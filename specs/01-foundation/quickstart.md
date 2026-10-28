@@ -1,38 +1,16 @@
-# Перевірка майбутньої основи — 01-foundation
+# Перевірка основи — 01-foundation
 
-Дата: 2026-10-28. Гілка: `01-foundation`.
-
-Це інструкція для майбутньої реалізації. На момент Plan немає firmware build files,
-реалізованих wrappers або тестового executable. Після D18–D20 контактний дизайн
-профілю погоджено; його firmware JSON/config ще не реалізовано.
-**Команди нижче зараз не виконувалися й ще не готові до запуску.** Тут не наведено
-команд прошивання/роботи з навантаженням. Tasks/Implement потребують окремого запиту.
+Дата: 2026-10-28. Реалізовано startup-каркас, host та native target build. Фізичні H02/H03 і прийняття ітерації відкриті; окремі результати — [acceptance.md](verification/acceptance.md).
 
 ## Передумови
 
-1. Прочитати [plan.md](plan.md), [research.md](research.md) й
-   [build/evidence contract](contracts/build-and-evidence.md).
-2. Підготувати SDK v5.5.6 саме на commit
-   `880a203ae603d08a94d06aa01e0d6761958e5e9e`, його pinned submodules і інструменти
-   з таблиці research. Використати CPython 3.11.7 та обраний macOS-arm64 host baseline.
-   Інсталяція SDK/залежностей не виконувалася в Plan.
-3. Закрити E01: повний exact-version/hash Python lock, wheelhouse і відтворення
-   у другому чистому venv. До цього не заявляти reproducible target build.
-   Сам bootstrap/lock tooling готується для закриття E01; залежна target-реалізація
-   починається після gate. До target configure визначити й записати з джерелами
-   flash mode/frequency/partition layout (Q01/Q02, 01); мовчазні defaults не приймаються.
-4. Під час окремо запитаної реалізації матеріалізувати
-   [профіль c3-supermini-pinout-01](../../hardware/esp32-c3-supermini-profile.md)
-   у firmware JSON/config: RC=GPIO3, PWM=GPIO0, DIR–GND на MD20A без GPIO1 (D20), зовнішні 3,3 В на 3V3/GND.
-   H01 design визначено D18–D20; додаткова схема/continuity не потрібна для збірки.
-   H02/H03 потрібні лише перед фізичними спостереженнями.
-5. Після реалізації tooling експортувати перевірені IDF_PATH/IDF_TOOLS_PATH та
-   активувати саме locked SDK venv. `python3 --version`, compiler/tools versions
-   мають збігатися з lock; якщо ні — зупинитися, не переписувати lock автоматично.
+SDK v5.5.6 на commit `880a203ae603d08a94d06aa01e0d6761958e5e9e`, macOS arm64 host pins і Python hash-lock зафіксовано в `tools/environment/environment.lock.json`; E01 закрито для перевіреного середовища. Локальні шляхи SDK/toolchain/venv можуть зникнути: checker зупинить збірку, якщо вони недоступні. Для нових завантажень у поточному shell — `source tools/environment/python-ca.sh`.
+
+Профіль `firmware/boards/c3-supermini-pinout-01.json`: RC GPIO3 зарезервовано, PWM GPIO0, DIR–GND на MD20A без GPIO1, живлення за D18; flash DIO 40 МГц, 4 МБ і pinned single-factory layout за D28. H02/H03 потрібні перед окремо дозволеними фізичними діями.
 
 ## Перевірка середовища
 
-З кореня репозиторію, після появи відповідного tooling:
+З кореня репозиторію:
 
 ```sh
 export SPECIFY_FEATURE_DIRECTORY=specs/01-foundation
@@ -44,11 +22,11 @@ lock replay. Відсутній lock/неправильна версія — exi
 
 ## Host — незалежно від MCU
 
-Після реалізації host target і встановлення pinned CMake/Ninja/host compiler:
+Використати новий каталог; для CTest — шлях із host lock:
 
 ```sh
-python3 scripts/build.py host --build-dir build/host-01-clean
-ctest --test-dir build/host-01-clean --output-on-failure
+python3 scripts/build.py host --build-dir build/host-01-new
+/private/tmp/scopa01-host/cmake/cmake-3.30.2-macos-universal/CMake.app/Contents/bin/ctest --test-dir build/host-01-new --output-on-failure
 ```
 
 Очікування: перевірки всіх станів, retry меж 999999/1000000 мкс, п'ятої невдачі,
@@ -62,7 +40,7 @@ poll 10 мс перевіряється по target config/source; гарант�
 Окремий контрольний негативний запуск (це очікувана невдала перевірка, не build failure):
 
 ```sh
-build/host-01-clean/negative_probe
+build/host-01-new/negative_probe
 ```
 
 Очікування: явне повідомлення про невірне очікування й ненульовий exit. Записати
@@ -71,13 +49,11 @@ build/host-01-clean/negative_probe
 
 ## Target build — без підключення/прошивання
 
-Змінна `BOARD_PROFILE` нижче має містити шлях до майбутнього JSON профілю
-`c3-supermini-pinout-01`, що відтворює погоджений контактний дизайн D18–D20.
-Наявність документа профілю ще не означає наявність реалізованого JSON/tooling.
+Використовуйте погоджений профіль і новий каталог збірки:
 
 ```sh
-python3 scripts/build.py target --board-profile "$BOARD_PROFILE" --build-dir build/c3-01-clean
-python3 scripts/verify/config.py --build-dir build/c3-01-clean
+python3 scripts/build.py target --board-profile firmware/boards/c3-supermini-pinout-01.json --build-dir build/c3-01-new
+python3 scripts/verify/config.py --build-dir build/c3-01-new
 ```
 
 Очікування: native ESP-IDF build для esp32c3, правильний flash/profile fingerprint,

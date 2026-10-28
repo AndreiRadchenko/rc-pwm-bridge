@@ -196,3 +196,15 @@ console isolation і схему профілю. Flash mode/frequency/partition l
 невідомі параметри не замінюються SDK defaults. Вибір не є фізичним boot acceptance.
 Відкриті E01 та H02–H05 — явні execution/evidence gates, а не відповіді, вигадані
 під час research. Джерела й локальний inventory не є host/build/physical acceptance.
+
+## RCH-08 — документальний пошук щодо вбудованої flash (D24)
+
+ROM/eFuse визначив вбудовану flash XMC 4 МБ і JEDEC `20:4016` цього екземпляра. [ESP32-C3 datasheet v2.4, §5.7](https://documentation.espressif.com/esp32-c3_datasheet_en.html) подає для in-package flash мінімальне значення максимальної частоти 80 МГц; це документальна специфікація сімейства, не вимір плати. [Espressif esptool flash modes](https://docs.espressif.com/projects/esptool/en/latest/esp32c3/esptool/flash-modes.html) описує DIO і доступні частоти, але не засвідчує точний part number цього екземпляра.
+
+Виявлено первинні datasheets XMC [XM25QH32C rev1.9](https://www.xmcwh.com/uploads/210/XM25QH32C_Ver1.9.pdf) та [XM25QH32D rev1.3](https://www.xmcwh.com/uploads/920/XM25QH32D_Ver1.3.pdf); сервер виробника не відповів під час перевірки, тому їхній зміст не використовувався як підтверджений доказ. JEDEC ID не розрізняє усі можливі моделі. Значення mode/frequency/layout не встановлено; T008 залишається відкритим до достатньої підстави або явної зміни вимоги користувачем. Жодного доступу до плати чи фізичної перевірки не виконували.
+
+### Дані конкретного екземпляра після D27
+
+ROM-identity збіглася; SFDP header та BFPT збережені у `verification/sfdp-2026-10-28/` разом з raw записами, скриптами та SHA-256. SFDP ревізія 1.6, BFPT ID `ff00`, адреса `0x30`, 16 DWORD; DWORD1 `0xfff120e5`, bit 20=1 — підтримка fast read 1-2-2; DWORD4 `0xbb423b08`, для 1-2-2 opcode `0xbb`, 2 mode та 2 wait clocks. Інтерпретацію bit/поля перевірено за [Linux SPI-NOR SFDP parser](https://github.com/torvalds/linux/blob/master/drivers/mtd/spi-nor/sfdp.c). DWORD2 `0x01ffffff` відповідає 32 Мбіт, узгоджено з ROM 4 МБ. Конкретний part number не встановлено.
+
+DIO 40 МГц обрано як дизайн для цієї одиниці: її SFDP підтверджує 1-2-2; ESP32-C3 datasheet §5.7 задає мінімум 80 МГц для показника максимальної частоти in-package flash. Це не результат тесту boot або сигналів. Explicit layout — pinned ESP-IDF `partitions_singleapp.csv`, SHA-256 `e829387dc93b09b655e5ba558bb317a798ab7378834facad2621602126d7b510`, 1 MiB factory app, без OTA; стандартні NVS/PHY partition записи самі не запускають відповідні сервіси. Фактичну конфігурацію й відсутність NVS-service перевіряти в T022.

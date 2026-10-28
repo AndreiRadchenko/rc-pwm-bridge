@@ -1,0 +1,8 @@
+{
+  "python": "/private/tmp/scopa01-replay-clean/bin/python",
+  "lock_sha256": "a1cfb709bae785b4bcf49cc704f0e51d69549f339c94b5e49b323ec3987403f5",
+  "pip_check_exit": 0,
+  "idf_check_exit": 0,
+  "install_exit": 0,
+  "method": "fresh venv; --no-index --require-hashes --force-reinstall"
+}

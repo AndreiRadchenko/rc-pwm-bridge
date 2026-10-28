@@ -1,0 +1,42 @@
+{
+  "started_utc": "2026-10-28T12:26:12.480533+00:00",
+  "command": [
+    "/Users/mac/.platformio/penv/bin/python",
+    "-m",
+    "esptool",
+    "--chip",
+    "esp32c3",
+    "--port",
+    "/dev/cu.usbmodem1101",
+    "--baud",
+    "115200",
+    "--no-stub",
+    "--connect-attempts",
+    "3",
+    "--before",
+    "no_reset",
+    "--after",
+    "hard_reset",
+    "read_mac"
+  ],
+  "returncode": 0,
+  "capture_settings": {
+    "baudrate": 115200,
+    "dtr": false,
+    "rts": false,
+    "timeout": 0.1,
+    "duration_seconds": 5
+  },
+  "confirmation": "User confirmed USB only; MD20A/pump/other loads disconnected.",
+  "captured_bytes": 58036,
+  "finished_utc": "2026-10-28T12:26:17.700179+00:00",
+  "ports_after": [
+    {
+      "device": "/dev/cu.usbmodem1101",
+      "description": "USB JTAG/serial debug unit",
+      "serial_number": "18:8B:0E:93:03:2C",
+      "vid": 12346,
+      "pid": 4097
+    }
+  ]
+}

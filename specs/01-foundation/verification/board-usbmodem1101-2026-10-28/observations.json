@@ -1,0 +1,72 @@
+{
+  "kind": "board_review",
+  "scope": "USB/ROM/chip/flash identity only; not GPIO/load acceptance",
+  "unit_id": "c3-supermini-188b0e93032c",
+  "variant_id": null,
+  "profile_approved": false,
+  "port": "/dev/cu.usbmodem1101",
+  "user_confirmed_connections": "USB only; MD20A, pump and other loads disconnected",
+  "observations": {
+    "soc": "ESP32-C3",
+    "package": "QFN32",
+    "silicon_revision": "v0.4",
+    "embedded_flash": "4 MB (XMC), reported by esptool target/eFuse decoding",
+    "jedec_manufacturer_hex": "0x20",
+    "jedec_device_hex": "0x4016",
+    "jedec_detected_flash_bytes": 4194304,
+    "flash_status_hex": "0x0200",
+    "factory_mac": "18:8b:0e:93:03:2c",
+    "usb_vid_hex": "0x303a",
+    "usb_pid_hex": "0x1001",
+    "usb_serial": "18:8B:0E:93:03:2C",
+    "transport": "native USB-Serial/JTAG",
+    "secure_boot": "disabled",
+    "flash_encryption": "disabled",
+    "security_flags_hex": "0x00000000",
+    "rom_chip_id": 5,
+    "security_api_version": 3,
+    "spi_boot_crypt_count": 0
+  },
+  "limitations": {
+    "crystal_40mhz": "esptool ESP32C3 target constant; not an independent frequency measurement",
+    "pcb_manufacturer_revision": "unknown",
+    "physical_chip_suffix": "not independently verified",
+    "pins_power_bias": "not verified",
+    "firmware_build_or_flash": "not performed",
+    "ram_stub_upload": "disabled with --no-stub",
+    "flash_or_efuse_writes": "not performed"
+  },
+  "read_regions": [
+    {
+      "offset_hex": "0x0",
+      "length_bytes": 4096,
+      "all_ff": true
+    },
+    {
+      "offset_hex": "0x8000",
+      "length_bytes": 4096,
+      "all_ff": true
+    }
+  ],
+  "boot_observation": {
+    "reset": "USB_UART_CHIP_RESET (rst:0x15)",
+    "boot": "SPI_FAST_FLASH_BOOT (boot:0xf)",
+    "message": "invalid header: 0xffffffff",
+    "duration_seconds": 5,
+    "application_start_observed": false,
+    "interpretation": "No valid bootloader at standard C3 boot offset 0x0 in read sample; no claim about all flash contents"
+  },
+  "gates": {
+    "H01": "identity/flash/native USB portion verified; board profile still blocked",
+    "H02": "power path/external bias not verified",
+    "H03": "GPIO measurement limits/waveforms not verified",
+    "H04": "RC input not connected/tested",
+    "H05": "MD20A/pump disconnected; not tested",
+    "E01": "SDK Python environment closure unrelated to board identity and not performed"
+  },
+  "tooling_notes": [
+    "First sandboxed port open failed with EPERM; successful device queries used approved serial access.",
+    "esptool module actually loaded is 4.9.0 from PlatformIO tool-esptoolpy; package distribution metadata reports 5.1.0 and was not used as executed version.",
+    "Optional ioreg plist attempt failed; USB enumeration evidence is from pyserial/macOS port metadata."
+  ]
+}

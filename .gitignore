@@ -1,0 +1,35 @@
+# Build and tool caches
+**/build/
+**/managed_components/
+**/sdkconfig.old
+.pio/
+**/.pio/
+.cache/
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+.DS_Store
+
+# Local editor/runtime state (keep shared Spec Kit skills)
+.vscode/
+.idea/
+.env
+.env.*
+!.env.example
+runtime-data/
+tmp/
+.specify/feature.json
+
+# Keep sdkconfig/defaults and dependency lockfiles trackable for reproducibility.
+
+# Compiled host artifacts and temporary files
+*.o
+*.a
+*.so
+*.dll
+*.exe
+*.log
+*.tmp
+*.swp
+Thumbs.db

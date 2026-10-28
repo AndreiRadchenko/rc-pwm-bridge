@@ -1,0 +1,15 @@
+esptool.py v4.9.0
+Serial port /dev/cu.usbmodem1101
+WARNING: Pre-connection option "no_reset" was selected. Connection may fail if the chip is not in bootloader or flasher stub mode.
+Connecting...
+Chip is ESP32-C3 (QFN32) (revision v0.4)
+Features: WiFi, BLE, Embedded Flash 4MB (XMC)
+Crystal is 40MHz
+USB mode: USB-Serial/JTAG
+MAC: 18:8b:0e:93:03:2c
+Enabling default SPI flash mode...
+Configuring flash size...
+WARNING: In case of failure, please set a specific --flash_size.
+1024 (25 %)2048 (50 %)3072 (75 %)4096 (100 %)
+Read 4096 bytes at 0x00008000 in 0.0 seconds (697.3 kbit/s)...
+Staying in bootloader.

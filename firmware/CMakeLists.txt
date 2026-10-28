@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.30)
+set(IDF_TARGET esp32c3 CACHE STRING "Target")
+set(COMPONENTS main)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+project(rc_pwm_bridge)

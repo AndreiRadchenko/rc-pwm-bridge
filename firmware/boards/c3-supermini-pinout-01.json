@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "variant_id": "c3-supermini-pinout-01",
+  "unit_id": "c3-supermini-188b0e93032c",
+  "manufacturer": "unknown",
+  "factory_revision": "unknown",
+  "chip_model": "ESP32-C3",
+  "chip_package": "QFN32",
+  "chip_revision": "v0.4",
+  "flash_bytes": 4194304,
+  "flash_vendor": "XMC",
+  "flash_jedec_id": "20:4016",
+  "flash_mode": "dio",
+  "flash_frequency_hz": 40000000,
+  "partition_layout": "idf_single_factory_1m",
+  "rc_pin": 3,
+  "pwm_pin": 0,
+  "direction_mode": "hardwired_low",
+  "power_path": "external nominal 3.3 V to 3V3 and GND",
+  "usb_route": "native USB Serial/JTAG, ROM observed",
+  "boot_conflicts": "GPIO0/3 avoid C3 straps, flash, USB, UART0 and conventional JTAG; GPIO0 external 32 kHz crystal unused",
+  "onboard_loads": "physical effects pending",
+  "bias": {
+    "status": "pending",
+    "owner": "01",
+    "gate": "H02/H03"
+  },
+  "rc_interface": {
+    "status": "pending",
+    "owner": "03",
+    "gate": "conditioning and measured levels before connection"
+  },
+  "md20a_interface": {
+    "status": "pending",
+    "owner": "04/06",
+    "gate": "driver interface and DIR jumper in 04; power path in 06"
+  },
+  "evidence": {
+    "pinout": "hardware/esp32-c3-pinout.jpg",
+    "pinout_sha256": "c0c770ef639612bcfeca7ed7472c4d0b190032b43332c84b52fda81f3133a07c",
+    "photo": "hardware/esp32-supermini.jpg",
+    "photo_sha256": "36ab8c15ab2626a4c55ddf45ceb3a02d9be5e18dd465bc9602f31cc8927ee041",
+    "rom": "specs/01-foundation/verification/board-review.md",
+    "design": "docs/decisions.md D17-D20"
+  },
+  "approval": {
+    "design": "design_approved",
+    "source": "D18-D20",
+    "date": "2026-10-28",
+    "bench": "pending",
+    "scope": "software design only; GPIO-only bench subject to H02/H03"
+  },
+  "flash_settings_evidence": {
+    "sfdp": "specs/01-foundation/verification/sfdp-2026-10-28/bfpt.bin",
+    "esp32c3_datasheet": "hardware/esp32-c3_datasheet_en.pdf section 5.7",
+    "partition_csv": "ESP-IDF v5.5.6 components/partition_table/partitions_singleapp.csv",
+    "partition_csv_sha256": "e829387dc93b09b655e5ba558bb317a798ab7378834facad2621602126d7b510",
+    "status": "design; boot not tested"
+  }
+}
