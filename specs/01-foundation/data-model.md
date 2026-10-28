@@ -55,7 +55,13 @@ C++11, фіксовані enum/структури; без GPIO, ESP-IDF, FreeRTO
 
 Перехідний контракт: [startup.md](contracts/startup.md). Reset створює нову volatile
 сесію з нульовим лічильником; NVS/збережених endpoints/відновлення дозволу немає.
+RetryPolicy задає мінімальну паузу; номінальний platform poll 10 мс за D23 не є
+полем core-політики або верхньою межею фактичного target lateness. Запізнілий tick
+видає одну спробу, без catch-up і без зміни permission=false.
 `Exhausted` та `ClockFault` не запускають автоматичний software reset.
+Clock-порт повертає validity/error signed raw до перетворення на MonotonicUs;
+помилка/від’ємне значення дає terminal ClockFault без вигаданого часу та init/GPIO/setup.
+Checked conversion є спільною SDK-незалежною політикою для target leaf і fake-clock tests.
 
 ## Платформний результат і локальний snapshot
 
@@ -63,8 +69,14 @@ C++11, фіксовані enum/структури; без GPIO, ESP-IDF, FreeRTO
 `pwm_low_api_applied=true` означає лише успішне застосування API; це не доказ LOW на
 контакті. Помилка assert LOW не дозволяє решту init-кроків у цій спробі.
 
-`StartupSnapshot`: sequence, now_us, phase, attempts_started, next_attempt_us,
+`StartupSnapshot`: sequence, now_us, now_valid, phase, attempts_started, next_attempt_us,
 work_permitted, last_error, pwm_low_api_applied, variant_id/fingerprint reference.
+`now_valid=true` означає валідний clock sample поточної події. Якщо sample відсутній,
+від'ємний або регресивний, now_valid=false, а now_us — останній прийнятий час
+або 0 до першого валідного sample, не поточне вимірювання. Невдалу операцію не
+підміняють цим значенням для init/deadline; сесія переходить у ClockFault.
+До першого запиту clock початковий snapshot може мати now_valid=false без fault:
+прапорець описує час, а ClockFault викликається саме невдалою/невалідною clock-операцією.
 На межі транспорту — fixed-size запис не більше 96 байтів, без динамічних рядків;
 ідентифікатор варіанта може передаватися як фіксований числовий fingerprint.
 

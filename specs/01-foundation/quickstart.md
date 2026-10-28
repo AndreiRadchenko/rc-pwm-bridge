@@ -53,7 +53,11 @@ ctest --test-dir build/host-01-clean --output-on-failure
 
 Очікування: перевірки всіх станів, retry меж 999999/1000000 мкс, п'ятої невдачі,
 успіху повторної спроби, clock/protocol faults і LOW-first ordering проходять;
+invalid/negative signed clock або clock-port failure до cast дає ClockFault без init/GPIO/setup;
 permission завжди false. Немає SDK/GPIO/FreeRTOS у core headers/host dependencies.
+За D23 запізнілий tick після deadline видає одну спробу без catch-up. Номінальний
+poll 10 мс перевіряється по target config/source; гарантовану верхню межу lateness
+або її фізичний вимір у 01 не заявляти. Додаткового timing-test образу не потрібно.
 
 Окремий контрольний негативний запуск (це очікувана невдала перевірка, не build failure):
 

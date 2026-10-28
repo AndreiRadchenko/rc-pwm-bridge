@@ -130,6 +130,10 @@ SuperMini; RC/MD20A у 01 мають документальні вимоги й 
 **Підстава**: скінченний ліміт робить fault history і host-тести визначеними;
 1 с не створює busy retry loop. Константи є design parameters, не виміряними
 затримками і не доказом фізичного cutoff. Подальшу зміну записувати як зміну контракту.
+Подальший вибір A у guided Analyze (C1, D23) уточнив: poll 10 мс номінальний,
+а 1 с — мінімальна пауза. Верхньої межі фактичного target lateness у 01 немає;
+окремий target-timing режим не додається. Перевіряються host deadline/late-tick
+логіка та nominal config/source, без заяви про виміряний target jitter або Q05 cutoff.
 
 **Альтернативи**: reset-only recovery суперечить обраному B; нескінченні retries або
 автоматичний reboot без обмежень не потрібні для 01. Точні переходи/error ordering:

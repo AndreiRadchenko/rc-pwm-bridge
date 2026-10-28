@@ -25,6 +25,9 @@ supervisor і платформні адаптери. У 01 немає RC capture
 Після init failure — автоматичні bounded retries за D12: 5 спроб загалом,
 1 000 000 мкс від завершення невдалої спроби. Успіх веде в ReadyDisabled, п'ята
 невдача — в Exhausted без application auto reset. Діагностика працює поза init path.
+За D23 poll 10 мс номінальний: спроба не раніше секундної паузи й на першому
+доступному poll; гарантована верхня межа target lateness у 01 не заявляється.
+Host deadline-тести та config/source review не є вимірюванням такої межі.
 Мінімальний supervisor не є повним control core 02 або operational failsafe 05.
 
 ## Технічний контекст
@@ -42,7 +45,7 @@ supervisor і платформні адаптери. У 01 немає RC capture
 | Платформа | ESP32-C3 SuperMini, профіль c3-supermini-pinout-01 для одиниці c3-supermini-188b0e93032c; дизайн за D18–D20, фізичне прийняття окремо. |
 | Контактний дизайн | За D18–D20: RC=GPIO3, PWM=GPIO0, DIR–GND на MD20A без GPIO1; зовнішні 3,3 В на 3V3/GND. Профіль погоджено для програмної підготовки, не електричного прийняття. |
 | Зберігання | Volatile startup state; без NVS, learned endpoints і persisted permission. |
-| Runtime час | Монотонні uint64 мкс поточного boot; адаптер esp_timer, scheduler poll 10 мс. |
+| Runtime час | Монотонні uint64 мкс поточного boot; адаптер esp_timer, номінальний poll 10 мс без гарантованої верхньої межі target lateness (D23). |
 | Діагностика | USB Serial/JTAG; static snapshot mailbox, окремий consumer poll 100 мс, лише нові sequence одноразово за D22; без heartbeat/replay після drop/reconnect. |
 | Масштаб | Один майбутній pump channel; R01,R02,R08,R10,R12. 07–09 не є targets. |
 | Output | У 01 лише статичний PWM LOW; DIR–GND на MD20A, програмного DIR немає. Погоджені 1000–2000 мкс/1000 Гц — інваріанти наступних етапів, не функції цього каркаса. |
@@ -87,7 +90,7 @@ SDK availability, C3 RMT/LEDC і конкретні tools pins перевіре�
 | III — Architecture | Pass меж core/platform; на момент початкового research профіль був відкритий | Pass: D18–D20 визначили контактний дизайн; H02/H03 залишаються фізичним прийняттям, не блоком software design |
 | IV — Evidence | Pass owned Q01 research gate; build/physical не заявлені | Pass дизайну pins/методів; Blocked відтворення E01, SC acceptance не пройдено |
 | V — Workflow | Pass: явний каталог, лише Plan, чинні файли збережено | Pass: тільки design-артефакти й запис рішень, без Tasks/Implement/Git/hardware дій |
-| VI — Decisions | Pass: D09,D11–D13 та Q owners прочитано | Pass: D14–D22 записано; E01/H02–H05 відкриті, H01 design визначено за погодженим pinout; межу SC-004 уточнено D21, одноразові diagnostic events — D22 |
+| VI — Decisions | Pass: D09,D11–D13 та Q owners прочитано | Pass: D14–D23 записано; E01/H02–H05 відкриті, H01 design визначено за погодженим pinout; SC-004 — D21, diagnostic events — D22, nominal init poll — D23 |
 
 Blocked hardware/environment gates зупиняють **відповідну** реалізацію/прийняття,
 а не перетворюються на Pass. Таблиця не є дозволом обійти конституцію. Загальних
@@ -109,8 +112,8 @@ web/API, обов'язкових test-first approval циклів чи дода�
 | R02,R08,R12 / FR-016 | Review E01/H-gates та узгоджених рішень до залежної роботи | SC-001,SC-004,SC-008; build.md,board-review.md |
 
 Шляхи записів тут відносні до майбутнього `specs/01-foundation/verification/`.
-Посилання на T-IDs додаються лише окремою фазою Tasks; самих tasks.md/тестів/доказів
-цей Plan не створює. Деталі перевірок: [build-and-evidence.md](contracts/build-and-evidence.md).
+Окремо виконана фаза Tasks додала T-IDs і залежності в [tasks.md](tasks.md).
+Сам Plan не створював runtime-тестів або доказів виконання. Деталі перевірок: [build-and-evidence.md](contracts/build-and-evidence.md).
 
 ## Структура проєкту
 
@@ -153,8 +156,12 @@ firmware/
 └── boards/                     # Матеріалізація погодженого профілю D18–D20
 tests/host/
 ├── CMakeLists.txt
+├── test_support.hpp
 ├── startup_tests.cpp
-└── negative_probe.cpp
+├── negative_probe.cpp
+└── core_header_probe.cpp
+tests/tooling/
+└── test_build_contract.py       # Python stdlib unittest, без стороннього framework
 scripts/
 ├── build.py                    # host/target wrapper, не flash
 ├── environment/check.py
@@ -163,8 +170,15 @@ tools/environment/              # SDK/tools/Python lock і hashes після E01
 ```
 
 `firmware` — ESP-IDF root. `main` складає адаптери й supervisor; core не включає
-SDK/GPIO/FreeRTOS. Generated profile header та sdkconfig розміщуються в окремому
+SDK/GPIO/FreeRTOS. Host і target core мають target-private -fno-rtti/-fno-exceptions
+та extensions OFF; actual compile options/dependencies перевіряються окремо
+у host evidence та target config review. Heap-залежності перевіряються по source.
+Generated profile header та sdkconfig розміщуються в окремому
 build directory. JSON parser потрібний лише host preflight, не firmware.
+`startup_port.hpp` містить SDK-незалежні port-контракти та спільну політику
+порядку/clock validity/diagnostic sequence для fake-port host-перевірок. SDK leaf
+у `.cpp` отримують raw або виконують hardware API; host suite не є перевіркою цих
+реальних периферій. Допоміжні test paths вище деталізовано в T010/T020/T032–T035.
 Реальні папки зараз мають README; дерево вище — дизайн, не доказ реалізації.
 
 ## Послідовність дизайну реалізації
@@ -202,5 +216,6 @@ build directory. JSON parser потрібний лише host preflight, не fi
 | E01 і H-gates | Розрізняти вибір дизайну й фактичні докази | «Збирається» не доводить hardware safety або dependency replay |
 
 Винятків із конституції для реалізації немає; відкриті gates не виправдовуються
-складністю. Наступна можлива фаза — Tasks лише за окремим запитом після review
-цього плану й визначення роботи, дозволеної відкритими gates.
+складністю. Tasks сформовано; guided Analyze завершив review цього плану та
+залежностей, див. [analysis-resolution.md](analysis-resolution.md). Implement
+потребує окремого запиту та дотримання E01/H-gates.

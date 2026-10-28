@@ -1,6 +1,6 @@
 # Контракт збірки, перевірок і доказів
 
-Версія 2, 2026-10-28. FR-002,FR-003,FR-009–FR-016.
+Версія 3, 2026-10-28. FR-002,FR-003,FR-009–FR-016.
 Наведені entry points — контракт майбутньої реалізації, зараз цих скриптів немає.
 
 ## Команди майбутнього tooling
@@ -33,7 +33,12 @@ wrapper відмовляє з поясненням; самостійних rm/re
   Platform залежить лише від потрібних GPIO, esp_timer та USB Serial/JTAG driver
   компонентів і їх системних залежностей; actual graph підлягає review.
 - `bridge_core` має C++11, CXX_STANDARD_REQUIRED та extensions OFF; app/adapters —
-  C++17. Host і target компілюють те саме core source, не дві копії поведінки.
+  C++17. На обох core targets явно застосовуються PRIVATE -fno-rtti/-fno-exceptions;
+  actual compile options перевіряються окремо: host-core у T036, target-core у
+  T022 (за compile_commands.json; export увімкнено в обох build roots). Target
+  audit не є передумовою host suite; test/platform targets flags автоматично не
+  успадковують. Відсутність heap-залежностей перевіряється окремо по source.
+  Host і target компілюють те саме core source, не дві копії поведінки.
 - GPIO та flash size/frequency/mode/partition settings походять з погодженого профілю
   та SDK design; невідомий flash не замінюється типовими 4 MB. Вибір partition layout
   не додає NVS/OTA feature; SDK-системні partition вимоги перевіряються окремо.
@@ -42,6 +47,9 @@ wrapper відмовляє з поясненням; самостійних rm/re
   завершують preflight як blocked, а не приймаються з SDK defaults.
 - SDK logs: `CONFIG_LOG_DEFAULT_LEVEL_NONE=y`, `CONFIG_LOG_MAXIMUM_EQUALS_DEFAULT=y`,
   generated levels 0. `CONFIG_FREERTOS_HZ=100` задає базовий tick 10 мс.
+  За D23 nominal supervisor poll 10 мс перевіряється по config/source, а minimum
+  retry pause й late tick — host-тестами. Це не доказ target lateness ≤10 мс;
+  такого acceptance-критерію або окремого timing-test режиму у 01 немає.
 - Local transport: `CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y`,
   `CONFIG_ESP_CONSOLE_SECONDARY_NONE=y`, лише після підтвердження Q02 USB routing.
   Console output у startup/retry code не використовується.
@@ -63,6 +71,10 @@ review/config check — fail, а не приховане N/A. Огляд config 
 Виконати state/deadline/order сценарії [startup.md](startup.md) на fake ports і
 контрольованому часі. Перевірити compile/public-header isolation від SDK/FreeRTOS/GPIO.
 При blocked diagnostics consumer producer не чекає, permission не змінюється.
+Окремий fake-clock сценарій invalid/negative signed raw або clock-port failure
+має перевірити terminal ClockFault до cast, без штучного timestamp та init/GPIO/setup.
+Snapshot позначає now_valid=false і зберігає останній валідний час або 0 до першого
+валідного sample; це не виміряний поточний час. Host-сценарій перевіряє цю відмінність.
 За D22 сценарії діагностики мають описувати одну спробу на новий sequence,
 zero/partial drop без replay на наступних polls або USB reconnect, відсутність
 heartbeat у термінальному стані та одну спробу для наступної нової події.

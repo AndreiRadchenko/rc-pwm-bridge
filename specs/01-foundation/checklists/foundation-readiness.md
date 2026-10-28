@@ -65,32 +65,32 @@
 
 | Пункт | Категорія | Текстове підтвердження |
 |---|---|---|
-| CHK001 | A | `spec.md:32` — «- **Поза обсягом**: повний автомат керування, capture RC, робочий PWM, arming/recovery,» |
-| CHK002 | A | `spec.md:29` — «- **Незмінні межі v1**: 1000–2000 мкс → 0–100%, PWM 1000 Гц, без автоматичного» |
-| CHK003 | B | `spec.md:9` — «**Статус**: Specify/Clarify/Plan виконано; guided checklist перед Tasks узгоджено.» |
+| CHK001 | A | `spec.md:33` — «- **Поза обсягом**: повний автомат керування, capture RC, робочий PWM, arming/recovery,» |
+| CHK002 | A | `spec.md:30` — «- **Незмінні межі v1**: 1000–2000 мкс → 0–100%, PWM 1000 Гц, без автоматичного» |
+| CHK003 | B | `spec.md:9` — «**Статус**: Specify/Clarify/Plan і guided checklist виконано; Tasks сформовано.» |
 | CHK004 | A | `data-model.md:22` — «\| direction_mode \| `hardwired_low`: перемичка DIR–GND на MD20A за D20. `dir_pin`/програмного `dir_level` немає; GPIO1 не використовується, ж» |
-| CHK005 | B | `spec.md:110` — «тоді контактний дизайн відповідає погодженому pinout і перевірці SoC-конфліктів» |
+| CHK005 | B | `spec.md:122` — «тоді контактний дизайн відповідає погодженому pinout і перевірці SoC-конфліктів» |
 | CHK006 | A | `data-model.md:26` — «\| approval \| Окремі design/bench statuses, джерело/дата, область дозволеної роботи та fingerprint вмісту. \|» |
 | CHK008 | A | `contracts/board-profile.md:67` — «максимальний допустимий PWM LOW, похибка/калібрування приладу, bandwidth,» |
 | CHK009 | A | `contracts/board-profile.md:35` — «\| Живлення \| Дизайн: зовнішні 3,3 В на 3V3/GND. H02: фактичні напруги/живлення; одночасне USB+external power не вважається перевіреним. \|» |
-| CHK010 | A | `spec.md:284` — «- **FR-012**: Апаратний опис ПОВИНЕН окремо визначати програмний LOW, зовнішній» |
+| CHK010 | A | `spec.md:298` — «- **FR-012**: Апаратний опис ПОВИНЕН окремо визначати програмний LOW, зовнішній» |
 | CHK011 | A | `contracts/board-profile.md:58` — «PWM LOW MD20A — brake. До схем H-bridge не додається зовнішній diode лише за» |
-| CHK012 | A | `contracts/startup.md:50` — «3. Якщо assert LOW повернув помилку, зупинити решту кроків, зафіксувати failure» |
+| CHK012 | A | `contracts/startup.md:55` — «3. Якщо assert LOW повернув помилку, зупинити решту кроків, зафіксувати failure» |
 | CHK013 | A | `contracts/startup.md:16` — «\| Максимум спроб \| 5 загалом, включно з першою. \|» |
-| CHK014 | A | `contracts/startup.md:39` — «\| Регресія часу / overflow deadline / порушення протоколу результатів \| `ClockFault` або явний terminal protocol fault, без init-спроб і доз» |
-| CHK015 | B | `contracts/startup.md:95` — «Стан/причина зберігаються у snapshot незалежно від доступності виводу. Відсутність» |
-| CHK017 | A | `contracts/startup.md:82` — «256 байтів. Він використовує `usb_serial_jtag_write_bytes` з timeout 0,» |
+| CHK014 | A | `contracts/startup.md:44` — «\| Регресія часу / overflow deadline / порушення протоколу результатів \| `ClockFault` або явний terminal protocol fault, без init-спроб і доз» |
+| CHK015 | B | `contracts/startup.md:110` — «Стан/причина зберігаються у snapshot незалежно від доступності виводу. Відсутність» |
+| CHK017 | A | `contracts/startup.md:97` — «256 байтів. Він використовує `usb_serial_jtag_write_bytes` з timeout 0,» |
 | CHK018 | A | `research.md:37` — «app/platform adapters — **C++17**. Host baseline цього етапу — macOS arm64 із» |
-| CHK019 | B | `research.md:189` — «console isolation і схему профілю. Flash mode/frequency/partition layout ще не» |
-| CHK020 | B | `plan.md:39` — «\| Python closure \| E01: full exact-version/hash lock і wheelhouse створюються/відтворюються до залежної target-реалізації/збірки; зараз їх н» |
+| CHK019 | B | `research.md:193` — «console isolation і схему профілю. Flash mode/frequency/partition layout ще не» |
+| CHK020 | B | `plan.md:42` — «\| Python closure \| E01: full exact-version/hash lock і wheelhouse створюються/відтворюються до залежної target-реалізації/збірки; зараз їх н» |
 | CHK021 | A | `quickstart.md:8` — «**Команди нижче зараз не виконувалися й ще не готові до запуску.** Тут не наведено» |
-| CHK022 | A | `contracts/build-and-evidence.md:70` — «CTest запускає справжній suite. Negative probe — окремий executable із навмисно» |
-| CHK023 | A | `contracts/build-and-evidence.md:55` — «Перевірка відсутності radios: component/dependency list і linked archives не містять» |
-| CHK024 | A | `spec.md:387` — «дала часткові докази ідентичності для SC-004; сам SC-004 і решта SC ще не прийняті.» |
-| CHK025 | A | `spec.md:383` — «\| R02,R08,R12 / FR-016 \| US1.AC1–US1.AC3, US2.AC2 \| SC-001, SC-004, SC-008 \| Огляд рішень і меж блокування; `verification/board-review.md`, » |
-| CHK026 | B | `spec.md:358` — «### Власники відкладених startup-сценаріїв (FR-013 / SC-007)» |
-| CHK027 | A | `plan.md:62` — «\| H04 / Q03, 01/03 \| RC levels/conditioning до підключення; source timing/loss до capture acceptance 03 \| Blocked для RC-підключення; RC не » |
-| CHK028 | A | `spec.md:406` — «`SPECIFY_FEATURE_DIRECTORY=specs/01-foundation`. За D10 під час Specify дозволені» |
+| CHK022 | A | `contracts/build-and-evidence.md:82` — «CTest запускає справжній suite. Negative probe — окремий executable із навмисно» |
+| CHK023 | A | `contracts/build-and-evidence.md:63` — «Перевірка відсутності radios: component/dependency list і linked archives не містять» |
+| CHK024 | A | `spec.md:401` — «дала часткові докази ідентичності для SC-004; сам SC-004 і решта SC ще не прийняті.» |
+| CHK025 | A | `spec.md:397` — «\| R02,R08,R12 / FR-016 \| US1.AC1–US1.AC3, US2.AC2 \| SC-001, SC-004, SC-008 \| Огляд рішень і меж блокування; `verification/board-review.md`, » |
+| CHK026 | B | `spec.md:372` — «### Власники відкладених startup-сценаріїв (FR-013 / SC-007)» |
+| CHK027 | A | `plan.md:65` — «\| H04 / Q03, 01/03 \| RC levels/conditioning до підключення; source timing/loss до capture acceptance 03 \| Blocked для RC-підключення; RC не » |
+| CHK028 | A | `spec.md:421` — «`SPECIFY_FEATURE_DIRECTORY=specs/01-foundation`. За D10 під час Specify дозволені» |
 
 CHK007 — C, рішення A, 2026-10-28, D21: SC-004 у 01 охоплює SuperMini;
 RC/MD20A — документальні вимоги та pending/gates 03/04/06. H02/H03 і SC-006 не
@@ -139,3 +139,12 @@ Raw ROM-докази, конституцію, початковий checklist, in
 **Hooks:** `.specify/extensions.yml` відсутній до та після генерації; hooks не запускалися.
 **Наступна фаза:** `/speckit-tasks` тільки за окремим запитом із
 `SPECIFY_FEATURE_DIRECTORY=specs/01-foundation`; `tasks.md` не створювався.
+
+## Синхронізація після guided Analyze (2026-10-28)
+
+D23 (C1, A) уточнює номінальний poll 10 мс і мінімальну retry-паузу 1 с без
+гарантованої верхньої межі target lateness у 01. Уточнено clock-fault host-сценарії,
+валідність snapshot часу й host/target core compile options. Посилання на рядки
+A/B доказів оновлено; рішення CHK007/CHK016 і результат 28/28 збережено.
+Історична Resolution перед Tasks описує саме ту фазу; Tasks тепер існує.
+Підсумок поточного аналізу: [analysis-resolution.md](../analysis-resolution.md).
