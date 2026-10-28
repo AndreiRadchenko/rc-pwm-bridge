@@ -7,7 +7,7 @@
 | Ітерація | Зміст | Залежності | Критерій завершення реалізації | Стан |
 |---|---|---|---|---|
 | [01-foundation](../speckit-iteration/01-foundation/manual-step.md) | Основа й апаратний профіль | — | Зафіксовано SDK/інструменти, точну плату, GPIO й апаратні припущення; каркас збирається без керування насосом. | Заплановано |
-| [02-control-core](../speckit-iteration/02-control-core/manual-step.md) | Переносиме ядро керування | 01-foundation | Ядро тестується без MCU, карта й валідація визначені; немає прихованої автокалібровки чи апаратних залежностей. | Заплановано |
+| [02-control-core](../speckit-iteration/02-control-core/manual-step.md) | Переносиме ядро керування | 01-foundation (програмна основа; повне фізичне прийняття 01 не блокує завершення 02 за D38) | Ядро тестується без MCU, карта й валідація визначені; немає прихованої автокалібровки чи апаратних залежностей. | Заплановано |
 | [03-rc-capture](../speckit-iteration/03-rc-capture/manual-step.md) | Один RC-вхід та діагностика | 01-foundation,02-control-core | Ширини й свіжість одного входу вимірюються з погодженими допусками; invalid не маскується діагностикою чи потоком подій. | Заплановано |
 | [04-pump-output](../speckit-iteration/04-pump-output/manual-step.md) | PWM із DIR–GND без насоса | 01-foundation,02-control-core,03-rc-capture | Виміряні 1000 Гц, проміжні duty, сталі LOW/HIGH і постійна перемичка DIR–GND; насос не використовується для цього прийняття. | Заплановано |
 | [05-failsafe-arming](../speckit-iteration/05-failsafe-arming/manual-step.md) | Failsafe та дозвіл роботи | 01-foundation,02-control-core,03-rc-capture,04-pump-output | Політики й deadline явно погоджені; програмні тести й вимірювання виходу підтверджують cutoff та відновлення. | Заплановано |

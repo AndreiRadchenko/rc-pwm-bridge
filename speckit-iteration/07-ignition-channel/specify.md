@@ -3,7 +3,7 @@
 Read `.specify/memory/constitution.md`, `docs/decisions.md`, `docs/requirements.md`, `docs/architecture.md`, `docs/roadmap.md`, `docs/open-questions.md` and `hardware/README.md`. Confirm the constitution has been filled and adopted; a stock placeholder is not an approved constitution. Treat `PROJECT_FOUNDATION.md` as historical context; current decisions supersede its WROOM/two-channel-start proposals.
 
 Target iteration `07-ignition-channel`. Requirement traceability: R03,R08,R09,R12,R13. Prerequisites: 06-pump-validation. Questions to resolve or explicitly scope: Q07; revisit Q02,Q04,Q05,Q06 for two channels.
-Set `SPECIFY_FEATURE_DIRECTORY=specs/07-ignition-channel` explicitly for all workflow scripts, including setup-plan; confirm returned paths belong to this iteration. The prompt directory is input, not generated feature artifacts. Preserve existing artifacts and user changes. Do not create/switch Git branches or commit automatically. Do not run Tasks or Implement, flash hardware or operate loads.
+Set `SPECIFY_FEATURE_DIRECTORY=specs/07-ignition-channel` explicitly for all workflow scripts, including setup-plan; confirm returned paths belong to this iteration. The prompt directory is input, not generated feature artifacts. Preserve existing artifacts and user changes. Do not commit automatically. Do not run Tasks or Implement, flash hardware or operate loads.
 This is a deferred roadmap extension. Reading this prompt does not activate it; require an explicit task for this iteration and accepted prerequisites.
 
 ## Intended result
