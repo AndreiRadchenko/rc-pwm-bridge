@@ -1,0 +1,34 @@
+test_missing_and_forbidden_evidence (test_build_contract.ConfigTests.test_missing_and_forbidden_evidence) ... ok
+test_approved_pending_bench (test_build_contract.ProfileTests.test_approved_pending_bench) ... ok
+test_rejected_variants (test_build_contract.ProfileTests.test_rejected_variants) ... ok
+test_bench_cli_modes_preserve_baseline (test_build_contract.Rc03ConfigTests.test_bench_cli_modes_preserve_baseline) ... usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                {host,target}
+build.py: error: --rc03-bench is target-only
+ok
+test_effective_config_and_missing_object (test_build_contract.Rc03ConfigTests.test_effective_config_and_missing_object) ... ok
+test_trace_object_matches_config_and_core_flags (test_build_contract.Rc03ConfigTests.test_trace_object_matches_config_and_core_flags) ... ok
+test_bad_cli (test_build_contract.WrapperTests.test_bad_cli) ... usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                {host,target}
+build.py: error: target requires --board-profile
+ok
+test_busy_directory_is_untouched (test_build_contract.WrapperTests.test_busy_directory_is_untouched) ... build directory already exists: /private/var/folders/r0/w15py5y95l15xpm18nhvr5lc0000gn/T/tmp8zgqnu85
+ok
+test_host_and_target_return_codes_without_device_actions (test_build_contract.WrapperTests.test_host_and_target_return_codes_without_device_actions) ... ok
+test_invalid_profile_rejected_before_configure (test_build_contract.WrapperTests.test_invalid_profile_rejected_before_configure) ... target environment/profile gate: invalid/unapproved profile field: pwm_pin
+ok
+test_direct_error_rule_not_guard_band (test_rc_capture_trace.TraceComparisonTests.test_direct_error_rule_not_guard_band) ... ok
+test_failed_collector_and_different_session_records (test_rc_capture_trace.TraceComparisonTests.test_failed_collector_and_different_session_records) ... ok
+test_gap_count_and_uncertainty (test_rc_capture_trace.TraceComparisonTests.test_gap_count_and_uncertainty) ... ok
+test_interval_error_is_checked_for_each_pair (test_rc_capture_trace.TraceComparisonTests.test_interval_error_is_checked_for_each_pair) ... ok
+test_outside_limit_no_rounding (test_rc_capture_trace.TraceComparisonTests.test_outside_limit_no_rounding) ... ok
+test_partial_cycle_then_recovered_reader (test_rc_capture_trace.TraceComparisonTests.test_partial_cycle_then_recovered_reader) ... ok
+test_reference_count_mismatch (test_rc_capture_trace.TraceComparisonTests.test_reference_count_mismatch) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.076s
+
+OK
+Automated config/graph/map/source checks passed; manual startup and watchdog/bootloader review still required.
+Automated config/graph/map/source checks passed; manual startup and watchdog/bootloader review still required.

@@ -1,0 +1,8 @@
+menu "RC capture validation"
+config BRIDGE_RC03_DIAGNOSTIC_STRESS
+    bool "Pad diagnostic records to 384 bytes (isolated bench only)"
+    default n
+config BRIDGE_RC03_ACCURACY_TRACE
+    bool "Collect a bounded 128-record accuracy archive (isolated bench only)"
+    default n
+endmenu

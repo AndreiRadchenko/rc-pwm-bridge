@@ -1,0 +1,16 @@
+{
+  "port": "/dev/cu.usbmodem1101",
+  "open_flags": "O_RDONLY|O_NONBLOCK|O_NOCTTY",
+  "requested_duration_s": 60,
+  "application_tx_bytes": 0,
+  "port_configuration": "unchanged; no termios/ioctl/RTS/DTR writes",
+  "source_setting_reported_by_user": "HJ cyclic 800..2200 us",
+  "started_utc": "2026-10-29T15:50:06.311417+00:00",
+  "raw_file": "specs/03-rc-capture/verification/serial-sweep-readonly-20261029T155006Z.txt",
+  "ended_utc": "2026-10-29T15:51:06.330320+00:00",
+  "elapsed_s": 60.01834054198116,
+  "bytes_received": 108385,
+  "stop_reason": "duration complete",
+  "port_closed": true,
+  "sha256": "a10ea7ff0505259729b4a7fcc6e8e8a01fbcceb1c2e6f176b81634a9a7bbad84"
+}

@@ -1,0 +1,39 @@
+/Users/mac/Projects/Scopa/rc-pwm-bridge/build/c3-03-usb-stress/rc_pwm_bridge.elf  :
+section                  size         addr
+.rtc.text                   0   1342177280
+.rtc.force_fast             0   1342177280
+.rtc_noinit                 0   1342177280
+.rtc.force_slow            32   1342177280
+.rtc_reserved              24   1342185448
+.iram0.text             56438   1077411840
+.iram0.text_end           394   1077468278
+.iram0.data                 0   1077468672
+.iram0.bss                  0   1077468672
+.iram0.end                  0   1077468672
+.dram0.dummy            56832   1070071808
+.dram0.data              5096   1070128640
+.noinit                     0   1070133736
+.dram0.bss              25336   1070133744
+.flash.text             87970   1107296288
+.flash_rodata_dummy    131072   1006632992
+.flash.appdesc            256   1006764064
+.flash.rodata           23104   1006764320
+.flash.init_array         188   1006787424
+.flash.tdata                0   1006787612
+.dram0.heap_start           8   1070159080
+.debug_aranges          21064            0
+.debug_info           1338013            0
+.debug_abbrev          144037            0
+.debug_line            729493            0
+.debug_frame            67996            0
+.debug_str             198098            0
+.debug_loc             356296            0
+.debug_ranges           31552            0
+.debug_line_str          5438            0
+.debug_loclists         46921            0
+.debug_rnglists          2030            0
+.comment                   47            0
+.riscv.attributes          72            0
+Total                 3327807
+
+

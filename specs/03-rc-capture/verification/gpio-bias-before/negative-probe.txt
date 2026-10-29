@@ -1,0 +1,2 @@
+Expected nonzero; actual exit=1
+line 3: s.snapshot().work_permitted

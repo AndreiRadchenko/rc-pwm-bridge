@@ -1,0 +1,18 @@
+{
+  "port": "/dev/cu.usbmodem1101",
+  "baudrate": 115200,
+  "dtr": false,
+  "rts": false,
+  "pyserial": "3.5",
+  "requested_duration_s": 60,
+  "application_tx_bytes": 0,
+  "mode": "receive only; no flash, no application writes",
+  "source_setting_reported_by_user": "HJ cyclic 800..2200 us",
+  "caveat": "USB open applies line settings; any observed boot/reset must be recorded, not hidden",
+  "raw_file": "specs/03-rc-capture/verification/serial-sweep-20261029T154852Z.txt",
+  "started_utc": "2026-10-29T15:48:52.992213+00:00",
+  "ended_utc": "2026-10-29T15:48:52.992280+00:00",
+  "bytes_received": 0,
+  "stop_reason": "SerialException: [Errno 1] could not open port /dev/cu.usbmodem1101: [Errno 1] Operation not permitted: '/dev/cu.usbmodem1101'",
+  "port_closed": true
+}

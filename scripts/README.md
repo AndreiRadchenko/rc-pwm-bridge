@@ -48,3 +48,10 @@ Git-репозиторіях: dry-run без змін, створення гіл
 базова гілка й відсутня база. Ці перевірки не є тестами firmware.
 
 Див. [roadmap](../docs/roadmap.md).
+
+
+## Перевірки03
+
+`build.py target --rc03-bench diagnostics|accuracy` додає відповідний defaults fragment до baseline, не змінюючи його. Normal запускається без flag; на host цей flag відхиляється. Потрібен новий build directory, наявні результати не видаляються. `verify/config.py` перевіряє effective IRAM/cache-safe/PM/radio settings, actual capture sources та trace config/object match, strict C++11 усіх core objects. Manual ISR call graph/data placement review — окремо; build не є latency proof.
+
+`verify/rc_capture_trace.py --trace <archive.txt> --analyzer <edges.csv> --u-width-us <U> --u-interval-us <U> --report <report.json>` — offline без serial/плати. CSV: `pulse_start_ns,pulse_end_ns`, integer ns. Exit0=pass,1=fail,2=blocked. Зберігає hashes, всі per-sample/per-interval errors без округлення/average/clock correction; U≤1мкс окремо та direct E≤5/10мкс. Формат bounded archive/діагностики й три build commands — [quickstart03](../specs/03-rc-capture/quickstart.md). Програмні докази — [verification03](../specs/03-rc-capture/verification/acceptance.md), physical not_run.

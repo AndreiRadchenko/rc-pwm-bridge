@@ -96,4 +96,73 @@ class ConfigTests(unittest.TestCase):
             (path/'compile_commands.json').write_text('[]'); (path/'rc_pwm_bridge.map').write_text('map')
             with self.assertRaisesRegex(ValueError,'forbidden components'): module.verify(path)
 
+
+class Rc03ConfigTests(unittest.TestCase):
+    def module(self):
+        spec = importlib.util.spec_from_file_location('rc03_config', ROOT/'scripts/verify/config.py')
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module
+
+    def fixture(self, path):
+        settings = {
+            'IDF_TARGET':'"esp32c3"', 'ESPTOOLPY_FLASHMODE_DIO':'y','ESPTOOLPY_FLASHFREQ_40M':'y',
+            'ESPTOOLPY_FLASHSIZE_4MB':'y','PARTITION_TABLE_SINGLE_APP':'y','BOOTLOADER_LOG_LEVEL':'0',
+            'LOG_DEFAULT_LEVEL':'0','LOG_MAXIMUM_LEVEL':'0','FREERTOS_HZ':'100',
+            'ESP_CONSOLE_USB_SERIAL_JTAG':'y','ESP_CONSOLE_SECONDARY_NONE':'y',
+            'RMT_RX_ISR_CACHE_SAFE':'y','RMT_RECV_FUNC_IN_IRAM':'y','GPIO_CTRL_FUNC_IN_IRAM':'y'}
+        (path/'sdkconfig').write_text('\n'.join(f'CONFIG_{k}={v}' for k,v in settings.items()))
+        (path/'project_description.json').write_text(json.dumps(dict(build_components=['main','bridge_core','esp_driver_rmt','esp_driver_gpio'])))
+        commands = [dict(file=str(ROOT/'firmware/components'/name),command='c++ -std=c++11 -fno-rtti -fno-exceptions')
+                    for name in ['bridge_core/startup.cpp','bridge_core/rc_capture.cpp',
+                                 'platform_esp32/rc_capture.cpp']]
+        (path/'compile_commands.json').write_text(json.dumps(commands))
+        (path/'rc_pwm_bridge.map').write_text('native capture fixture')
+        return commands
+
+    def test_effective_config_and_missing_object(self):
+        with tempfile.TemporaryDirectory() as d:
+            path=pathlib.Path(d); commands=self.fixture(path); module=self.module()
+            module.verify(path)
+            commands.pop()
+            (path/'compile_commands.json').write_text(json.dumps(commands))
+            with self.assertRaisesRegex(ValueError,'missing capture compile object'):
+                module.verify(path)
+            self.fixture(path)
+            (path/'sdkconfig').write_text((path/'sdkconfig').read_text().replace('CONFIG_RMT_RECV_FUNC_IN_IRAM=y',''))
+            with self.assertRaisesRegex(ValueError,'missing capture config'):
+                module.verify(path)
+
+    def test_trace_object_matches_config_and_core_flags(self):
+        with tempfile.TemporaryDirectory() as d:
+            path=pathlib.Path(d); commands=self.fixture(path); module=self.module()
+            commands.append(dict(file=str(ROOT/'firmware/components/bridge_core/rc_capture_trace.cpp'),
+                                 command='c++ -std=c++11 -fno-rtti -fno-exceptions'))
+            (path/'compile_commands.json').write_text(json.dumps(commands))
+            with self.assertRaisesRegex(ValueError,'trace config/object/stress'):
+                module.verify(path)
+            with (path/'sdkconfig').open('a') as f:
+                f.write('\nCONFIG_BRIDGE_RC03_ACCURACY_TRACE=y\nCONFIG_BRIDGE_RC03_DIAGNOSTIC_STRESS=y\n')
+            module.verify(path)
+            commands[-1]['command']='c++ -std=c++17 -fno-rtti -fno-exceptions'
+            (path/'compile_commands.json').write_text(json.dumps(commands))
+            with self.assertRaisesRegex(ValueError,'strict C\+\+11'):
+                module.verify(path)
+
+    def test_bench_cli_modes_preserve_baseline(self):
+        from unittest.mock import patch
+        from types import SimpleNamespace
+        h={'cmake':{'path':'/fake/cmake'},'ninja':{'path':'/fake/ninja'},'clang':{'path':'/fake/clang'}}
+        for mode,fragment in [('diagnostics','sdkconfig.rc03-bench.defaults'),('accuracy','sdkconfig.rc03-trace.defaults')]:
+            with tempfile.TemporaryDirectory() as d, patch.object(build,'host_tools',return_value=h), patch.object(build.subprocess,'run',return_value=SimpleNamespace(returncode=0)) as run:
+                with patch.object(build.sys,'argv',['build.py','target','--board-profile',str(ROOT/'firmware/boards/c3-supermini-pinout-01.json'),'--build-dir',str(pathlib.Path(d)/'target'),'--rc03-bench',mode]):
+                    self.assertEqual(build.main(),0)
+                cmd=run.call_args_list[-1].args[0]
+                defaults=next(x for x in cmd if x.startswith('SDKCONFIG_DEFAULTS='))
+                self.assertEqual(defaults,'SDKCONFIG_DEFAULTS='+str(ROOT/'firmware/sdkconfig.defaults')+';'+str(ROOT/'firmware'/fragment))
+                self.assertFalse(set(cmd)&{'flash','monitor','erase-flash'})
+        with patch.object(build.sys,'argv',['build.py','host','--build-dir','unused','--rc03-bench','accuracy']):
+            with self.assertRaises(SystemExit):
+                build.main()
+
 if __name__ == '__main__': unittest.main()

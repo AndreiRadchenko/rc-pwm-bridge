@@ -1,0 +1,257 @@
+{
+  "raw_file": "specs/03-rc-capture/verification/serial-sweep-readonly-20261029T155006Z.txt",
+  "raw_sha256": "a10ea7ff0505259729b4a7fcc6e8e8a01fbcceb1c2e6f176b81634a9a7bbad84",
+  "metadata_file": "specs/03-rc-capture/verification/serial-sweep-readonly-20261029T155006Z.json",
+  "elapsed_host_s": 60.01834054198116,
+  "records": 601,
+  "non_rc03_lines": [],
+  "monotonic_versions_and_counts": true,
+  "capture_span_between_latest_rising_s": 213.432276,
+  "width_range_us": [
+    802,
+    2203
+  ],
+  "period_range_us": [
+    19991,
+    20008
+  ],
+  "status_histogram": {
+    "1": 480,
+    "3": 121
+  },
+  "fault_masks": [
+    0
+  ],
+  "output_commands": [
+    0
+  ],
+  "permissions": [
+    0
+  ],
+  "duty_range_percent": [
+    0,
+    100
+  ],
+  "counter_names": [
+    "candidates",
+    "valid",
+    "invalid",
+    "discarded",
+    "fault_events",
+    "duplicate_edges"
+  ],
+  "first_counters": [
+    1335,
+    1061,
+    274,
+    0,
+    0,
+    0
+  ],
+  "last_counters": [
+    12007,
+    9609,
+    2398,
+    0,
+    0,
+    0
+  ],
+  "counter_deltas": [
+    10672,
+    8548,
+    2124,
+    0,
+    0,
+    0
+  ],
+  "diagnostic_counter_names": [
+    "overwritten_snapshots",
+    "busy_slots",
+    "write_drops",
+    "slots",
+    "accepted_driver_bytes"
+  ],
+  "diagnostic_counter_deltas": [
+    243866,
+    1534,
+    0,
+    2134,
+    108204
+  ],
+  "cumulative_max_timing_us": [
+    16,
+    186,
+    0
+  ],
+  "status_inconsistency_indices": [],
+  "mapping_inconsistency_indices": [],
+  "groups": {
+    "valid": {
+      "records": 480,
+      "width_range_us": [
+        901,
+        2097
+      ],
+      "calculated_duties": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ],
+      "example": "rc03 q=77c6 id=f1da070bd29de94e sid=f1d w=1323 s=1977356 e=1977881 p=19997 v=1 c=0 d=32 o=0 a=0 f=0 n=537,425,112,0,0,0 k=76bb,0,0,10c,afeb m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0"
+    },
+    "invalid_low": {
+      "records": 64,
+      "width_range_us": [
+        802,
+        897
+      ],
+      "calculated_duties": [
+        0
+      ],
+      "example": "rc03 q=32a6d id=f1da070bd29de94e sid=f1d w=889 s=acb9678 e=acb99f1 p=20003 v=3 c=0 d=0 o=0 a=0 f=0 n=2360,1c58,708,0,0,0 k=32958,5fe,0,714,b6d8 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0"
+    },
+    "invalid_high": {
+      "records": 57,
+      "width_range_us": [
+        2101,
+        2203
+      ],
+      "calculated_duties": [
+        100
+      ],
+      "example": "rc03 q=3429b id=f1da070bd29de94e sid=f1d w=2101 s=b1dfe8c e=b1e06c1 p=20004 v=3 c=0 d=100 o=0 a=0 f=0 n=246e,1d32,73c,0,0,0 k=34154,5fe,0,74a,dc7d m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0"
+    }
+  },
+  "limits": "Latest snapshots only; 60s normal diagnostics, not all pulses/analyzer reference/600s stress acceptance.",
+  "initial_committed_record": {
+    "index": 0,
+    "retained_in_raw": true,
+    "latest_rising_s": 26.702678,
+    "next_latest_rising_s": 180.214308,
+    "source_timestamp_gap_s": 153.51163,
+    "classification": "One older committed diagnostic record before current stream; not included in new continuous interval counter deltas. No raw data removed."
+  },
+  "continuous_tail": {
+    "first_record_index": 1,
+    "records": 600,
+    "latest_rising_span_s": 59.920646,
+    "counter_deltas": [
+      2996,
+      2396,
+      600,
+      0,
+      0,
+      0
+    ],
+    "diagnostic_counter_deltas": [
+      68095,
+      0,
+      0,
+      599,
+      108031
+    ],
+    "width_min_us": 802,
+    "width_max_us": 2203,
+    "valid_snapshots": 479,
+    "invalid_width_snapshots": 121
+  },
+  "interpretation_note": "Full-record endpoint deltas span the old committed record and time before monitor opened. Use explicitly identified continuous_tail for the new interval. This is diagnostics observation, not analyzer pulse matching."
+}

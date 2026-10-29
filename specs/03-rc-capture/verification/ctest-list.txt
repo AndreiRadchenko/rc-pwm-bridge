@@ -1,0 +1,22 @@
+Internal ctest changing into directory: /Users/mac/Projects/Scopa/rc-pwm-bridge/build/host-03-verified
+Test project /Users/mac/Projects/Scopa/rc-pwm-bridge/build/host-03-verified
+  Test  #1: startup_tests
+  Test  #2: core_header_probe
+  Test  #3: control_header_probe
+  Test  #4: control_mapping_tests
+  Test  #5: control_validation_tests
+  Test  #6: control_fault_tests
+  Test  #7: control_state_tests
+  Test  #8: control_time_tests
+  Test  #9: rc_capture_header_probe
+  Test #10: rc_capture_validation_tests
+  Test #11: rc_capture_association_tests
+  Test #12: rc_capture_core_tests
+  Test #13: rc_capture_fault_tests
+  Test #14: rc_capture_time_tests
+  Test #15: rc_capture_adapter_tests
+  Test #16: rc_capture_trace_tests
+  Test #17: rc_diagnostics_policy_tests
+  Test #18: rc_diagnostics_transport_tests
+
+Total Tests: 18
