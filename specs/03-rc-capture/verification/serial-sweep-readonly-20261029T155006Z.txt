@@ -1,0 +1,1202 @@
+
+rc03 q=77c6 id=f1da070bd29de94e sid=f1d w=1323 s=1977356 e=1977881 p=19997 v=1 c=0 d=32 o=0 a=0 f=0 n=537,425,112,0,0,0 k=76bb,0,0,10c,afeb m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=32662 id=f1da070bd29de94e sid=f1d w=1135 s=abdda24 e=abdde93 p=20005 v=1 c=0 d=14 o=0 a=0 f=0 n=2333,1c2d,706,0,0,0 k=32556,5fe,0,70b,b098 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=326d5 id=f1da070bd29de94e sid=f1d w=1109 s=abf60d5 e=abf652a p=20002 v=1 c=0 d=11 o=0 a=0 f=0 n=2338,1c32,706,0,0,0 k=325c8,5fe,0,70c,b14b m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=32748 id=f1da070bd29de94e sid=f1d w=1081 s=ac0e789 e=ac0ebc2 p=20004 v=1 c=0 d=8 o=0 a=0 f=0 n=233d,1c37,706,0,0,0 k=3263a,5fe,0,70d,b1fe m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=327bb id=f1da070bd29de94e sid=f1d w=1054 s=ac26e41 e=ac2725f p=20004 v=1 c=0 d=5 o=0 a=0 f=0 n=2342,1c3c,706,0,0,0 k=326ac,5fe,0,70e,b2b0 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3282e id=f1da070bd29de94e sid=f1d w=1026 s=ac3f4f6 e=ac3f8f8 p=20004 v=1 c=0 d=3 o=0 a=0 f=0 n=2347,1c41,706,0,0,0 k=3271e,5fe,0,70f,b362 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=328a1 id=f1da070bd29de94e sid=f1d w=999 s=ac57bb2 e=ac57f99 p=20006 v=1 c=0 d=0 o=0 a=0 f=0 n=234c,1c46,706,0,0,0 k=32790,5fe,0,710,b414 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=32914 id=f1da070bd29de94e sid=f1d w=971 s=ac70268 e=ac70633 p=20004 v=1 c=0 d=0 o=0 a=0 f=0 n=2351,1c4b,706,0,0,0 k=32802,5fe,0,711,b4c5 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=32987 id=f1da070bd29de94e sid=f1d w=944 s=ac8891a e=ac88cca p=20005 v=1 c=0 d=0 o=0 a=0 f=0 n=2356,1c50,706,0,0,0 k=32874,5fe,0,712,b576 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=329fa id=f1da070bd29de94e sid=f1d w=916 s=aca0fcc e=aca1360 p=20003 v=1 c=0 d=0 o=0 a=0 f=0 n=235b,1c55,706,0,0,0 k=328e6,5fe,0,713,b627 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=32a6d id=f1da070bd29de94e sid=f1d w=889 s=acb9678 e=acb99f1 p=20003 v=3 c=0 d=0 o=0 a=0 f=0 n=2360,1c58,708,0,0,0 k=32958,5fe,0,714,b6d8 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=32ae0 id=f1da070bd29de94e sid=f1d w=861 s=acd1d30 e=acd208d p=20006 v=3 c=0 d=0 o=0 a=0 f=0 n=2365,1c58,70d,0,0,0 k=329ca,5fe,0,715,b789 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=32b53 id=f1da070bd29de94e sid=f1d w=834 s=acea3e4 e=acea726 p=20003 v=3 c=0 d=0 o=0 a=0 f=0 n=236a,1c58,712,0,0,0 k=32a3c,5fe,0,716,b83a m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=32bc6 id=f1da070bd29de94e sid=f1d w=805 s=ad02a94 e=ad02db9 p=20005 v=3 c=0 d=0 o=0 a=0 f=0 n=236f,1c58,717,0,0,0 k=32aae,5fe,0,717,b8eb m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=32c39 id=f1da070bd29de94e sid=f1d w=803 s=ad1b146 e=ad1b468 p=20005 v=3 c=0 d=0 o=0 a=0 f=0 n=2374,1c58,71c,0,0,0 k=32b20,5fe,0,718,b99c m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=32cac id=f1da070bd29de94e sid=f1d w=803 s=ad337f4 e=ad33b16 p=20003 v=3 c=0 d=0 o=0 a=0 f=0 n=2379,1c58,721,0,0,0 k=32b92,5fe,0,719,ba4d m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=32d1f id=f1da070bd29de94e sid=f1d w=803 s=ad4bea5 e=ad4c1c8 p=20003 v=3 c=0 d=0 o=0 a=0 f=0 n=237e,1c58,726,0,0,0 k=32c04,5fe,0,71a,bafe m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=32d92 id=f1da070bd29de94e sid=f1d w=809 s=ad64550 e=ad64879 p=20000 v=3 c=0 d=0 o=0 a=0 f=0 n=2383,1c58,72b,0,0,0 k=32c76,5fe,0,71b,bbaf m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=32e05 id=f1da070bd29de94e sid=f1d w=836 s=ad7cbf4 e=ad7cf37 p=20002 v=3 c=0 d=0 o=0 a=0 f=0 n=2388,1c58,730,0,0,0 k=32ce8,5fe,0,71c,bc60 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=32e78 id=f1da070bd29de94e sid=f1d w=863 s=ad9529d e=ad955fc p=20003 v=3 c=0 d=0 o=0 a=0 f=0 n=238d,1c58,735,0,0,0 k=32d5a,5fe,0,71d,bd11 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=32eeb id=f1da070bd29de94e sid=f1d w=890 s=adad948 e=adadcc2 p=20002 v=3 c=0 d=0 o=0 a=0 f=0 n=2392,1c58,73a,0,0,0 k=32dcc,5fe,0,71e,bdc2 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=32f5e id=f1da070bd29de94e sid=f1d w=919 s=adc5ff3 e=adc638a p=20001 v=1 c=0 d=0 o=0 a=0 f=0 n=2397,1c5c,73b,0,0,0 k=32e3e,5fe,0,71f,be73 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=32fd1 id=f1da070bd29de94e sid=f1d w=945 s=adde698 e=addea4a p=20000 v=1 c=0 d=0 o=0 a=0 f=0 n=239c,1c61,73b,0,0,0 k=32eb0,5fe,0,720,bf24 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33044 id=f1da070bd29de94e sid=f1d w=973 s=adf6d3f e=adf710d p=20002 v=1 c=0 d=0 o=0 a=0 f=0 n=23a1,1c66,73b,0,0,0 k=32f22,5fe,0,721,bfd5 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=330b7 id=f1da070bd29de94e sid=f1d w=1001 s=ae0f3ea e=ae0f7d3 p=20004 v=1 c=0 d=0 o=0 a=0 f=0 n=23a6,1c6b,73b,0,0,0 k=32f94,5fe,0,722,c086 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3312a id=f1da070bd29de94e sid=f1d w=1029 s=ae27a91 e=ae27e96 p=20001 v=1 c=0 d=3 o=0 a=0 f=0 n=23ab,1c70,73b,0,0,0 k=33006,5fe,0,723,c138 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3319d id=f1da070bd29de94e sid=f1d w=1056 s=ae40141 e=ae40561 p=20003 v=1 c=0 d=6 o=0 a=0 f=0 n=23b0,1c75,73b,0,0,0 k=33078,5fe,0,724,c1ea m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33210 id=f1da070bd29de94e sid=f1d w=1083 s=ae587f4 e=ae58c30 p=20003 v=1 c=0 d=8 o=0 a=0 f=0 n=23b5,1c7a,73b,0,0,0 k=330ea,5fe,0,725,c29c m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33283 id=f1da070bd29de94e sid=f1d w=1111 s=ae70e9e e=ae712f5 p=20000 v=1 c=0 d=11 o=0 a=0 f=0 n=23ba,1c7f,73b,0,0,0 k=3315c,5fe,0,726,c34e m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=332f6 id=f1da070bd29de94e sid=f1d w=1138 s=ae89548 e=ae899ba p=20003 v=1 c=0 d=14 o=0 a=0 f=0 n=23bf,1c84,73b,0,0,0 k=331ce,5fe,0,727,c401 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33369 id=f1da070bd29de94e sid=f1d w=1166 s=aea1bf3 e=aea2081 p=20005 v=1 c=0 d=17 o=0 a=0 f=0 n=23c4,1c89,73b,0,0,0 k=33240,5fe,0,728,c4b4 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=333dc id=f1da070bd29de94e sid=f1d w=1194 s=aeba2a8 e=aeba752 p=20004 v=1 c=0 d=19 o=0 a=0 f=0 n=23c9,1c8e,73b,0,0,0 k=332b2,5fe,0,729,c567 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3344c id=f1da070bd29de94e sid=f1d w=1221 s=aed295a e=aed2e1f p=20004 v=1 c=0 d=22 o=0 a=0 f=0 n=23ce,1c93,73b,0,0,0 k=33321,5fe,0,72a,c61a m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=334b9 id=f1da070bd29de94e sid=f1d w=1248 s=aeeb006 e=aeeb4e7 p=20003 v=1 c=0 d=25 o=0 a=0 f=0 n=23d3,1c98,73b,0,0,0 k=3338d,5fe,0,72b,c6cd m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3352c id=f1da070bd29de94e sid=f1d w=1276 s=af036b2 e=af03bad p=20001 v=1 c=0 d=28 o=0 a=0 f=0 n=23d8,1c9d,73b,0,0,0 k=333ff,5fe,0,72c,c780 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3359f id=f1da070bd29de94e sid=f1d w=1304 s=af1bd52 e=af1c26a p=19999 v=1 c=0 d=30 o=0 a=0 f=0 n=23dd,1ca2,73b,0,0,0 k=33471,5fe,0,72d,c833 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33612 id=f1da070bd29de94e sid=f1d w=1331 s=af343ff e=af34931 p=20004 v=1 c=0 d=33 o=0 a=0 f=0 n=23e2,1ca7,73b,0,0,0 k=334e3,5fe,0,72e,c8e6 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33685 id=f1da070bd29de94e sid=f1d w=1359 s=af4caad e=af4cffc p=20002 v=1 c=0 d=36 o=0 a=0 f=0 n=23e7,1cac,73b,0,0,0 k=33555,5fe,0,72f,c999 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=336f8 id=f1da070bd29de94e sid=f1d w=1386 s=af65159 e=af656c3 p=20003 v=1 c=0 d=39 o=0 a=0 f=0 n=23ec,1cb1,73b,0,0,0 k=335c7,5fe,0,730,ca4c m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3376b id=f1da070bd29de94e sid=f1d w=1413 s=af7d805 e=af7dd8a p=20000 v=1 c=0 d=41 o=0 a=0 f=0 n=23f1,1cb6,73b,0,0,0 k=33639,5fe,0,731,caff m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=337de id=f1da070bd29de94e sid=f1d w=1440 s=af95eb3 e=af96454 p=20005 v=1 c=0 d=44 o=0 a=0 f=0 n=23f6,1cbb,73b,0,0,0 k=336ab,5fe,0,732,cbb2 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33851 id=f1da070bd29de94e sid=f1d w=1468 s=afae56b e=afaeb28 p=20005 v=1 c=0 d=47 o=0 a=0 f=0 n=23fb,1cc0,73b,0,0,0 k=3371d,5fe,0,733,cc65 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=338c4 id=f1da070bd29de94e sid=f1d w=1495 s=afc6c22 e=afc71fa p=20004 v=1 c=0 d=50 o=0 a=0 f=0 n=2400,1cc5,73b,0,0,0 k=3378f,5fe,0,734,cd18 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33937 id=f1da070bd29de94e sid=f1d w=1524 s=afdf2d1 e=afdf8c5 p=20003 v=1 c=0 d=52 o=0 a=0 f=0 n=2405,1cca,73b,0,0,0 k=33801,5fe,0,735,cdcb m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=339aa id=f1da070bd29de94e sid=f1d w=1551 s=aff7979 e=aff7f88 p=20001 v=1 c=0 d=55 o=0 a=0 f=0 n=240a,1ccf,73b,0,0,0 k=33873,5fe,0,736,ce7e m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33a1d id=f1da070bd29de94e sid=f1d w=1579 s=b01001f e=b01064a p=20003 v=1 c=0 d=58 o=0 a=0 f=0 n=240f,1cd4,73b,0,0,0 k=338e5,5fe,0,737,cf31 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33a90 id=f1da070bd29de94e sid=f1d w=1606 s=b0286cc e=b028d11 p=20003 v=1 c=0 d=61 o=0 a=0 f=0 n=2414,1cd9,73b,0,0,0 k=33957,5fe,0,738,cfe4 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33b03 id=f1da070bd29de94e sid=f1d w=1634 s=b040d76 e=b0413d8 p=20003 v=1 c=0 d=63 o=0 a=0 f=0 n=2419,1cde,73b,0,0,0 k=339c9,5fe,0,739,d097 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33b76 id=f1da070bd29de94e sid=f1d w=1661 s=b05941c e=b059a99 p=20002 v=1 c=0 d=66 o=0 a=0 f=0 n=241e,1ce3,73b,0,0,0 k=33a3b,5fe,0,73a,d14a m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33be9 id=f1da070bd29de94e sid=f1d w=1688 s=b071ac0 e=b072159 p=20000 v=1 c=0 d=69 o=0 a=0 f=0 n=2423,1ce8,73b,0,0,0 k=33aad,5fe,0,73b,d1fd m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33c5c id=f1da070bd29de94e sid=f1d w=1716 s=b08a168 e=b08a81c p=20002 v=1 c=0 d=72 o=0 a=0 f=0 n=2428,1ced,73b,0,0,0 k=33b1f,5fe,0,73c,d2b0 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33ccf id=f1da070bd29de94e sid=f1d w=1743 s=b0a280a e=b0a2eda p=20000 v=1 c=0 d=74 o=0 a=0 f=0 n=242d,1cf2,73b,0,0,0 k=33b91,5fe,0,73d,d363 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33d4f id=f1da070bd29de94e sid=f1d w=1776 s=b0bfcd5 e=b0c03c5 p=20001 v=1 c=0 d=78 o=0 a=0 f=0 n=2433,1cf8,73b,0,0,0 k=33c10,5fe,0,73e,d416 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33dbe id=f1da070bd29de94e sid=f1d w=1798 s=b0d3557 e=b0d3c5d p=20000 v=1 c=0 d=80 o=0 a=0 f=0 n=2437,1cfc,73b,0,0,0 k=33c7e,5fe,0,73f,d4c9 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33e2c id=f1da070bd29de94e sid=f1d w=1825 s=b0ebc05 e=b0ec325 p=20000 v=1 c=0 d=83 o=0 a=0 f=0 n=243c,1d01,73b,0,0,0 k=33cec,5fe,0,740,d57c m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33e9a id=f1da070bd29de94e sid=f1d w=1853 s=b1042ab e=b1049e6 p=20000 v=1 c=0 d=85 o=0 a=0 f=0 n=2441,1d06,73b,0,0,0 k=33d5a,5fe,0,741,d62f m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33f0c id=f1da070bd29de94e sid=f1d w=1881 s=b11c956 e=b11d0ae p=20003 v=1 c=0 d=88 o=0 a=0 f=0 n=2446,1d0b,73b,0,0,0 k=33dcc,5fe,0,742,d6e2 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33f7f id=f1da070bd29de94e sid=f1d w=1909 s=b134fff e=b135773 p=20000 v=1 c=0 d=91 o=0 a=0 f=0 n=244b,1d10,73b,0,0,0 k=33e3f,5fe,0,743,d795 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=33ff2 id=f1da070bd29de94e sid=f1d w=1936 s=b14d6a1 e=b14de30 p=20000 v=1 c=0 d=94 o=0 a=0 f=0 n=2450,1d15,73b,0,0,0 k=33eb1,5fe,0,744,d848 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3405d id=f1da070bd29de94e sid=f1d w=1963 s=b165d48 e=b1664f5 p=20002 v=1 c=0 d=96 o=0 a=0 f=0 n=2455,1d1a,73b,0,0,0 k=33f1b,5fe,0,745,d8fb m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=340cf id=f1da070bd29de94e sid=f1d w=1990 s=b17e3f6 e=b17ebbc p=20003 v=1 c=0 d=99 o=0 a=0 f=0 n=245a,1d1f,73b,0,0,0 k=33f8c,5fe,0,746,d9ae m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34142 id=f1da070bd29de94e sid=f1d w=2018 s=b196a9b e=b19727d p=20000 v=1 c=0 d=100 o=0 a=0 f=0 n=245f,1d24,73b,0,0,0 k=33ffe,5fe,0,747,da61 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=341b5 id=f1da070bd29de94e sid=f1d w=2046 s=b1af139 e=b1af937 p=20001 v=1 c=0 d=100 o=0 a=0 f=0 n=2464,1d29,73b,0,0,0 k=34070,5fe,0,748,db15 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34228 id=f1da070bd29de94e sid=f1d w=2073 s=b1c77e1 e=b1c7ffa p=20002 v=1 c=0 d=100 o=0 a=0 f=0 n=2469,1d2e,73b,0,0,0 k=340e2,5fe,0,749,dbc9 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3429b id=f1da070bd29de94e sid=f1d w=2101 s=b1dfe8c e=b1e06c1 p=20004 v=3 c=0 d=100 o=0 a=0 f=0 n=246e,1d32,73c,0,0,0 k=34154,5fe,0,74a,dc7d m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3430e id=f1da070bd29de94e sid=f1d w=2129 s=b1f8531 e=b1f8d82 p=19999 v=3 c=0 d=100 o=0 a=0 f=0 n=2473,1d32,741,0,0,0 k=341c6,5fe,0,74b,dd31 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34381 id=f1da070bd29de94e sid=f1d w=2155 s=b210bd6 e=b211442 p=20001 v=3 c=0 d=100 o=0 a=0 f=0 n=2478,1d32,746,0,0,0 k=34238,5fe,0,74c,dde5 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=343f4 id=f1da070bd29de94e sid=f1d w=2183 s=b229276 e=b229afd p=20002 v=3 c=0 d=100 o=0 a=0 f=0 n=247d,1d32,74b,0,0,0 k=342aa,5fe,0,74d,de99 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34467 id=f1da070bd29de94e sid=f1d w=2203 s=b24191c e=b2421b7 p=20001 v=3 c=0 d=100 o=0 a=0 f=0 n=2482,1d32,750,0,0,0 k=3431c,5fe,0,74e,df4d m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=344da id=f1da070bd29de94e sid=f1d w=2202 s=b259fc5 e=b25a85f p=20002 v=3 c=0 d=100 o=0 a=0 f=0 n=2487,1d32,755,0,0,0 k=3438e,5fe,0,74f,e001 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3454d id=f1da070bd29de94e sid=f1d w=2202 s=b272666 e=b272f00 p=20000 v=3 c=0 d=100 o=0 a=0 f=0 n=248c,1d32,75a,0,0,0 k=34400,5fe,0,750,e0b5 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=345c0 id=f1da070bd29de94e sid=f1d w=2202 s=b28ad13 e=b28b5ad p=20003 v=3 c=0 d=100 o=0 a=0 f=0 n=2491,1d32,75f,0,0,0 k=34472,5fe,0,751,e169 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34633 id=f1da070bd29de94e sid=f1d w=2185 s=b2a33bb e=b2a3c44 p=20000 v=3 c=0 d=100 o=0 a=0 f=0 n=2496,1d32,764,0,0,0 k=344e4,5fe,0,752,e21d m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=346a6 id=f1da070bd29de94e sid=f1d w=2157 s=b2bba57 e=b2bc2c4 p=20001 v=3 c=0 d=100 o=0 a=0 f=0 n=249b,1d32,769,0,0,0 k=34556,5fe,0,753,e2d1 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34719 id=f1da070bd29de94e sid=f1d w=2130 s=b2d4104 e=b2d4956 p=20003 v=3 c=0 d=100 o=0 a=0 f=0 n=24a0,1d32,76e,0,0,0 k=345c8,5fe,0,754,e385 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3478c id=f1da070bd29de94e sid=f1d w=2103 s=b2ec7a4 e=b2ecfdb p=20003 v=3 c=0 d=100 o=0 a=0 f=0 n=24a5,1d32,773,0,0,0 k=3463a,5fe,0,755,e439 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=347ff id=f1da070bd29de94e sid=f1d w=2075 s=b304e54 e=b305670 p=20004 v=1 c=0 d=100 o=0 a=0 f=0 n=24aa,1d37,773,0,0,0 k=346ac,5fe,0,756,e4ed m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34872 id=f1da070bd29de94e sid=f1d w=2047 s=b31d4ff e=b31dcfe p=20002 v=1 c=0 d=100 o=0 a=0 f=0 n=24af,1d3c,773,0,0,0 k=3471e,5fe,0,757,e5a1 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=348e5 id=f1da070bd29de94e sid=f1d w=2020 s=b335bac e=b336390 p=20003 v=1 c=0 d=100 o=0 a=0 f=0 n=24b4,1d41,773,0,0,0 k=34790,5fe,0,758,e655 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34958 id=f1da070bd29de94e sid=f1d w=1992 s=b34e25f e=b34ea27 p=20004 v=1 c=0 d=99 o=0 a=0 f=0 n=24b9,1d46,773,0,0,0 k=34802,5fe,0,759,e709 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=349cb id=f1da070bd29de94e sid=f1d w=1965 s=b36690a e=b3670b8 p=20002 v=1 c=0 d=97 o=0 a=0 f=0 n=24be,1d4b,773,0,0,0 k=34874,5fe,0,75a,e7bc m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34a3e id=f1da070bd29de94e sid=f1d w=1938 s=b37efbc e=b37f74d p=20003 v=1 c=0 d=94 o=0 a=0 f=0 n=24c3,1d50,773,0,0,0 k=348e6,5fe,0,75b,e86f m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34ab1 id=f1da070bd29de94e sid=f1d w=1911 s=b397661 e=b397dd8 p=20000 v=1 c=0 d=91 o=0 a=0 f=0 n=24c8,1d55,773,0,0,0 k=34958,5fe,0,75c,e922 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34b24 id=f1da070bd29de94e sid=f1d w=1882 s=b3afd13 e=b3b046d p=20003 v=1 c=0 d=88 o=0 a=0 f=0 n=24cd,1d5a,773,0,0,0 k=349ca,5fe,0,75d,e9d5 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34b97 id=f1da070bd29de94e sid=f1d w=1856 s=b3c83c0 e=b3c8b00 p=20003 v=1 c=0 d=86 o=0 a=0 f=0 n=24d2,1d5f,773,0,0,0 k=34a3c,5fe,0,75e,ea88 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34c0a id=f1da070bd29de94e sid=f1d w=1828 s=b3e0a72 e=b3e1196 p=20004 v=1 c=0 d=83 o=0 a=0 f=0 n=24d7,1d64,773,0,0,0 k=34aae,5fe,0,75f,eb3b m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34c7d id=f1da070bd29de94e sid=f1d w=1800 s=b3f912b e=b3f9833 p=20004 v=1 c=0 d=80 o=0 a=0 f=0 n=24dc,1d69,773,0,0,0 k=34b20,5fe,0,760,ebee m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34cf0 id=f1da070bd29de94e sid=f1d w=1773 s=b4117d5 e=b411ec2 p=20003 v=1 c=0 d=77 o=0 a=0 f=0 n=24e1,1d6e,773,0,0,0 k=34b92,5fe,0,761,eca1 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34d63 id=f1da070bd29de94e sid=f1d w=1746 s=b429e81 e=b42a552 p=20001 v=1 c=0 d=75 o=0 a=0 f=0 n=24e6,1d73,773,0,0,0 k=34c04,5fe,0,762,ed54 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34dd6 id=f1da070bd29de94e sid=f1d w=1718 s=b44252e e=b442be4 p=20004 v=1 c=0 d=72 o=0 a=0 f=0 n=24eb,1d78,773,0,0,0 k=34c76,5fe,0,763,ee07 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34e49 id=f1da070bd29de94e sid=f1d w=1691 s=b45abdb e=b45b277 p=20002 v=1 c=0 d=69 o=0 a=0 f=0 n=24f0,1d7d,773,0,0,0 k=34ce8,5fe,0,764,eeba m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34ebc id=f1da070bd29de94e sid=f1d w=1663 s=b473287 e=b473906 p=20004 v=1 c=0 d=66 o=0 a=0 f=0 n=24f5,1d82,773,0,0,0 k=34d5a,5fe,0,765,ef6d m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34f2c id=f1da070bd29de94e sid=f1d w=1636 s=b48b93c e=b48bfa0 p=20002 v=1 c=0 d=64 o=0 a=0 f=0 n=24fa,1d87,773,0,0,0 k=34dc9,5fe,0,766,f020 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34f95 id=f1da070bd29de94e sid=f1d w=1608 s=b4a3ff2 e=b4a463b p=20005 v=1 c=0 d=61 o=0 a=0 f=0 n=24ff,1d8c,773,0,0,0 k=34e31,5fe,0,767,f0d3 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=34ffe id=f1da070bd29de94e sid=f1d w=1580 s=b4bc6ab e=b4bccdb p=20003 v=1 c=0 d=58 o=0 a=0 f=0 n=2504,1d91,773,0,0,0 k=34e99,5fe,0,768,f186 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35067 id=f1da070bd29de94e sid=f1d w=1552 s=b4d4d62 e=b4d5372 p=20004 v=1 c=0 d=55 o=0 a=0 f=0 n=2509,1d96,773,0,0,0 k=34f01,5fe,0,769,f239 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=350d0 id=f1da070bd29de94e sid=f1d w=1526 s=b4ed415 e=b4eda0b p=20002 v=1 c=0 d=53 o=0 a=0 f=0 n=250e,1d9b,773,0,0,0 k=34f69,5fe,0,76a,f2ec m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3513d id=f1da070bd29de94e sid=f1d w=1498 s=b505ac6 e=b5060a0 p=20006 v=1 c=0 d=50 o=0 a=0 f=0 n=2513,1da0,773,0,0,0 k=34fd5,5fe,0,76b,f39f m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=351ab id=f1da070bd29de94e sid=f1d w=1471 s=b51e17d e=b51e73c p=20002 v=1 c=0 d=47 o=0 a=0 f=0 n=2518,1da5,773,0,0,0 k=35042,5fe,0,76c,f452 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3521d id=f1da070bd29de94e sid=f1d w=1442 s=b53682d e=b536dcf p=20004 v=1 c=0 d=44 o=0 a=0 f=0 n=251d,1daa,773,0,0,0 k=350b3,5fe,0,76d,f505 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35290 id=f1da070bd29de94e sid=f1d w=1415 s=b54eed6 e=b54f45e p=20002 v=1 c=0 d=42 o=0 a=0 f=0 n=2522,1daf,773,0,0,0 k=35125,5fe,0,76e,f5b8 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35303 id=f1da070bd29de94e sid=f1d w=1387 s=b567584 e=b567aef p=20003 v=1 c=0 d=39 o=0 a=0 f=0 n=2527,1db4,773,0,0,0 k=35197,5fe,0,76f,f66b m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35376 id=f1da070bd29de94e sid=f1d w=1361 s=b57fc32 e=b580183 p=20003 v=1 c=0 d=36 o=0 a=0 f=0 n=252c,1db9,773,0,0,0 k=3520a,5fe,0,770,f71e m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=353e9 id=f1da070bd29de94e sid=f1d w=1332 s=b5982e4 e=b598819 p=20001 v=1 c=0 d=33 o=0 a=0 f=0 n=2531,1dbe,773,0,0,0 k=3527d,5fe,0,771,f7d1 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3545c id=f1da070bd29de94e sid=f1d w=1305 s=b5b0986 e=b5b0ea0 p=20000 v=1 c=0 d=31 o=0 a=0 f=0 n=2536,1dc3,773,0,0,0 k=352f0,5fe,0,772,f884 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=354cf id=f1da070bd29de94e sid=f1d w=1277 s=b5c9024 e=b5c9521 p=19998 v=1 c=0 d=28 o=0 a=0 f=0 n=253b,1dc8,773,0,0,0 k=35363,5fe,0,773,f937 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35542 id=f1da070bd29de94e sid=f1d w=1251 s=b5e16c9 e=b5e1bac p=20001 v=1 c=0 d=25 o=0 a=0 f=0 n=2540,1dcd,773,0,0,0 k=353d6,5fe,0,774,f9ea m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=355b5 id=f1da070bd29de94e sid=f1d w=1222 s=b5f9d75 e=b5fa23b p=20002 v=1 c=0 d=22 o=0 a=0 f=0 n=2545,1dd2,773,0,0,0 k=35449,5fe,0,775,fa9d m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35628 id=f1da070bd29de94e sid=f1d w=1196 s=b612420 e=b6128cc p=20002 v=1 c=0 d=20 o=0 a=0 f=0 n=254a,1dd7,773,0,0,0 k=354bc,5fe,0,776,fb50 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3569b id=f1da070bd29de94e sid=f1d w=1168 s=b62aacd e=b62af5d p=20001 v=1 c=0 d=17 o=0 a=0 f=0 n=254f,1ddc,773,0,0,0 k=3552f,5fe,0,777,fc03 m=d,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3570f id=f1da070bd29de94e sid=f1d w=1135 s=b647f9b e=b64840a p=20002 v=1 c=0 d=14 o=0 a=0 f=0 n=2555,1de2,773,0,0,0 k=355a3,5fe,0,778,fcb6 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35782 id=f1da070bd29de94e sid=f1d w=1108 s=b660649 e=b660a9d p=20003 v=1 c=0 d=11 o=0 a=0 f=0 n=255a,1de7,773,0,0,0 k=35615,5fe,0,779,fd6a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=357ff id=f1da070bd29de94e sid=f1d w=1080 s=b678cff e=b679137 p=20004 v=1 c=0 d=8 o=0 a=0 f=0 n=255f,1dec,773,0,0,0 k=35691,5fe,0,77a,fe1e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35872 id=f1da070bd29de94e sid=f1d w=1053 s=b6913b3 e=b6917d0 p=20004 v=1 c=0 d=5 o=0 a=0 f=0 n=2564,1df1,773,0,0,0 k=35703,5fe,0,77b,fed1 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=358e5 id=f1da070bd29de94e sid=f1d w=1025 s=b6a9a68 e=b6a9e69 p=20004 v=1 c=0 d=3 o=0 a=0 f=0 n=2569,1df6,773,0,0,0 k=35775,5fe,0,77c,ff84 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35958 id=f1da070bd29de94e sid=f1d w=998 s=b6c211b e=b6c2501 p=20003 v=1 c=0 d=0 o=0 a=0 f=0 n=256e,1dfb,773,0,0,0 k=357e7,5fe,0,77d,10037 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=359cb id=f1da070bd29de94e sid=f1d w=970 s=b6da7c4 e=b6dab8e p=20001 v=1 c=0 d=0 o=0 a=0 f=0 n=2573,1e00,773,0,0,0 k=35859,5fe,0,77e,100ea m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35a3e id=f1da070bd29de94e sid=f1d w=943 s=b6f2e6d e=b6f321b p=20000 v=1 c=0 d=0 o=0 a=0 f=0 n=2578,1e05,773,0,0,0 k=358cb,5fe,0,77f,1019d m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35ab1 id=f1da070bd29de94e sid=f1d w=915 s=b70b510 e=b70b8a3 p=20000 v=1 c=0 d=0 o=0 a=0 f=0 n=257d,1e0a,773,0,0,0 k=3593d,5fe,0,780,10250 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35b24 id=f1da070bd29de94e sid=f1d w=888 s=b723bbc e=b723f34 p=20004 v=3 c=0 d=0 o=0 a=0 f=0 n=2582,1e0c,776,0,0,0 k=359af,5fe,0,781,10303 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35b97 id=f1da070bd29de94e sid=f1d w=860 s=b73c26d e=b73c5c8 p=20003 v=3 c=0 d=0 o=0 a=0 f=0 n=2587,1e0c,77b,0,0,0 k=35a21,5fe,0,782,103b6 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35c0a id=f1da070bd29de94e sid=f1d w=833 s=b75491b e=b754c5c p=20004 v=3 c=0 d=0 o=0 a=0 f=0 n=258c,1e0c,780,0,0,0 k=35a93,5fe,0,783,10469 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35c7d id=f1da070bd29de94e sid=f1d w=805 s=b76cfc5 e=b76d2ea p=20004 v=3 c=0 d=0 o=0 a=0 f=0 n=2591,1e0c,785,0,0,0 k=35b05,5fe,0,784,1051c m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35cf0 id=f1da070bd29de94e sid=f1d w=803 s=b78567c e=b78599f p=20004 v=3 c=0 d=0 o=0 a=0 f=0 n=2596,1e0c,78a,0,0,0 k=35b77,5fe,0,785,105cf m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35d63 id=f1da070bd29de94e sid=f1d w=803 s=b79dd27 e=b79e04a p=20002 v=3 c=0 d=0 o=0 a=0 f=0 n=259b,1e0c,78f,0,0,0 k=35be9,5fe,0,786,10682 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35dd6 id=f1da070bd29de94e sid=f1d w=803 s=b7b63d2 e=b7b66f5 p=20002 v=3 c=0 d=0 o=0 a=0 f=0 n=25a0,1e0c,794,0,0,0 k=35c5b,5fe,0,787,10735 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35e49 id=f1da070bd29de94e sid=f1d w=810 s=b7cea85 e=b7cedaf p=20006 v=3 c=0 d=0 o=0 a=0 f=0 n=25a5,1e0c,799,0,0,0 k=35ccd,5fe,0,788,107e8 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35ebc id=f1da070bd29de94e sid=f1d w=836 s=b7e713b e=b7e747f p=20006 v=3 c=0 d=0 o=0 a=0 f=0 n=25aa,1e0c,79e,0,0,0 k=35d3f,5fe,0,789,1089b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35f2f id=f1da070bd29de94e sid=f1d w=864 s=b7ff7e9 e=b7ffb49 p=20003 v=3 c=0 d=0 o=0 a=0 f=0 n=25af,1e0c,7a3,0,0,0 k=35db1,5fe,0,78a,1094e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=35fa2 id=f1da070bd29de94e sid=f1d w=892 s=b817e9d e=b818219 p=20004 v=3 c=0 d=0 o=0 a=0 f=0 n=25b4,1e0c,7a8,0,0,0 k=35e23,5fe,0,78b,10a01 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36015 id=f1da070bd29de94e sid=f1d w=920 s=b83054c e=b8308e3 p=20002 v=1 c=0 d=0 o=0 a=0 f=0 n=25b9,1e10,7a9,0,0,0 k=35e95,5fe,0,78c,10ab4 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36088 id=f1da070bd29de94e sid=f1d w=947 s=b848bf7 e=b848faa p=20003 v=1 c=0 d=0 o=0 a=0 f=0 n=25be,1e15,7a9,0,0,0 k=35f07,5fe,0,78d,10b67 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=360fb id=f1da070bd29de94e sid=f1d w=974 s=b8612a1 e=b86166f p=20001 v=1 c=0 d=0 o=0 a=0 f=0 n=25c3,1e1a,7a9,0,0,0 k=35f79,5fe,0,78e,10c1a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3616e id=f1da070bd29de94e sid=f1d w=1001 s=b879950 e=b879d39 p=20003 v=1 c=0 d=0 o=0 a=0 f=0 n=25c8,1e1f,7a9,0,0,0 k=35feb,5fe,0,78f,10ccd m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=361da id=f1da070bd29de94e sid=f1d w=1029 s=b892006 e=b89240f p=20004 v=1 c=0 d=3 o=0 a=0 f=0 n=25cd,1e24,7a9,0,0,0 k=36056,5fe,0,790,10d81 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36249 id=f1da070bd29de94e sid=f1d w=1057 s=b8aa6ba e=b8aaadb p=20003 v=1 c=0 d=6 o=0 a=0 f=0 n=25d2,1e29,7a9,0,0,0 k=360c4,5fe,0,791,10e35 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=362bc id=f1da070bd29de94e sid=f1d w=1085 s=b8c2d6a e=b8c31a7 p=20003 v=1 c=0 d=9 o=0 a=0 f=0 n=25d7,1e2e,7a9,0,0,0 k=36136,5fe,0,792,10ee9 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3632f id=f1da070bd29de94e sid=f1d w=1112 s=b8db41e e=b8db876 p=20004 v=1 c=0 d=11 o=0 a=0 f=0 n=25dc,1e33,7a9,0,0,0 k=361a8,5fe,0,793,10f9d m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=363a2 id=f1da070bd29de94e sid=f1d w=1139 s=b8f3ac9 e=b8f3f3c p=20001 v=1 c=0 d=14 o=0 a=0 f=0 n=25e1,1e38,7a9,0,0,0 k=3621a,5fe,0,794,11052 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36415 id=f1da070bd29de94e sid=f1d w=1167 s=b90c179 e=b90c608 p=20005 v=1 c=0 d=17 o=0 a=0 f=0 n=25e6,1e3d,7a9,0,0,0 k=3628c,5fe,0,795,11107 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36488 id=f1da070bd29de94e sid=f1d w=1195 s=b924827 e=b924cd2 p=20002 v=1 c=0 d=20 o=0 a=0 f=0 n=25eb,1e42,7a9,0,0,0 k=362fe,5fe,0,796,111bc m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=364fb id=f1da070bd29de94e sid=f1d w=1221 s=b93ced1 e=b93d396 p=20000 v=1 c=0 d=22 o=0 a=0 f=0 n=25f0,1e47,7a9,0,0,0 k=36370,5fe,0,797,11271 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3656e id=f1da070bd29de94e sid=f1d w=1250 s=b955575 e=b955a57 p=19999 v=1 c=0 d=25 o=0 a=0 f=0 n=25f5,1e4c,7a9,0,0,0 k=363e2,5fe,0,798,11326 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=365e1 id=f1da070bd29de94e sid=f1d w=1276 s=b96dc1f e=b96e11c p=20003 v=1 c=0 d=28 o=0 a=0 f=0 n=25fa,1e51,7a9,0,0,0 k=36454,5fe,0,799,113db m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36654 id=f1da070bd29de94e sid=f1d w=1304 s=b9862c2 e=b9867da p=20002 v=1 c=0 d=30 o=0 a=0 f=0 n=25ff,1e56,7a9,0,0,0 k=364c6,5fe,0,79a,11490 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=366c7 id=f1da070bd29de94e sid=f1d w=1332 s=b99e96b e=b99ee9e p=20003 v=1 c=0 d=33 o=0 a=0 f=0 n=2604,1e5b,7a9,0,0,0 k=36538,5fe,0,79b,11545 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3673a id=f1da070bd29de94e sid=f1d w=1359 s=b9b7011 e=b9b7560 p=20000 v=1 c=0 d=36 o=0 a=0 f=0 n=2609,1e60,7a9,0,0,0 k=365aa,5fe,0,79c,115fa m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=367ad id=f1da070bd29de94e sid=f1d w=1387 s=b9cf6b9 e=b9cfc24 p=20001 v=1 c=0 d=39 o=0 a=0 f=0 n=260e,1e65,7a9,0,0,0 k=3661c,5fe,0,79d,116af m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36820 id=f1da070bd29de94e sid=f1d w=1414 s=b9e7d63 e=b9e82ea p=20001 v=1 c=0 d=41 o=0 a=0 f=0 n=2613,1e6a,7a9,0,0,0 k=3668e,5fe,0,79e,11764 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36893 id=f1da070bd29de94e sid=f1d w=1442 s=ba00414 e=ba009b6 p=20006 v=1 c=0 d=44 o=0 a=0 f=0 n=2618,1e6f,7a9,0,0,0 k=36700,5fe,0,79f,11819 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36906 id=f1da070bd29de94e sid=f1d w=1470 s=ba18abd e=ba1907b p=20002 v=1 c=0 d=47 o=0 a=0 f=0 n=261d,1e74,7a9,0,0,0 k=36772,5fe,0,7a0,118ce m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36979 id=f1da070bd29de94e sid=f1d w=1497 s=ba31170 e=ba31748 p=20005 v=1 c=0 d=50 o=0 a=0 f=0 n=2622,1e79,7a9,0,0,0 k=367e4,5fe,0,7a1,11983 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=369ec id=f1da070bd29de94e sid=f1d w=1525 s=ba49824 e=ba49e19 p=20004 v=1 c=0 d=53 o=0 a=0 f=0 n=2627,1e7e,7a9,0,0,0 k=36856,5fe,0,7a2,11a38 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36a5f id=f1da070bd29de94e sid=f1d w=1551 s=ba61edb e=ba624eb p=20005 v=1 c=0 d=55 o=0 a=0 f=0 n=262c,1e83,7a9,0,0,0 k=368c8,5fe,0,7a3,11aed m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36ad2 id=f1da070bd29de94e sid=f1d w=1580 s=ba7a594 e=ba7abc0 p=20005 v=1 c=0 d=58 o=0 a=0 f=0 n=2631,1e88,7a9,0,0,0 k=3693a,5fe,0,7a4,11ba2 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36b45 id=f1da070bd29de94e sid=f1d w=1607 s=ba92c4b e=ba93292 p=20005 v=1 c=0 d=61 o=0 a=0 f=0 n=2636,1e8d,7a9,0,0,0 k=369ac,5fe,0,7a5,11c57 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36bb8 id=f1da070bd29de94e sid=f1d w=1634 s=baab2f5 e=baab957 p=20001 v=1 c=0 d=63 o=0 a=0 f=0 n=263b,1e92,7a9,0,0,0 k=36a1e,5fe,0,7a6,11d0c m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36c2b id=f1da070bd29de94e sid=f1d w=1662 s=bac39a0 e=bac401e p=20003 v=1 c=0 d=66 o=0 a=0 f=0 n=2640,1e97,7a9,0,0,0 k=36a90,5fe,0,7a7,11dc1 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36c96 id=f1da070bd29de94e sid=f1d w=1689 s=badc048 e=badc6e3 p=20003 v=1 c=0 d=69 o=0 a=0 f=0 n=2645,1e9c,7a9,0,0,0 k=36afa,5fe,0,7a8,11e76 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36d09 id=f1da070bd29de94e sid=f1d w=1716 s=baf46e9 e=baf4d9d p=20000 v=1 c=0 d=72 o=0 a=0 f=0 n=264a,1ea1,7a9,0,0,0 k=36b6c,5fe,0,7a9,11f2b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36d7c id=f1da070bd29de94e sid=f1d w=1745 s=bb0cd92 e=bb0d463 p=20003 v=1 c=0 d=75 o=0 a=0 f=0 n=264f,1ea6,7a9,0,0,0 k=36bde,5fe,0,7aa,11fe0 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36def id=f1da070bd29de94e sid=f1d w=1772 s=bb25442 e=bb25b2e p=20003 v=1 c=0 d=77 o=0 a=0 f=0 n=2654,1eab,7a9,0,0,0 k=36c50,5fe,0,7ab,12095 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36e62 id=f1da070bd29de94e sid=f1d w=1799 s=bb3daf4 e=bb3e1fc p=20002 v=1 c=0 d=80 o=0 a=0 f=0 n=2659,1eb0,7a9,0,0,0 k=36cc2,5fe,0,7ac,1214a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36ed5 id=f1da070bd29de94e sid=f1d w=1826 s=bb561a1 e=bb568c4 p=20001 v=1 c=0 d=83 o=0 a=0 f=0 n=265e,1eb5,7a9,0,0,0 k=36d34,5fe,0,7ad,121ff m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36f48 id=f1da070bd29de94e sid=f1d w=1854 s=bb6e855 e=bb6ef94 p=20004 v=1 c=0 d=85 o=0 a=0 f=0 n=2663,1eba,7a9,0,0,0 k=36da6,5fe,0,7ae,122b4 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=36fbb id=f1da070bd29de94e sid=f1d w=1881 s=bb86f0e e=bb87667 p=20007 v=1 c=0 d=88 o=0 a=0 f=0 n=2668,1ebf,7a9,0,0,0 k=36e18,5fe,0,7af,12369 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3702e id=f1da070bd29de94e sid=f1d w=1909 s=bb9f5c1 e=bb9fd36 p=20003 v=1 c=0 d=91 o=0 a=0 f=0 n=266d,1ec4,7a9,0,0,0 k=36e8a,5fe,0,7b0,1241e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=370a1 id=f1da070bd29de94e sid=f1d w=1937 s=bbb7c73 e=bbb8403 p=20005 v=1 c=0 d=94 o=0 a=0 f=0 n=2672,1ec9,7a9,0,0,0 k=36efc,5fe,0,7b1,124d3 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37114 id=f1da070bd29de94e sid=f1d w=1964 s=bbd031a e=bbd0ac6 p=20001 v=1 c=0 d=96 o=0 a=0 f=0 n=2677,1ece,7a9,0,0,0 k=36f6e,5fe,0,7b2,12588 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37187 id=f1da070bd29de94e sid=f1d w=1991 s=bbe89c3 e=bbe918a p=20003 v=1 c=0 d=99 o=0 a=0 f=0 n=267c,1ed3,7a9,0,0,0 k=36fe0,5fe,0,7b3,1263d m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=371fa id=f1da070bd29de94e sid=f1d w=2020 s=bc01076 e=bc01859 p=20004 v=1 c=0 d=100 o=0 a=0 f=0 n=2681,1ed8,7a9,0,0,0 k=37052,5fe,0,7b4,126f2 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3726d id=f1da070bd29de94e sid=f1d w=2047 s=bc19734 e=bc19f33 p=20006 v=1 c=0 d=100 o=0 a=0 f=0 n=2686,1edd,7a9,0,0,0 k=370c4,5fe,0,7b5,127a8 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=372e0 id=f1da070bd29de94e sid=f1d w=2075 s=bc31df0 e=bc3260a p=20008 v=1 c=0 d=100 o=0 a=0 f=0 n=268b,1ee2,7a9,0,0,0 k=37136,5fe,0,7b6,1285e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37353 id=f1da070bd29de94e sid=f1d w=2102 s=bc4a4b0 e=bc4ace6 p=20008 v=3 c=0 d=100 o=0 a=0 f=0 n=2690,1ee6,7aa,0,0,0 k=371a8,5fe,0,7b7,12914 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=373c6 id=f1da070bd29de94e sid=f1d w=2129 s=bc62b61 e=bc633b3 p=20001 v=3 c=0 d=100 o=0 a=0 f=0 n=2695,1ee6,7af,0,0,0 k=3721a,5fe,0,7b8,129ca m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37439 id=f1da070bd29de94e sid=f1d w=2157 s=bc7b219 e=bc7ba86 p=20005 v=3 c=0 d=100 o=0 a=0 f=0 n=269a,1ee6,7b4,0,0,0 k=3728c,5fe,0,7b9,12a80 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=374ac id=f1da070bd29de94e sid=f1d w=2184 s=bc938cb e=bc94153 p=20002 v=3 c=0 d=100 o=0 a=0 f=0 n=269f,1ee6,7b9,0,0,0 k=372fe,5fe,0,7ba,12b36 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3751f id=f1da070bd29de94e sid=f1d w=2202 s=bcabf7b e=bcac815 p=20004 v=3 c=0 d=100 o=0 a=0 f=0 n=26a4,1ee6,7be,0,0,0 k=37370,5fe,0,7bb,12bec m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37592 id=f1da070bd29de94e sid=f1d w=2203 s=bcc462a e=bcc4ec5 p=20004 v=3 c=0 d=100 o=0 a=0 f=0 n=26a9,1ee6,7c3,0,0,0 k=373e2,5fe,0,7bc,12ca2 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37605 id=f1da070bd29de94e sid=f1d w=2202 s=bcdcce4 e=bcdd57e p=20003 v=3 c=0 d=100 o=0 a=0 f=0 n=26ae,1ee6,7c8,0,0,0 k=37454,5fe,0,7bd,12d58 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37678 id=f1da070bd29de94e sid=f1d w=2203 s=bcf539c e=bcf5c36 p=20005 v=3 c=0 d=100 o=0 a=0 f=0 n=26b3,1ee6,7cd,0,0,0 k=374c6,5fe,0,7be,12e0e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=376eb id=f1da070bd29de94e sid=f1d w=2185 s=bd0da4a e=bd0e2d3 p=20002 v=3 c=0 d=100 o=0 a=0 f=0 n=26b8,1ee6,7d2,0,0,0 k=37538,5fe,0,7bf,12ec4 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3775e id=f1da070bd29de94e sid=f1d w=2157 s=bd260f4 e=bd26961 p=20002 v=3 c=0 d=100 o=0 a=0 f=0 n=26bd,1ee6,7d7,0,0,0 k=375aa,5fe,0,7c0,12f7a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=377d1 id=f1da070bd29de94e sid=f1d w=2130 s=bd3e79d e=bd3efef p=20004 v=3 c=0 d=100 o=0 a=0 f=0 n=26c2,1ee6,7dc,0,0,0 k=3761c,5fe,0,7c1,13030 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37844 id=f1da070bd29de94e sid=f1d w=2102 s=bd56e54 e=bd5768b p=20004 v=3 c=0 d=100 o=0 a=0 f=0 n=26c7,1ee6,7e1,0,0,0 k=3768e,5fe,0,7c2,130e6 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=378b7 id=f1da070bd29de94e sid=f1d w=2074 s=bd6f512 e=bd6fd2c p=20008 v=1 c=0 d=100 o=0 a=0 f=0 n=26cc,1eeb,7e1,0,0,0 k=37700,5fe,0,7c3,1319c m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3792a id=f1da070bd29de94e sid=f1d w=2048 s=bd87bcd e=bd883cd p=20006 v=1 c=0 d=100 o=0 a=0 f=0 n=26d1,1ef0,7e1,0,0,0 k=37772,5fe,0,7c4,13252 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3799d id=f1da070bd29de94e sid=f1d w=2019 s=bda028c e=bda0a6f p=20006 v=1 c=0 d=100 o=0 a=0 f=0 n=26d6,1ef5,7e1,0,0,0 k=377e4,5fe,0,7c5,13308 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37a10 id=f1da070bd29de94e sid=f1d w=1992 s=bdb893e e=bdb9107 p=20003 v=1 c=0 d=99 o=0 a=0 f=0 n=26db,1efa,7e1,0,0,0 k=37856,5fe,0,7c6,133be m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37a83 id=f1da070bd29de94e sid=f1d w=1965 s=bdd0ff4 e=bdd17a1 p=20005 v=1 c=0 d=97 o=0 a=0 f=0 n=26e0,1eff,7e1,0,0,0 k=378c8,5fe,0,7c7,13473 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37af6 id=f1da070bd29de94e sid=f1d w=1938 s=bde96a6 e=bde9e38 p=20003 v=1 c=0 d=94 o=0 a=0 f=0 n=26e5,1f04,7e1,0,0,0 k=3793a,5fe,0,7c8,13528 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37b69 id=f1da070bd29de94e sid=f1d w=1910 s=be01d61 e=be024d7 p=20005 v=1 c=0 d=91 o=0 a=0 f=0 n=26ea,1f09,7e1,0,0,0 k=379ac,5fe,0,7c9,135dd m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37bdc id=f1da070bd29de94e sid=f1d w=1883 s=be1a416 e=be1ab71 p=20003 v=1 c=0 d=88 o=0 a=0 f=0 n=26ef,1f0e,7e1,0,0,0 k=37a1e,5fe,0,7ca,13692 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37c4c id=f1da070bd29de94e sid=f1d w=1855 s=be32ad0 e=be3320f p=20004 v=1 c=0 d=86 o=0 a=0 f=0 n=26f4,1f13,7e1,0,0,0 k=37a8d,5fe,0,7cb,13747 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37cba id=f1da070bd29de94e sid=f1d w=1827 s=be4b180 e=be4b8a3 p=20002 v=1 c=0 d=83 o=0 a=0 f=0 n=26f9,1f18,7e1,0,0,0 k=37afa,5fe,0,7cc,137fc m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37d2d id=f1da070bd29de94e sid=f1d w=1799 s=be6382f e=be63f34 p=20006 v=1 c=0 d=80 o=0 a=0 f=0 n=26fe,1f1d,7e1,0,0,0 k=37b6c,5fe,0,7cd,138b1 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37da0 id=f1da070bd29de94e sid=f1d w=1772 s=be7bed8 e=be7c5c4 p=20002 v=1 c=0 d=77 o=0 a=0 f=0 n=2703,1f22,7e1,0,0,0 k=37bde,5fe,0,7ce,13966 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37e13 id=f1da070bd29de94e sid=f1d w=1744 s=be9457e e=be94c4e p=19999 v=1 c=0 d=74 o=0 a=0 f=0 n=2708,1f27,7e1,0,0,0 k=37c50,5fe,0,7cf,13a1b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37e86 id=f1da070bd29de94e sid=f1d w=1717 s=beacc1f e=bead2d4 p=19999 v=1 c=0 d=72 o=0 a=0 f=0 n=270d,1f2c,7e1,0,0,0 k=37cc2,5fe,0,7d0,13ad0 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37ef9 id=f1da070bd29de94e sid=f1d w=1690 s=bec52c8 e=bec5962 p=20003 v=1 c=0 d=69 o=0 a=0 f=0 n=2712,1f31,7e1,0,0,0 k=37d34,5fe,0,7d1,13b85 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37f6c id=f1da070bd29de94e sid=f1d w=1663 s=bedd975 e=beddff4 p=20001 v=1 c=0 d=66 o=0 a=0 f=0 n=2717,1f36,7e1,0,0,0 k=37da6,5fe,0,7d2,13c3a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=37fdf id=f1da070bd29de94e sid=f1d w=1634 s=bef601d e=bef667f p=20002 v=1 c=0 d=63 o=0 a=0 f=0 n=271c,1f3b,7e1,0,0,0 k=37e18,5fe,0,7d3,13cef m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38052 id=f1da070bd29de94e sid=f1d w=1608 s=bf0e6c6 e=bf0ed0e p=20004 v=1 c=0 d=61 o=0 a=0 f=0 n=2721,1f40,7e1,0,0,0 k=37e8a,5fe,0,7d4,13da4 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=380c5 id=f1da070bd29de94e sid=f1d w=1579 s=bf26d71 e=bf2739c p=20002 v=1 c=0 d=58 o=0 a=0 f=0 n=2726,1f45,7e1,0,0,0 k=37efc,5fe,0,7d5,13e59 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38138 id=f1da070bd29de94e sid=f1d w=1552 s=bf3f412 e=bf3fa22 p=20001 v=1 c=0 d=55 o=0 a=0 f=0 n=272b,1f4a,7e1,0,0,0 k=37f6e,5fe,0,7d6,13f0e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=381ab id=f1da070bd29de94e sid=f1d w=1525 s=bf57ac0 e=bf580b5 p=20001 v=1 c=0 d=53 o=0 a=0 f=0 n=2730,1f4f,7e1,0,0,0 k=37fe0,5fe,0,7d7,13fc3 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3821e id=f1da070bd29de94e sid=f1d w=1497 s=bf70168 e=bf70741 p=20001 v=1 c=0 d=50 o=0 a=0 f=0 n=2735,1f54,7e1,0,0,0 k=38052,5fe,0,7d8,14078 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38291 id=f1da070bd29de94e sid=f1d w=1469 s=bf88807 e=bf88dc4 p=19998 v=1 c=0 d=47 o=0 a=0 f=0 n=273a,1f59,7e1,0,0,0 k=380c4,5fe,0,7d9,1412d m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38304 id=f1da070bd29de94e sid=f1d w=1443 s=bfa0eae e=bfa1451 p=20001 v=1 c=0 d=44 o=0 a=0 f=0 n=273f,1f5e,7e1,0,0,0 k=38136,5fe,0,7da,141e2 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38377 id=f1da070bd29de94e sid=f1d w=1414 s=bfb9559 e=bfb9adf p=20002 v=1 c=0 d=41 o=0 a=0 f=0 n=2744,1f63,7e1,0,0,0 k=381a8,5fe,0,7db,14297 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=383ea id=f1da070bd29de94e sid=f1d w=1388 s=bfd1c06 e=bfd2171 p=20003 v=1 c=0 d=39 o=0 a=0 f=0 n=2749,1f68,7e1,0,0,0 k=3821a,5fe,0,7dc,1434c m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3845d id=f1da070bd29de94e sid=f1d w=1359 s=bfea2b9 e=bfea808 p=20005 v=1 c=0 d=36 o=0 a=0 f=0 n=274e,1f6d,7e1,0,0,0 k=3828c,5fe,0,7dd,14401 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=384d0 id=f1da070bd29de94e sid=f1d w=1333 s=c00296c e=c002ea1 p=20003 v=1 c=0 d=33 o=0 a=0 f=0 n=2753,1f72,7e1,0,0,0 k=382fe,5fe,0,7de,144b6 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38543 id=f1da070bd29de94e sid=f1d w=1305 s=c01b01b e=c01b534 p=20004 v=1 c=0 d=31 o=0 a=0 f=0 n=2758,1f77,7e1,0,0,0 k=38370,5fe,0,7df,1456b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=385b6 id=f1da070bd29de94e sid=f1d w=1278 s=c0336cd e=c033bca p=20002 v=1 c=0 d=28 o=0 a=0 f=0 n=275d,1f7c,7e1,0,0,0 k=383e2,5fe,0,7e0,14620 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38629 id=f1da070bd29de94e sid=f1d w=1250 s=c04bd7a e=c04c25c p=20004 v=1 c=0 d=25 o=0 a=0 f=0 n=2762,1f81,7e1,0,0,0 k=38454,5fe,0,7e1,146d5 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3869c id=f1da070bd29de94e sid=f1d w=1223 s=c064424 e=c0648eb p=20003 v=1 c=0 d=22 o=0 a=0 f=0 n=2767,1f86,7e1,0,0,0 k=384c6,5fe,0,7e2,1478a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3870f id=f1da070bd29de94e sid=f1d w=1195 s=c07cad4 e=c07cf7f p=20003 v=1 c=0 d=20 o=0 a=0 f=0 n=276c,1f8b,7e1,0,0,0 k=38538,5fe,0,7e3,1483f m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38782 id=f1da070bd29de94e sid=f1d w=1168 s=c09518c e=c09561c p=20007 v=1 c=0 d=17 o=0 a=0 f=0 n=2771,1f90,7e1,0,0,0 k=385aa,5fe,0,7e4,148f4 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=387f5 id=f1da070bd29de94e sid=f1d w=1140 s=c0ad842 e=c0adcb5 p=20004 v=1 c=0 d=14 o=0 a=0 f=0 n=2776,1f95,7e1,0,0,0 k=3861c,5fe,0,7e5,149a9 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38868 id=f1da070bd29de94e sid=f1d w=1113 s=c0c5ef8 e=c0c6351 p=20005 v=1 c=0 d=11 o=0 a=0 f=0 n=277b,1f9a,7e1,0,0,0 k=3868e,5fe,0,7e6,14a5e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=388db id=f1da070bd29de94e sid=f1d w=1085 s=c0de5b3 e=c0de9f0 p=20006 v=1 c=0 d=9 o=0 a=0 f=0 n=2780,1f9f,7e1,0,0,0 k=38700,5fe,0,7e7,14b13 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3894e id=f1da070bd29de94e sid=f1d w=1058 s=c0f6c6b e=c0f708d p=20005 v=1 c=0 d=6 o=0 a=0 f=0 n=2785,1fa4,7e1,0,0,0 k=38772,5fe,0,7e8,14bc7 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=389c1 id=f1da070bd29de94e sid=f1d w=1030 s=c10f320 e=c10f726 p=20005 v=1 c=0 d=3 o=0 a=0 f=0 n=278a,1fa9,7e1,0,0,0 k=387e4,5fe,0,7e9,14c7b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38a34 id=f1da070bd29de94e sid=f1d w=1003 s=c1279ce e=c127db9 p=20000 v=1 c=0 d=0 o=0 a=0 f=0 n=278f,1fae,7e1,0,0,0 k=38856,5fe,0,7ea,14d2f m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38aa7 id=f1da070bd29de94e sid=f1d w=975 s=c140079 e=c140448 p=20003 v=1 c=0 d=0 o=0 a=0 f=0 n=2794,1fb3,7e1,0,0,0 k=388c8,5fe,0,7eb,14de3 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38b1a id=f1da070bd29de94e sid=f1d w=948 s=c158722 e=c158ad6 p=20003 v=1 c=0 d=0 o=0 a=0 f=0 n=2799,1fb8,7e1,0,0,0 k=3893a,5fe,0,7ec,14e96 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38b8d id=f1da070bd29de94e sid=f1d w=920 s=c170de0 e=c171178 p=20007 v=1 c=0 d=0 o=0 a=0 f=0 n=279e,1fbd,7e1,0,0,0 k=389ac,5fe,0,7ed,14f49 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38c00 id=f1da070bd29de94e sid=f1d w=893 s=c189492 e=c18980f p=20002 v=3 c=0 d=0 o=0 a=0 f=0 n=27a3,1fc0,7e3,0,0,0 k=38a1e,5fe,0,7ee,14ffc m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38c73 id=f1da070bd29de94e sid=f1d w=864 s=c1a1b41 e=c1a1ea2 p=20003 v=3 c=0 d=0 o=0 a=0 f=0 n=27a8,1fc0,7e8,0,0,0 k=38a90,5fe,0,7ef,150af m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38ce6 id=f1da070bd29de94e sid=f1d w=838 s=c1ba1e8 e=c1ba52e p=19998 v=3 c=0 d=0 o=0 a=0 f=0 n=27ad,1fc0,7ed,0,0,0 k=38b02,5fe,0,7f0,15162 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38d59 id=f1da070bd29de94e sid=f1d w=809 s=c1d288b e=c1d2bb4 p=20001 v=3 c=0 d=0 o=0 a=0 f=0 n=27b2,1fc0,7f2,0,0,0 k=38b74,5fe,0,7f1,15215 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38dcc id=f1da070bd29de94e sid=f1d w=802 s=c1eaf2b e=c1eb24d p=19998 v=3 c=0 d=0 o=0 a=0 f=0 n=27b7,1fc0,7f7,0,0,0 k=38be6,5fe,0,7f2,152c8 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38e3f id=f1da070bd29de94e sid=f1d w=803 s=c2035c5 e=c2038e8 p=19999 v=3 c=0 d=0 o=0 a=0 f=0 n=27bc,1fc0,7fc,0,0,0 k=38c58,5fe,0,7f3,1537b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38eb2 id=f1da070bd29de94e sid=f1d w=803 s=c21bc57 e=c21bf7a p=19997 v=3 c=0 d=0 o=0 a=0 f=0 n=27c1,1fc0,801,0,0,0 k=38cca,5fe,0,7f4,1542e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38f25 id=f1da070bd29de94e sid=f1d w=805 s=c2342f3 e=c234618 p=20000 v=3 c=0 d=0 o=0 a=0 f=0 n=27c6,1fc0,806,0,0,0 k=38d3c,5fe,0,7f5,154e1 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=38f98 id=f1da070bd29de94e sid=f1d w=831 s=c24c98e e=c24ccce p=20002 v=3 c=0 d=0 o=0 a=0 f=0 n=27cb,1fc0,80b,0,0,0 k=38dae,5fe,0,7f6,15594 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3900b id=f1da070bd29de94e sid=f1d w=860 s=c265034 e=c265390 p=20003 v=3 c=0 d=0 o=0 a=0 f=0 n=27d0,1fc0,810,0,0,0 k=38e20,5fe,0,7f7,15647 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3907e id=f1da070bd29de94e sid=f1d w=887 s=c27d6dc e=c27da53 p=20001 v=3 c=0 d=0 o=0 a=0 f=0 n=27d5,1fc0,815,0,0,0 k=38e92,5fe,0,7f8,156fa m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=390f1 id=f1da070bd29de94e sid=f1d w=915 s=c295d7d e=c296110 p=20000 v=1 c=0 d=0 o=0 a=0 f=0 n=27da,1fc3,817,0,0,0 k=38f04,5fe,0,7f9,157ad m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39164 id=f1da070bd29de94e sid=f1d w=941 s=c2ae428 e=c2ae7d5 p=20002 v=1 c=0 d=0 o=0 a=0 f=0 n=27df,1fc8,817,0,0,0 k=38f76,5fe,0,7fa,15860 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=391d7 id=f1da070bd29de94e sid=f1d w=969 s=c2c6ad2 e=c2c6e9b p=20004 v=1 c=0 d=0 o=0 a=0 f=0 n=27e4,1fcd,817,0,0,0 k=38fe8,5fe,0,7fb,15913 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3924a id=f1da070bd29de94e sid=f1d w=997 s=c2df17a e=c2df55f p=20002 v=1 c=0 d=0 o=0 a=0 f=0 n=27e9,1fd2,817,0,0,0 k=3905a,5fe,0,7fc,159c6 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=392bd id=f1da070bd29de94e sid=f1d w=1025 s=c2f7820 e=c2f7c21 p=19998 v=1 c=0 d=3 o=0 a=0 f=0 n=27ee,1fd7,817,0,0,0 k=390cc,5fe,0,7fd,15a79 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39330 id=f1da070bd29de94e sid=f1d w=1052 s=c30feca e=c3102e5 p=20004 v=1 c=0 d=5 o=0 a=0 f=0 n=27f3,1fdc,817,0,0,0 k=3913e,5fe,0,7fe,15b2d m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=393a3 id=f1da070bd29de94e sid=f1d w=1080 s=c32857a e=c3289b2 p=20004 v=1 c=0 d=8 o=0 a=0 f=0 n=27f8,1fe1,817,0,0,0 k=391b0,5fe,0,7ff,15be1 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39416 id=f1da070bd29de94e sid=f1d w=1107 s=c340c28 e=c34107a p=20002 v=1 c=0 d=11 o=0 a=0 f=0 n=27fd,1fe6,817,0,0,0 k=39222,5fe,0,800,15c95 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39489 id=f1da070bd29de94e sid=f1d w=1134 s=c3592ce e=c35973c p=20002 v=1 c=0 d=13 o=0 a=0 f=0 n=2802,1feb,817,0,0,0 k=39294,5fe,0,801,15d4a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=394fc id=f1da070bd29de94e sid=f1d w=1162 s=c37196b e=c371df5 p=19999 v=1 c=0 d=16 o=0 a=0 f=0 n=2807,1ff0,817,0,0,0 k=39306,5fe,0,802,15dff m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3956f id=f1da070bd29de94e sid=f1d w=1190 s=c38a00e e=c38a4b4 p=20001 v=1 c=0 d=19 o=0 a=0 f=0 n=280c,1ff5,817,0,0,0 k=39378,5fe,0,803,15eb4 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=395e2 id=f1da070bd29de94e sid=f1d w=1217 s=c3a26af e=c3a2b70 p=20001 v=1 c=0 d=22 o=0 a=0 f=0 n=2811,1ffa,817,0,0,0 k=393ea,5fe,0,804,15f69 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39655 id=f1da070bd29de94e sid=f1d w=1244 s=c3bad55 e=c3bb231 p=20001 v=1 c=0 d=24 o=0 a=0 f=0 n=2816,1fff,817,0,0,0 k=3945c,5fe,0,805,1601e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=396c8 id=f1da070bd29de94e sid=f1d w=1272 s=c3d33f2 e=c3d38ea p=20000 v=1 c=0 d=27 o=0 a=0 f=0 n=281b,2004,817,0,0,0 k=394ce,5fe,0,806,160d3 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3973b id=f1da070bd29de94e sid=f1d w=1299 s=c3eba8e e=c3ebfa2 p=20000 v=1 c=0 d=30 o=0 a=0 f=0 n=2820,2009,817,0,0,0 k=39540,5fe,0,807,16188 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=397ae id=f1da070bd29de94e sid=f1d w=1327 s=c404130 e=c40465f p=20002 v=1 c=0 d=33 o=0 a=0 f=0 n=2825,200e,817,0,0,0 k=395b2,5fe,0,808,1623d m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39821 id=f1da070bd29de94e sid=f1d w=1354 s=c41c7d2 e=c41cd1d p=19999 v=1 c=0 d=35 o=0 a=0 f=0 n=282a,2013,817,0,0,0 k=39624,5fe,0,809,162f2 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39894 id=f1da070bd29de94e sid=f1d w=1381 s=c434e74 e=c4353d9 p=20001 v=1 c=0 d=38 o=0 a=0 f=0 n=282f,2018,817,0,0,0 k=39696,5fe,0,80a,163a7 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39903 id=f1da070bd29de94e sid=f1d w=1410 s=c44d51a e=c44da9b p=20003 v=1 c=0 d=41 o=0 a=0 f=0 n=2834,201d,817,0,0,0 k=39704,5fe,0,80b,1645c m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39970 id=f1da070bd29de94e sid=f1d w=1437 s=c465bc0 e=c46615f p=20002 v=1 c=0 d=44 o=0 a=0 f=0 n=2839,2022,817,0,0,0 k=39770,5fe,0,80c,16511 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=399e3 id=f1da070bd29de94e sid=f1d w=1465 s=c47e26d e=c47e826 p=20002 v=1 c=0 d=47 o=0 a=0 f=0 n=283e,2027,817,0,0,0 k=397e2,5fe,0,80d,165c6 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39a56 id=f1da070bd29de94e sid=f1d w=1492 s=c49691e e=c496ef2 p=20003 v=1 c=0 d=49 o=0 a=0 f=0 n=2843,202c,817,0,0,0 k=39854,5fe,0,80e,1667b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39ac9 id=f1da070bd29de94e sid=f1d w=1520 s=c4aefc7 e=c4af5b7 p=20003 v=1 c=0 d=52 o=0 a=0 f=0 n=2848,2031,817,0,0,0 k=398c6,5fe,0,80f,16730 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39b3c id=f1da070bd29de94e sid=f1d w=1547 s=c4c767b e=c4c7c86 p=20004 v=1 c=0 d=55 o=0 a=0 f=0 n=284d,2036,817,0,0,0 k=39938,5fe,0,810,167e5 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39baf id=f1da070bd29de94e sid=f1d w=1575 s=c4dfd26 e=c4e034d p=20001 v=1 c=0 d=58 o=0 a=0 f=0 n=2852,203b,817,0,0,0 k=399aa,5fe,0,811,1689a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39c22 id=f1da070bd29de94e sid=f1d w=1601 s=c4f83ce e=c4f8a10 p=20001 v=1 c=0 d=60 o=0 a=0 f=0 n=2857,2040,817,0,0,0 k=39a1c,5fe,0,812,1694f m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39c95 id=f1da070bd29de94e sid=f1d w=1629 s=c510a77 e=c5110d4 p=20001 v=1 c=0 d=63 o=0 a=0 f=0 n=285c,2045,817,0,0,0 k=39a8e,5fe,0,813,16a04 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39d08 id=f1da070bd29de94e sid=f1d w=1657 s=c529126 e=c52979f p=20004 v=1 c=0 d=66 o=0 a=0 f=0 n=2861,204a,817,0,0,0 k=39b00,5fe,0,814,16ab9 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39d7b id=f1da070bd29de94e sid=f1d w=1684 s=c5417cc e=c541e60 p=20001 v=1 c=0 d=68 o=0 a=0 f=0 n=2866,204f,817,0,0,0 k=39b72,5fe,0,815,16b6e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39dee id=f1da070bd29de94e sid=f1d w=1712 s=c559e7c e=c55a52b p=20006 v=1 c=0 d=71 o=0 a=0 f=0 n=286b,2054,817,0,0,0 k=39be4,5fe,0,816,16c23 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39e61 id=f1da070bd29de94e sid=f1d w=1740 s=c57252f e=c572bfb p=20004 v=1 c=0 d=74 o=0 a=0 f=0 n=2870,2059,817,0,0,0 k=39c56,5fe,0,817,16cd8 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39ed4 id=f1da070bd29de94e sid=f1d w=1767 s=c58abdd e=c58b2c4 p=20004 v=1 c=0 d=77 o=0 a=0 f=0 n=2875,205e,817,0,0,0 k=39cc8,5fe,0,818,16d8d m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39f47 id=f1da070bd29de94e sid=f1d w=1795 s=c5a3289 e=c5a398b p=20002 v=1 c=0 d=80 o=0 a=0 f=0 n=287a,2063,817,0,0,0 k=39d3a,5fe,0,819,16e42 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=39fba id=f1da070bd29de94e sid=f1d w=1822 s=c5bb935 e=c5bc053 p=20003 v=1 c=0 d=82 o=0 a=0 f=0 n=287f,2068,817,0,0,0 k=39dac,5fe,0,81a,16ef7 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a02d id=f1da070bd29de94e sid=f1d w=1850 s=c5d3fe2 e=c5d471c p=20000 v=1 c=0 d=85 o=0 a=0 f=0 n=2884,206d,817,0,0,0 k=39e1e,5fe,0,81b,16fac m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a0a0 id=f1da070bd29de94e sid=f1d w=1877 s=c5ec682 e=c5ecdd7 p=20001 v=1 c=0 d=88 o=0 a=0 f=0 n=2889,2072,817,0,0,0 k=39e90,5fe,0,81c,17061 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a113 id=f1da070bd29de94e sid=f1d w=1905 s=c604d31 e=c6054a2 p=20003 v=1 c=0 d=91 o=0 a=0 f=0 n=288e,2077,817,0,0,0 k=39f02,5fe,0,81d,17116 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a186 id=f1da070bd29de94e sid=f1d w=1931 s=c61d3e3 e=c61db6f p=20002 v=1 c=0 d=93 o=0 a=0 f=0 n=2893,207c,817,0,0,0 k=39f74,5fe,0,81e,171cb m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a1f9 id=f1da070bd29de94e sid=f1d w=1959 s=c635a8f e=c636236 p=20001 v=1 c=0 d=96 o=0 a=0 f=0 n=2898,2081,817,0,0,0 k=39fe6,5fe,0,81f,17280 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a26c id=f1da070bd29de94e sid=f1d w=1986 s=c64e134 e=c64e8f6 p=19999 v=1 c=0 d=99 o=0 a=0 f=0 n=289d,2086,817,0,0,0 k=3a058,5fe,0,820,17335 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a2df id=f1da070bd29de94e sid=f1d w=2014 s=c6667d0 e=c666fae p=19998 v=1 c=0 d=100 o=0 a=0 f=0 n=28a2,208b,817,0,0,0 k=3a0ca,5fe,0,821,173ea m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a352 id=f1da070bd29de94e sid=f1d w=2041 s=c67ee76 e=c67f66f p=20002 v=1 c=0 d=100 o=0 a=0 f=0 n=28a7,2090,817,0,0,0 k=3a13c,5fe,0,822,174a0 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a3c5 id=f1da070bd29de94e sid=f1d w=2070 s=c697521 e=c697d37 p=20002 v=1 c=0 d=100 o=0 a=0 f=0 n=28ac,2095,817,0,0,0 k=3a1ae,5fe,0,823,17556 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a438 id=f1da070bd29de94e sid=f1d w=2097 s=c6afbc7 e=c6b03f8 p=20001 v=1 c=0 d=100 o=0 a=0 f=0 n=28b1,209a,817,0,0,0 k=3a220,5fe,0,824,1760c m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a4a9 id=f1da070bd29de94e sid=f1d w=2124 s=c6c826d e=c6c8ab9 p=20000 v=3 c=0 d=100 o=0 a=0 f=0 n=28b6,209a,81c,0,0,0 k=3a290,5fe,0,825,176c2 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a514 id=f1da070bd29de94e sid=f1d w=2152 s=c6e0913 e=c6e117b p=20002 v=3 c=0 d=100 o=0 a=0 f=0 n=28bb,209a,821,0,0,0 k=3a2fa,5fe,0,826,17778 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a587 id=f1da070bd29de94e sid=f1d w=2179 s=c6f8fbb e=c6f983e p=20000 v=3 c=0 d=100 o=0 a=0 f=0 n=28c0,209a,826,0,0,0 k=3a36c,5fe,0,827,1782e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a5fa id=f1da070bd29de94e sid=f1d w=2203 s=c711668 e=c711f03 p=20004 v=3 c=0 d=100 o=0 a=0 f=0 n=28c5,209a,82b,0,0,0 k=3a3de,5fe,0,828,178e4 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a66d id=f1da070bd29de94e sid=f1d w=2202 s=c729d16 e=c72a5b0 p=20003 v=3 c=0 d=100 o=0 a=0 f=0 n=28ca,209a,830,0,0,0 k=3a450,5fe,0,829,1799a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a6e0 id=f1da070bd29de94e sid=f1d w=2203 s=c7423c3 e=c742c5e p=20001 v=3 c=0 d=100 o=0 a=0 f=0 n=28cf,209a,835,0,0,0 k=3a4c2,5fe,0,82a,17a50 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a753 id=f1da070bd29de94e sid=f1d w=2202 s=c75aa75 e=c75b30f p=20003 v=3 c=0 d=100 o=0 a=0 f=0 n=28d4,209a,83a,0,0,0 k=3a534,5fe,0,82b,17b06 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a7c6 id=f1da070bd29de94e sid=f1d w=2189 s=c773125 e=c7739b3 p=20003 v=3 c=0 d=100 o=0 a=0 f=0 n=28d9,209a,83f,0,0,0 k=3a5a6,5fe,0,82c,17bbc m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a839 id=f1da070bd29de94e sid=f1d w=2161 s=c78b7d2 e=c78c043 p=20002 v=3 c=0 d=100 o=0 a=0 f=0 n=28de,209a,844,0,0,0 k=3a618,5fe,0,82d,17c72 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a8ac id=f1da070bd29de94e sid=f1d w=2134 s=c7a3e83 e=c7a46d9 p=20005 v=3 c=0 d=100 o=0 a=0 f=0 n=28e3,209a,849,0,0,0 k=3a68a,5fe,0,82e,17d28 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a91d id=f1da070bd29de94e sid=f1d w=2106 s=c7bc533 e=c7bcd6d p=20004 v=3 c=0 d=100 o=0 a=0 f=0 n=28e8,209a,84e,0,0,0 k=3a6fa,5fe,0,82f,17dde m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a98b id=f1da070bd29de94e sid=f1d w=2080 s=c7d4be5 e=c7d5403 p=20006 v=1 c=0 d=100 o=0 a=0 f=0 n=28ed,209e,84f,0,0,0 k=3a767,5fe,0,830,17e94 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3a9fc id=f1da070bd29de94e sid=f1d w=2051 s=c7ed292 e=c7eda96 p=20002 v=1 c=0 d=100 o=0 a=0 f=0 n=28f2,20a3,84f,0,0,0 k=3a7d7,5fe,0,831,17f4a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3aa6f id=f1da070bd29de94e sid=f1d w=2024 s=c805944 e=c80612c p=20002 v=1 c=0 d=100 o=0 a=0 f=0 n=28f7,20a8,84f,0,0,0 k=3a849,5fe,0,832,18000 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3aae2 id=f1da070bd29de94e sid=f1d w=1996 s=c81dfeb e=c81e7b7 p=20001 v=1 c=0 d=100 o=0 a=0 f=0 n=28fc,20ad,84f,0,0,0 k=3a8bb,5fe,0,833,180b6 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ab55 id=f1da070bd29de94e sid=f1d w=1970 s=c83668d e=c836e3e p=20000 v=1 c=0 d=97 o=0 a=0 f=0 n=2901,20b2,84f,0,0,0 k=3a92d,5fe,0,834,1816c m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3abc0 id=f1da070bd29de94e sid=f1d w=1942 s=c84ed36 e=c84f4cd p=20002 v=1 c=0 d=94 o=0 a=0 f=0 n=2906,20b7,84f,0,0,0 k=3a997,5fe,0,835,18221 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ac29 id=f1da070bd29de94e sid=f1d w=1914 s=c8673e6 e=c867b60 p=20003 v=1 c=0 d=91 o=0 a=0 f=0 n=290b,20bc,84f,0,0,0 k=3a9ff,5fe,0,836,182d6 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ac97 id=f1da070bd29de94e sid=f1d w=1887 s=c87fa9a e=c8801f8 p=20006 v=1 c=0 d=89 o=0 a=0 f=0 n=2910,20c1,84f,0,0,0 k=3aa6c,5fe,0,837,1838b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ad05 id=f1da070bd29de94e sid=f1d w=1859 s=c898150 e=c898894 p=20003 v=1 c=0 d=86 o=0 a=0 f=0 n=2915,20c6,84f,0,0,0 k=3aad9,5fe,0,838,18440 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ad77 id=f1da070bd29de94e sid=f1d w=1832 s=c8b0803 e=c8b0f2a p=20005 v=1 c=0 d=83 o=0 a=0 f=0 n=291a,20cb,84f,0,0,0 k=3ab4a,5fe,0,839,184f5 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3adea id=f1da070bd29de94e sid=f1d w=1804 s=c8c8eb1 e=c8c95be p=20001 v=1 c=0 d=80 o=0 a=0 f=0 n=291f,20d0,84f,0,0,0 k=3abbc,5fe,0,83a,185aa m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ae5d id=f1da070bd29de94e sid=f1d w=1776 s=c8e1564 e=c8e1c54 p=20004 v=1 c=0 d=78 o=0 a=0 f=0 n=2924,20d5,84f,0,0,0 k=3ac2e,5fe,0,83b,1865f m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3aed0 id=f1da070bd29de94e sid=f1d w=1750 s=c8f9c14 e=c8fa2e9 p=20003 v=1 c=0 d=75 o=0 a=0 f=0 n=2929,20da,84f,0,0,0 k=3aca0,5fe,0,83c,18714 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3af43 id=f1da070bd29de94e sid=f1d w=1722 s=c9122ce e=c912988 p=20004 v=1 c=0 d=72 o=0 a=0 f=0 n=292e,20df,84f,0,0,0 k=3ad12,5fe,0,83d,187c9 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3afb6 id=f1da070bd29de94e sid=f1d w=1695 s=c92a980 e=c92b01f p=20004 v=1 c=0 d=70 o=0 a=0 f=0 n=2933,20e4,84f,0,0,0 k=3ad84,5fe,0,83e,1887e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b029 id=f1da070bd29de94e sid=f1d w=1666 s=c943037 e=c9436b9 p=20005 v=1 c=0 d=67 o=0 a=0 f=0 n=2938,20e9,84f,0,0,0 k=3adf6,5fe,0,83f,18933 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b09c id=f1da070bd29de94e sid=f1d w=1639 s=c95b6e4 e=c95bd4b p=20002 v=1 c=0 d=64 o=0 a=0 f=0 n=293d,20ee,84f,0,0,0 k=3ae68,5fe,0,840,189e8 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b10f id=f1da070bd29de94e sid=f1d w=1612 s=c973d93 e=c9743df p=20003 v=1 c=0 d=61 o=0 a=0 f=0 n=2942,20f3,84f,0,0,0 k=3aeda,5fe,0,841,18a9d m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b182 id=f1da070bd29de94e sid=f1d w=1585 s=c98c43e e=c98ca6f p=20001 v=1 c=0 d=59 o=0 a=0 f=0 n=2947,20f8,84f,0,0,0 k=3af4c,5fe,0,842,18b52 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b1f5 id=f1da070bd29de94e sid=f1d w=1556 s=c9a4aea e=c9a50fe p=20002 v=1 c=0 d=56 o=0 a=0 f=0 n=294c,20fd,84f,0,0,0 k=3afbe,5fe,0,843,18c07 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b268 id=f1da070bd29de94e sid=f1d w=1529 s=c9bd189 e=c9bd782 p=19998 v=1 c=0 d=53 o=0 a=0 f=0 n=2951,2102,84f,0,0,0 k=3b030,5fe,0,844,18cbc m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b2db id=f1da070bd29de94e sid=f1d w=1501 s=c9d5830 e=c9d5e0d p=20003 v=1 c=0 d=50 o=0 a=0 f=0 n=2956,2107,84f,0,0,0 k=3b0a2,5fe,0,845,18d71 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b34e id=f1da070bd29de94e sid=f1d w=1474 s=c9edecf e=c9ee491 p=20001 v=1 c=0 d=47 o=0 a=0 f=0 n=295b,210c,84f,0,0,0 k=3b114,5fe,0,846,18e26 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b3c1 id=f1da070bd29de94e sid=f1d w=1446 s=ca06579 e=ca06b1f p=20002 v=1 c=0 d=45 o=0 a=0 f=0 n=2960,2111,84f,0,0,0 k=3b186,5fe,0,847,18edb m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b434 id=f1da070bd29de94e sid=f1d w=1420 s=ca1ec1f e=ca1f1ab p=20000 v=1 c=0 d=42 o=0 a=0 f=0 n=2965,2116,84f,0,0,0 k=3b1f8,5fe,0,848,18f90 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b4a7 id=f1da070bd29de94e sid=f1d w=1392 s=ca372ca e=ca3783a p=20003 v=1 c=0 d=39 o=0 a=0 f=0 n=296a,211b,84f,0,0,0 k=3b26a,5fe,0,849,19045 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b51a id=f1da070bd29de94e sid=f1d w=1364 s=ca4f978 e=ca4fecd p=20002 v=1 c=0 d=36 o=0 a=0 f=0 n=296f,2120,84f,0,0,0 k=3b2dc,5fe,0,84a,190fa m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b58d id=f1da070bd29de94e sid=f1d w=1337 s=ca6802a e=ca68563 p=20004 v=1 c=0 d=34 o=0 a=0 f=0 n=2974,2125,84f,0,0,0 k=3b34e,5fe,0,84b,191af m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b600 id=f1da070bd29de94e sid=f1d w=1310 s=ca806d3 e=ca80bf1 p=20001 v=1 c=0 d=31 o=0 a=0 f=0 n=2979,212a,84f,0,0,0 k=3b3c0,5fe,0,84c,19264 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b673 id=f1da070bd29de94e sid=f1d w=1282 s=ca98d7f e=ca99281 p=20002 v=1 c=0 d=28 o=0 a=0 f=0 n=297e,212f,84f,0,0,0 k=3b432,5fe,0,84d,19319 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b6e6 id=f1da070bd29de94e sid=f1d w=1254 s=cab1425 e=cab190b p=20003 v=1 c=0 d=25 o=0 a=0 f=0 n=2983,2134,84f,0,0,0 k=3b4a4,5fe,0,84e,193ce m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b759 id=f1da070bd29de94e sid=f1d w=1226 s=cac9ac9 e=cac9f93 p=20001 v=1 c=0 d=23 o=0 a=0 f=0 n=2988,2139,84f,0,0,0 k=3b516,5fe,0,84f,19483 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b7cc id=f1da070bd29de94e sid=f1d w=1200 s=cae2175 e=cae2625 p=20003 v=1 c=0 d=20 o=0 a=0 f=0 n=298d,213e,84f,0,0,0 k=3b588,5fe,0,850,19538 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b83f id=f1da070bd29de94e sid=f1d w=1171 s=cafa822 e=cafacb5 p=20004 v=1 c=0 d=17 o=0 a=0 f=0 n=2992,2143,84f,0,0,0 k=3b5fa,5fe,0,851,195ed m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b8b2 id=f1da070bd29de94e sid=f1d w=1144 s=cb12ed0 e=cb13349 p=20002 v=1 c=0 d=14 o=0 a=0 f=0 n=2997,2148,84f,0,0,0 k=3b66c,5fe,0,852,196a2 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b925 id=f1da070bd29de94e sid=f1d w=1117 s=cb2b57a e=cb2b9d6 p=19999 v=1 c=0 d=12 o=0 a=0 f=0 n=299c,214d,84f,0,0,0 k=3b6de,5fe,0,853,19757 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3b998 id=f1da070bd29de94e sid=f1d w=1090 s=cb43c2a e=cb4406c p=20006 v=1 c=0 d=9 o=0 a=0 f=0 n=29a1,2152,84f,0,0,0 k=3b750,5fe,0,854,1980c m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ba0b id=f1da070bd29de94e sid=f1d w=1062 s=cb5c2e2 e=cb5c708 p=20006 v=1 c=0 d=6 o=0 a=0 f=0 n=29a6,2157,84f,0,0,0 k=3b7c2,5fe,0,855,198c0 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ba7e id=f1da070bd29de94e sid=f1d w=1035 s=cb74993 e=cb74d9d p=20002 v=1 c=0 d=4 o=0 a=0 f=0 n=29ab,215c,84f,0,0,0 k=3b834,5fe,0,856,19974 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3baf1 id=f1da070bd29de94e sid=f1d w=1006 s=cb8d045 e=cb8d434 p=20005 v=1 c=0 d=1 o=0 a=0 f=0 n=29b0,2161,84f,0,0,0 k=3b8a6,5fe,0,857,19a28 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3bb64 id=f1da070bd29de94e sid=f1d w=980 s=cba56f2 e=cba5ac6 p=20003 v=1 c=0 d=0 o=0 a=0 f=0 n=29b5,2166,84f,0,0,0 k=3b918,5fe,0,858,19adc m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3bbd7 id=f1da070bd29de94e sid=f1d w=951 s=cbbdd9f e=cbbe156 p=20002 v=1 c=0 d=0 o=0 a=0 f=0 n=29ba,216b,84f,0,0,0 k=3b98a,5fe,0,859,19b8f m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3bc4a id=f1da070bd29de94e sid=f1d w=925 s=cbd644a e=cbd67e7 p=20002 v=1 c=0 d=0 o=0 a=0 f=0 n=29bf,2170,84f,0,0,0 k=3b9fc,5fe,0,85a,19c42 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3bcbd id=f1da070bd29de94e sid=f1d w=897 s=cbeeaf3 e=cbeee74 p=20002 v=3 c=0 d=0 o=0 a=0 f=0 n=29c4,2174,850,0,0,0 k=3ba6e,5fe,0,85b,19cf5 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3bd30 id=f1da070bd29de94e sid=f1d w=870 s=cc07196 e=cc074fc p=20001 v=3 c=0 d=0 o=0 a=0 f=0 n=29c9,2174,855,0,0,0 k=3bae0,5fe,0,85c,19da8 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3bda3 id=f1da070bd29de94e sid=f1d w=841 s=cc1f82c e=cc1fb75 p=19997 v=3 c=0 d=0 o=0 a=0 f=0 n=29ce,2174,85a,0,0,0 k=3bb52,5fe,0,85d,19e5b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3be16 id=f1da070bd29de94e sid=f1d w=815 s=cc37ec0 e=cc381ef p=19997 v=3 c=0 d=0 o=0 a=0 f=0 n=29d3,2174,85f,0,0,0 k=3bbc4,5fe,0,85e,19f0e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3be89 id=f1da070bd29de94e sid=f1d w=803 s=cc50555 e=cc50878 p=19997 v=3 c=0 d=0 o=0 a=0 f=0 n=29d8,2174,864,0,0,0 k=3bc36,5fe,0,85f,19fc1 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3befc id=f1da070bd29de94e sid=f1d w=803 s=cc68bec e=cc68f0e p=19998 v=3 c=0 d=0 o=0 a=0 f=0 n=29dd,2174,869,0,0,0 k=3bca8,5fe,0,860,1a074 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3bf6f id=f1da070bd29de94e sid=f1d w=803 s=cc81286 e=cc815a9 p=19999 v=3 c=0 d=0 o=0 a=0 f=0 n=29e2,2174,86e,0,0,0 k=3bd1a,5fe,0,861,1a127 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3bfe2 id=f1da070bd29de94e sid=f1d w=803 s=cc9991f e=cc99c41 p=20000 v=3 c=0 d=0 o=0 a=0 f=0 n=29e7,2174,873,0,0,0 k=3bd8c,5fe,0,862,1a1da m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c055 id=f1da070bd29de94e sid=f1d w=828 s=ccb1fbb e=ccb22f7 p=19999 v=3 c=0 d=0 o=0 a=0 f=0 n=29ec,2174,878,0,0,0 k=3bdfe,5fe,0,863,1a28d m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c0c8 id=f1da070bd29de94e sid=f1d w=854 s=ccca652 e=ccca9a8 p=19996 v=3 c=0 d=0 o=0 a=0 f=0 n=29f1,2174,87d,0,0,0 k=3be70,5fe,0,864,1a340 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c13b id=f1da070bd29de94e sid=f1d w=882 s=cce2ce5 e=cce3057 p=19996 v=3 c=0 d=0 o=0 a=0 f=0 n=29f6,2174,882,0,0,0 k=3bee2,5fe,0,865,1a3f3 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c1ae id=f1da070bd29de94e sid=f1d w=910 s=ccfb378 e=ccfb706 p=19999 v=1 c=0 d=0 o=0 a=0 f=0 n=29fb,2176,885,0,0,0 k=3bf54,5fe,0,866,1a4a6 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c221 id=f1da070bd29de94e sid=f1d w=937 s=cd13a0c e=cd13db5 p=19997 v=1 c=0 d=0 o=0 a=0 f=0 n=2a00,217b,885,0,0,0 k=3bfc6,5fe,0,867,1a559 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c294 id=f1da070bd29de94e sid=f1d w=964 s=cd2c09b e=cd2c45f p=19997 v=1 c=0 d=0 o=0 a=0 f=0 n=2a05,2180,885,0,0,0 k=3c038,5fe,0,868,1a60c m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c307 id=f1da070bd29de94e sid=f1d w=992 s=cd44727 e=cd44b07 p=19997 v=1 c=0 d=0 o=0 a=0 f=0 n=2a0a,2185,885,0,0,0 k=3c0aa,5fe,0,869,1a6bf m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c37a id=f1da070bd29de94e sid=f1d w=1019 s=cd5cdbf e=cd5d1ba p=20000 v=1 c=0 d=2 o=0 a=0 f=0 n=2a0f,218a,885,0,0,0 k=3c11c,5fe,0,86a,1a772 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c3ed id=f1da070bd29de94e sid=f1d w=1047 s=cd75457 e=cd7586e p=19999 v=1 c=0 d=5 o=0 a=0 f=0 n=2a14,218f,885,0,0,0 k=3c18e,5fe,0,86b,1a826 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c460 id=f1da070bd29de94e sid=f1d w=1075 s=cd8dae5 e=cd8df18 p=19997 v=1 c=0 d=8 o=0 a=0 f=0 n=2a19,2194,885,0,0,0 k=3c200,5fe,0,86c,1a8da m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c4d3 id=f1da070bd29de94e sid=f1d w=1102 s=cda6178 e=cda65c6 p=19997 v=1 c=0 d=10 o=0 a=0 f=0 n=2a1e,2199,885,0,0,0 k=3c272,5fe,0,86d,1a98e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c546 id=f1da070bd29de94e sid=f1d w=1129 s=cdbe803 e=cdbec6c p=19996 v=1 c=0 d=13 o=0 a=0 f=0 n=2a23,219e,885,0,0,0 k=3c2e4,5fe,0,86e,1aa43 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c5b9 id=f1da070bd29de94e sid=f1d w=1158 s=cdd6e8b e=cdd7311 p=19994 v=1 c=0 d=16 o=0 a=0 f=0 n=2a28,21a3,885,0,0,0 k=3c356,5fe,0,86f,1aaf8 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c62c id=f1da070bd29de94e sid=f1d w=1184 s=cdef515 e=cdef9b6 p=19996 v=1 c=0 d=18 o=0 a=0 f=0 n=2a2d,21a8,885,0,0,0 k=3c3c8,5fe,0,870,1abad m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c69f id=f1da070bd29de94e sid=f1d w=1212 s=ce07bac e=ce08069 p=19997 v=1 c=0 d=21 o=0 a=0 f=0 n=2a32,21ad,885,0,0,0 k=3c43a,5fe,0,871,1ac62 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c712 id=f1da070bd29de94e sid=f1d w=1240 s=ce2023b e=ce20712 p=19999 v=1 c=0 d=24 o=0 a=0 f=0 n=2a37,21b2,885,0,0,0 k=3c4ac,5fe,0,872,1ad17 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c785 id=f1da070bd29de94e sid=f1d w=1268 s=ce388ce e=ce38dc2 p=19997 v=1 c=0 d=27 o=0 a=0 f=0 n=2a3c,21b7,885,0,0,0 k=3c51e,5fe,0,873,1adcc m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c7f8 id=f1da070bd29de94e sid=f1d w=1295 s=ce50f64 e=ce51473 p=19998 v=1 c=0 d=30 o=0 a=0 f=0 n=2a41,21bc,885,0,0,0 k=3c590,5fe,0,874,1ae81 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c86b id=f1da070bd29de94e sid=f1d w=1322 s=ce695f5 e=ce69b1f p=19997 v=1 c=0 d=32 o=0 a=0 f=0 n=2a46,21c1,885,0,0,0 k=3c602,5fe,0,875,1af36 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c8de id=f1da070bd29de94e sid=f1d w=1350 s=ce81c91 e=ce821d7 p=19998 v=1 c=0 d=35 o=0 a=0 f=0 n=2a4b,21c6,885,0,0,0 k=3c674,5fe,0,876,1afeb m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c951 id=f1da070bd29de94e sid=f1d w=1377 s=ce9a323 e=ce9a884 p=19997 v=1 c=0 d=38 o=0 a=0 f=0 n=2a50,21cb,885,0,0,0 k=3c6e6,5fe,0,877,1b0a0 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3c9c4 id=f1da070bd29de94e sid=f1d w=1405 s=ceb29b7 e=ceb2f33 p=19998 v=1 c=0 d=41 o=0 a=0 f=0 n=2a55,21d0,885,0,0,0 k=3c758,5fe,0,878,1b155 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ca37 id=f1da070bd29de94e sid=f1d w=1432 s=cecb04e e=cecb5e6 p=19996 v=1 c=0 d=43 o=0 a=0 f=0 n=2a5a,21d5,885,0,0,0 k=3c7ca,5fe,0,879,1b20a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3caaa id=f1da070bd29de94e sid=f1d w=1460 s=cee36e3 e=cee3c97 p=19999 v=1 c=0 d=46 o=0 a=0 f=0 n=2a5f,21da,885,0,0,0 k=3c83c,5fe,0,87a,1b2bf m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3cb1d id=f1da070bd29de94e sid=f1d w=1487 s=cefbd79 e=cefc349 p=19996 v=1 c=0 d=49 o=0 a=0 f=0 n=2a64,21df,885,0,0,0 k=3c8ae,5fe,0,87b,1b374 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3cb90 id=f1da070bd29de94e sid=f1d w=1514 s=cf1440f e=cf149f9 p=19999 v=1 c=0 d=51 o=0 a=0 f=0 n=2a69,21e4,885,0,0,0 k=3c920,5fe,0,87c,1b429 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3cc03 id=f1da070bd29de94e sid=f1d w=1542 s=cf2caa2 e=cf2d0a8 p=19997 v=1 c=0 d=54 o=0 a=0 f=0 n=2a6e,21e9,885,0,0,0 k=3c992,5fe,0,87d,1b4de m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3cc76 id=f1da070bd29de94e sid=f1d w=1569 s=cf45130 e=cf45751 p=19996 v=1 c=0 d=57 o=0 a=0 f=0 n=2a73,21ee,885,0,0,0 k=3ca04,5fe,0,87e,1b593 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3cce9 id=f1da070bd29de94e sid=f1d w=1597 s=cf5d7b8 e=cf5ddf5 p=19996 v=1 c=0 d=60 o=0 a=0 f=0 n=2a78,21f3,885,0,0,0 k=3ca76,5fe,0,87f,1b648 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3cd5c id=f1da070bd29de94e sid=f1d w=1624 s=cf75e41 e=cf76499 p=19996 v=1 c=0 d=62 o=0 a=0 f=0 n=2a7d,21f8,885,0,0,0 k=3cae8,5fe,0,880,1b6fd m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3cdcf id=f1da070bd29de94e sid=f1d w=1652 s=cf8e4c3 e=cf8eb37 p=19994 v=1 c=0 d=65 o=0 a=0 f=0 n=2a82,21fd,885,0,0,0 k=3cb5a,5fe,0,881,1b7b2 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ce42 id=f1da070bd29de94e sid=f1d w=1680 s=cfa6b4b e=cfa71da p=19995 v=1 c=0 d=68 o=0 a=0 f=0 n=2a87,2202,885,0,0,0 k=3cbcc,5fe,0,882,1b867 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ceb5 id=f1da070bd29de94e sid=f1d w=1707 s=cfbf1d9 e=cfbf883 p=19995 v=1 c=0 d=71 o=0 a=0 f=0 n=2a8c,2207,885,0,0,0 k=3cc3e,5fe,0,883,1b91c m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3cf26 id=f1da070bd29de94e sid=f1d w=1734 s=cfd785f e=cfd7f25 p=19994 v=1 c=0 d=73 o=0 a=0 f=0 n=2a91,220c,885,0,0,0 k=3ccae,5fe,0,884,1b9d1 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3cf96 id=f1da070bd29de94e sid=f1d w=1761 s=cfefee8 e=cff05c9 p=19994 v=1 c=0 d=76 o=0 a=0 f=0 n=2a96,2211,885,0,0,0 k=3cd1d,5fe,0,885,1ba86 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d009 id=f1da070bd29de94e sid=f1d w=1790 s=d008576 e=d008c74 p=19998 v=1 c=0 d=79 o=0 a=0 f=0 n=2a9b,2216,885,0,0,0 k=3cd8f,5fe,0,886,1bb3b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d07c id=f1da070bd29de94e sid=f1d w=1817 s=d020c07 e=d021320 p=19998 v=1 c=0 d=82 o=0 a=0 f=0 n=2aa0,221b,885,0,0,0 k=3ce01,5fe,0,887,1bbf0 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d0ef id=f1da070bd29de94e sid=f1d w=1844 s=d039294 e=d0399c8 p=19996 v=1 c=0 d=84 o=0 a=0 f=0 n=2aa5,2220,885,0,0,0 k=3ce73,5fe,0,888,1bca5 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d162 id=f1da070bd29de94e sid=f1d w=1872 s=d051926 e=d052076 p=19996 v=1 c=0 d=87 o=0 a=0 f=0 n=2aaa,2225,885,0,0,0 k=3cee5,5fe,0,889,1bd5a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d1d5 id=f1da070bd29de94e sid=f1d w=1898 s=d069fba e=d06a725 p=19998 v=1 c=0 d=90 o=0 a=0 f=0 n=2aaf,222a,885,0,0,0 k=3cf57,5fe,0,88a,1be0f m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d248 id=f1da070bd29de94e sid=f1d w=1927 s=d08264c e=d082dd3 p=19996 v=1 c=0 d=93 o=0 a=0 f=0 n=2ab4,222f,885,0,0,0 k=3cfc9,5fe,0,88b,1bec4 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d2bb id=f1da070bd29de94e sid=f1d w=1954 s=d09acdc e=d09b47f p=19997 v=1 c=0 d=95 o=0 a=0 f=0 n=2ab9,2234,885,0,0,0 k=3d03b,5fe,0,88c,1bf79 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d32e id=f1da070bd29de94e sid=f1d w=1982 s=d0b3361 e=d0b3b1f p=19995 v=1 c=0 d=98 o=0 a=0 f=0 n=2abe,2239,885,0,0,0 k=3d0ad,5fe,0,88d,1c02e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d3a1 id=f1da070bd29de94e sid=f1d w=2009 s=d0cb9f3 e=d0cc1cc p=19998 v=1 c=0 d=100 o=0 a=0 f=0 n=2ac3,223e,885,0,0,0 k=3d11f,5fe,0,88e,1c0e3 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d414 id=f1da070bd29de94e sid=f1d w=2037 s=d0e4080 e=d0e4875 p=19998 v=1 c=0 d=100 o=0 a=0 f=0 n=2ac8,2243,885,0,0,0 k=3d191,5fe,0,88f,1c199 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d487 id=f1da070bd29de94e sid=f1d w=2064 s=d0fc710 e=d0fcf1f p=19995 v=1 c=0 d=100 o=0 a=0 f=0 n=2acd,2248,885,0,0,0 k=3d203,5fe,0,890,1c24f m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d4fa id=f1da070bd29de94e sid=f1d w=2092 s=d114d93 e=d1155bf p=19996 v=1 c=0 d=100 o=0 a=0 f=0 n=2ad2,224d,885,0,0,0 k=3d275,5fe,0,891,1c305 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d56d id=f1da070bd29de94e sid=f1d w=2119 s=d12d41f e=d12dc66 p=19995 v=3 c=0 d=100 o=0 a=0 f=0 n=2ad7,224e,889,0,0,0 k=3d2e7,5fe,0,892,1c3bb m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d5e0 id=f1da070bd29de94e sid=f1d w=2147 s=d145aab e=d14630e p=19997 v=3 c=0 d=100 o=0 a=0 f=0 n=2adc,224e,88e,0,0,0 k=3d359,5fe,0,893,1c471 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d653 id=f1da070bd29de94e sid=f1d w=2175 s=d15e13f e=d15e9bd p=19997 v=3 c=0 d=100 o=0 a=0 f=0 n=2ae1,224e,893,0,0,0 k=3d3cb,5fe,0,894,1c527 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d6c6 id=f1da070bd29de94e sid=f1d w=2202 s=d1767d2 e=d17706c p=19997 v=3 c=0 d=100 o=0 a=0 f=0 n=2ae6,224e,898,0,0,0 k=3d43d,5fe,0,895,1c5dd m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d739 id=f1da070bd29de94e sid=f1d w=2202 s=d18ee5b e=d18f6f5 p=19996 v=3 c=0 d=100 o=0 a=0 f=0 n=2aeb,224e,89d,0,0,0 k=3d4af,5fe,0,896,1c693 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d7ac id=f1da070bd29de94e sid=f1d w=2202 s=d1a74df e=d1a7d79 p=19995 v=3 c=0 d=100 o=0 a=0 f=0 n=2af0,224e,8a2,0,0,0 k=3d521,5fe,0,897,1c749 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d81f id=f1da070bd29de94e sid=f1d w=2202 s=d1bfb69 e=d1c0403 p=19997 v=3 c=0 d=100 o=0 a=0 f=0 n=2af5,224e,8a7,0,0,0 k=3d593,5fe,0,898,1c7ff m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d892 id=f1da070bd29de94e sid=f1d w=2193 s=d1d81f6 e=d1d8a87 p=19997 v=3 c=0 d=100 o=0 a=0 f=0 n=2afa,224e,8ac,0,0,0 k=3d605,5fe,0,899,1c8b5 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d905 id=f1da070bd29de94e sid=f1d w=2166 s=d1f088a e=d1f1100 p=19998 v=3 c=0 d=100 o=0 a=0 f=0 n=2aff,224e,8b1,0,0,0 k=3d677,5fe,0,89a,1c96b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d978 id=f1da070bd29de94e sid=f1d w=2138 s=d208f22 e=d20977c p=20000 v=3 c=0 d=100 o=0 a=0 f=0 n=2b04,224e,8b6,0,0,0 k=3d6e9,5fe,0,89b,1ca21 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3d9eb id=f1da070bd29de94e sid=f1d w=2111 s=d2215b6 e=d221df5 p=19997 v=3 c=0 d=100 o=0 a=0 f=0 n=2b09,224e,8bb,0,0,0 k=3d75b,5fe,0,89c,1cad7 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3da5e id=f1da070bd29de94e sid=f1d w=2082 s=d239c4c e=d23a46f p=19998 v=1 c=0 d=100 o=0 a=0 f=0 n=2b0e,2252,8bc,0,0,0 k=3d7cd,5fe,0,89d,1cb8d m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3dad1 id=f1da070bd29de94e sid=f1d w=2056 s=d2522e6 e=d252aee p=19998 v=1 c=0 d=100 o=0 a=0 f=0 n=2b13,2257,8bc,0,0,0 k=3d83f,5fe,0,89e,1cc43 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3db44 id=f1da070bd29de94e sid=f1d w=2028 s=d26a97b e=d26b167 p=19998 v=1 c=0 d=100 o=0 a=0 f=0 n=2b18,225c,8bc,0,0,0 k=3d8b1,5fe,0,89f,1ccf9 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3dbb7 id=f1da070bd29de94e sid=f1d w=2000 s=d283006 e=d2837d7 p=19994 v=1 c=0 d=100 o=0 a=0 f=0 n=2b1d,2261,8bc,0,0,0 k=3d923,5fe,0,8a0,1cdaf m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3dc2a id=f1da070bd29de94e sid=f1d w=1973 s=d29b69b e=d29be50 p=19999 v=1 c=0 d=97 o=0 a=0 f=0 n=2b22,2266,8bc,0,0,0 k=3d995,5fe,0,8a1,1ce65 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3dc9d id=f1da070bd29de94e sid=f1d w=1946 s=d2b3d36 e=d2b44d0 p=20000 v=1 c=0 d=95 o=0 a=0 f=0 n=2b27,226b,8bc,0,0,0 k=3da07,5fe,0,8a2,1cf1a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3dd10 id=f1da070bd29de94e sid=f1d w=1918 s=d2cc3ca e=d2ccb48 p=19997 v=1 c=0 d=92 o=0 a=0 f=0 n=2b2c,2270,8bc,0,0,0 k=3da79,5fe,0,8a3,1cfcf m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3dd83 id=f1da070bd29de94e sid=f1d w=1891 s=d2e4a51 e=d2e51b4 p=19994 v=1 c=0 d=89 o=0 a=0 f=0 n=2b31,2275,8bc,0,0,0 k=3daeb,5fe,0,8a4,1d084 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ddf6 id=f1da070bd29de94e sid=f1d w=1863 s=d2fd0e3 e=d2fd82a p=19999 v=1 c=0 d=86 o=0 a=0 f=0 n=2b36,227a,8bc,0,0,0 k=3db5d,5fe,0,8a5,1d139 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3de69 id=f1da070bd29de94e sid=f1d w=1836 s=d31577d e=d315ea9 p=20000 v=1 c=0 d=84 o=0 a=0 f=0 n=2b3b,227f,8bc,0,0,0 k=3dbcf,5fe,0,8a6,1d1ee m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3dedc id=f1da070bd29de94e sid=f1d w=1808 s=d32de0f e=d32e51f p=19998 v=1 c=0 d=81 o=0 a=0 f=0 n=2b40,2284,8bc,0,0,0 k=3dc41,5fe,0,8a7,1d2a3 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3df4f id=f1da070bd29de94e sid=f1d w=1781 s=d34649f e=d346b94 p=19995 v=1 c=0 d=78 o=0 a=0 f=0 n=2b45,2289,8bc,0,0,0 k=3dcb3,5fe,0,8a8,1d358 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3dfc2 id=f1da070bd29de94e sid=f1d w=1754 s=d35eb27 e=d35f201 p=19996 v=1 c=0 d=75 o=0 a=0 f=0 n=2b4a,228e,8bc,0,0,0 k=3dd25,5fe,0,8a9,1d40d m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e035 id=f1da070bd29de94e sid=f1d w=1726 s=d3771bf e=d37787d p=19999 v=1 c=0 d=73 o=0 a=0 f=0 n=2b4f,2293,8bc,0,0,0 k=3dd97,5fe,0,8aa,1d4c2 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e0a8 id=f1da070bd29de94e sid=f1d w=1699 s=d38f84a e=d38feed p=19997 v=1 c=0 d=70 o=0 a=0 f=0 n=2b54,2298,8bc,0,0,0 k=3de09,5fe,0,8ab,1d577 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e11b id=f1da070bd29de94e sid=f1d w=1672 s=d3a7edb e=d3a8563 p=19996 v=1 c=0 d=67 o=0 a=0 f=0 n=2b59,229d,8bc,0,0,0 k=3de7b,5fe,0,8ac,1d62c m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e187 id=f1da070bd29de94e sid=f1d w=1644 s=d3c0560 e=d3c0bcc p=19991 v=1 c=0 d=64 o=0 a=0 f=0 n=2b5e,22a2,8bc,0,0,0 k=3dee6,5fe,0,8ad,1d6e1 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e1fa id=f1da070bd29de94e sid=f1d w=1616 s=d3d8bde e=d3d922d p=19994 v=1 c=0 d=62 o=0 a=0 f=0 n=2b63,22a7,8bc,0,0,0 k=3df58,5fe,0,8ae,1d796 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e26d id=f1da070bd29de94e sid=f1d w=1589 s=d3f1262 e=d3f1897 p=19993 v=1 c=0 d=59 o=0 a=0 f=0 n=2b68,22ac,8bc,0,0,0 k=3dfca,5fe,0,8af,1d84b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e2e0 id=f1da070bd29de94e sid=f1d w=1561 s=d4098e3 e=d409efc p=19995 v=1 c=0 d=56 o=0 a=0 f=0 n=2b6d,22b1,8bc,0,0,0 k=3e03c,5fe,0,8b0,1d900 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e353 id=f1da070bd29de94e sid=f1d w=1534 s=d421f64 e=d422562 p=19992 v=1 c=0 d=53 o=0 a=0 f=0 n=2b72,22b6,8bc,0,0,0 k=3e0ae,5fe,0,8b1,1d9b5 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e3c6 id=f1da070bd29de94e sid=f1d w=1506 s=d43a5e4 e=d43abc6 p=19994 v=1 c=0 d=51 o=0 a=0 f=0 n=2b77,22bb,8bc,0,0,0 k=3e120,5fe,0,8b2,1da6a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e439 id=f1da070bd29de94e sid=f1d w=1479 s=d452c6d e=d453234 p=19996 v=1 c=0 d=48 o=0 a=0 f=0 n=2b7c,22c0,8bc,0,0,0 k=3e192,5fe,0,8b3,1db1f m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e4ac id=f1da070bd29de94e sid=f1d w=1451 s=d46b2f2 e=d46b89e p=19996 v=1 c=0 d=45 o=0 a=0 f=0 n=2b81,22c5,8bc,0,0,0 k=3e204,5fe,0,8b4,1dbd4 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e51f id=f1da070bd29de94e sid=f1d w=1424 s=d483982 e=d483f12 p=19996 v=1 c=0 d=42 o=0 a=0 f=0 n=2b86,22ca,8bc,0,0,0 k=3e276,5fe,0,8b5,1dc89 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e592 id=f1da070bd29de94e sid=f1d w=1396 s=d49c00f e=d49c583 p=19996 v=1 c=0 d=40 o=0 a=0 f=0 n=2b8b,22cf,8bc,0,0,0 k=3e2e8,5fe,0,8b6,1dd3e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e605 id=f1da070bd29de94e sid=f1d w=1370 s=d4b4691 e=d4b4bea p=19996 v=1 c=0 d=37 o=0 a=0 f=0 n=2b90,22d4,8bc,0,0,0 k=3e35a,5fe,0,8b7,1ddf3 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e678 id=f1da070bd29de94e sid=f1d w=1341 s=d4ccd18 e=d4cd255 p=19994 v=1 c=0 d=34 o=0 a=0 f=0 n=2b95,22d9,8bc,0,0,0 k=3e3cc,5fe,0,8b8,1dea8 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e6ea id=f1da070bd29de94e sid=f1d w=1314 s=d4e539b e=d4e58bd p=19992 v=1 c=0 d=31 o=0 a=0 f=0 n=2b9a,22de,8bc,0,0,0 k=3e43d,5fe,0,8b9,1df5d m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e75a id=f1da070bd29de94e sid=f1d w=1286 s=d4fda1a e=d4fdf21 p=19993 v=1 c=0 d=29 o=0 a=0 f=0 n=2b9f,22e3,8bc,0,0,0 k=3e4ac,5fe,0,8ba,1e012 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e7cd id=f1da070bd29de94e sid=f1d w=1259 s=d5160a4 e=d51658f p=19996 v=1 c=0 d=26 o=0 a=0 f=0 n=2ba4,22e8,8bc,0,0,0 k=3e51e,5fe,0,8bb,1e0c7 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e840 id=f1da070bd29de94e sid=f1d w=1231 s=d52e734 e=d52ec03 p=19997 v=1 c=0 d=23 o=0 a=0 f=0 n=2ba9,22ed,8bc,0,0,0 k=3e590,5fe,0,8bc,1e17c m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e8b3 id=f1da070bd29de94e sid=f1d w=1205 s=d546dc0 e=d547274 p=19996 v=1 c=0 d=21 o=0 a=0 f=0 n=2bae,22f2,8bc,0,0,0 k=3e602,5fe,0,8bd,1e231 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e926 id=f1da070bd29de94e sid=f1d w=1176 s=d55f44b e=d55f8e3 p=19996 v=1 c=0 d=18 o=0 a=0 f=0 n=2bb3,22f7,8bc,0,0,0 k=3e674,5fe,0,8be,1e2e6 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3e999 id=f1da070bd29de94e sid=f1d w=1150 s=d577ad9 e=d577f57 p=19999 v=1 c=0 d=15 o=0 a=0 f=0 n=2bb8,22fc,8bc,0,0,0 k=3e6e6,5fe,0,8bf,1e39b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ea05 id=f1da070bd29de94e sid=f1d w=1121 s=d59016a e=d5905cb p=19998 v=1 c=0 d=12 o=0 a=0 f=0 n=2bbd,2301,8bc,0,0,0 k=3e751,5fe,0,8c0,1e450 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ea77 id=f1da070bd29de94e sid=f1d w=1094 s=d5a87f3 e=d5a8c39 p=19995 v=1 c=0 d=9 o=0 a=0 f=0 n=2bc2,2306,8bc,0,0,0 k=3e7c2,5fe,0,8c1,1e505 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3eaea id=f1da070bd29de94e sid=f1d w=1066 s=d5c0e81 e=d5c12ab p=19997 v=1 c=0 d=7 o=0 a=0 f=0 n=2bc7,230b,8bc,0,0,0 k=3e834,5fe,0,8c2,1e5b9 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3eb5d id=f1da070bd29de94e sid=f1d w=1039 s=d5d9510 e=d5d991f p=19997 v=1 c=0 d=4 o=0 a=0 f=0 n=2bcc,2310,8bc,0,0,0 k=3e8a6,5fe,0,8c3,1e66d m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ebd0 id=f1da070bd29de94e sid=f1d w=1012 s=d5f1ba7 e=d5f1f9b p=20000 v=1 c=0 d=1 o=0 a=0 f=0 n=2bd1,2315,8bc,0,0,0 k=3e918,5fe,0,8c4,1e721 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ec43 id=f1da070bd29de94e sid=f1d w=985 s=d60a23e e=d60a617 p=19996 v=1 c=0 d=0 o=0 a=0 f=0 n=2bd6,231a,8bc,0,0,0 k=3e98a,5fe,0,8c5,1e7d5 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ecb6 id=f1da070bd29de94e sid=f1d w=957 s=d6228da e=d622c96 p=19998 v=1 c=0 d=0 o=0 a=0 f=0 n=2bdb,231f,8bc,0,0,0 k=3e9fc,5fe,0,8c6,1e888 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ed29 id=f1da070bd29de94e sid=f1d w=930 s=d63af6f e=d63b311 p=19997 v=1 c=0 d=0 o=0 a=0 f=0 n=2be0,2324,8bc,0,0,0 k=3ea6e,5fe,0,8c7,1e93b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ed9c id=f1da070bd29de94e sid=f1d w=901 s=d653606 e=d65398b p=19998 v=1 c=0 d=0 o=0 a=0 f=0 n=2be5,2329,8bc,0,0,0 k=3eae0,5fe,0,8c8,1e9ee m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ee0f id=f1da070bd29de94e sid=f1d w=874 s=d66bc98 e=d66c003 p=19997 v=3 c=0 d=0 o=0 a=0 f=0 n=2bea,2329,8c1,0,0,0 k=3eb52,5fe,0,8c9,1eaa1 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ee82 id=f1da070bd29de94e sid=f1d w=847 s=d684331 e=d68467f p=20000 v=3 c=0 d=0 o=0 a=0 f=0 n=2bef,2329,8c6,0,0,0 k=3ebc4,5fe,0,8ca,1eb54 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3eef5 id=f1da070bd29de94e sid=f1d w=819 s=d69c9bf e=d69ccf2 p=19995 v=3 c=0 d=0 o=0 a=0 f=0 n=2bf4,2329,8cb,0,0,0 k=3ec36,5fe,0,8cb,1ec07 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ef68 id=f1da070bd29de94e sid=f1d w=803 s=d6b5044 e=d6b5366 p=19994 v=3 c=0 d=0 o=0 a=0 f=0 n=2bf9,2329,8d0,0,0,0 k=3eca8,5fe,0,8cc,1ecba m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3efdb id=f1da070bd29de94e sid=f1d w=802 s=d6cd6ce e=d6cd9f0 p=19995 v=3 c=0 d=0 o=0 a=0 f=0 n=2bfe,2329,8d5,0,0,0 k=3ed1a,5fe,0,8cd,1ed6d m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f04e id=f1da070bd29de94e sid=f1d w=803 s=d6e5d53 e=d6e6075 p=19995 v=3 c=0 d=0 o=0 a=0 f=0 n=2c03,2329,8da,0,0,0 k=3ed8c,5fe,0,8ce,1ee20 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f0c1 id=f1da070bd29de94e sid=f1d w=802 s=d6fe3e0 e=d6fe702 p=19995 v=3 c=0 d=0 o=0 a=0 f=0 n=2c08,2329,8df,0,0,0 k=3edfe,5fe,0,8cf,1eed3 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f134 id=f1da070bd29de94e sid=f1d w=823 s=d716a63 e=d716d9a p=19993 v=3 c=0 d=0 o=0 a=0 f=0 n=2c0d,2329,8e4,0,0,0 k=3ee70,5fe,0,8d0,1ef86 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f1a7 id=f1da070bd29de94e sid=f1d w=849 s=d72f0e7 e=d72f438 p=19995 v=3 c=0 d=0 o=0 a=0 f=0 n=2c12,2329,8e9,0,0,0 k=3eee2,5fe,0,8d1,1f039 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f21a id=f1da070bd29de94e sid=f1d w=878 s=d747769 e=d747ad7 p=19995 v=3 c=0 d=0 o=0 a=0 f=0 n=2c17,2329,8ee,0,0,0 k=3ef54,5fe,0,8d2,1f0ec m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f28d id=f1da070bd29de94e sid=f1d w=905 s=d75fdec e=d760175 p=19995 v=1 c=0 d=0 o=0 a=0 f=0 n=2c1c,232a,8f2,0,0,0 k=3efc6,5fe,0,8d3,1f19f m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f300 id=f1da070bd29de94e sid=f1d w=932 s=d77846b e=d77880f p=19996 v=1 c=0 d=0 o=0 a=0 f=0 n=2c21,232f,8f2,0,0,0 k=3f038,5fe,0,8d4,1f252 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f373 id=f1da070bd29de94e sid=f1d w=960 s=d790af0 e=d790eb0 p=19994 v=1 c=0 d=0 o=0 a=0 f=0 n=2c26,2334,8f2,0,0,0 k=3f0aa,5fe,0,8d5,1f305 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f3e6 id=f1da070bd29de94e sid=f1d w=987 s=d7a9179 e=d7a9554 p=19996 v=1 c=0 d=0 o=0 a=0 f=0 n=2c2b,2339,8f2,0,0,0 k=3f11c,5fe,0,8d6,1f3b8 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f459 id=f1da070bd29de94e sid=f1d w=1016 s=d7c1803 e=d7c1bfb p=19995 v=1 c=0 d=2 o=0 a=0 f=0 n=2c30,233e,8f2,0,0,0 k=3f18e,5fe,0,8d7,1f46b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f4cc id=f1da070bd29de94e sid=f1d w=1043 s=d7d9e84 e=d7da296 p=19996 v=1 c=0 d=4 o=0 a=0 f=0 n=2c35,2343,8f2,0,0,0 k=3f200,5fe,0,8d8,1f51f m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f53f id=f1da070bd29de94e sid=f1d w=1070 s=d7f250a e=d7f2938 p=19995 v=1 c=0 d=7 o=0 a=0 f=0 n=2c3a,2348,8f2,0,0,0 k=3f272,5fe,0,8d9,1f5d3 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f5b2 id=f1da070bd29de94e sid=f1d w=1097 s=d80ab8b e=d80afd4 p=19996 v=1 c=0 d=10 o=0 a=0 f=0 n=2c3f,234d,8f2,0,0,0 k=3f2e4,5fe,0,8da,1f687 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f625 id=f1da070bd29de94e sid=f1d w=1125 s=d82320c e=d823671 p=19995 v=1 c=0 d=13 o=0 a=0 f=0 n=2c44,2352,8f2,0,0,0 k=3f356,5fe,0,8db,1f73c m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f698 id=f1da070bd29de94e sid=f1d w=1152 s=d83b88d e=d83bd0d p=19995 v=1 c=0 d=15 o=0 a=0 f=0 n=2c49,2357,8f2,0,0,0 k=3f3c8,5fe,0,8dc,1f7f1 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f70b id=f1da070bd29de94e sid=f1d w=1180 s=d853f13 e=d8543b0 p=19994 v=1 c=0 d=18 o=0 a=0 f=0 n=2c4e,235c,8f2,0,0,0 k=3f43a,5fe,0,8dd,1f8a6 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f77e id=f1da070bd29de94e sid=f1d w=1207 s=d86c597 e=d86ca4f p=19995 v=1 c=0 d=21 o=0 a=0 f=0 n=2c53,2361,8f2,0,0,0 k=3f4ac,5fe,0,8de,1f95b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f7f1 id=f1da070bd29de94e sid=f1d w=1235 s=d884c20 e=d8850f3 p=19996 v=1 c=0 d=24 o=0 a=0 f=0 n=2c58,2366,8f2,0,0,0 k=3f51e,5fe,0,8df,1fa10 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f864 id=f1da070bd29de94e sid=f1d w=1262 s=d89d2ac e=d89d79a p=19997 v=1 c=0 d=26 o=0 a=0 f=0 n=2c5d,236b,8f2,0,0,0 k=3f590,5fe,0,8e0,1fac5 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f8d7 id=f1da070bd29de94e sid=f1d w=1290 s=d8b5933 e=d8b5e3d p=19993 v=1 c=0 d=29 o=0 a=0 f=0 n=2c62,2370,8f2,0,0,0 k=3f602,5fe,0,8e1,1fb7a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f94a id=f1da070bd29de94e sid=f1d w=1317 s=d8cdfb7 e=d8ce4dc p=19995 v=1 c=0 d=32 o=0 a=0 f=0 n=2c67,2375,8f2,0,0,0 k=3f674,5fe,0,8e2,1fc2f m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3f9bd id=f1da070bd29de94e sid=f1d w=1345 s=d8e6644 e=d8e6b85 p=19995 v=1 c=0 d=35 o=0 a=0 f=0 n=2c6c,237a,8f2,0,0,0 k=3f6e6,5fe,0,8e3,1fce4 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3fa30 id=f1da070bd29de94e sid=f1d w=1372 s=d8fecd6 e=d8ff232 p=19997 v=1 c=0 d=37 o=0 a=0 f=0 n=2c71,237f,8f2,0,0,0 k=3f758,5fe,0,8e4,1fd99 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3faa3 id=f1da070bd29de94e sid=f1d w=1400 s=d917364 e=d9178db p=19996 v=1 c=0 d=40 o=0 a=0 f=0 n=2c76,2384,8f2,0,0,0 k=3f7ca,5fe,0,8e5,1fe4e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3fb16 id=f1da070bd29de94e sid=f1d w=1428 s=d92f9f2 e=d92ff86 p=19997 v=1 c=0 d=43 o=0 a=0 f=0 n=2c7b,2389,8f2,0,0,0 k=3f83c,5fe,0,8e6,1ff03 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3fb89 id=f1da070bd29de94e sid=f1d w=1454 s=d94808a e=d948638 p=19998 v=1 c=0 d=45 o=0 a=0 f=0 n=2c80,238e,8f2,0,0,0 k=3f8ae,5fe,0,8e7,1ffb8 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3fbfc id=f1da070bd29de94e sid=f1d w=1482 s=d960721 e=d960ceb p=19994 v=1 c=0 d=48 o=0 a=0 f=0 n=2c85,2393,8f2,0,0,0 k=3f920,5fe,0,8e8,2006d m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3fc6f id=f1da070bd29de94e sid=f1d w=1509 s=d978dbd e=d9793a2 p=20001 v=1 c=0 d=51 o=0 a=0 f=0 n=2c8a,2398,8f2,0,0,0 k=3f992,5fe,0,8e9,20122 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3fcdf id=f1da070bd29de94e sid=f1d w=1537 s=d99144d e=d991a4e p=19994 v=1 c=0 d=54 o=0 a=0 f=0 n=2c8f,239d,8f2,0,0,0 k=3fa01,5fe,0,8ea,201d7 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3fd4e id=f1da070bd29de94e sid=f1d w=1565 s=d9a9adc e=d9aa0f9 p=19997 v=1 c=0 d=57 o=0 a=0 f=0 n=2c94,23a2,8f2,0,0,0 k=3fa6f,5fe,0,8eb,2028c m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3fdc1 id=f1da070bd29de94e sid=f1d w=1593 s=d9c2175 e=d9c27ad p=19996 v=1 c=0 d=59 o=0 a=0 f=0 n=2c99,23a7,8f2,0,0,0 k=3fae1,5fe,0,8ec,20341 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3fe34 id=f1da070bd29de94e sid=f1d w=1620 s=d9da80a e=d9dae5d p=19998 v=1 c=0 d=62 o=0 a=0 f=0 n=2c9e,23ac,8f2,0,0,0 k=3fb53,5fe,0,8ed,203f6 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3fea7 id=f1da070bd29de94e sid=f1d w=1647 s=d9f2ea0 e=d9f350f p=19996 v=1 c=0 d=65 o=0 a=0 f=0 n=2ca3,23b1,8f2,0,0,0 k=3fbc5,5fe,0,8ee,204ab m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ff1a id=f1da070bd29de94e sid=f1d w=1674 s=da0b52e e=da0bbb7 p=19996 v=1 c=0 d=67 o=0 a=0 f=0 n=2ca8,23b6,8f2,0,0,0 k=3fc37,5fe,0,8ef,20560 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=3ff8d id=f1da070bd29de94e sid=f1d w=1702 s=da23bbe e=da24264 p=19997 v=1 c=0 d=70 o=0 a=0 f=0 n=2cad,23bb,8f2,0,0,0 k=3fca9,5fe,0,8f0,20615 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40000 id=f1da070bd29de94e sid=f1d w=1730 s=da3c253 e=da3c915 p=19997 v=1 c=0 d=73 o=0 a=0 f=0 n=2cb2,23c0,8f2,0,0,0 k=3fd1b,5fe,0,8f1,206ca m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40073 id=f1da070bd29de94e sid=f1d w=1757 s=da548e0 e=da54fbc p=19995 v=1 c=0 d=76 o=0 a=0 f=0 n=2cb7,23c5,8f2,0,0,0 k=3fd8d,5fe,0,8f2,2077f m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=400e6 id=f1da070bd29de94e sid=f1d w=1784 s=da6cf5a e=da6d652 p=19992 v=1 c=0 d=78 o=0 a=0 f=0 n=2cbc,23ca,8f2,0,0,0 k=3fdff,5fe,0,8f3,20834 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40159 id=f1da070bd29de94e sid=f1d w=1812 s=da855e3 e=da85cf7 p=19998 v=1 c=0 d=81 o=0 a=0 f=0 n=2cc1,23cf,8f2,0,0,0 k=3fe71,5fe,0,8f4,208e9 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=401cc id=f1da070bd29de94e sid=f1d w=1839 s=da9dc76 e=da9e3a5 p=19998 v=1 c=0 d=84 o=0 a=0 f=0 n=2cc6,23d4,8f2,0,0,0 k=3fee3,5fe,0,8f5,2099e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=4023f id=f1da070bd29de94e sid=f1d w=1868 s=dab6306 e=dab6a52 p=19997 v=1 c=0 d=87 o=0 a=0 f=0 n=2ccb,23d9,8f2,0,0,0 k=3ff55,5fe,0,8f6,20a53 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=402b2 id=f1da070bd29de94e sid=f1d w=1894 s=dace99f e=dacf105 p=19998 v=1 c=0 d=89 o=0 a=0 f=0 n=2cd0,23de,8f2,0,0,0 k=3ffc7,5fe,0,8f7,20b08 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40325 id=f1da070bd29de94e sid=f1d w=1922 s=dae702a e=dae77ac p=19995 v=1 c=0 d=92 o=0 a=0 f=0 n=2cd5,23e3,8f2,0,0,0 k=40039,5fe,0,8f8,20bbd m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40398 id=f1da070bd29de94e sid=f1d w=1949 s=daff6b1 e=daffe4e p=19995 v=1 c=0 d=95 o=0 a=0 f=0 n=2cda,23e8,8f2,0,0,0 k=400ab,5fe,0,8f9,20c72 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=4040b id=f1da070bd29de94e sid=f1d w=1977 s=db17d2d e=db184e6 p=19992 v=1 c=0 d=98 o=0 a=0 f=0 n=2cdf,23ed,8f2,0,0,0 k=4011d,5fe,0,8fa,20d27 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=4047e id=f1da070bd29de94e sid=f1d w=2004 s=db303b7 e=db30b8a p=19997 v=1 c=0 d=100 o=0 a=0 f=0 n=2ce4,23f2,8f2,0,0,0 k=4018f,5fe,0,8fb,20ddc m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=404f1 id=f1da070bd29de94e sid=f1d w=2032 s=db48a37 e=db49227 p=19993 v=1 c=0 d=100 o=0 a=0 f=0 n=2ce9,23f7,8f2,0,0,0 k=40201,5fe,0,8fc,20e92 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40564 id=f1da070bd29de94e sid=f1d w=2059 s=db610bb e=db618c6 p=19995 v=1 c=0 d=100 o=0 a=0 f=0 n=2cee,23fc,8f2,0,0,0 k=40273,5fe,0,8fd,20f48 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=405d7 id=f1da070bd29de94e sid=f1d w=2087 s=db79740 e=db79f67 p=19995 v=1 c=0 d=100 o=0 a=0 f=0 n=2cf3,2401,8f2,0,0,0 k=402e5,5fe,0,8fe,20ffe m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=4064a id=f1da070bd29de94e sid=f1d w=2114 s=db91dcf e=db92611 p=19998 v=3 c=0 d=100 o=0 a=0 f=0 n=2cf8,2403,8f5,0,0,0 k=40357,5fe,0,8ff,210b4 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=406bd id=f1da070bd29de94e sid=f1d w=2143 s=dbaa461 e=dbaacc0 p=19999 v=3 c=0 d=100 o=0 a=0 f=0 n=2cfd,2403,8fa,0,0,0 k=403c9,5fe,0,900,2116a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40730 id=f1da070bd29de94e sid=f1d w=2169 s=dbc2af4 e=dbc336d p=19995 v=3 c=0 d=100 o=0 a=0 f=0 n=2d02,2403,8ff,0,0,0 k=4043b,5fe,0,901,21220 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=407a3 id=f1da070bd29de94e sid=f1d w=2196 s=dbdb179 e=dbdba0d p=19995 v=3 c=0 d=100 o=0 a=0 f=0 n=2d07,2403,904,0,0,0 k=404ad,5fe,0,902,212d6 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40816 id=f1da070bd29de94e sid=f1d w=2201 s=dbf3807 e=dbf40a1 p=19996 v=3 c=0 d=100 o=0 a=0 f=0 n=2d0c,2403,909,0,0,0 k=4051f,5fe,0,903,2138c m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40889 id=f1da070bd29de94e sid=f1d w=2201 s=dc0be91 e=dc0c72a p=19996 v=3 c=0 d=100 o=0 a=0 f=0 n=2d11,2403,90e,0,0,0 k=40591,5fe,0,904,21442 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=408fc id=f1da070bd29de94e sid=f1d w=2202 s=dc2451c e=dc24db6 p=19996 v=3 c=0 d=100 o=0 a=0 f=0 n=2d16,2403,913,0,0,0 k=40603,5fe,0,905,214f8 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=4096f id=f1da070bd29de94e sid=f1d w=2197 s=dc3cba3 e=dc3d438 p=19995 v=3 c=0 d=100 o=0 a=0 f=0 n=2d1b,2403,918,0,0,0 k=40675,5fe,0,906,215ae m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=409e2 id=f1da070bd29de94e sid=f1d w=2171 s=dc55236 e=dc55ab1 p=19997 v=3 c=0 d=100 o=0 a=0 f=0 n=2d20,2403,91d,0,0,0 k=406e7,5fe,0,907,21664 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40a55 id=f1da070bd29de94e sid=f1d w=2143 s=dc6d8c8 e=dc6e127 p=19997 v=3 c=0 d=100 o=0 a=0 f=0 n=2d25,2403,922,0,0,0 k=40759,5fe,0,908,2171a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40ac8 id=f1da070bd29de94e sid=f1d w=2116 s=dc85f59 e=dc8679d p=19996 v=3 c=0 d=100 o=0 a=0 f=0 n=2d2a,2403,927,0,0,0 k=407cb,5fe,0,909,217d0 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40b3b id=f1da070bd29de94e sid=f1d w=2088 s=dc9e5ed e=dc9ee15 p=20000 v=1 c=0 d=100 o=0 a=0 f=0 n=2d2f,2406,929,0,0,0 k=4083d,5fe,0,90a,21886 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40bae id=f1da070bd29de94e sid=f1d w=2061 s=dcb6c82 e=dcb748f p=19996 v=1 c=0 d=100 o=0 a=0 f=0 n=2d34,240b,929,0,0,0 k=408af,5fe,0,90b,2193c m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40c21 id=f1da070bd29de94e sid=f1d w=2033 s=dccf31e e=dccfb0f p=20000 v=1 c=0 d=100 o=0 a=0 f=0 n=2d39,2410,929,0,0,0 k=40921,5fe,0,90c,219f2 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40c94 id=f1da070bd29de94e sid=f1d w=2006 s=dce79c0 e=dce8196 p=20000 v=1 c=0 d=100 o=0 a=0 f=0 n=2d3e,2415,929,0,0,0 k=40993,5fe,0,90d,21aa8 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40d07 id=f1da070bd29de94e sid=f1d w=1978 s=dd00053 e=dd0080d p=19998 v=1 c=0 d=98 o=0 a=0 f=0 n=2d43,241a,929,0,0,0 k=40a05,5fe,0,90e,21b5e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40d7a id=f1da070bd29de94e sid=f1d w=1951 s=dd186e1 e=dd18e80 p=19994 v=1 c=0 d=95 o=0 a=0 f=0 n=2d48,241f,929,0,0,0 k=40a77,5fe,0,90f,21c13 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40ded id=f1da070bd29de94e sid=f1d w=1923 s=dd30d6d e=dd314f0 p=19996 v=1 c=0 d=92 o=0 a=0 f=0 n=2d4d,2424,929,0,0,0 k=40ae9,5fe,0,910,21cc8 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40e60 id=f1da070bd29de94e sid=f1d w=1896 s=dd493f1 e=dd49b59 p=19994 v=1 c=0 d=90 o=0 a=0 f=0 n=2d52,2429,929,0,0,0 k=40b5b,5fe,0,911,21d7d m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40ed3 id=f1da070bd29de94e sid=f1d w=1868 s=dd61a7d e=dd621c9 p=19997 v=1 c=0 d=87 o=0 a=0 f=0 n=2d57,242e,929,0,0,0 k=40bcd,5fe,0,912,21e32 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40f46 id=f1da070bd29de94e sid=f1d w=1841 s=dd7a111 e=dd7a843 p=19997 v=1 c=0 d=84 o=0 a=0 f=0 n=2d5c,2433,929,0,0,0 k=40c3f,5fe,0,913,21ee7 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=40fb9 id=f1da070bd29de94e sid=f1d w=1813 s=dd927aa e=dd92ebf p=19998 v=1 c=0 d=81 o=0 a=0 f=0 n=2d61,2438,929,0,0,0 k=40cb1,5fe,0,914,21f9c m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=4102c id=f1da070bd29de94e sid=f1d w=1786 s=ddaae3c e=ddab537 p=19997 v=1 c=0 d=79 o=0 a=0 f=0 n=2d66,243d,929,0,0,0 k=40d23,5fe,0,915,22051 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41099 id=f1da070bd29de94e sid=f1d w=1758 s=ddc34cc e=ddc3baa p=19998 v=1 c=0 d=76 o=0 a=0 f=0 n=2d6b,2442,929,0,0,0 k=40d8f,5fe,0,916,22106 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=4110a id=f1da070bd29de94e sid=f1d w=1731 s=dddbb5a e=dddc21d p=19996 v=1 c=0 d=73 o=0 a=0 f=0 n=2d70,2447,929,0,0,0 k=40dff,5fe,0,917,221bb m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=4117d id=f1da070bd29de94e sid=f1d w=1703 s=ddf41ea e=ddf4891 p=19998 v=1 c=0 d=70 o=0 a=0 f=0 n=2d75,244c,929,0,0,0 k=40e71,5fe,0,918,22270 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=411f0 id=f1da070bd29de94e sid=f1d w=1676 s=de0c87f e=de0cf0b p=19995 v=1 c=0 d=68 o=0 a=0 f=0 n=2d7a,2451,929,0,0,0 k=40ee3,5fe,0,919,22325 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41263 id=f1da070bd29de94e sid=f1d w=1648 s=de24f0f e=de2557f p=19999 v=1 c=0 d=65 o=0 a=0 f=0 n=2d7f,2456,929,0,0,0 k=40f55,5fe,0,91a,223da m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=412d6 id=f1da070bd29de94e sid=f1d w=1621 s=de3d5a8 e=de3dbfe p=20000 v=1 c=0 d=62 o=0 a=0 f=0 n=2d84,245b,929,0,0,0 k=40fc7,5fe,0,91b,2248f m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41349 id=f1da070bd29de94e sid=f1d w=1593 s=de55c41 e=de5627a p=19998 v=1 c=0 d=59 o=0 a=0 f=0 n=2d89,2460,929,0,0,0 k=41039,5fe,0,91c,22544 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=413bc id=f1da070bd29de94e sid=f1d w=1566 s=de6e2d7 e=de6e8f5 p=19999 v=1 c=0 d=57 o=0 a=0 f=0 n=2d8e,2465,929,0,0,0 k=410ab,5fe,0,91d,225f9 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=4142f id=f1da070bd29de94e sid=f1d w=1538 s=de8696c e=de86f6e p=19997 v=1 c=0 d=54 o=0 a=0 f=0 n=2d93,246a,929,0,0,0 k=4111d,5fe,0,91e,226ae m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=414a2 id=f1da070bd29de94e sid=f1d w=1511 s=de9efff e=de9f5e6 p=19998 v=1 c=0 d=51 o=0 a=0 f=0 n=2d98,246f,929,0,0,0 k=4118f,5fe,0,91f,22763 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41515 id=f1da070bd29de94e sid=f1d w=1483 s=deb7692 e=deb7c5d p=19998 v=1 c=0 d=48 o=0 a=0 f=0 n=2d9d,2474,929,0,0,0 k=41201,5fe,0,920,22818 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41588 id=f1da070bd29de94e sid=f1d w=1456 s=decfd2b e=ded02db p=19997 v=1 c=0 d=46 o=0 a=0 f=0 n=2da2,2479,929,0,0,0 k=41273,5fe,0,921,228cd m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=415fb id=f1da070bd29de94e sid=f1d w=1429 s=dee83c1 e=dee8955 p=19998 v=1 c=0 d=43 o=0 a=0 f=0 n=2da7,247e,929,0,0,0 k=412e5,5fe,0,922,22982 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=4166e id=f1da070bd29de94e sid=f1d w=1401 s=df00a5e e=df00fd7 p=19998 v=1 c=0 d=40 o=0 a=0 f=0 n=2dac,2483,929,0,0,0 k=41357,5fe,0,923,22a37 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=416e1 id=f1da070bd29de94e sid=f1d w=1373 s=df190f7 e=df19654 p=20000 v=1 c=0 d=37 o=0 a=0 f=0 n=2db1,2488,929,0,0,0 k=413c9,5fe,0,924,22aec m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41754 id=f1da070bd29de94e sid=f1d w=1347 s=df31786 e=df31cc9 p=19997 v=1 c=0 d=35 o=0 a=0 f=0 n=2db6,248d,929,0,0,0 k=4143b,5fe,0,925,22ba1 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=417c7 id=f1da070bd29de94e sid=f1d w=1319 s=df49e1b e=df4a342 p=19998 v=1 c=0 d=32 o=0 a=0 f=0 n=2dbb,2492,929,0,0,0 k=414ad,5fe,0,926,22c56 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=4183a id=f1da070bd29de94e sid=f1d w=1292 s=df624b5 e=df629c0 p=19998 v=1 c=0 d=29 o=0 a=0 f=0 n=2dc0,2497,929,0,0,0 k=4151f,5fe,0,927,22d0b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=418ad id=f1da070bd29de94e sid=f1d w=1263 s=df7ab49 e=df7b038 p=19999 v=1 c=0 d=26 o=0 a=0 f=0 n=2dc5,249c,929,0,0,0 k=41591,5fe,0,928,22dc0 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41920 id=f1da070bd29de94e sid=f1d w=1237 s=df931ea e=df936bf p=20002 v=1 c=0 d=24 o=0 a=0 f=0 n=2dca,24a1,929,0,0,0 k=41603,5fe,0,929,22e75 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41993 id=f1da070bd29de94e sid=f1d w=1208 s=dfab88f e=dfabd47 p=20001 v=1 c=0 d=21 o=0 a=0 f=0 n=2dcf,24a6,929,0,0,0 k=41675,5fe,0,92a,22f2a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41a06 id=f1da070bd29de94e sid=f1d w=1181 s=dfc3f32 e=dfc43cf p=19999 v=1 c=0 d=18 o=0 a=0 f=0 n=2dd4,24ab,929,0,0,0 k=416e7,5fe,0,92b,22fdf m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41a79 id=f1da070bd29de94e sid=f1d w=1154 s=dfdc5cb e=dfdca4d p=19999 v=1 c=0 d=15 o=0 a=0 f=0 n=2dd9,24b0,929,0,0,0 k=41759,5fe,0,92c,23094 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41aec id=f1da070bd29de94e sid=f1d w=1126 s=dff4c73 e=dff50da p=20001 v=1 c=0 d=13 o=0 a=0 f=0 n=2dde,24b5,929,0,0,0 k=417cb,5fe,0,92d,23149 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41b5f id=f1da070bd29de94e sid=f1d w=1099 s=e00d31a e=e00d765 p=20001 v=1 c=0 d=10 o=0 a=0 f=0 n=2de3,24ba,929,0,0,0 k=4183d,5fe,0,92e,231fe m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41bd2 id=f1da070bd29de94e sid=f1d w=1072 s=e0259c5 e=e025df5 p=20001 v=1 c=0 d=7 o=0 a=0 f=0 n=2de8,24bf,929,0,0,0 k=418af,5fe,0,92f,232b3 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41c45 id=f1da070bd29de94e sid=f1d w=1044 s=e03e06b e=e03e47f p=20000 v=1 c=0 d=4 o=0 a=0 f=0 n=2ded,24c4,929,0,0,0 k=41921,5fe,0,930,23367 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41cb8 id=f1da070bd29de94e sid=f1d w=1016 s=e056712 e=e056b0a p=20000 v=1 c=0 d=2 o=0 a=0 f=0 n=2df2,24c9,929,0,0,0 k=41993,5fe,0,931,2341b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41d2b id=f1da070bd29de94e sid=f1d w=989 s=e06edb7 e=e06f194 p=20001 v=1 c=0 d=0 o=0 a=0 f=0 n=2df7,24ce,929,0,0,0 k=41a05,5fe,0,932,234cf m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41d9e id=f1da070bd29de94e sid=f1d w=961 s=e087468 e=e08782a p=20001 v=1 c=0 d=0 o=0 a=0 f=0 n=2dfc,24d3,929,0,0,0 k=41a77,5fe,0,933,23582 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41e11 id=f1da070bd29de94e sid=f1d w=934 s=e09fb11 e=e09feb7 p=20001 v=1 c=0 d=0 o=0 a=0 f=0 n=2e01,24d8,929,0,0,0 k=41ae9,5fe,0,934,23635 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41e84 id=f1da070bd29de94e sid=f1d w=907 s=e0b81b3 e=e0b853e p=19999 v=1 c=0 d=0 o=0 a=0 f=0 n=2e06,24dd,929,0,0,0 k=41b5b,5fe,0,935,236e8 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41eed id=f1da070bd29de94e sid=f1d w=879 s=e0d0850 e=e0d0bbf p=19998 v=3 c=0 d=0 o=0 a=0 f=0 n=2e0b,24de,92d,0,0,0 k=41bc3,5fe,0,936,2379b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41f5f id=f1da070bd29de94e sid=f1d w=852 s=e0e8eeb e=e0e923e p=20002 v=3 c=0 d=0 o=0 a=0 f=0 n=2e10,24de,932,0,0,0 k=41c34,5fe,0,937,2384e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=41fd2 id=f1da070bd29de94e sid=f1d w=823 s=e10158c e=e1018c4 p=19999 v=3 c=0 d=0 o=0 a=0 f=0 n=2e15,24de,937,0,0,0 k=41ca6,5fe,0,938,23901 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42045 id=f1da070bd29de94e sid=f1d w=803 s=e119c2e e=e119f50 p=19999 v=3 c=0 d=0 o=0 a=0 f=0 n=2e1a,24de,93c,0,0,0 k=41d18,5fe,0,939,239b4 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=420b8 id=f1da070bd29de94e sid=f1d w=802 s=e1322cb e=e1325ee p=20000 v=3 c=0 d=0 o=0 a=0 f=0 n=2e1f,24de,941,0,0,0 k=41d8a,5fe,0,93a,23a67 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=4212b id=f1da070bd29de94e sid=f1d w=802 s=e14a96b e=e14ac8d p=19999 v=3 c=0 d=0 o=0 a=0 f=0 n=2e24,24de,946,0,0,0 k=41dfc,5fe,0,93b,23b1a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=4219e id=f1da070bd29de94e sid=f1d w=802 s=e163001 e=e163323 p=19999 v=3 c=0 d=0 o=0 a=0 f=0 n=2e29,24de,94b,0,0,0 k=41e6e,5fe,0,93c,23bcd m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42211 id=f1da070bd29de94e sid=f1d w=818 s=e17b69e e=e17b9d0 p=19999 v=3 c=0 d=0 o=0 a=0 f=0 n=2e2e,24de,950,0,0,0 k=41ee0,5fe,0,93d,23c80 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42284 id=f1da070bd29de94e sid=f1d w=846 s=e193d36 e=e194084 p=19999 v=3 c=0 d=0 o=0 a=0 f=0 n=2e33,24de,955,0,0,0 k=41f52,5fe,0,93e,23d33 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=422f7 id=f1da070bd29de94e sid=f1d w=873 s=e1ac3e0 e=e1ac749 p=20002 v=3 c=0 d=0 o=0 a=0 f=0 n=2e38,24de,95a,0,0,0 k=41fc4,5fe,0,93f,23de6 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42362 id=f1da070bd29de94e sid=f1d w=901 s=e1c4a8c e=e1c4e13 p=20003 v=1 c=0 d=0 o=0 a=0 f=0 n=2e3d,24df,95e,0,0,0 k=4202e,5fe,0,940,23e99 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=423d5 id=f1da070bd29de94e sid=f1d w=928 s=e1dd12e e=e1dd4cf p=20001 v=1 c=0 d=0 o=0 a=0 f=0 n=2e42,24e4,95e,0,0,0 k=420a0,5fe,0,941,23f4c m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42448 id=f1da070bd29de94e sid=f1d w=955 s=e1f57c5 e=e1f5b80 p=19998 v=1 c=0 d=0 o=0 a=0 f=0 n=2e47,24e9,95e,0,0,0 k=42112,5fe,0,942,23fff m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=424bb id=f1da070bd29de94e sid=f1d w=982 s=e20de5b e=e20e231 p=20000 v=1 c=0 d=0 o=0 a=0 f=0 n=2e4c,24ee,95e,0,0,0 k=42184,5fe,0,943,240b2 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=4252e id=f1da070bd29de94e sid=f1d w=1011 s=e2264f6 e=e2268e8 p=20000 v=1 c=0 d=1 o=0 a=0 f=0 n=2e51,24f3,95e,0,0,0 k=421f6,5fe,0,944,24165 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=425a1 id=f1da070bd29de94e sid=f1d w=1038 s=e23eba5 e=e23efb3 p=20002 v=1 c=0 d=4 o=0 a=0 f=0 n=2e56,24f8,95e,0,0,0 k=42268,5fe,0,945,24219 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42614 id=f1da070bd29de94e sid=f1d w=1066 s=e257248 e=e257672 p=20001 v=1 c=0 d=7 o=0 a=0 f=0 n=2e5b,24fd,95e,0,0,0 k=422da,5fe,0,946,242cd m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42687 id=f1da070bd29de94e sid=f1d w=1092 s=e26f8e1 e=e26fd25 p=19998 v=1 c=0 d=9 o=0 a=0 f=0 n=2e60,2502,95e,0,0,0 k=4234c,5fe,0,947,24381 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=426fa id=f1da070bd29de94e sid=f1d w=1121 s=e287f7d e=e2883de p=19999 v=1 c=0 d=12 o=0 a=0 f=0 n=2e65,2507,95e,0,0,0 k=423be,5fe,0,948,24435 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=4276d id=f1da070bd29de94e sid=f1d w=1148 s=e2a061b e=e2a0a97 p=20000 v=1 c=0 d=15 o=0 a=0 f=0 n=2e6a,250c,95e,0,0,0 k=42430,5fe,0,949,244ea m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=427e0 id=f1da070bd29de94e sid=f1d w=1175 s=e2b8cb7 e=e2b914e p=20001 v=1 c=0 d=18 o=0 a=0 f=0 n=2e6f,2511,95e,0,0,0 k=424a2,5fe,0,94a,2459f m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42853 id=f1da070bd29de94e sid=f1d w=1203 s=e2d1352 e=e2d1805 p=20001 v=1 c=0 d=20 o=0 a=0 f=0 n=2e74,2516,95e,0,0,0 k=42514,5fe,0,94b,24654 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=428c6 id=f1da070bd29de94e sid=f1d w=1230 s=e2e99f3 e=e2e9ec1 p=20001 v=1 c=0 d=23 o=0 a=0 f=0 n=2e79,251b,95e,0,0,0 k=42586,5fe,0,94c,24709 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42939 id=f1da070bd29de94e sid=f1d w=1257 s=e30208c e=e302576 p=19998 v=1 c=0 d=26 o=0 a=0 f=0 n=2e7e,2520,95e,0,0,0 k=425f8,5fe,0,94d,247be m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=429ac id=f1da070bd29de94e sid=f1d w=1285 s=e31a722 e=e31ac28 p=19998 v=1 c=0 d=29 o=0 a=0 f=0 n=2e83,2525,95e,0,0,0 k=4266a,5fe,0,94e,24873 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42a1f id=f1da070bd29de94e sid=f1d w=1312 s=e332dbf e=e3332df p=20001 v=1 c=0 d=31 o=0 a=0 f=0 n=2e88,252a,95e,0,0,0 k=426dc,5fe,0,94f,24928 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42a92 id=f1da070bd29de94e sid=f1d w=1341 s=e34b455 e=e34b992 p=19998 v=1 c=0 d=34 o=0 a=0 f=0 n=2e8d,252f,95e,0,0,0 k=4274e,5fe,0,950,249dd m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42b05 id=f1da070bd29de94e sid=f1d w=1368 s=e363af0 e=e364048 p=19998 v=1 c=0 d=37 o=0 a=0 f=0 n=2e92,2534,95e,0,0,0 k=427c0,5fe,0,951,24a92 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42b78 id=f1da070bd29de94e sid=f1d w=1396 s=e37c182 e=e37c6f6 p=19996 v=1 c=0 d=40 o=0 a=0 f=0 n=2e97,2539,95e,0,0,0 k=42832,5fe,0,952,24b47 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42beb id=f1da070bd29de94e sid=f1d w=1422 s=e39481f e=e394dab p=20000 v=1 c=0 d=42 o=0 a=0 f=0 n=2e9c,253e,95e,0,0,0 k=428a4,5fe,0,953,24bfc m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42c5e id=f1da070bd29de94e sid=f1d w=1451 s=e3acebf e=e3ad467 p=20000 v=1 c=0 d=45 o=0 a=0 f=0 n=2ea1,2543,95e,0,0,0 k=42916,5fe,0,954,24cb1 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42cd1 id=f1da070bd29de94e sid=f1d w=1478 s=e3c5561 e=e3c5b25 p=20002 v=1 c=0 d=48 o=0 a=0 f=0 n=2ea6,2548,95e,0,0,0 k=42988,5fe,0,955,24d66 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42d44 id=f1da070bd29de94e sid=f1d w=1506 s=e3ddc01 e=e3de1e1 p=20000 v=1 c=0 d=51 o=0 a=0 f=0 n=2eab,254d,95e,0,0,0 k=429fa,5fe,0,956,24e1b m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42db7 id=f1da070bd29de94e sid=f1d w=1532 s=e3f629f e=e3f6898 p=20000 v=1 c=0 d=53 o=0 a=0 f=0 n=2eb0,2552,95e,0,0,0 k=42a6c,5fe,0,957,24ed0 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42e2a id=f1da070bd29de94e sid=f1d w=1561 s=e40e939 e=e40ef52 p=19998 v=1 c=0 d=56 o=0 a=0 f=0 n=2eb5,2557,95e,0,0,0 k=42ade,5fe,0,958,24f85 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42e9d id=f1da070bd29de94e sid=f1d w=1588 s=e426fe1 e=e427613 p=20002 v=1 c=0 d=59 o=0 a=0 f=0 n=2eba,255c,95e,0,0,0 k=42b50,5fe,0,959,2503a m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42f10 id=f1da070bd29de94e sid=f1d w=1616 s=e43f689 e=e43fcd9 p=20001 v=1 c=0 d=62 o=0 a=0 f=0 n=2ebf,2561,95e,0,0,0 k=42bc2,5fe,0,95a,250ef m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42f83 id=f1da070bd29de94e sid=f1d w=1642 s=e457d24 e=e45838d p=20000 v=1 c=0 d=64 o=0 a=0 f=0 n=2ec4,2566,95e,0,0,0 k=42c34,5fe,0,95b,251a4 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=42ff6 id=f1da070bd29de94e sid=f1d w=1671 s=e4703bf e=e470a42 p=20000 v=1 c=0 d=67 o=0 a=0 f=0 n=2ec9,256b,95e,0,0,0 k=42ca6,5fe,0,95c,25259 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=43069 id=f1da070bd29de94e sid=f1d w=1697 s=e488a57 e=e4890f8 p=19999 v=1 c=0 d=70 o=0 a=0 f=0 n=2ece,2570,95e,0,0,0 k=42d18,5fe,0,95d,2530e m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=430da id=f1da070bd29de94e sid=f1d w=1725 s=e4a10ed e=e4a17a9 p=19997 v=1 c=0 d=73 o=0 a=0 f=0 n=2ed3,2575,95e,0,0,0 k=42d88,5fe,0,95e,253c3 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=43148 id=f1da070bd29de94e sid=f1d w=1753 s=e4b9780 e=e4b9e57 p=19999 v=1 c=0 d=75 o=0 a=0 f=0 n=2ed8,257a,95e,0,0,0 k=42df5,5fe,0,95f,25478 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=431c6 id=f1da070bd29de94e sid=f1d w=1785 s=e4d6c28 e=e4d7321 p=19996 v=1 c=0 d=79 o=0 a=0 f=0 n=2ede,2580,95e,0,0,0 k=42e72,5fe,0,960,2552d m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=43239 id=f1da070bd29de94e sid=f1d w=1813 s=e4ef2b9 e=e4ef9ce p=19997 v=1 c=0 d=81 o=0 a=0 f=0 n=2ee3,2585,95e,0,0,0 k=42ee4,5fe,0,961,255e2 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0
+
+rc03 q=432ab id=f1da070bd29de94e sid=f1d w=1835 s=e502b2a e=e503255 p=19996 v=1 c=0 d=84 o=0 a=0 f=0 n=2ee7,2589,95e,0,0,0 k=42f55,5fe,0,962,25697 m=10,ba,0 ft=0,0 b=3,1,0,1 sat=0

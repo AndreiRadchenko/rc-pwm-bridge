@@ -1,0 +1,400 @@
+{
+  "rmt_rx_default_isr": {
+    "address": "40382be0",
+    "section": ".iram0.text",
+    "size": 102,
+    "calls": [
+      "rmt_isr_handle_rx_done",
+      "rmt_isr_handle_rx_threshold",
+      "vPortYieldFromISR"
+    ],
+    "indirect": []
+  },
+  "rmt_isr_handle_rx_done": {
+    "address": "40382776",
+    "section": ".iram0.text",
+    "size": 356,
+    "calls": [
+      "memcpy",
+      "vPortEnterCritical",
+      "vPortExitCritical"
+    ],
+    "indirect": [
+      "4038281e:\t9982                \tjalr\ts3",
+      "403828b4:\t9982                \tjalr\ts3"
+    ]
+  },
+  "vPortExitCritical": {
+    "address": "403852b0",
+    "section": ".iram0.text",
+    "size": 96,
+    "calls": [
+      "__assert_func",
+      "vPortClearInterruptMaskFromISR"
+    ],
+    "indirect": []
+  },
+  "vPortClearInterruptMaskFromISR": {
+    "address": "40385270",
+    "section": ".iram0.text",
+    "size": 16,
+    "calls": [],
+    "indirect": []
+  },
+  "__assert_func": {
+    "address": "4038bc16",
+    "section": ".iram0.text",
+    "size": 258,
+    "calls": [
+      "esp_system_abort",
+      "itoa",
+      "memcpy",
+      "ra_to_str",
+      "spi_flash_cache_enabled",
+      "strlen"
+    ],
+    "indirect": []
+  },
+  "esp_system_abort": {
+    "address": "40384f0e",
+    "section": ".iram0.text",
+    "size": 6,
+    "calls": [
+      "panic_abort"
+    ],
+    "indirect": []
+  },
+  "panic_abort": {
+    "address": "40384f44",
+    "section": ".iram0.text",
+    "size": 22,
+    "calls": [],
+    "indirect": []
+  },
+  "strlen": {
+    "address": "40000374",
+    "section": "*ABS*",
+    "size": 100,
+    "calls": [],
+    "indirect": []
+  },
+  "memcpy": {
+    "address": "4038bdfa",
+    "section": ".iram0.text",
+    "size": 210,
+    "calls": [],
+    "indirect": []
+  },
+  "ra_to_str": {
+    "address": "4038bbea",
+    "section": ".iram0.text",
+    "size": 44,
+    "calls": [
+      "itoa"
+    ],
+    "indirect": []
+  },
+  "itoa": {
+    "address": "40000448",
+    "section": "*ABS*",
+    "size": 8,
+    "calls": [],
+    "indirect": []
+  },
+  "spi_flash_cache_enabled": {
+    "address": "40382278",
+    "section": ".iram0.text",
+    "size": 18,
+    "calls": [
+      "cache_hal_is_cache_enabled"
+    ],
+    "indirect": []
+  },
+  "cache_hal_is_cache_enabled": {
+    "address": "403881a8",
+    "section": ".iram0.text",
+    "size": 10,
+    "calls": [],
+    "indirect": []
+  },
+  "vPortEnterCritical": {
+    "address": "40385280",
+    "section": ".iram0.text",
+    "size": 48,
+    "calls": [
+      "xPortSetInterruptMaskFromISR"
+    ],
+    "indirect": []
+  },
+  "xPortSetInterruptMaskFromISR": {
+    "address": "40385256",
+    "section": ".iram0.text",
+    "size": 26,
+    "calls": [],
+    "indirect": []
+  },
+  "rmt_isr_handle_rx_threshold": {
+    "address": "403828da",
+    "section": ".iram0.text",
+    "size": 226,
+    "calls": [
+      "memcpy",
+      "vPortEnterCritical",
+      "vPortExitCritical"
+    ],
+    "indirect": [
+      "40382934:\t9702                \tjalr\ta4"
+    ]
+  },
+  "vPortYieldFromISR": {
+    "address": "40385310",
+    "section": ".iram0.text",
+    "size": 20,
+    "calls": [],
+    "indirect": []
+  },
+  "gpio_intr_service": {
+    "address": "40381932",
+    "section": ".iram0.text",
+    "size": 42,
+    "calls": [
+      "gpio_isr_loop"
+    ],
+    "indirect": []
+  },
+  "gpio_isr_loop": {
+    "address": "40381858",
+    "section": ".iram0.text",
+    "size": 218,
+    "calls": [
+      "__ffssi2"
+    ],
+    "indirect": [
+      "40381892:\t9702                \tjalr\ta4"
+    ]
+  },
+  "__ffssi2": {
+    "address": "400007d4",
+    "section": "*ABS*",
+    "size": 64,
+    "calls": [],
+    "indirect": []
+  },
+  "platform::RcCapture::rx_done(rmt_channel_t*, rmt_rx_done_event_data_t const*, void*)": {
+    "address": "403816a8",
+    "section": ".iram0.text",
+    "size": 432,
+    "calls": [
+      "esp_timer_get_time",
+      "memset",
+      "platform::RcCapture::arm_locked(bool)",
+      "vPortEnterCritical",
+      "vPortExitCritical",
+      "vTaskGenericNotifyGiveFromISR",
+      "xQueueGenericSendFromISR"
+    ],
+    "indirect": []
+  },
+  "esp_timer_get_time": {
+    "address": "40380322",
+    "section": ".iram0.text",
+    "size": 36,
+    "calls": [
+      "systimer_hal_get_counter_value"
+    ],
+    "indirect": [
+      "4038033c:\t9402                \tjalr\ts0"
+    ]
+  },
+  "systimer_hal_get_counter_value": {
+    "address": "40389820",
+    "section": ".iram0.text",
+    "size": 78,
+    "calls": [],
+    "indirect": []
+  },
+  "platform::RcCapture::arm_locked(bool)": {
+    "address": "403815a8",
+    "section": ".iram0.text",
+    "size": 256,
+    "calls": [
+      "esp_timer_get_time",
+      "gpio_get_level",
+      "platform::RcCapture::pending_edge() const",
+      "rmt_receive"
+    ],
+    "indirect": []
+  },
+  "platform::RcCapture::pending_edge() const": {
+    "address": "40381590",
+    "section": ".iram0.text",
+    "size": 24,
+    "calls": [],
+    "indirect": []
+  },
+  "gpio_get_level": {
+    "address": "403826d4",
+    "section": ".iram0.text",
+    "size": 24,
+    "calls": [],
+    "indirect": []
+  },
+  "rmt_receive": {
+    "address": "403829bc",
+    "section": ".iram0.text",
+    "size": 548,
+    "calls": [
+      "__atomic_compare_exchange_4",
+      "__udivdi3",
+      "memset",
+      "vPortEnterCritical",
+      "vPortExitCritical",
+      "xPortInIsrContext"
+    ],
+    "indirect": []
+  },
+  "xPortInIsrContext": {
+    "address": "4038524c",
+    "section": ".iram0.text",
+    "size": 10,
+    "calls": [],
+    "indirect": []
+  },
+  "memset": {
+    "address": "40000354",
+    "section": "*ABS*",
+    "size": 168,
+    "calls": [],
+    "indirect": []
+  },
+  "__atomic_compare_exchange_4": {
+    "address": "4038bf9c",
+    "section": ".iram0.text",
+    "size": 60,
+    "calls": [
+      "vPortClearInterruptMaskFromISR",
+      "xPortSetInterruptMaskFromISR"
+    ],
+    "indirect": []
+  },
+  "__udivdi3": {
+    "address": "400008ac",
+    "section": "*ABS*",
+    "size": 858,
+    "calls": [],
+    "indirect": []
+  },
+  "vTaskGenericNotifyGiveFromISR": {
+    "address": "40387b72",
+    "section": ".iram0.text",
+    "size": 390,
+    "calls": [
+      "__assert_func",
+      "vPortClearInterruptMaskFromISR",
+      "xPortSetInterruptMaskFromISR"
+    ],
+    "indirect": []
+  },
+  "xQueueGenericSendFromISR": {
+    "address": "40385fa8",
+    "section": ".iram0.text",
+    "size": 372,
+    "calls": [
+      "__assert_func",
+      "prvCopyDataToQueue",
+      "prvNotifyQueueSetContainer",
+      "uxTaskGetNumberOfTasks",
+      "vPortClearInterruptMaskFromISR",
+      "xPortSetInterruptMaskFromISR",
+      "xTaskRemoveFromEventList"
+    ],
+    "indirect": []
+  },
+  "uxTaskGetNumberOfTasks": {
+    "address": "40386d7a",
+    "section": ".iram0.text",
+    "size": 10,
+    "calls": [],
+    "indirect": []
+  },
+  "xTaskRemoveFromEventList": {
+    "address": "403872d4",
+    "section": ".iram0.text",
+    "size": 284,
+    "calls": [
+      "__assert_func"
+    ],
+    "indirect": []
+  },
+  "prvNotifyQueueSetContainer": {
+    "address": "403858fe",
+    "section": ".iram0.text",
+    "size": 222,
+    "calls": [
+      "__assert_func",
+      "prvCopyDataToQueue",
+      "uxTaskGetNumberOfTasks",
+      "xTaskRemoveFromEventList"
+    ],
+    "indirect": []
+  },
+  "prvCopyDataToQueue": {
+    "address": "40385844",
+    "section": ".iram0.text",
+    "size": 146,
+    "calls": [
+      "memcpy",
+      "xTaskPriorityDisinherit"
+    ],
+    "indirect": []
+  },
+  "xTaskPriorityDisinherit": {
+    "address": "40387662",
+    "section": ".iram0.text",
+    "size": 260,
+    "calls": [
+      "__assert_func",
+      "uxListRemove"
+    ],
+    "indirect": []
+  },
+  "uxListRemove": {
+    "address": "403857c0",
+    "section": ".iram0.text",
+    "size": 40,
+    "calls": [],
+    "indirect": []
+  },
+  "platform::RcCapture::gpio_edge(void*)": {
+    "address": "40381482",
+    "section": ".iram0.text",
+    "size": 270,
+    "calls": [
+      "esp_timer_get_time",
+      "gpio_get_level",
+      "gpio_intr_disable",
+      "vPortEnterCritical",
+      "vPortExitCritical",
+      "vPortYieldFromISR",
+      "vTaskGenericNotifyGiveFromISR",
+      "xQueueGenericSendFromISR"
+    ],
+    "indirect": []
+  },
+  "gpio_intr_disable": {
+    "address": "403826ec",
+    "section": ".iram0.text",
+    "size": 64,
+    "calls": [
+      "gpio_hal_intr_disable"
+    ],
+    "indirect": []
+  },
+  "gpio_hal_intr_disable": {
+    "address": "403882e4",
+    "section": ".iram0.text",
+    "size": 58,
+    "calls": [],
+    "indirect": []
+  }
+}

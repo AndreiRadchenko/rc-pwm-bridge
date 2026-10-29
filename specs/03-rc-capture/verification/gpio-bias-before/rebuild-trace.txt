@@ -1,0 +1,19 @@
+[1/11] Performing build step for 'bootloader'
+[1/1] cd /Users/mac/Projects/Scopa/rc-pwm-bridge/build/c3-03-trace/bootloader/esp-idf/esptool_py && /private/tmp/scopa01-replay-clean/bin/python /Users/mac/Projects/Scopa/rc-pwm-bridge/build/scopa01-idf-sdk/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/mac/Projects/Scopa/rc-pwm-bridge/build/c3-03-trace/bootloader/bootloader.bin
+Bootloader binary size 0x3310 bytes. 0x4cf0 bytes (60%) free.
+[2/11] No install step for 'bootloader'
+[3/11] Building CXX object esp-idf/bridge_core/CMakeFiles/__idf_bridge_core.dir/rc_capture.cpp.obj
+[4/11] Completed 'bootloader'
+[5/11] Linking C static library esp-idf/bridge_core/libbridge_core.a
+[6/11] Building CXX object esp-idf/platform_esp32/CMakeFiles/__idf_platform_esp32.dir/rc_capture.cpp.obj
+[7/11] Linking C static library esp-idf/platform_esp32/libplatform_esp32.a
+[8/11] Generating esp-idf/esp_system/ld/sections.ld
+[9/11] Linking CXX executable rc_pwm_bridge.elf
+[10/11] Generating binary image from built executable
+esptool.py v4.12.0
+Creating esp32c3 image...
+Merged 2 ELF sections
+Successfully created esp32c3 image.
+Generated /Users/mac/Projects/Scopa/rc-pwm-bridge/build/c3-03-trace/rc_pwm_bridge.bin
+[11/11] cd /Users/mac/Projects/Scopa/rc-pwm-bridge/build/c3-03-trace/esp-idf/esptool_py && /private/tmp/scopa01-replay-clean/bin/python /Users/mac/Projects/Scopa/rc-pwm-bridge/build/scopa01-idf-sdk/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/mac/Projects/Scopa/rc-pwm-bridge/build/c3-03-trace/partition_table/partition-table.bin /Users/mac/Projects/Scopa/rc-pwm-bridge/build/c3-03-trace/rc_pwm_bridge.bin
+rc_pwm_bridge.bin binary size 0x2a530 bytes. Smallest app partition is 0x100000 bytes. 0xd5ad0 bytes (83%) free.

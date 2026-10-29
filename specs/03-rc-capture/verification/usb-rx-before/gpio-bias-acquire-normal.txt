@@ -1,0 +1,152 @@
+ELF review: GPIO3 (a0=3), GPIO_FLOATING (a1=3), checked return and cleanup.
+42005eb0 <platform::RcCapture::acquire(bridge::CaptureResource)>
+42005eb0:	7179                	addi	sp,sp,-48
+42005eb2:	d606                	sw	ra,44(sp)
+42005eb4:	d422                	sw	s0,40(sp)
+42005eb6:	d226                	sw	s1,36(sp)
+42005eb8:	842a                	mv	s0,a0
+42005eba:	c9b1                	beqz	a1,42005f0e <platform::RcCapture::acquire(bridge::CaptureResource)+0x5e>
+42005ebc:	4785                	li	a5,1
+42005ebe:	0ef58063          	beq	a1,a5,42005f9e <platform::RcCapture::acquire(bridge::CaptureResource)+0xee>
+42005ec2:	4789                	li	a5,2
+42005ec4:	14f58163          	beq	a1,a5,42006006 <platform::RcCapture::acquire(bridge::CaptureResource)+0x156>
+42005ec8:	6489                	lui	s1,0x2
+42005eca:	800008b7          	lui	a7,0x80000
+42005ece:	18fd                	addi	a7,a7,-1 # 7fffffff <SYSTEM+0x1ff3ffff>
+42005ed0:	e3848813          	addi	a6,s1,-456 # 1e38 <CSR_UINTSTATUS+0x1187>
+42005ed4:	982a                	add	a6,a6,a0
+42005ed6:	f8848793          	addi	a5,s1,-120
+42005eda:	97aa                	add	a5,a5,a0
+42005edc:	4729                	li	a4,10
+42005ede:	86aa                	mv	a3,a0
+42005ee0:	8626                	mv	a2,s1
+42005ee2:	3c0225b7          	lui	a1,0x3c022
+42005ee6:	72058593          	addi	a1,a1,1824 # 3c022720 <_flash_rodata_start+0x2600>
+42005eea:	42007537          	lui	a0,0x42007
+42005eee:	8d050513          	addi	a0,a0,-1840 # 420068d0 <platform::RcCapture::run(void*)>
+42005ef2:	fe382097          	auipc	ra,0xfe382
+42005ef6:	ec4080e7          	jalr	-316(ra) # 40387db6 <xTaskCreateStaticPinnedToCore>
+42005efa:	9426                	add	s0,s0,s1
+42005efc:	e2a42a23          	sw	a0,-460(s0)
+42005f00:	00a03533          	snez	a0,a0
+42005f04:	50b2                	lw	ra,44(sp)
+42005f06:	5422                	lw	s0,40(sp)
+42005f08:	5492                	lw	s1,36(sp)
+42005f0a:	6145                	addi	sp,sp,48
+42005f0c:	8082                	ret
+42005f0e:	c402                	sw	zero,8(sp)
+42005f10:	c602                	sw	zero,12(sp)
+42005f12:	c802                	sw	zero,16(sp)
+42005f14:	ca02                	sw	zero,20(sp)
+42005f16:	cc02                	sw	zero,24(sp)
+42005f18:	ce02                	sw	zero,28(sp)
+42005f1a:	470d                	li	a4,3
+42005f1c:	c43a                	sw	a4,8(sp)
+42005f1e:	4791                	li	a5,4
+42005f20:	c63e                	sw	a5,12(sp)
+42005f22:	000f47b7          	lui	a5,0xf4
+42005f26:	24078793          	addi	a5,a5,576 # f4240 <CSR_UINTSTATUS+0xf358f>
+42005f2a:	c83e                	sw	a5,16(sp)
+42005f2c:	03000793          	li	a5,48
+42005f30:	ca3e                	sw	a5,20(sp)
+42005f32:	cc3a                	sw	a4,24(sp)
+42005f34:	6585                	lui	a1,0x1
+42005f36:	93058593          	addi	a1,a1,-1744 # 930 <ALIGN_VECTOR_TABLE+0x830>
+42005f3a:	95aa                	add	a1,a1,a0
+42005f3c:	0028                	addi	a0,sp,8
+42005f3e:	02e0e0ef          	jal	42013f6c <rmt_new_rx_channel>
+42005f42:	c119                	beqz	a0,42005f48 <platform::RcCapture::acquire(bridge::CaptureResource)+0x98>
+42005f44:	4501                	li	a0,0
+42005f46:	bf7d                	j	42005f04 <platform::RcCapture::acquire(bridge::CaptureResource)+0x54>
+42005f48:	c202                	sw	zero,4(sp)
+42005f4a:	403817b7          	lui	a5,0x40381
+42005f4e:	6a878793          	addi	a5,a5,1704 # 403816a8 <platform::RcCapture::rx_done(rmt_channel_t*, rmt_rx_done_event_data_t const*, void*)>
+42005f52:	c23e                	sw	a5,4(sp)
+42005f54:	458d                	li	a1,3
+42005f56:	852e                	mv	a0,a1
+42005f58:	5a60d0ef          	jal	420134fe <gpio_set_pull_mode>
+42005f5c:	e911                	bnez	a0,42005f70 <platform::RcCapture::acquire(bridge::CaptureResource)+0xc0>
+42005f5e:	6785                	lui	a5,0x1
+42005f60:	97a2                	add	a5,a5,s0
+42005f62:	8622                	mv	a2,s0
+42005f64:	004c                	addi	a1,sp,4
+42005f66:	9307a503          	lw	a0,-1744(a5) # 930 <ALIGN_VECTOR_TABLE+0x830>
+42005f6a:	2e00e0ef          	jal	4201424a <rmt_rx_register_event_callbacks>
+42005f6e:	c919                	beqz	a0,42005f84 <platform::RcCapture::acquire(bridge::CaptureResource)+0xd4>
+42005f70:	6785                	lui	a5,0x1
+42005f72:	943e                	add	s0,s0,a5
+42005f74:	93042503          	lw	a0,-1744(s0)
+42005f78:	084020ef          	jal	42007ffc <rmt_del_channel>
+42005f7c:	92042823          	sw	zero,-1744(s0)
+42005f80:	4501                	li	a0,0
+42005f82:	b749                	j	42005f04 <platform::RcCapture::acquire(bridge::CaptureResource)+0x54>
+42005f84:	6785                	lui	a5,0x1
+42005f86:	97a2                	add	a5,a5,s0
+42005f88:	9307a503          	lw	a0,-1744(a5) # 930 <ALIGN_VECTOR_TABLE+0x830>
+42005f8c:	086020ef          	jal	42008012 <rmt_enable>
+42005f90:	f165                	bnez	a0,42005f70 <platform::RcCapture::acquire(bridge::CaptureResource)+0xc0>
+42005f92:	6791                	lui	a5,0x4
+42005f94:	97a2                	add	a5,a5,s0
+42005f96:	4505                	li	a0,1
+42005f98:	fca78523          	sb	a0,-54(a5) # 3fca <CSR_UINTSTATUS+0x3319>
+42005f9c:	b7a5                	j	42005f04 <platform::RcCapture::acquire(bridge::CaptureResource)+0x54>
+42005f9e:	40800513          	li	a0,1032
+42005fa2:	04d0d0ef          	jal	420137ee <gpio_install_isr_service>
+42005fa6:	c119                	beqz	a0,42005fac <platform::RcCapture::acquire(bridge::CaptureResource)+0xfc>
+42005fa8:	4501                	li	a0,0
+42005faa:	bfa9                	j	42005f04 <platform::RcCapture::acquire(bridge::CaptureResource)+0x54>
+42005fac:	6791                	lui	a5,0x4
+42005fae:	97a2                	add	a5,a5,s0
+42005fb0:	4705                	li	a4,1
+42005fb2:	fce78423          	sb	a4,-56(a5) # 3fc8 <CSR_UINTSTATUS+0x3317>
+42005fb6:	458d                	li	a1,3
+42005fb8:	852e                	mv	a0,a1
+42005fba:	1e00d0ef          	jal	4201319a <gpio_set_intr_type>
+42005fbe:	cd01                	beqz	a0,42005fd6 <platform::RcCapture::acquire(bridge::CaptureResource)+0x126>
+42005fc0:	6791                	lui	a5,0x4
+42005fc2:	97a2                	add	a5,a5,s0
+42005fc4:	fc87c783          	lbu	a5,-56(a5) # 3fc8 <CSR_UINTSTATUS+0x3317>
+42005fc8:	ef85                	bnez	a5,42006000 <platform::RcCapture::acquire(bridge::CaptureResource)+0x150>
+42005fca:	6791                	lui	a5,0x4
+42005fcc:	97a2                	add	a5,a5,s0
+42005fce:	fc078423          	sb	zero,-56(a5) # 3fc8 <CSR_UINTSTATUS+0x3317>
+42005fd2:	4501                	li	a0,0
+42005fd4:	bf05                	j	42005f04 <platform::RcCapture::acquire(bridge::CaptureResource)+0x54>
+42005fd6:	8622                	mv	a2,s0
+42005fd8:	403815b7          	lui	a1,0x40381
+42005fdc:	48258593          	addi	a1,a1,1154 # 40381482 <platform::RcCapture::gpio_edge(void*)>
+42005fe0:	450d                	li	a0,3
+42005fe2:	6420d0ef          	jal	42013624 <gpio_isr_handler_add>
+42005fe6:	fd69                	bnez	a0,42005fc0 <platform::RcCapture::acquire(bridge::CaptureResource)+0x110>
+42005fe8:	6791                	lui	a5,0x4
+42005fea:	97a2                	add	a5,a5,s0
+42005fec:	4405                	li	s0,1
+42005fee:	fc8784a3          	sb	s0,-55(a5) # 3fc9 <CSR_UINTSTATUS+0x3318>
+42005ff2:	450d                	li	a0,3
+42005ff4:	fe37c097          	auipc	ra,0xfe37c
+42005ff8:	6f8080e7          	jalr	1784(ra) # 403826ec <gpio_intr_disable>
+42005ffc:	8522                	mv	a0,s0
+42005ffe:	b719                	j	42005f04 <platform::RcCapture::acquire(bridge::CaptureResource)+0x54>
+42006000:	7440d0ef          	jal	42013744 <gpio_uninstall_isr_service>
+42006004:	b7d9                	j	42005fca <platform::RcCapture::acquire(bridge::CaptureResource)+0x11a>
+42006006:	c402                	sw	zero,8(sp)
+42006008:	c602                	sw	zero,12(sp)
+4200600a:	c802                	sw	zero,16(sp)
+4200600c:	ca02                	sw	zero,20(sp)
+4200600e:	cc02                	sw	zero,24(sp)
+42006010:	420067b7          	lui	a5,0x42006
+42006014:	12278793          	addi	a5,a5,290 # 42006122 <platform::RcCapture::tick(void*)>
+42006018:	c43e                	sw	a5,8(sp)
+4200601a:	c62a                	sw	a0,12(sp)
+4200601c:	3c0227b7          	lui	a5,0x3c022
+42006020:	71478793          	addi	a5,a5,1812 # 3c022714 <_flash_rodata_start+0x25f4>
+42006024:	ca3e                	sw	a5,20(sp)
+42006026:	4785                	li	a5,1
+42006028:	00f10c23          	sb	a5,24(sp)
+4200602c:	6585                	lui	a1,0x1
+4200602e:	93458593          	addi	a1,a1,-1740 # 934 <ALIGN_VECTOR_TABLE+0x834>
+42006032:	95aa                	add	a1,a1,a0
+42006034:	0028                	addi	a0,sp,8
+42006036:	03d020ef          	jal	42008872 <esp_timer_create>
+4200603a:	00153513          	seqz	a0,a0
+4200603e:	b5d9                	j	42005f04 <platform::RcCapture::acquire(bridge::CaptureResource)+0x54>

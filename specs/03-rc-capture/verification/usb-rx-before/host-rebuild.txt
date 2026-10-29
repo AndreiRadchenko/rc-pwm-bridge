@@ -1,0 +1,27 @@
+[1/27] Building CXX object CMakeFiles/bridge_core.dir/Users/mac/Projects/Scopa/rc-pwm-bridge/firmware/components/bridge_core/rc_capture.cpp.o
+[2/27] Building CXX object CMakeFiles/rc_capture_validation_tests.dir/rc_capture_validation_tests.cpp.o
+[3/27] Building CXX object CMakeFiles/rc_capture_fault_tests.dir/rc_capture_fault_tests.cpp.o
+[4/27] Building CXX object CMakeFiles/rc_capture_adapter_tests.dir/rc_capture_adapter_tests.cpp.o
+[5/27] Building CXX object CMakeFiles/rc_capture_association_tests.dir/rc_capture_association_tests.cpp.o
+[6/27] Building CXX object CMakeFiles/rc_capture_core_tests.dir/rc_capture_core_tests.cpp.o
+[7/27] Building CXX object CMakeFiles/rc_capture_time_tests.dir/rc_capture_time_tests.cpp.o
+[8/27] Linking CXX static library libbridge_core.a
+[9/27] Linking CXX executable negative_probe
+[10/27] Linking CXX executable startup_tests
+[11/27] Linking CXX executable core_header_probe
+[12/27] Linking CXX executable control_fault_tests
+[13/27] Linking CXX executable control_header_probe
+[14/27] Linking CXX executable control_mapping_tests
+[15/27] Linking CXX executable control_validation_tests
+[16/27] Linking CXX executable control_state_tests
+[17/27] Linking CXX executable control_time_tests
+[18/27] Linking CXX executable rc_capture_header_probe
+[19/27] Linking CXX executable rc_capture_fault_tests
+[20/27] Linking CXX executable rc_capture_association_tests
+[21/27] Linking CXX executable rc_diagnostics_policy_tests
+[22/27] Linking CXX executable rc_capture_adapter_tests
+[23/27] Linking CXX executable rc_capture_time_tests
+[24/27] Linking CXX executable rc_capture_core_tests
+[25/27] Linking CXX executable rc_capture_trace_tests
+[26/27] Linking CXX executable rc_capture_validation_tests
+[27/27] Linking CXX executable rc_diagnostics_transport_tests

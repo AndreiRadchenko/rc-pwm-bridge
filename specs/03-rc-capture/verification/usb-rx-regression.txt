@@ -1,0 +1,3 @@
+Isolated regression check: override RX128 to original RX64 in a temporary header; real project files unchanged.
+Expected test exit1; actual exit=1
+line 7: platform::DiagnosticTransportBuffers::rx_bytes > 64

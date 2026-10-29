@@ -79,9 +79,12 @@ def main():
     parser.add_argument('mode', choices=['host', 'target'])
     parser.add_argument('--build-dir', required=True)
     parser.add_argument('--board-profile')
+    parser.add_argument('--rc03-bench', choices=['diagnostics','accuracy'])
     args = parser.parse_args()
     if args.mode == 'target' and not args.board_profile:
         parser.error('target requires --board-profile')
+    if args.mode == 'host' and args.rc03_bench:
+        parser.error('--rc03-bench is target-only')
     if args.mode == 'host' and args.board_profile:
         parser.error('host does not accept --board-profile')
     directory = pathlib.Path(args.build_dir).resolve()
@@ -103,13 +106,17 @@ def main():
             python = pathlib.Path(json.loads((ROOT / 'tools/environment/replay-evidence.json').read_text())['python'])
             header = generate_profile_header(directory, data, fingerprint)
             env = os.environ.copy()
-            env.update({'IDF_PATH': str(sdk), 'IDF_TOOLS_PATH': str(toolroot), 'IDF_PYTHON_ENV_PATH': str(python.parent.parent), 'IDF_COMPONENT_MANAGER': '0'})
+            env.update({'IDF_PATH': str(sdk), 'IDF_TOOLS_PATH': str(toolroot), 'IDF_PYTHON_ENV_PATH': str(python.parent.parent), 'IDF_COMPONENT_MANAGER': '0', 'ESP_ROM_ELF_DIR': str(toolroot / 'tools/esp-rom-elfs/20260528')})
             bins = [str(pathlib.Path(h['cmake']['path']).parent), str(pathlib.Path(h['ninja']['path']).parent),
                     str(toolroot / 'tools/riscv32-esp-elf/esp-14.2.0_20260121/riscv32-esp-elf/bin'), str(python.parent)]
             env['PATH'] = os.pathsep.join(bins + [env.get('PATH', '')])
+            defaults = str(ROOT / 'firmware/sdkconfig.defaults')
+            if args.rc03_bench:
+                fragment = 'sdkconfig.rc03-trace.defaults' if args.rc03_bench == 'accuracy' else 'sdkconfig.rc03-bench.defaults'
+                defaults += ';' + str(ROOT / 'firmware' / fragment)
             cmd = [str(python), str(sdk / 'tools/idf.py'), '-C', str(ROOT / 'firmware'), '-B', str(directory),
                    '-D', 'SDKCONFIG=' + str(directory / 'sdkconfig'),
-                   '-D', 'SDKCONFIG_DEFAULTS=' + str(ROOT / 'firmware/sdkconfig.defaults'),
+                   '-D', 'SDKCONFIG_DEFAULTS=' + defaults,
                    '-D', 'BOARD_PROFILE_HEADER=' + str(header), 'build']
             return 0 if subprocess.run(cmd, env=env, check=False).returncode == 0 else 1
         except (OSError, ValueError, KeyError, json.JSONDecodeError) as exc:

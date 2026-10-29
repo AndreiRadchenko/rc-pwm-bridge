@@ -58,3 +58,47 @@ bool DiagnosticConsumer::consume(const DiagnosticSnapshot& s, TransportPort& tra
     return true;
 }
 }
+
+namespace platform {
+void RcDiagnosticPolicy::publish(const DiagnosticSnapshot& s) {
+    if(pending_) bridge::increment(overwritten_,saturated_);
+    latest_=s; latest_.sequence=++version_; pending_=true;
+}
+void RcDiagnosticPolicy::ack(uint64_t v) { if(v==latest_.sequence) pending_=false; }
+bool RcDiagnosticPolicy::slot(uint64_t now,bool drained) {
+    if(attempted_ && (now<last_slot_ || now-last_slot_<100000)) return false;
+    attempted_=true; last_slot_=now;
+    bridge::increment(attempts_,saturated_);
+    if(!drained) { bridge::increment(busy_,saturated_);return false; }
+    return true;
+}
+void RcDiagnosticPolicy::written(size_t n,size_t expected) {
+    if(n>UINT64_MAX-bytes_) {bytes_=UINT64_MAX;saturated_=true;}
+    else bytes_+=n;
+    if(n!=expected) bridge::increment(drops_,saturated_);
+}
+int RcDiagnosticPolicy::format(const DiagnosticSnapshot& s,char* b,size_t cap,bool padded) const {
+    auto c=s.capture;
+    int n=std::snprintf(b,cap,
+        "\nrc03 q=%llx id=%llx sid=%llx w=%u s=%llx e=%llx p=%u v=%u c=%u d=%u o=0 a=0 f=%x n=%x,%x,%x,%x,%x,%x k=%x,%x,%x,%x,%llx m=%llx,%llx,%llx ft=%llx,%llx b=%x,%x,%x,%x sat=%u\n",
+        (unsigned long long)s.sequence,(unsigned long long)s.profile_fingerprint,
+        (unsigned long long)c.started_at_us,
+        unsigned(c.measurement.width_us),(unsigned long long)c.measurement.start_us,
+        (unsigned long long)c.measurement.end_us,unsigned(c.measurement.period_us),
+        unsigned(c.measurement.status),unsigned(c.phase),unsigned(c.control.calculated_duty_percent),
+        unsigned(c.fault_bits),unsigned(c.counters.candidates),unsigned(c.counters.valid),
+        unsigned(c.counters.invalid),unsigned(c.counters.dropped),unsigned(c.counters.faults),unsigned(c.counters.duplicate_edges),
+        unsigned(overwritten_),unsigned(busy_),unsigned(drops_),unsigned(attempts_),(unsigned long long)bytes_,
+        (unsigned long long)c.max_rearm_us,(unsigned long long)c.max_processing_us,
+        (unsigned long long)c.max_fault_lateness_us,(unsigned long long)c.threshold_at_us,
+        (unsigned long long)c.reported_at_us,unsigned(s.startup.phase),unsigned(s.startup.attempts_started),
+        unsigned(s.startup.last_error),unsigned(s.pwm_low_api_applied),unsigned(saturated_||c.counters.saturated));
+    if(n<=0 || size_t(n)>=cap) return 0;
+    if(padded) {
+        if(cap<385) return 0;
+        for(int i=n-1;i<383;++i)b[i]=' ';
+        b[383]='\n';b[384]=0;return 384;
+    }
+    return n;
+}
+}
