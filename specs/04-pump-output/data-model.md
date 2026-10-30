@@ -10,6 +10,7 @@
 | scenario | Waveform, Stress або Accuracy тільки за Bench |
 | initial_low_us | uint64,5 000 000 |
 | plateau_us | uint64,10 000 000 або100 000 000 за сценарієм |
+| stress_window_us | uint64,601 000 000 лише Stress за D62; не змінює plateau_us/output deadlines |
 | points | Незмінний масив6 uint8:0,25,40,50,80,100 |
 | trace_step | uint8,0..5, тільки Accuracy; не змінює points |
 | build/config identity | SHA256 source/config у build manifest; короткий fingerprint у header/diagnostics |
@@ -58,6 +59,8 @@ Output reason bits uint8, sticky протягом boot:
 
 Completion і EvidenceFrozen — state, не помилковий fault. Стан LOW після справного freeze не очищує capture latch; наявний fault має пріоритет над freeze/completion.
 
+ApplyApiError та LowUnconfirmed не тотожні: невдалий stop0 з успішними set_level0 і set_directionOUTPUT зберігає Fault/ApplyApiError та API-applied Low, але сам не встановлює новий LowUnconfirmed. Якщо жоден повний LOW-шлях (stop0 або обидві GPIO fallback операції) не завершився успішно, applied state Unknown і встановлюється LowUnconfirmed. Усі reason bits sticky; раніше встановлений LowUnconfirmed не очищується пізнішим успіхом. Жоден API-applied Low не доводить фізичний рівень.
+
 ## DiagnosticSnapshot04
 
 Успадковує startup/capture snapshot03 і counters; додає mode, phase, requested duty, bench permission, API-applied mode та output reason bits. Core calculated/effective/permission не підміняються. `LocalDiagnostics.publish_control` публікує узгоджену пару capture/output від одного owner, а не дві конкурентні версії. До handoff startup snapshots містять Disabled/LOW metadata.
@@ -76,11 +79,11 @@ Boot label/start time не гарантує глобальної унікаль�
 
 Для кожного випадку: firmware/config/source hashes, profile/unit/driver identity, сценарій і boot, фізичний стан load disconnected, схема живлення/ground/bias/conditioning, прилад/threshold/timebase/U, raw traces та нормалізація, before/after counters, declared limits, measured E/latency/voltage, pass/fail/blocked/not_run і owner. Host/build/physical records розділені; старі01–03 measurements не видаються за нові04.
 
-## CaptureWindowEvidence — тільки stress, D61
+## CaptureWindowEvidence — тільки stress, D61/D62
 
-Один статичний об’єкт≤512B, без heap/overwrite/per-pulse records. Разом з OutputEvidence stress≤3200B; accuracy trace03 у stress відсутній. Normal/waveform/accuracy не містять цього collector. Стани waiting → collecting → closing → frozen; fault/неповне вікно завершує frozen з incomplete, не створює нової сесії. Capture працює далі; frozen summary не оновлюється поточними лічильниками та живе до наступного boot.
+Один статичний об’єкт≤512B, без heap/overwrite/per-pulse records. Разом з OutputEvidence stress≤3200B; accuracy trace03 у stress відсутній. Normal/waveform/accuracy не містять цього collector. Стани waiting → collecting → closing → frozen; fault/неповне вікно завершує frozen з incomplete, не створює нової сесії. Output Complete на t0+605 с залишає collector collecting до t0+606 с, потім closing до deadline t0+606,017 с. Capture/max diagnostics тривають у додатковій LOW-секунді; frozen summary не оновлюється поточними лічильниками та живе до наступного boot.
 
-Зберігаються version1/build/scenario/boot identity; start_us=t0+5000000, end_us=t0+605000000, фактичні checkpoint_start_at_us/checkpoint_end_at_us/finalized_at_us; ingress watermark/closure status; global baseline/end snapshots та window-local counts/maxima. Global snapshots беруться одним owner на першому service на/після start та під час closure; це допоміжні actual-time snapshots, їх різниця не є window count. Облік належних samples виконується за estimated end_us, включно з обробкою після end; алгоритм — контракт.
+Зберігаються version1/build/scenario/boot identity; start_us=t0+5000000, end_us=t0+606000000, фактичні checkpoint_start_at_us/checkpoint_end_at_us/finalized_at_us; ingress watermark/closure status; global baseline/end snapshots та window-local counts/maxima. Global snapshots беруться одним owner на першому service на/після start та під час closure; це допоміжні actual-time snapshots, їх різниця не є window count. Облік належних samples виконується за estimated end_us, включно з обробкою після end; алгоритм — контракт.
 
 Window counts uint32 у фіксованому порядку: candidates, valid, invalid, incomplete, dropped, faults, duplicate, reordered. Не всі діагностовані втрати мають точний end_us: невіднесена подія позначає incomplete, а не губиться з підрахунку. first_seq,last_seq,first_epoch,last_epoch — uint32; first_end_us,last_end_us — uint64, із явним has_samples. Maxima uint64: rearm_us,processing_us,fault_delivery_us; rearm/processing стосуються належних samples, fault-delivery — діагностованих належних faults. has_fault_delivery відрізняє відсутність такого вимірювання від0. Global snapshots містять сім чинних03 uint32 counters у порядку batches,candidates,valid,invalid,dropped,faults,duplicate_edges. Saturation та будь-яка неоднозначність/втрата/порушення бюджету зберігаються flags і забороняють pass. Ширини counters03 не змінюються, modulo seq/epoch03 не підміняються необмеженими числами.
 
@@ -89,6 +92,8 @@ Wire export `rc04-win` version1: H/B/W/T/E, числа hexadecimal. Кожен f
 Frozen частина незмінна, окремий sticky postfreeze_invalid піднімається при виявленні пізнішої події зі start_us вікна≤sample.end_us<end_us вікна, яка мала бути врахована, або порушеного closure barrier. Такий run failed навіть за правильного digest. Звичайні пізні події поза закритим вікном не дописуються в нього. При новому boot попередній RAM summary втрачається; змішані boots/partial cycles не приймаються.
 
 Wire flags uint32:0x01 Incomplete,0x02 Saturated,0x04 ClosureLate,0x08 AssociationUnknown,0x10 CaptureFault,0x20 LossOrOrderError,0x40 BudgetMiss,0x80 Frozen. Presence fields/postfreeze_invalid —0 або1. Інші bits/невалідні presence codes відхиляються. Pass вимагає Frozen без failure bits, обох checkpoint presence та однозначного source matching; відсутність faults не видається за виміряний fault_delivery0. Overflow/невизначена причина не маскуються reserved bit.
+
+Для physical duration за D62 metadata version1 додатково вимагає duration_uncertainty_ns (невід’ємне число наносекунд із method/calibration provenance). Report містить індекси first/last matched falling у raw analyzer, observed_duration_ns, duration_uncertainty_ns та covered_duration_lower_ns. Вони обчислюються за фізичними edges, не з 601000000 MCU-мкс; правило lower-bound — контракт. RAM/wire H/B/W/T/E version1 і≤512B не змінюються.
 
 ## Стабільні коди протоколу04
 

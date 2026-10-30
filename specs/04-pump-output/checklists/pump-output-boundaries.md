@@ -129,3 +129,8 @@ A — вже задоволено текстом; B — внесене одно�
 **Відкриті пункти checklist:** немає. **Фізичні gates:** Q02/H02/H03, Q03 conditioning/capture evidence, Q06 MD20A revision/interface/jumper залишаються відкритими. Q05/силовий тракт/напрямок насоса належать05/06.
 
 **Наступний крок:** окремий явний виклик /speckit-tasks для04. Tasks/Implement не запускались.
+
+
+### Уточнення після analyze-guided, D62
+
+2026-10-30 власник обрав A для U1: замість первісного 600 MCU-секундного RAM window D61 чинні 601 MCU-секунда [t0+5 с,t0+606 с). Output schedule лишається D60 з LOW на t0+605 с; collector/max diagnostics тривають до 606 с, export чекає closure/freeze. Окреме фізичне прийняття вимагає≥600 с покриття зневизначеністю за контрактом. Історичні цитати/номери рядків і 33/33 вище належать моменту первісного checklist review, а не новим hardware доказам. Рішення щодо bounded RAM/capture continues збережено. Повний аналіз і виправлення — [analysis-resolution.md](../analysis-resolution.md).

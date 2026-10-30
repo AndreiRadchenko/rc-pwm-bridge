@@ -73,7 +73,7 @@ Capture/core, D56 floating GPIO3, epoch/fault barriers та bounded diagnostics 
 
 ## RCH-05 — Числові M04 межі до реалізації та вимірювань
 
-За явним Plan-завданням технічний вибір закрито D60; повні нормативні параметри й методика — [контракт](contracts/pump-output.md). Нижче rationale, не вимірювання. Waveform:5с initial LOW +6×10с =65с. Stress:5с+6×100с=605с, із600с вікном після initial LOW, по одному run для active/slow/absent reader. Це одна скінченна послідовність, без loop. Accuracy instrumentation завершується раніше за чинним D55 і має окремий scope evidence.
+За явним Plan-завданням технічний вибір закрито D60; повні нормативні параметри й методика — [контракт](contracts/pump-output.md). Нижче rationale, не вимірювання. Waveform:5 с initial LOW +6×10 с =65 с. Stress output:5 с+6×100 с=605 с; чинне evidence window за D62 —601 MCU-секунда після initial LOW, окремо підтверджується≥600 фізичних секунд. По одному run для active/slow/absent reader. Це одна скінченна послідовність, без loop. Accuracy instrumentation завершується раніше за чинним D55 і має окремий scope evidence.
 
 - Частота: абсолютна E_f≤1 Гц від1000 Гц; U_f≤0,1 Гц окремо.
 - Duty: E_d≤0,1 відсоткового пункту від nominal, U_d≤0,02 п.п. окремо. Максимальна 13-bit quantization≤0,006104п.п., тобто всередині запропонованого бюджету. Не усереднювати погані цикли для pass.
@@ -103,3 +103,10 @@ Checklist-guided уточнив вимоги без нових hardware факт
 ## RCH-07 — Докази stress-вікна за відсутнього reader
 
 Користувач обрав A / D61 під час checklist-guided 2026-10-30: bounded RAM summary, capture після вікна продовжується. Відхилена альтернатива B — зупинка capture для stress export. Latest-only snapshots самі не зберігають точні bounds/counts600с; їх друк після reconnect не є достатнім доказом. Окремий CaptureWindowEvidence≤512B зберігає належність за estimated falling, boundary provenance, window counts і maxima без per-pulse history. Для здорового valid потоку closure guard17мс складається з чинних stop5мс/callback-rearm1мс/processing10мс та owner poll1мс; підтвердження ingress barrier обов’язкове, самого спливу часу недостатньо. Capture budgets03 не змінюються. Це рішення й технічний дизайн до реалізації, без нових фізичних результатів.
+
+
+## RCH-08 — Аналіз U1, рішення A / D62
+
+2026-10-30 користувач обрав A: зберегти output schedule D60, подовжити лише bounded RAM window до 601 MCU-секунди [t0+5 с,t0+606 с). Це замінює первісні 600 MCU-секундного bounds у D61/RCH-07. Наприклад, гіпотетичний MCU-clock на 0,1% швидший дає близько 599,4 фізичних секунд за 600 MCU-секунд; це арифметичний приклад, не виміряна похибка плати. Запас 601 сам не гарантує прийняття: консервативний інтервал між first/last matched falling мінус невизначеність має бути≥600 фізичних секунд.
+
+На 605 с output Complete/LOW, collector продовжує збір та max diagnostics до 606 с, closure≤17 мс від нової межі; export чекає freeze. RAM≤512B/transport/one writer/clock domain не змінюються. Відхилено B — звузити 04 до номінальних 600 MCU-секунд; C — відкласти рішення. Фізичні результати відсутні, Q02/Q03/Q06 відкриті.
