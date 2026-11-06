@@ -1,0 +1,570 @@
+{
+  "elf": "build/c3-04-reviewed-accuracy-5/rc_pwm_bridge.elf",
+  "roots": [
+    "rmt_rx_default_isr",
+    "gpio_intr_service",
+    "platform::RcCapture::gpio_edge(void*)",
+    "platform::RcCapture::rx_done(rmt_channel_t*, rmt_rx_done_event_data_t const*, void*)",
+    "systimer_ticks_to_us"
+  ],
+  "closure": {
+    "systimer_ticks_to_us": {
+      "address": "40383bc2",
+      "section": ".iram0.text",
+      "size": 12,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "platform::RcCapture::rx_done(rmt_channel_t*, rmt_rx_done_event_data_t const*, void*)": {
+      "address": "4038168a",
+      "section": ".iram0.text",
+      "size": 424,
+      "flags": "g     F",
+      "calls": [
+        "esp_timer_get_time",
+        "memset",
+        "platform::RcCapture::arm_locked(bool)",
+        "vPortEnterCritical",
+        "vPortExitCritical",
+        "vTaskGenericNotifyGiveFromISR",
+        "xQueueGenericSendFromISR"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 480
+    },
+    "esp_timer_get_time": {
+      "address": "40380322",
+      "section": ".iram0.text",
+      "size": 36,
+      "flags": "g     F",
+      "calls": [
+        "systimer_hal_get_counter_value"
+      ],
+      "indirect": [
+        "4038033c:\t9402                \tjalr\ts0"
+      ],
+      "largest_explicit_frame_bytes": 16
+    },
+    "systimer_hal_get_counter_value": {
+      "address": "40389a80",
+      "section": ".iram0.text",
+      "size": 78,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "vPortExitCritical": {
+      "address": "40385372",
+      "section": ".iram0.text",
+      "size": 96,
+      "flags": "g     F",
+      "calls": [
+        "__assert_func",
+        "vPortClearInterruptMaskFromISR"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 16
+    },
+    "vPortClearInterruptMaskFromISR": {
+      "address": "40385332",
+      "section": ".iram0.text",
+      "size": 16,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "__assert_func": {
+      "address": "4038be7a",
+      "section": ".iram0.text",
+      "size": 258,
+      "flags": "g     F",
+      "calls": [
+        "esp_system_abort",
+        "itoa",
+        "memcpy",
+        "ra_to_str",
+        "spi_flash_cache_enabled",
+        "strlen"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 288
+    },
+    "esp_system_abort": {
+      "address": "40384f94",
+      "section": ".iram0.text",
+      "size": 6,
+      "flags": "g     F",
+      "calls": [
+        "panic_abort"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 16
+    },
+    "panic_abort": {
+      "address": "40384fca",
+      "section": ".iram0.text",
+      "size": 22,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "ra_to_str": {
+      "address": "4038be4e",
+      "section": ".iram0.text",
+      "size": 44,
+      "flags": "l     F",
+      "calls": [
+        "itoa"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 16
+    },
+    "itoa": {
+      "address": "40000448",
+      "section": "*ABS*",
+      "size": 8,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "spi_flash_cache_enabled": {
+      "address": "403822fe",
+      "section": ".iram0.text",
+      "size": 18,
+      "flags": "g     F",
+      "calls": [
+        "cache_hal_is_cache_enabled"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 16
+    },
+    "cache_hal_is_cache_enabled": {
+      "address": "403882aa",
+      "section": ".iram0.text",
+      "size": 10,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "memcpy": {
+      "address": "4038c05e",
+      "section": ".iram0.text",
+      "size": 210,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "strlen": {
+      "address": "40000374",
+      "section": "*ABS*",
+      "size": 100,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "vPortEnterCritical": {
+      "address": "40385342",
+      "section": ".iram0.text",
+      "size": 48,
+      "flags": "g     F",
+      "calls": [
+        "xPortSetInterruptMaskFromISR"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 16
+    },
+    "xPortSetInterruptMaskFromISR": {
+      "address": "40385318",
+      "section": ".iram0.text",
+      "size": 26,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "memset": {
+      "address": "40000354",
+      "section": "*ABS*",
+      "size": 168,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "xQueueGenericSendFromISR": {
+      "address": "4038606a",
+      "section": ".iram0.text",
+      "size": 372,
+      "flags": "g     F",
+      "calls": [
+        "__assert_func",
+        "prvCopyDataToQueue",
+        "prvNotifyQueueSetContainer",
+        "uxTaskGetNumberOfTasks",
+        "vPortClearInterruptMaskFromISR",
+        "xPortSetInterruptMaskFromISR",
+        "xTaskRemoveFromEventList"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 32
+    },
+    "xTaskRemoveFromEventList": {
+      "address": "403873d6",
+      "section": ".iram0.text",
+      "size": 284,
+      "flags": "g     F",
+      "calls": [
+        "__assert_func"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 16
+    },
+    "prvNotifyQueueSetContainer": {
+      "address": "403859c0",
+      "section": ".iram0.text",
+      "size": 222,
+      "flags": "l     F",
+      "calls": [
+        "__assert_func",
+        "prvCopyDataToQueue",
+        "uxTaskGetNumberOfTasks",
+        "xTaskRemoveFromEventList"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 32
+    },
+    "uxTaskGetNumberOfTasks": {
+      "address": "40386e7c",
+      "section": ".iram0.text",
+      "size": 10,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "prvCopyDataToQueue": {
+      "address": "40385906",
+      "section": ".iram0.text",
+      "size": 146,
+      "flags": "l     F",
+      "calls": [
+        "memcpy",
+        "xTaskPriorityDisinherit"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 16
+    },
+    "xTaskPriorityDisinherit": {
+      "address": "40387764",
+      "section": ".iram0.text",
+      "size": 260,
+      "flags": "g     F",
+      "calls": [
+        "__assert_func",
+        "uxListRemove"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 16
+    },
+    "uxListRemove": {
+      "address": "40385882",
+      "section": ".iram0.text",
+      "size": 40,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "platform::RcCapture::arm_locked(bool)": {
+      "address": "4038159e",
+      "section": ".iram0.text",
+      "size": 236,
+      "flags": "g     F",
+      "calls": [
+        "esp_timer_get_time",
+        "gpio_get_level",
+        "platform::RcCapture::pending_edge() const",
+        "rmt_receive"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 32
+    },
+    "gpio_get_level": {
+      "address": "4038275a",
+      "section": ".iram0.text",
+      "size": 24,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "rmt_receive": {
+      "address": "40382a42",
+      "section": ".iram0.text",
+      "size": 548,
+      "flags": "g     F",
+      "calls": [
+        "__atomic_compare_exchange_4",
+        "__udivdi3",
+        "memset",
+        "vPortEnterCritical",
+        "vPortExitCritical",
+        "xPortInIsrContext"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 64
+    },
+    "__atomic_compare_exchange_4": {
+      "address": "4038c200",
+      "section": ".iram0.text",
+      "size": 60,
+      "flags": "g     F",
+      "calls": [
+        "vPortClearInterruptMaskFromISR",
+        "xPortSetInterruptMaskFromISR"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 16
+    },
+    "__udivdi3": {
+      "address": "400008ac",
+      "section": "*ABS*",
+      "size": 858,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "xPortInIsrContext": {
+      "address": "4038530e",
+      "section": ".iram0.text",
+      "size": 10,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "platform::RcCapture::pending_edge() const": {
+      "address": "40381586",
+      "section": ".iram0.text",
+      "size": 24,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "vTaskGenericNotifyGiveFromISR": {
+      "address": "40387c74",
+      "section": ".iram0.text",
+      "size": 390,
+      "flags": "g     F",
+      "calls": [
+        "__assert_func",
+        "vPortClearInterruptMaskFromISR",
+        "xPortSetInterruptMaskFromISR"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 16
+    },
+    "platform::RcCapture::gpio_edge(void*)": {
+      "address": "4038147e",
+      "section": ".iram0.text",
+      "size": 264,
+      "flags": "g     F",
+      "calls": [
+        "esp_timer_get_time",
+        "gpio_get_level",
+        "gpio_intr_disable",
+        "vPortEnterCritical",
+        "vPortExitCritical",
+        "vPortYieldFromISR",
+        "vTaskGenericNotifyGiveFromISR",
+        "xQueueGenericSendFromISR"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 64
+    },
+    "vPortYieldFromISR": {
+      "address": "403853d2",
+      "section": ".iram0.text",
+      "size": 20,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "gpio_intr_disable": {
+      "address": "40382772",
+      "section": ".iram0.text",
+      "size": 64,
+      "flags": "g     F",
+      "calls": [
+        "gpio_hal_intr_disable"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 16
+    },
+    "gpio_hal_intr_disable": {
+      "address": "403883e6",
+      "section": ".iram0.text",
+      "size": 58,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "gpio_intr_service": {
+      "address": "403819b8",
+      "section": ".iram0.text",
+      "size": 42,
+      "flags": "l     F",
+      "calls": [
+        "gpio_isr_loop"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 16
+    },
+    "gpio_isr_loop": {
+      "address": "403818de",
+      "section": ".iram0.text",
+      "size": 218,
+      "flags": "l     F",
+      "calls": [
+        "__ffssi2"
+      ],
+      "indirect": [
+        "40381918:\t9702                \tjalr\ta4"
+      ],
+      "largest_explicit_frame_bytes": 32
+    },
+    "__ffssi2": {
+      "address": "400007d4",
+      "section": "*ABS*",
+      "size": 64,
+      "flags": "g     F",
+      "calls": [],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 0
+    },
+    "rmt_rx_default_isr": {
+      "address": "40382c66",
+      "section": ".iram0.text",
+      "size": 102,
+      "flags": "l     F",
+      "calls": [
+        "rmt_isr_handle_rx_done",
+        "rmt_isr_handle_rx_threshold",
+        "vPortYieldFromISR"
+      ],
+      "indirect": [],
+      "largest_explicit_frame_bytes": 32
+    },
+    "rmt_isr_handle_rx_done": {
+      "address": "403827fc",
+      "section": ".iram0.text",
+      "size": 356,
+      "flags": "g     F",
+      "calls": [
+        "memcpy",
+        "vPortEnterCritical",
+        "vPortExitCritical"
+      ],
+      "indirect": [
+        "403828a4:\t9982                \tjalr\ts3",
+        "4038293a:\t9982                \tjalr\ts3"
+      ],
+      "largest_explicit_frame_bytes": 48
+    },
+    "rmt_isr_handle_rx_threshold": {
+      "address": "40382960",
+      "section": ".iram0.text",
+      "size": 226,
+      "flags": "g     F",
+      "calls": [
+        "memcpy",
+        "vPortEnterCritical",
+        "vPortExitCritical"
+      ],
+      "indirect": [
+        "403829ba:\t9702                \tjalr\ta4"
+      ],
+      "largest_explicit_frame_bytes": 48
+    }
+  },
+  "data": {
+    "systimer_hal": {
+      "address": "3fc8f4a0",
+      "section": ".dram0.bss",
+      "size": 12,
+      "flags": "l     O"
+    },
+    "gpio_context": {
+      "address": "3fc8e0f8",
+      "section": ".dram0.data",
+      "size": 32,
+      "flags": "l     O"
+    },
+    "app_main::clock": {
+      "address": "3fc8e01c",
+      "section": ".dram0.data",
+      "size": 4,
+      "flags": "l     O"
+    },
+    "app_main::evidence": {
+      "address": "3fc96ae0",
+      "section": ".dram0.bss",
+      "size": 2616,
+      "flags": "l     O"
+    },
+    "app_main::profile": {
+      "address": "3fc8e018",
+      "section": ".dram0.data",
+      "size": 4,
+      "flags": "l     O"
+    },
+    "app_main::sdk": {
+      "address": "3fc8e0ec",
+      "section": ".dram0.data",
+      "size": 12,
+      "flags": "l     O"
+    },
+    "app_main::output": {
+      "address": "3fc96a88",
+      "section": ".dram0.bss",
+      "size": 88,
+      "flags": "l     O"
+    },
+    "app_main::diagnostic": {
+      "address": "3fc957c0",
+      "section": ".dram0.bss",
+      "size": 4808,
+      "flags": "l     O"
+    },
+    "app_main::supervisor": {
+      "address": "3fc95678",
+      "section": ".dram0.bss",
+      "size": 328,
+      "flags": "l     O"
+    },
+    "app_main::capture": {
+      "address": "3fc8fe08",
+      "section": ".dram0.bss",
+      "size": 22640,
+      "flags": "l     O"
+    }
+  },
+  "app_frames": {
+    "platform::LocalDiagnostics::step(unsigned long long)": 1344,
+    "platform::RcCapture::output_service(unsigned long long)": 448,
+    "platform::RcCapture::step()": 1072
+  }
+}

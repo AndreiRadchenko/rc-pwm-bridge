@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "kind": "synthetic C++ production formatters + writer cursor to Python parser",
+  "output_records": 1,
+  "window_counts": [
+    2,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "api": [
+    {
+      "seq": 1,
+      "kind": 5,
+      "elapsed_us": 1,
+      "budget_us": 2000
+    }
+  ]
+}

@@ -12,7 +12,7 @@ FORBIDDEN = {'esp_wifi', 'bt', 'esp_netif', 'lwip'}
 FORBIDDEN_SYMBOLS = ('esp_wifi_init', 'esp_wifi_start', 'esp_bt_controller_init',
                      'esp_bt_controller_enable', 'esp_netif_init')
 
-def verify(directory):
+def verify(directory, require_pump04=None):
     sdk = (directory / 'sdkconfig').read_text()
     graph = json.loads((directory / 'project_description.json').read_text())
     commands = json.loads((directory / 'compile_commands.json').read_text())
@@ -65,13 +65,39 @@ def verify(directory):
             raise ValueError('RMT creation outside approved adapter: ' + str(source))
         for symbol in forbidden_calls:
             if re.search(r'\b' + symbol + r'\s*\(', text): raise ValueError(f'forbidden call {symbol}: {source}')
+    if require_pump04 is not None:
+        manifest=json.loads((directory/'pump04-manifest.json').read_text())
+        if manifest['scenario']!=require_pump04 or manifest['output_duration_us']!=({'normal':0,'waveform':60000000,'stress':600000000,'accuracy':60000000}[require_pump04]) or manifest['window_duration_us']!=(601000000 if require_pump04=='stress' else 0) or manifest['initial_low_us']!=(0 if require_pump04=='normal' else 5000000):
+            raise ValueError('pump04 manifest/scenario/duration mismatch')
+        bench='CONFIG_BRIDGE_PUMP04_BENCH=y' in sdk.splitlines()
+        if bench != (require_pump04!='normal'):raise ValueError('pump04 default-off/bench mismatch')
+        if require_pump04!='normal':
+            expected={'waveform':1,'stress':2,'accuracy':3}[require_pump04]
+            if 'CONFIG_BRIDGE_PUMP04_SCENARIO='+str(expected) not in sdk.splitlines():raise ValueError('pump04 scenario mismatch')
+        if trace_on != (require_pump04=='accuracy') or stress_on != (require_pump04 in ('stress','accuracy')):
+            raise ValueError('pump04 instrumentation mismatch')
+        if require_pump04=='accuracy':
+            step=manifest.get('trace_step')
+            if type(step) is not int or not 0<=step<=5 or 'CONFIG_BRIDGE_PUMP04_TRACE_STEP='+str(step) not in sdk.splitlines():raise ValueError('pump04 accuracy step mismatch')
+        for name in ('bridge_core/pump_output.cpp','platform_esp32/pump_output.cpp'):
+            if str(ROOT/'firmware/components'/name) not in actual:raise ValueError('missing pump04 object: '+name)
+        for command in commands:
+            if '/components/platform_esp32/' in command['file'] or '/firmware/main/' in command['file']:
+                standards=[x for x in shlex.split(command['command']) if x.startswith('-std=')]
+                if not standards or standards[-1]!='-std=c++17':raise ValueError('pump04 platform compiler flags')
+        if 'esp_driver_ledc' not in components:raise ValueError('missing native LEDC dependency')
+        for symbol in ('ledc_fade_func_install','ledc_set_duty_and_update'):
+            # Discarded input sections and the cross-reference table also name
+            # SDK functions that are absent from the linked image.
+            if re.search(r'^\s+0x[0-9a-fA-F]+\s+'+symbol+r'\s*$',map_text,re.MULTILINE):
+                raise ValueError('forbidden pump04 fade/blocking service')
     print('Automated config/graph/map/source checks passed; manual startup and watchdog/bootloader review still required.')
     for line in sdk.splitlines():
         if re.match(r'CONFIG_(?:ESP_SYSTEM_PANIC|ESP_TASK_WDT|ESP_INT_WDT|BOOTLOADER_WDT)',line): print(line)
 
 def main():
-    parser = argparse.ArgumentParser(); parser.add_argument('--build-dir', type=pathlib.Path, required=True); args = parser.parse_args()
-    try: verify(args.build_dir); return 0
+    parser = argparse.ArgumentParser(); parser.add_argument('--build-dir', type=pathlib.Path, required=True); parser.add_argument('--require-pump04',choices=['normal','waveform','stress','accuracy']); args = parser.parse_args()
+    try: verify(args.build_dir,args.require_pump04); return 0
     except (OSError, ValueError, KeyError, json.JSONDecodeError) as exc:
         print('config check failed:', exc, file=sys.stderr); return 1
 if __name__ == '__main__': sys.exit(main())

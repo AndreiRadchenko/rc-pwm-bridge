@@ -1,0 +1,18 @@
+[
+  {
+    "variant": "normal",
+    "scenario": "normal",
+    "step": null,
+    "directory": "build/c3-04-final-normal",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "scripts/build.py",
+      "target",
+      "--board-profile",
+      "firmware/boards/c3-supermini-pinout-01.json",
+      "--build-dir",
+      "build/c3-04-final-normal"
+    ],
+    "exit": 1
+  }
+]

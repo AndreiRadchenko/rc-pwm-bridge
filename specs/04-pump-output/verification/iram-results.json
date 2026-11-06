@@ -1,0 +1,47 @@
+[
+  {
+    "variant": "normal",
+    "functions": 43,
+    "artifact": "iram-audit-normal.json"
+  },
+  {
+    "variant": "waveform",
+    "functions": 43,
+    "artifact": "iram-audit-waveform.json"
+  },
+  {
+    "variant": "stress",
+    "functions": 43,
+    "artifact": "iram-audit-stress.json"
+  },
+  {
+    "variant": "accuracy-0",
+    "functions": 43,
+    "artifact": "iram-audit-accuracy-0.json"
+  },
+  {
+    "variant": "accuracy-1",
+    "functions": 43,
+    "artifact": "iram-audit-accuracy-1.json"
+  },
+  {
+    "variant": "accuracy-2",
+    "functions": 43,
+    "artifact": "iram-audit-accuracy-2.json"
+  },
+  {
+    "variant": "accuracy-3",
+    "functions": 43,
+    "artifact": "iram-audit-accuracy-3.json"
+  },
+  {
+    "variant": "accuracy-4",
+    "functions": 43,
+    "artifact": "iram-audit-accuracy-4.json"
+  },
+  {
+    "variant": "accuracy-5",
+    "functions": 43,
+    "artifact": "iram-audit-accuracy-5.json"
+  }
+]

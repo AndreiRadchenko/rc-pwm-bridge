@@ -165,4 +165,61 @@ class Rc03ConfigTests(unittest.TestCase):
             with self.assertRaises(SystemExit):
                 build.main()
 
+class Pump04BuildTests(unittest.TestCase):
+    invoke=WrapperTests.invoke
+    def test_pump04_bad_inputs(self):
+        for tail in [['--pump04-bench','waveform'],['--pump04-trace-step','0'],['--pump04-bench','accuracy'],['--pump04-bench','accuracy','--pump04-trace-step','6'],['--pump04-bench','stress','--pump04-trace-step','1']]:
+            with self.subTest(tail=tail):
+                with self.assertRaises(SystemExit):self.invoke(['host','--build-dir','unused']+tail)
+        base=['target','--board-profile',str(ROOT/'firmware/boards/c3-supermini-pinout-01.json'),'--build-dir','unused']
+        for tail in [['--pump04-bench','accuracy'],['--pump04-bench','waveform','--rc03-bench','diagnostics'],['--pump04-bench','accuracy','--pump04-trace-step','-1']]:
+            with self.assertRaises(SystemExit):self.invoke(base+tail)
+
+    def test_pump04_manifest_and_variants(self):
+        from unittest.mock import patch
+        from types import SimpleNamespace
+        h={'cmake':{'path':'/fake/cmake'},'ninja':{'path':'/fake/ninja'},'clang':{'path':'/fake/clang'}}
+        identities=[]
+        for mode in ['waveform','stress','accuracy']:
+            with tempfile.TemporaryDirectory() as d, patch.object(build,'host_tools',return_value=h), patch.object(build.subprocess,'run',return_value=SimpleNamespace(returncode=0)) as run:
+                dest=pathlib.Path(d)/'target'
+                args=['target','--board-profile',str(ROOT/'firmware/boards/c3-supermini-pinout-01.json'),'--build-dir',str(dest),'--pump04-bench',mode]
+                if mode=='accuracy':args+=['--pump04-trace-step','5']
+                self.assertEqual(self.invoke(args),0)
+                manifest=json.loads((dest/'pump04-manifest.json').read_text());identities.append(manifest['fingerprint'])
+                self.assertEqual(manifest['scenario'],mode);self.assertEqual(manifest['window_duration_us'],601000000 if mode=='stress' else 0)
+                self.assertEqual(manifest['output_duration_us'],600000000 if mode=='stress' else 60000000)
+                cmd=run.call_args_list[-1].args[0];self.assertIn('sdkconfig.pump04-'+mode+'.defaults',str(cmd))
+                if mode=='accuracy':self.assertIn('TRACE_STEP=5',(dest/'pump04-step.defaults').read_text())
+                self.assertFalse(set(cmd)&{'flash','monitor','reset'})
+        self.assertEqual(len(set(identities)),3)
+
+class Pump04ConfigTests(unittest.TestCase):
+    fixture=Rc03ConfigTests.fixture
+    module=Rc03ConfigTests.module
+    def test_pump04_config_contract(self):
+        with tempfile.TemporaryDirectory() as d:
+            path=pathlib.Path(d);commands=self.fixture(path);module=self.module()
+            commands[-1]['command']='c++ -std=c++17'
+            commands.extend([dict(file=str(ROOT/'firmware/components'/name),command='c++ -std='+standard+' -fno-rtti -fno-exceptions') for name,standard in [('bridge_core/pump_output.cpp','c++11'),('platform_esp32/pump_output.cpp','c++17')]])
+            (path/'compile_commands.json').write_text(json.dumps(commands))
+            graph=json.loads((path/'project_description.json').read_text());graph['build_components'].append('esp_driver_ledc');(path/'project_description.json').write_text(json.dumps(graph))
+            manifest=dict(scenario='normal',initial_low_us=0,output_duration_us=0,window_duration_us=0,trace_step=None)
+            (path/'pump04-manifest.json').write_text(json.dumps(manifest));module.verify(path,'normal')
+            map_path=path/'rc_pwm_bridge.map'
+            original_map=map_path.read_text()
+            map_path.write_text(original_map+'\n .text.ledc_fade_func_install\n 0x00000000 0x6c sdk.a(ledc.c.obj)\nledc_fade_func_install sdk.a(ledc.c.obj)\n')
+            module.verify(path,'normal')
+            for symbol in ('ledc_fade_func_install','ledc_set_duty_and_update'):
+                map_path.write_text(original_map+'\n 0x42001234 '+symbol+'\n')
+                with self.assertRaisesRegex(ValueError,'fade/blocking'):module.verify(path,'normal')
+            map_path.write_text(original_map)
+            with self.assertRaisesRegex(ValueError,'scenario/duration'):module.verify(path,'stress')
+            manifest.update(scenario='stress',initial_low_us=5000000,output_duration_us=600000000,window_duration_us=601000000)
+            (path/'pump04-manifest.json').write_text(json.dumps(manifest))
+            with (path/'sdkconfig').open('a') as f:f.write('\nCONFIG_BRIDGE_PUMP04_BENCH=y\nCONFIG_BRIDGE_PUMP04_SCENARIO=2\nCONFIG_BRIDGE_RC03_DIAGNOSTIC_STRESS=y\n')
+            module.verify(path,'stress')
+            manifest['window_duration_us']=600000000;(path/'pump04-manifest.json').write_text(json.dumps(manifest))
+            with self.assertRaisesRegex(ValueError,'scenario/duration'):module.verify(path,'stress')
+
 if __name__ == '__main__': unittest.main()

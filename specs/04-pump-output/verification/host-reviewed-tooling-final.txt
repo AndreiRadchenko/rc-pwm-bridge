@@ -1,0 +1,103 @@
+test_missing_and_forbidden_evidence (test_build_contract.ConfigTests.test_missing_and_forbidden_evidence) ... ok
+test_approved_pending_bench (test_build_contract.ProfileTests.test_approved_pending_bench) ... ok
+test_rejected_variants (test_build_contract.ProfileTests.test_rejected_variants) ... ok
+test_pump04_bad_inputs (test_build_contract.Pump04BuildTests.test_pump04_bad_inputs) ... usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: --pump04-bench is target-only and conflicts with --rc03-bench
+usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: --pump04-trace-step requires accuracy and range0..5
+usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: --pump04-bench is target-only and conflicts with --rc03-bench
+usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: --pump04-bench is target-only and conflicts with --rc03-bench
+usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: --pump04-bench is target-only and conflicts with --rc03-bench
+usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: accuracy requires explicit --pump04-trace-step
+usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: --pump04-bench is target-only and conflicts with --rc03-bench
+usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: --pump04-trace-step requires accuracy and range0..5
+ok
+test_pump04_manifest_and_variants (test_build_contract.Pump04BuildTests.test_pump04_manifest_and_variants) ... ok
+test_pump04_config_contract (test_build_contract.Pump04ConfigTests.test_pump04_config_contract) ... ok
+test_bench_cli_modes_preserve_baseline (test_build_contract.Rc03ConfigTests.test_bench_cli_modes_preserve_baseline) ... usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: --rc03-bench is target-only
+ok
+test_effective_config_and_missing_object (test_build_contract.Rc03ConfigTests.test_effective_config_and_missing_object) ... ok
+test_trace_object_matches_config_and_core_flags (test_build_contract.Rc03ConfigTests.test_trace_object_matches_config_and_core_flags) ... ok
+test_bad_cli (test_build_contract.WrapperTests.test_bad_cli) ... usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: target requires --board-profile
+ok
+test_busy_directory_is_untouched (test_build_contract.WrapperTests.test_busy_directory_is_untouched) ... build directory already exists: /private/var/folders/r0/w15py5y95l15xpm18nhvr5lc0000gn/T/tmpj0lc0e3l
+ok
+test_host_and_target_return_codes_without_device_actions (test_build_contract.WrapperTests.test_host_and_target_return_codes_without_device_actions) ... ok
+test_invalid_profile_rejected_before_configure (test_build_contract.WrapperTests.test_invalid_profile_rejected_before_configure) ... target environment/profile gate: invalid/unapproved profile field: pwm_pin
+ok
+test_D62_duration_lower_bound_and_presence (test_pump_output_trace.PumpTraceTests.test_D62_duration_lower_bound_and_presence) ... ok
+test_analog_not_inferred_from_logic_levels (test_pump_output_trace.PumpTraceTests.test_analog_not_inferred_from_logic_levels) ... ok
+test_api_archive_reconnect_integrity_and_failures (test_pump_output_trace.PumpTraceTests.test_api_archive_reconnect_integrity_and_failures) ... ok
+test_cli_exit_codes (test_pump_output_trace.PumpTraceTests.test_cli_exit_codes) ... ok
+test_every_period_not_average_and_duty_boundary (test_pump_output_trace.PumpTraceTests.test_every_period_not_average_and_duty_boundary) ... ok
+test_fnv_known_vector (test_pump_output_trace.PumpTraceTests.test_fnv_known_vector) ... ok
+test_static_empty_trace_requires_initial_state_and_bounds (test_pump_output_trace.PumpTraceTests.test_static_empty_trace_requires_initial_state_and_bounds) ... ok
+test_terminal_low_112ms_boundary_and_no_repeat (test_pump_output_trace.PumpTraceTests.test_terminal_low_112ms_boundary_and_no_repeat) ... ok
+test_direct_error_rule_not_guard_band (test_rc_capture_trace.TraceComparisonTests.test_direct_error_rule_not_guard_band) ... ok
+test_failed_collector_and_different_session_records (test_rc_capture_trace.TraceComparisonTests.test_failed_collector_and_different_session_records) ... ok
+test_gap_count_and_uncertainty (test_rc_capture_trace.TraceComparisonTests.test_gap_count_and_uncertainty) ... ok
+test_interval_error_is_checked_for_each_pair (test_rc_capture_trace.TraceComparisonTests.test_interval_error_is_checked_for_each_pair) ... ok
+test_outside_limit_no_rounding (test_rc_capture_trace.TraceComparisonTests.test_outside_limit_no_rounding) ... ok
+test_partial_cycle_then_recovered_reader (test_rc_capture_trace.TraceComparisonTests.test_partial_cycle_then_recovered_reader) ... ok
+test_reference_count_mismatch (test_rc_capture_trace.TraceComparisonTests.test_reference_count_mismatch) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 1.282s
+
+OK
+Automated config/graph/map/source checks passed; manual startup and watchdog/bootloader review still required.
+Automated config/graph/map/source checks passed; manual startup and watchdog/bootloader review still required.
+Automated config/graph/map/source checks passed; manual startup and watchdog/bootloader review still required.
+Automated config/graph/map/source checks passed; manual startup and watchdog/bootloader review still required.
+Automated config/graph/map/source checks passed; manual startup and watchdog/bootloader review still required.
+pass
+fail: SDK error у frozen archive
+blocked: немає повного output archive

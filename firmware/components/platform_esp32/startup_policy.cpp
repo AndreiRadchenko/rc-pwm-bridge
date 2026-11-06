@@ -8,7 +8,7 @@ bool checked_clock(ClockReading reading, bridge::MonotonicUs& result) {
     return true;
 }
 StartupPolicy::StartupPolicy(ClockPort& c, ProfilePort& p, OutputPort& o, SetupPort& s, DiagnosticPort& d, uint64_t fp)
-    : clock_(c), profile_(p), output_(o), setup_(s), diagnostic_(d), supervisor_(), last_{}, published_(false), low_(false) {
+    : clock_(c), profile_(p), output_(o), setup_(s), diagnostic_(d), supervisor_(), last_{}, published_(false), low_(false), had_failure_(false) {
     last_.profile_fingerprint = fp;
     publish_if_changed(true);
 }
@@ -27,7 +27,7 @@ void StartupPolicy::publish_if_changed(bool force) {
 }
 void StartupPolicy::poll() {
     bridge::MonotonicUs now;
-    if (!checked_clock(clock_.read(), now)) { supervisor_.clock_fault(); publish_if_changed(); return; }
+    if (!checked_clock(clock_.read(), now)) { had_failure_=true; supervisor_.clock_fault(); publish_if_changed(); return; }
     if (!supervisor_.tick(now)) { publish_if_changed(); return; }
     publish_if_changed();
     bridge::InitOutcome outcome{false, bridge::StartupError::Profile};
@@ -42,7 +42,8 @@ void StartupPolicy::poll() {
             }
         }
     }
-    if (!checked_clock(clock_.read(), now)) supervisor_.clock_fault();
+    if(!outcome.success)had_failure_=true;
+    if (!checked_clock(clock_.read(), now)) {had_failure_=true;supervisor_.clock_fault();}
     else supervisor_.result(now, outcome);
     publish_if_changed();
 }
@@ -77,9 +78,36 @@ void RcDiagnosticPolicy::written(size_t n,size_t expected) {
     else bytes_+=n;
     if(n!=expected) bridge::increment(drops_,saturated_);
 }
+int format_rc04(const DiagnosticSnapshot& s,const DiagnosticStats& stats,char* b,size_t cap,bool padded) {
+    const auto c=s.capture;int n=0;
+
+        const auto& z=s.output;
+        if(unsigned(z.mode)>1||unsigned(z.phase)>10||z.requested_percent>100||unsigned(z.applied)>3||unsigned(c.measurement.status)>6||unsigned(c.phase)>3||c.control.calculated_duty_percent>100||c.fault_bits>0x7ff||unsigned(s.startup.phase)>5||s.startup.attempts_started>5||unsigned(s.startup.last_error)>6)return 0;
+        n=std::snprintf(b,cap,
+        "\nrc04 q=%llx id=%llx sid=%llx w=%x s=%llx e=%llx p=%x v=%x c=%x d=%x o=0 a=0 f=%x n=%x,%x,%x,%x,%x,%x k=%x,%x,%x,%x,%llx m=%llx,%llx,%llx t=%llx,%llx b=%x,%x,%x,%x x=%x z=%x,%x,%x,%x,%x,%x\n",
+        (unsigned long long)s.sequence,(unsigned long long)s.profile_fingerprint,
+        (unsigned long long)c.started_at_us,
+        unsigned(c.measurement.width_us),(unsigned long long)c.measurement.start_us,
+        (unsigned long long)c.measurement.end_us,unsigned(c.measurement.period_us),
+        unsigned(c.measurement.status),unsigned(c.phase),unsigned(c.control.calculated_duty_percent),
+        unsigned(c.fault_bits),unsigned(c.counters.candidates),unsigned(c.counters.valid),
+        unsigned(c.counters.invalid),unsigned(c.counters.dropped),unsigned(c.counters.faults),unsigned(c.counters.duplicate_edges),
+        unsigned(stats.overwritten),unsigned(stats.busy),unsigned(stats.drops),unsigned(stats.attempts),(unsigned long long)stats.bytes,
+        (unsigned long long)c.max_rearm_us,(unsigned long long)c.max_processing_us,
+        (unsigned long long)c.max_fault_lateness_us,(unsigned long long)c.threshold_at_us,
+        (unsigned long long)c.reported_at_us,unsigned(s.startup.phase),unsigned(s.startup.attempts_started),
+        unsigned(s.startup.last_error),unsigned(s.pwm_low_api_applied),unsigned(stats.saturated||c.counters.saturated),unsigned(z.mode),unsigned(z.phase),unsigned(z.requested_percent),unsigned(z.bench_permission),unsigned(z.applied),unsigned(z.reasons));
+
+    if(n<=0 || n>383 || size_t(n)>=cap)return 0;
+    if(padded){if(cap<385)return 0;for(int i=n-1;i<383;++i)b[i]=' ';b[383]='\n';b[384]=0;return 384;}
+    return n;
+}
 int RcDiagnosticPolicy::format(const DiagnosticSnapshot& s,char* b,size_t cap,bool padded) const {
     auto c=s.capture;
-    int n=std::snprintf(b,cap,
+    int n=0;
+    if(s.has_output)return format_rc04(s,{overwritten_,busy_,drops_,attempts_,bytes_,saturated_},b,cap,padded);
+    {
+    n=std::snprintf(b,cap,
         "\nrc03 q=%llx id=%llx sid=%llx w=%u s=%llx e=%llx p=%u v=%u c=%u d=%u o=0 a=0 f=%x n=%x,%x,%x,%x,%x,%x k=%x,%x,%x,%x,%llx m=%llx,%llx,%llx ft=%llx,%llx b=%x,%x,%x,%x sat=%u\n",
         (unsigned long long)s.sequence,(unsigned long long)s.profile_fingerprint,
         (unsigned long long)c.started_at_us,
@@ -93,6 +121,7 @@ int RcDiagnosticPolicy::format(const DiagnosticSnapshot& s,char* b,size_t cap,bo
         (unsigned long long)c.max_fault_lateness_us,(unsigned long long)c.threshold_at_us,
         (unsigned long long)c.reported_at_us,unsigned(s.startup.phase),unsigned(s.startup.attempts_started),
         unsigned(s.startup.last_error),unsigned(s.pwm_low_api_applied),unsigned(saturated_||c.counters.saturated));
+    }
     if(n<=0 || size_t(n)>=cap) return 0;
     if(padded) {
         if(cap<385) return 0;

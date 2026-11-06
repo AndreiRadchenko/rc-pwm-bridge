@@ -6,3 +6,19 @@ config BRIDGE_RC03_ACCURACY_TRACE
     bool "Collect a bounded 128-record accuracy archive (isolated bench only)"
     default n
 endmenu
+
+menu "Isolated no-pump waveform validation"
+config BRIDGE_PUMP04_BENCH
+    bool "Finite waveform test after every app boot (NO PUMP)"
+    default n
+config BRIDGE_PUMP04_SCENARIO
+    int "1=waveform, 2=stress, 3=accuracy"
+    range 1 3
+    default 1
+    depends on BRIDGE_PUMP04_BENCH
+config BRIDGE_PUMP04_TRACE_STEP
+    int "Accuracy collector step (explicit build-wrapper argument required)"
+    range -1 5
+    default -1
+    depends on BRIDGE_PUMP04_BENCH && BRIDGE_PUMP04_SCENARIO = 3
+endmenu

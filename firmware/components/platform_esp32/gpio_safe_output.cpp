@@ -14,11 +14,4 @@ bool EspBoardProfile::matches() {
            esp_flash_get_physical_size(nullptr, &bytes) == ESP_OK && bytes == 4194304 &&
            esp_flash_read_id(nullptr, &flash_id) == ESP_OK && flash_id == 0x204016;
 }
-OutputApplyResult EspSafeOutput::apply_low() {
-    if (!profile_.matches()) return {false};
-    const auto pin = static_cast<gpio_num_t>(BRIDGE_PROFILE_PWM_PIN);
-    if (gpio_set_level(pin, 0) != ESP_OK) return {false};
-    if (gpio_set_direction(pin, GPIO_MODE_OUTPUT) != ESP_OK) return {false};
-    return {true};
-}
 }

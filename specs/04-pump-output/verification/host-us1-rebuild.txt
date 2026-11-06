@@ -1,0 +1,2 @@
+[1/2] Building CXX object CMakeFiles/startup_tests.dir/startup_tests.cpp.o
+[2/2] Linking CXX executable startup_tests

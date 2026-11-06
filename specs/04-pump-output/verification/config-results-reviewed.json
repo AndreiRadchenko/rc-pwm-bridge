@@ -1,0 +1,110 @@
+[
+  {
+    "variant": "normal",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "scripts/verify/config.py",
+      "--build-dir",
+      "build/c3-04-reviewed-normal",
+      "--require-pump04",
+      "normal"
+    ],
+    "exit": 0
+  },
+  {
+    "variant": "waveform",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "scripts/verify/config.py",
+      "--build-dir",
+      "build/c3-04-reviewed-waveform",
+      "--require-pump04",
+      "waveform"
+    ],
+    "exit": 0
+  },
+  {
+    "variant": "stress",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "scripts/verify/config.py",
+      "--build-dir",
+      "build/c3-04-reviewed-stress",
+      "--require-pump04",
+      "stress"
+    ],
+    "exit": 0
+  },
+  {
+    "variant": "accuracy-0",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "scripts/verify/config.py",
+      "--build-dir",
+      "build/c3-04-reviewed-accuracy-0",
+      "--require-pump04",
+      "accuracy"
+    ],
+    "exit": 0
+  },
+  {
+    "variant": "accuracy-1",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "scripts/verify/config.py",
+      "--build-dir",
+      "build/c3-04-reviewed-accuracy-1",
+      "--require-pump04",
+      "accuracy"
+    ],
+    "exit": 0
+  },
+  {
+    "variant": "accuracy-2",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "scripts/verify/config.py",
+      "--build-dir",
+      "build/c3-04-reviewed-accuracy-2",
+      "--require-pump04",
+      "accuracy"
+    ],
+    "exit": 0
+  },
+  {
+    "variant": "accuracy-3",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "scripts/verify/config.py",
+      "--build-dir",
+      "build/c3-04-reviewed-accuracy-3",
+      "--require-pump04",
+      "accuracy"
+    ],
+    "exit": 0
+  },
+  {
+    "variant": "accuracy-4",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "scripts/verify/config.py",
+      "--build-dir",
+      "build/c3-04-reviewed-accuracy-4",
+      "--require-pump04",
+      "accuracy"
+    ],
+    "exit": 0
+  },
+  {
+    "variant": "accuracy-5",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "scripts/verify/config.py",
+      "--build-dir",
+      "build/c3-04-reviewed-accuracy-5",
+      "--require-pump04",
+      "accuracy"
+    ],
+    "exit": 0
+  }
+]

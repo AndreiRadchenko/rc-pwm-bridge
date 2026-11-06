@@ -1,0 +1,72 @@
+...usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: --pump04-bench is target-only and conflicts with --rc03-bench
+usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: --pump04-trace-step requires accuracy and range0..5
+usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: --pump04-bench is target-only and conflicts with --rc03-bench
+usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: --pump04-bench is target-only and conflicts with --rc03-bench
+usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: --pump04-bench is target-only and conflicts with --rc03-bench
+usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: accuracy requires explicit --pump04-trace-step
+usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: --pump04-bench is target-only and conflicts with --rc03-bench
+usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: --pump04-trace-step requires accuracy and range0..5
+..usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: --rc03-bench is target-only
+...usage: build.py [-h] --build-dir BUILD_DIR [--board-profile BOARD_PROFILE]
+                [--rc03-bench {diagnostics,accuracy}]
+                [--pump04-bench {waveform,stress,accuracy}]
+                [--pump04-trace-step PUMP04_TRACE_STEP]
+                {host,target}
+build.py: error: target requires --board-profile
+.build directory already exists: /private/var/folders/r0/w15py5y95l15xpm18nhvr5lc0000gn/T/tmpbjazxpds
+..target environment/profile gate: invalid/unapproved profile field: pwm_pin
+................
+----------------------------------------------------------------------
+Ran 27 tests in 1.258s
+
+OK
+Automated config/graph/map/source checks passed; manual startup and watchdog/bootloader review still required.
+Automated config/graph/map/source checks passed; manual startup and watchdog/bootloader review still required.
+pass
+fail: SDK error у frozen archive
+blocked: немає повного output archive

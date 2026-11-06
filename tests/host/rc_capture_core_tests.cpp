@@ -1,4 +1,5 @@
 #include "rc_capture_fixtures.hpp"
+#include "bridge/pump_output.hpp"
 using namespace bridge;
 int main() {
   Checks c;
@@ -25,5 +26,15 @@ int main() {
     CHECK(c, f.policy.snapshot().control.calculated_duty_percent ==
                  (width - 1000 + 5) / 10);
   }
+  // The output policy sees explicit faults, never a calculated RC duty as permission.
+  CaptureFixture capture;OutputPolicy output(BenchConfig::bench(PumpScenario::Waveform));
+  output.tick(0,{true,false,true});output.tick(5000000,{true,false,true});output.tick(15000000,{true,false,true});
+  for(unsigned i=0;i<800;++i)capture.pulse(1000+i*20000,1000);
+  for(unsigned i=0;i<6;++i){capture.pulse(16000000+i*20000,w[i]);output.tick(16007000+i*20000,{true,false,true});CHECK(c,output.snapshot().requested_percent==25);}
+  const auto last=capture.policy.snapshot().control.last_valid_time_us;
+  capture.pulse(16120000,899);CHECK(c,capture.policy.snapshot().control.last_valid_time_us==last);CHECK(c,!capture.policy.snapshot().fault_bits);
+  capture.policy.fault(QueueLoss,16130000);output.tick(16130000,{true,false,true},PumpCaptureFault);
+  capture.policy.recovered(16130000,false,capture.seq);capture.pulse(16140000,1800);capture.pulse(16160000,1800);CHECK(c,capture.policy.snapshot().control.calculated_duty_percent==80);CHECK(c,!capture.policy.snapshot().control.work_permitted);
+  output.tick(16170000,{true,false,true});CHECK(c,!output.request().permission&&output.request().percent==0);
   return c.failures ? 1 : 0;
 }
