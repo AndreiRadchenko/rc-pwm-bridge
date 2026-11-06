@@ -19,7 +19,7 @@ Apply accepted D63-D65; do not reselect them. The source is an ArduPilot output 
 
 Resolve only remaining Q05 choices before affected implementation: numerical Test timeout and exact boundary, last-valid-to-LOW budget, technical clock/output API failure classes and automatic retry, watchdog and diagnostic responsibilities. Use accepted valid pulse_end_us in the shared monotonic domain, including processing/output latency. Preserve capture stuck100ms detection plus10ms delivery accounting, but migrate historical 02-04 latch/observer/terminal-adapter output inhibition: it must not silently defeat Fly hold or automatic recovery. Sticky history may remain diagnostic; it is not a permanent operational signal-loss lock. Fly hold does not claim control through a failed output API or continued duty through reboot. Operational Test/Fly are separate from finite bench04 waveform/stress/accuracy images.
 
-Record D64/D65 as explicit user overrides of the older operational arming/universal signal-loss fail-off wording in constitution v1.0.0 principle II. Formal constitution/template synchronization is required before affected 05 implementation. Identify this conflict honestly; do not reopen selected policy, claim the old text already complies, amend governance incidentally, or invoke another phase automatically.
+Apply constitution v2.0.0/D74: principle II formally incorporates D63-D65 and G05 is closed after the explicitly authorized constitution/template synchronization. Retain the earlier v1.0.0 arming/universal signal-loss fail-off conflict as historical context, not an unresolved gate. Do not reselect settled policy or amend governance/invoke another phase automatically; hardware and verification gates remain open.
 
 ## Validation and deliverables
 

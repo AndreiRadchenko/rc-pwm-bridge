@@ -2,6 +2,8 @@
 
 **Iteration**: `[iteration]` | **Date**: [DATE] | **Spec**: [link]
 
+**Constitution**: [Version actually read from .specify/memory/constitution.md]
+
 **Input**: Feature specification from `specs/[iteration]/spec.md`
 
 **Feature directory**: `SPECIFY_FEATURE_DIRECTORY=specs/[iteration]` (explicitly set)
@@ -39,7 +41,8 @@ changes. Do not create/switch branches, commit, push, flash or operate loads aut
 **Performance Goals**: [1000 Hz output; applicable capture/cutoff budgets with decision references]
 
 **Constraints**: [Fixed 1000–2000 us mapping, radios disabled, nonblocking diagnostics;
-startup/fail-off and hardware responsibilities relevant to this iteration]
+startup, mode-specific cutoff/hold, automatic recovery and separate technical/hardware
+responsibilities relevant to this iteration; preserve legacy 01-04 contracts]
 
 **Scale/Scope**: [One pump input in v1; roadmap dependencies and explicit exclusions]
 
@@ -57,13 +60,20 @@ parameters to pass a gate or use complexity justification as a waiver.
 | Gate | Required check | Before research | After design |
 |------|----------------|-----------------|--------------|
 | I — Scope | One local pump channel, fixed mapping/1000 Hz, radios disabled; deferred features excluded. | [status/reference] | [status/reference] |
-| II — Safety | Validity/freshness, startup, arming/recovery, cutoff and watchdog responsibilities; hardware bias and emergency cutoff separate; LOW means brake. | [status/reference] | [status/reference] |
+| II — Safety | Validity/freshness, startup and automatic recovery; operational Test(default)/explicit Fly cutoff/hold; signal history distinct from technical inhibition; watchdog actual control progress; hardware bias/emergency cutoff separate; LOW means brake. | [status/reference] | [status/reference] |
 | III — Architecture | Standard-C++ core, explicit platform adapters, approved profile boundaries, native ESP-IDF; no unsupported compatibility claims. | [status/reference] | [status/reference] |
 | IV — Evidence | Pinned build/test dependencies or owned selection gate, behavior tests, traceability and separate host/build/physical evidence. | [status/reference] | [status/reference] |
-| V — Workflow | Requested phase, explicit feature directory, roadmap dependencies, language policy and user changes preserved; no automatic Git/hardware actions. | [status/reference] | [status/reference] |
+| V — Workflow | Requested phase, explicit feature directory, roadmap dependencies, language policy/user changes preserved; D10 branch preparation only in Specify, no branch switching in Plan or unauthorized publication/hardware actions. | [status/reference] | [status/reference] |
 | VI — Decisions | Current sources and applicable Q owners/due boundaries; no silent timeout, threshold, pinout or suitability defaults. | [status/reference] | [status/reference] |
 
 ### Verification and Traceability
+
+For operational 05/consumers, cover Test timeout boundaries/total physical cutoff,
+Fly long input-loss hold (including 0/100%), no current-boot valid, reset, automatic
+reconnect-high after resync, old/overflow samples, technical output/clock failure/retry,
+and deliberate control-task stall/watchdog under heavy diagnostics. Signal loss alone
+must not silently force Fly LOW or reset; output/clock failures have separate policy.
+Retain historical 01-04 behavior/evidence as legacy regression, not operational defaults.
 
 Map applicable R/FR IDs and acceptance scenarios to planned tasks and host tests,
 target-build checks or physical checks. State tolerances and acceptance limits before

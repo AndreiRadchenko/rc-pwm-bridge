@@ -9,6 +9,8 @@ description: "Task list template for feature implementation"
 
 **Feature directory**: `SPECIFY_FEATURE_DIRECTORY=specs/[iteration]` (explicitly set)
 
+**Constitution**: [Version actually read from .specify/memory/constitution.md]
+
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
 
 **Tests**: Meaningful behavior tests are required for changed control behavior, including
@@ -21,6 +23,16 @@ the constitution, roadmap dependencies and accepted scope; reference R/FR/SC IDs
 Keep input prompts and user changes. Invoke only the requested phase. Do not create/switch
 branches, commit, push, flash or operate loads automatically. Physical checks are operator
 steps requiring an explicit task and must remain open until performed.
+
+**Operational pump policy**: For 05 and its consumers, tasks MUST verify Test(default)
+and explicitly selected Fly, LOW before the first current-boot valid command, automatic
+first/reconnect-high without zero-handshake/arming/manual signal-loss clear, Test cutoff
+boundaries/physical budget, Fly hold including 0/100%, and preservation of capture
+validation/barrier/resync. Separate signal status/sticky history from technical failure
+inhibition. Include checked output/clock failure/retry and actual-progress watchdog
+verification; no-valid Fly/no-reader alone are not a control stall. Keep 01-04 legacy
+and finite bench contracts/evidence as explicit regression baselines. Use accepted
+numerical limits from the owning decisions/spec/plan; never replace them with defaults.
 
 **Organization**: Tasks are grouped by user story to enable independent implementation and testing of each story.
 
@@ -269,7 +281,8 @@ With multiple developers:
 - [Story] label maps task to specific user story for traceability
 - Each user story should be independently completable and testable
 - Check applicable constitutional gates and traceability at review
-- Do not create/switch branches, commit or push without an explicit user task
+- During Specify only, prepare the iteration branch under D10; Tasks/Implement do not
+  switch branches automatically. Do not commit or push without an explicit user task
 - A checked code task or successful build does not establish physical acceptance
 - Stop at any checkpoint to validate story independently
 - Avoid: vague tasks, same file conflicts, cross-story dependencies that break independence

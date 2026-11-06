@@ -20,7 +20,7 @@ RC-тестер / приймач
   → переносимий автомат керування та лінійне перетворення
   → LEDC 1000 Гц → Cytron MD20A → бензонасос
                          ↑
-              arming / faults / watchdog
+              Test/Fly / technical faults / watchdog
 
 12 В → захист проводки → незалежне аварійне відключення → MD20A
      → перевірене перетворення живлення → плата ESP32-C3
@@ -34,10 +34,10 @@ RC-тестер / приймач
 
 | Межа | Обов'язок та мінімальний контракт |
 |---|---|
-| `core` | Перевірка, карта duty, стани startup/disarmed/armed/fault та відновлення; тільки стандартний C++, без апаратних викликів. Остаточні переходи визначаються у 02/05. |
+| `core` | Перевірка, карта duty, legacy startup/disarmed/fault та operational await-valid/active/timeout/technical recovery; тільки стандартний C++, без апаратних викликів. Остаточні переходи визначаються у 02/05. |
 | `rc_capture` | RMT RX вимірює ширину в мкс; GPIO ISR записує оцінені start/end у спільній монотонній шкалі, period — rising-to-rising (D51). Дані однозначно зіставляються до validation; час callback/друку не підміняє час фронту. Capture faults і доступні ознаки втрат передаються окремо. |
 | `clock` | Монотонний час з явними одиницями; ядро отримує час аргументом, тести контролюють його. |
-| `pump_output` | Приймає перевірений запит duty та дозвіл роботи; fault/disarmed мають пріоритет. Адаптер гарантує LOW і сталі endpoints, не вигадує команд з invalid. |
+| `pump_output` | Приймає перевірений запит duty та режимний дозвіл; technical inhibition має явну політику. Signal history не підміняє Fly cutoff. Checked LOW/static endpoints і failures видимі; успіх API не є physical voltage proof, invalid не створює команд. |
 | `board_profile` | Перевірені GPIO, полярність, частота/роздільність, ресурси й електричні припущення конкретної плати. |
 | `app` | Оркестрація capture → core → output, watchdog, локальна обмежена діагностика. ISR не виконує логування чи блокувальну роботу. |
 
@@ -81,4 +81,4 @@ Test/Fly задаються під час збірки; runtime перемика
 
 Freshness походить від accepted pulse_end_us; invalid не подовжує last-valid. Capture stuck100мс та його10мс бюджет залишаються фактом/status входу, але міграція05 має відокремити status/loss history від effective output: blanket fault→LOW або observer adapter04 не може непомітно скасувати Fly. Sticky diagnostics не є вічною забороною виконувати нові trustworthy valid-команди. Числовий Test timeout/межу/бюджет, clock/output API failures, cleanup/retry й watchdog визначає05 окремо; Fly signal-loss hold не обіцяє керування фізично несправним драйвером або утримання через reset.
 
-D64/D65 явно змінюють старі arming/fail-off вимоги для operational05. Конституціяv1.0.0 принципII ще має попередній текст; необхідна формальна поправка з міграцією шаблонів до реалізації05. Нові прямі рішення не потрібно переобирати. No-pump/physical gates01–04 та відокремлення software/build/physical evidence зберігаються.
+D74: конституцію формально змінено до v2.0.0 від 2026-11-06, шаблони й настанови синхронізовано; G05 закрито. D64/D65 тепер є нормою принципуII, D10 — правилом принципуV. План05/D69–D73 задає технічну міграцію latch/observer/terminal adapter та перевірки; поправка не виконує цю реалізацію. No-pump/physical gates01–04 та окремі software/build/physical докази зберігаються.

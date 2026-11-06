@@ -1,36 +1,40 @@
 <!--
 Sync Impact Report
-Version change: unratified upstream template (no approved version) -> 1.0.0.
-Rationale: first adoption, not an amendment of the template's example principles.
-Modified principles: none previously ratified; all six are newly adopted:
-  I. Bounded Local Pump Control
-  II. Explicit Safety and Fail-Off Responsibilities
-  III. Portable Core and Verified Platform Boundaries
-  IV. Reproducible Builds and Traceable Evidence
-  V. Bounded Iterations and Authorized Actions
-  VI. Honest Decisions and Scoped Uncertainty
-Added sections: Operating Constraints; Development Workflow and Compliance; Governance.
-Removed sections: unratified example principles and placeholder sections only.
-Template synchronization:
-  ✅ updated .specify/templates/plan-template.md: six-principle gates, firmware
-     context, iteration paths, evidence and decision boundaries.
-  ✅ updated .specify/templates/spec-template.md: scope, question ownership,
-     requirement-to-acceptance traceability and distinct evidence categories.
-  ✅ updated .specify/templates/tasks-template.md: required behavior verification,
-     evidence tasks and action boundaries; removed mandatory test-first/commit defaults.
-  ✅ reviewed .specify/templates/checklist-template.md: no change required.
-  ✅ reviewed .specify/templates/constitution-template.md: upstream initialization
-     template retained; it is not an approved project constitution.
-Runtime guidance synchronization:
-  ✅ updated README.md, AGENTS.md, speckit-iteration/README.md,
-     docs/decisions.md and docs/roadmap.md to record adoption and workflow precedence.
-Installed commands: reviewed all ten .agents/skills/speckit-*/SKILL.md files;
-  no obsolete agent-specific execution references require edits. Upstream skills
-  remain unchanged; generic defaults are subordinate to the project workflow below.
-Extension hooks: .specify/extensions.yml absent; no pre/post hooks registered.
-Deferred placeholders / manual synchronization TODOs: none.
-Q01-Q09 remain owned by their roadmap iterations; adoption resolves none of them.
-PROJECT_FOUNDATION.md and iteration input prompts are preserved unchanged.
+Version change: 1.0.0 -> 2.0.0 (MAJOR).
+Rationale: incompatible redefinition of principle II's mandatory arming/universal
+input-loss fail-off for operational 05; codification of the existing D10 branch rule.
+Authorization: user's explicit constitution-update request on 2026-11-06; D74.
+Modified principles:
+  I. Bounded Local Pump Control: clarify converter/engine responsibility under D63.
+  II. Explicit Safety and Fail-Off Responsibilities -> Explicit Operational Modes
+      and Safety Responsibilities: Test/Fly, startup/automatic recovery, distinct
+      input history and technical failure inhibition, progress-based supervision.
+  V. Bounded Iterations and Authorized Actions: Specify-only branch preparation D10;
+     publication, other branch changes, hardware and phase authorization retained.
+Other synchronized sections: Q05 ownership, six-gate checks, adoption/governance dates.
+Added/removed sections: none; six-principle structure retained.
+Templates:
+  updated .specify/templates/spec-template.md: mode/recovery/status scenarios, D10.
+  updated .specify/templates/plan-template.md: Test/Fly and supervision gates.
+  updated .specify/templates/tasks-template.md: mode/technical/legacy verification.
+  reviewed .specify/templates/checklist-template.md: no change required.
+  reviewed .specify/templates/constitution-template.md: upstream initializer retained.
+Runtime guidance and current inputs:
+  updated AGENTS.md, README.md, docs/architecture.md, docs/roadmap.md,
+    docs/open-questions.md, docs/decisions.md, speckit-iteration/README.md,
+    speckit-iteration/current-baseline.md and affected 04-09 prompts/instructions.
+Active feature synchronization:
+  updated specs/05-failsafe-arming spec/plan/research/quickstart and quality notes;
+    G05 closed; original pre-amendment assessments retained as historical records.
+  D66-D73 numerical/technical choices not reselected; no firmware or acceptance claim.
+Installed commands: reviewed all 12 installed speckit-* SKILL.md files. Generic
+multi-agent/environment examples and CLAUDE.md/AGENTS.md alternatives are not
+CLAUDE-only requirements. No outdated runtime references require edits; skills kept.
+Preserved: PROJECT_FOUNDATION.md, 01-03 input prompts, 01-04 artifacts/evidence,
+  firmware/tests, environment/profile, original ratification date 2026-10-28.
+Extension hooks: .specify/extensions.yml absent before/after; no dispatch.
+Deferred placeholders/manual synchronization: none. G05 is closed; implementation,
+  verification and physical Q02/Q03/Q06 remain separate explicitly requested work.
 -->
 # rc-pwm-bridge Constitution
 
@@ -43,28 +47,66 @@ fixed direction through native ESP-IDF. For valid nominal input, the mapping MUS
 remain linear: 1000–2000 us maps to 0–100 percent duty. Output MUST use 1000 Hz at
 intermediate duty, steady LOW at 0 percent and supported steady HIGH at 100 percent.
 Automatic endpoint calibration MUST NOT be introduced. RC frame rate MUST NOT be
-confused with output PWM frequency.
+confused with output PWM frequency. The converter validates and translates commands;
+engine starting, combustion control, and engine recovery MUST remain outside its scope.
 
 Wi-Fi and Bluetooth MUST remain disabled; firmware MUST NOT start network services or
 require a network connection. Ignition ON/OFF, additional ESP32 boards and a concrete
 Nano port MUST remain separate deferred iterations. This boundary keeps v1 acceptance
 focused on agreed pump behavior rather than speculative extensions.
 
-### II. Explicit Safety and Fail-Off Responsibilities
+### II. Explicit Operational Modes and Safety Responsibilities
 
-Control designs MUST expose startup/disarmed, armed, fault and recovery behavior,
-signal validity and freshness, cutoff deadlines, and watchdog responsibilities.
-The pump command MUST remain LOW before explicit arming and after a fault requires
-cutoff. Arming and recovery conditions, including reconnecting a high command, MUST be
-decided before the affected behavior is implemented. Missing or invalid input MUST
-lead to fail-off under the selected policy and deadline; this constitution does not
-select the single-invalid policy or timeout.
+Control designs MUST expose startup, signal validity and freshness, calculated duty,
+effective output, technical faults, and recovery as distinct observable facts.
+Operational iteration 05 and its consumers MUST use the accepted transparent converter
+policy of D63-D65. After every boot or reset, output MUST remain LOW until the first
+fully valid current-boot command; subject to the explicit technical-failure policy
+below, that command MUST then be translated, including a high command. A preceding zero command, separate arming, extra ten-frame startup
+qualification, manual input-loss clear, or restoration of prior-boot duty MUST NOT
+be required or introduced.
 
-Validation MUST precede duty limiting. An invalid pulse MUST NOT become maximum output
-through blind clamping, and invalid activity MUST NOT refresh last-valid time. Capture,
-control and cutoff MUST remain nonblocking with respect to diagnostics; diagnostics
-MUST be bounded and MUST NOT introduce another command source. Watchdog coverage,
-triggering conditions and reset/recovery behavior MUST be documented and verified.
+Operational mode MUST be selected at build time: the ordinary/default build is Test;
+Fly MUST require explicit selection. Runtime mode switching, USB control commands,
+and persisted runtime mode MUST NOT be introduced. In Test, missing new valid commands
+MUST retain the last valid duty before the selected timeout and require LOW at the
+selected inclusive boundary and total physical cutoff budget. In Fly, absence of new
+valid input alone MUST NOT cause cutoff: the last valid duty, including 0 or 100
+percent, MUST be retained while output and time remain trustworthy. With no valid
+command in the current boot, both modes MUST remain LOW. Both modes MUST automatically
+translate the next new trustworthy valid command, including reconnect-high, after
+required capture resynchronization and validation.
+
+Validation MUST precede duty limiting. Invalid, old, incomplete, or ambiguously
+associated samples MUST NOT become new commands or refresh last-valid time. Freshness
+MUST use the accepted pulse_end_us in the shared monotonic domain, including processing
+and output latency. Existing width, period, epoch, association, time-order, and resync
+boundaries MUST be preserved unless changed by a separate explicit decision. Capture
+stuck detection and its delivery accounting MUST remain input status, not a hidden
+Fly cutoff. Sticky diagnostic history MUST NOT become a permanent input-loss lock.
+
+Signal or capture unavailability MUST be distinguished from output, clock, protocol,
+and supervision failures. Their classes, checked LOW/fallback behavior, automatic
+retry limits, exhaustion, and recovery conditions MUST be selected and documented
+before implementation. Fly hold MUST NOT be claimed through a failed output, reboot,
+or arbitrary hardware failure. A failed LOW operation MUST remain unconfirmed rather
+than be reported as successful physical cutoff. Timing values and technical mechanisms
+remain in the owning decisions/specification/plan; this amendment does not reselect
+D66-D73 or turn their unverified budgets into measured guarantees.
+
+Capture, control, mode-dependent cutoff/hold, and recovery MUST remain nonblocking with
+respect to bounded diagnostics. Diagnostics MUST NOT introduce another command source.
+Watchdog supervision MUST monitor actual capture/control/output progress, not log
+transport or merely another live task. Missing input in Fly or an absent USB reader
+alone MUST NOT be treated as a stalled control cycle. The selected watchdog reset
+policy MUST restart with LOW until a new fully valid current-boot command, and coverage,
+triggering conditions, reset timing, and recovery MUST be documented and verified.
+
+The disabled/latching and finite bench contracts of iterations 01-04 MUST remain
+explicit historical regression baselines. Their artifacts and evidence MUST NOT be
+rewritten to imply operational 05 behavior or physical acceptance. Migration of legacy
+core/observer/terminal-output inhibition MUST be explicit and tested; the model-only
+clear_fault() MUST NOT be treated as production recovery.
 
 Safety analysis and acceptance MUST cover power application, reset, bootloader, upload,
 brownout and watchdog recovery, including the interval before firmware executes.
@@ -128,11 +170,21 @@ or stale active-feature state. Constitution adoption updates
 `.specify/memory/constitution.md` and required synchronization files; it MUST NOT
 create a feature specification or start another phase.
 
-Branches MUST NOT be created/switched, commits or pushes made, firmware flashed, or
-loads operated automatically. Each requires an appropriate explicit user task;
-document generation or implementation alone does not authorize those actions.
-Existing files and user changes MUST be preserved, with edits confined to authorized
-scope. These rules keep automation reviewable and iteration boundaries real.
+During an explicitly requested Specify phase, the exact iteration feature branch MUST
+be created or selected under D10 and AGENTS.md while preserving user work. This is the
+codified, narrowly scoped authorization for branch preparation; it MUST NOT be applied
+to Plan, Clarify, Constitution, or other phases. If safe preparation is blocked, report
+the condition; MUST NOT discard, stash, reset, clean, commit, or overwrite user work to
+force a branch switch. SPECIFY_FEATURE_DIRECTORY MUST still be explicit and independent
+of the branch name.
+
+The agent MUST NOT automatically make commits or pushes, access devices, flash or
+reset hardware, or operate loads; each action requires an appropriate explicit user
+task. Other phases MUST NOT create or switch branches without a separate explicit task. Document generation,
+implementation, or adoption of this amendment alone does not authorize those actions
+or another phase. Existing files and user changes MUST be preserved, with edits confined
+to authorized scope. These workflow restrictions do not change the accepted firmware
+watchdog reset policy. These rules keep automation reviewable and iteration boundaries real.
 
 ### VI. Honest Decisions and Scoped Uncertainty
 
@@ -170,7 +222,7 @@ Question ownership MUST remain as follows; adoption supplies no missing answer:
 | Q02 | 01: exact C3 board, pins, resources, power and bias before approving its profile. |
 | Q03 | 01/03: RC levels/interface before connection; source timing and loss behavior before capture acceptance. |
 | Q04 | 02/03: validity, rounding/filtering, capture faults and tolerances before affected implementation. |
-| Q05 | 05: timeout, cutoff budget, arming/recovery, watchdog and diagnostics before operational output. |
+| Q05 | 05: Test timeout/cutoff budget, Fly hold, automatic recovery, technical failures/retry, watchdog and diagnostics before operational output; current selections are in D64-D73. |
 | Q06 | 01 hardware basis, then 06 refinement/acceptance: power path, protection, bias, emergency cutoff and load limits. |
 | Q07 | 07: ignition interface, thresholds, interlocks and cross-channel faults; does not block 01–06. |
 | Q08 | 08: concrete additional ESP32 board/peripherals; does not block v1. |
@@ -192,14 +244,16 @@ reference. A later-owned unresolved question is not itself a failure for unrelat
 but MUST be linked to its owner and resolution boundary.
 
 1. Scope: one local pump channel and fixed mapping/frequency for v1; deferred work excluded.
-2. Safety: validity/freshness, startup, arming/recovery, cutoff, watchdog and hardware
-   responsibilities covered for affected behavior, without invented parameters.
+2. Safety: validity/freshness, startup, Test/Fly cutoff/hold and automatic recovery,
+   technical failures/retry, watchdog and separate hardware responsibilities covered
+   for affected behavior, without invented parameters or hidden signal-loss inhibition.
 3. Architecture: portable core, adapters and verified board-profile boundaries;
    no unsupported compatibility claim.
 4. Evidence: pinned dependencies or an owned selection gate, meaningful behavior tests,
    requirement-to-acceptance traceability and separate host/build/physical records.
 5. Workflow: authorized phase, explicit feature directory, roadmap dependencies,
-   language policy, user changes preserved and no automatic Git/hardware actions.
+   language policy, user changes preserved, Specify-only branch preparation under D10,
+   and no unauthorized publication/hardware actions.
 6. Decisions: current sources used, blocking choices resolved at their due boundary,
    and deferred questions retained without obstructing unrelated scope.
 
@@ -220,10 +274,14 @@ or a Git/hardware action beyond the user's task.
 
 ## Governance
 
-This is the first approved constitution, adopted by the user's explicit constitution
-task on 2026-10-28. The preceding file was an unratified upstream template and carried no
-approved principles or version. Adoption establishes governance only; firmware remains
-unimplemented and physical acceptance has not been performed.
+The constitution was first approved by the user's explicit task on 2026-10-28 as
+version 1.0.0; the preceding file was an unratified upstream template. The explicit
+constitution-update task on 2026-11-06 adopts version 2.0.0, formalizing D63-D65 and
+the already authorized D10 branch policy. G05 is closed by this adoption and dependent
+synchronization. Historical 1.0.0 compliance assessments retain their dates and meaning;
+current work MUST use 2.0.0. Current software and physical outcomes MUST be read from
+owning feature evidence, not inferred from constitution adoption. Q02/Q03/Q06 and
+unperformed tests, builds, or physical acceptance remain open at their own boundaries.
 
 This constitution governs specifications, plans, tasks, implementation and acceptance.
 Current explicit user instructions take precedence; a conflicting instruction MUST be
@@ -245,4 +303,4 @@ corrections without changed obligations. Ratified MUST retain the original adopt
 date; Last Amended MUST record the latest adopted change date. Dates MUST use YYYY-MM-DD.
 The version footer and Sync Impact Report MUST agree.
 
-**Version**: 1.0.0 | **Ratified**: 2026-10-28 | **Last Amended**: 2026-10-28
+**Version**: 2.0.0 | **Ratified**: 2026-10-28 | **Last Amended**: 2026-11-06

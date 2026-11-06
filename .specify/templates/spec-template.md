@@ -8,17 +8,21 @@
 
 **Status**: Draft
 
+**Constitution**: [Version actually read from .specify/memory/constitution.md]
+
 **Input**: User description: "$ARGUMENTS"
 
 Write the generated specification in Ukrainian. Follow `.specify/memory/constitution.md`;
 retain input prompts in `speckit-iteration/` and preserve user changes. Invoke only the
-requested phase; do not create/switch branches, commit, push, flash or operate loads
-automatically.
+requested phase. During Specify only, prepare the exact iteration branch under D10
+and constitution principle V while preserving user work; other phases do not switch
+branches. Do not commit, push, access/flash/reset hardware or operate loads automatically.
 
 ## Scope and Decision Boundaries *(mandatory)*
 
 - **Roadmap scope and dependencies**: [Owning iteration, prerequisites and applicable R IDs]
-- **Included behavior**: [Bounded contribution to one local pump channel for v1]
+- **Included behavior**: [Bounded contribution to one local pump channel for v1; for
+  operational 05/consumers, transparent Test(default)/explicit Fly and automatic recovery]
 - **Excluded/deferred work**: [Ignition, other ESP32 boards and Nano belong to 07–09]
 - **Agreed invariants**: [Fixed 1000–2000 us → 0–100%, 1000 Hz output, no automatic
   calibration, radios disabled; refer to existing constraints without inventing parameters]
@@ -95,7 +99,9 @@ automatically.
 
 - [Applicable mapping/validity boundaries; invalid input must not clamp to maximum duty]
 - [Missing/stale/malformed capture and last-valid timestamp behavior]
-- [Startup/reset, arming, reconnect-high, watchdog and diagnostics under the owned scope]
+- [For operational 05/consumers: no prior-valid/reset LOW, first/reconnect-high without
+  zero-handshake/arming, Test cutoff, long Fly hold including 0/100%, technical failures,
+  watchdog actual progress, heavy diagnostics; keep 01-04 legacy/bench baselines explicit]
 - [Physical responsibilities and evidence boundaries; MD20A LOW means brake, not isolation]
 
 ## Requirements *(mandatory)*
@@ -108,8 +114,10 @@ automatically.
 ### Functional Requirements
 
 - **FR-001**: System MUST [testable iteration behavior, traced to applicable R ID]
-- **FR-002**: System MUST [applicable validity/freshness or fail-off behavior]
-- **FR-003**: System MUST [applicable startup/arming/recovery behavior]
+- **FR-002**: System MUST [applicable validity/freshness and mode-specific cutoff/hold; distinguish signal
+  status/history from technical output/clock inhibition]
+- **FR-003**: System MUST [applicable startup/automatic valid-command recovery and technical recovery behavior;
+  do not impose operational 05 rules on historical 01-04 evidence]
 
 *Example of marking unclear requirements:*
 

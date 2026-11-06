@@ -9,7 +9,8 @@ at invocation time; this summary does not freeze their future state.
 Read `docs/decisions.md`, `docs/requirements.md`, `docs/architecture.md`,
 `docs/roadmap.md` and `docs/open-questions.md` first, then
 `.specify/memory/constitution.md`, `AGENTS.md` and `hardware/README.md`.
-The constitution is ratified v1.0.0, not a template. `PROJECT_FOUNDATION.md` is
+The active constitution is v2.0.0, amended on 2026-11-06 under D74; its original
+ratification remains 2026-10-28. It is not a template. `PROJECT_FOUNDATION.md` is
 historical context. Preserve installed skills and templates; invoke only the
 requested phase. Write generated documentation and operator procedures in Ukrainian.
 
@@ -32,10 +33,10 @@ may identify those gates without claiming that implementation or hardware use is
 
 During Specify, create or switch to the iteration's exact feature branch as required
 by current `AGENTS.md` and D10, preserving existing files and user changes. D10 is
-the explicit user-authorized exception to the older blanket branch prohibition in
-constitution principle V; it does not authorize commit/push or hardware actions.
-Record this reconciliation in generated workflow/compliance notes; do not amend the
-constitution as a side effect. During other phases do not switch branches automatically.
+the original user authorization for Specify-only branch preparation, now codified in
+constitution v2.0.0 principle V by D74. It does not authorize commit/push or hardware
+actions. Record the applicable rule and preserve historical pre-amendment assessments;
+do not amend governance as a side effect of another phase. During other phases do not switch branches automatically.
 Always set `SPECIFY_FEATURE_DIRECTORY=specs/<iteration>` explicitly, even when the
 branch matches. If safe branch preparation is blocked, report it; do not discard,
 stash, commit or overwrite user work to force progress. No prompt authorizes flashing,
@@ -122,17 +123,18 @@ D64/D65 settle the operational 05 product policy:
 - Operational Test/Fly are not the finite no-pump waveform/stress/accuracy images04.
   Existing 04 firmware, artifacts and physical acceptance are unchanged baselines.
 
-Q05 remains open only for numerical Test timeout/exact boundary/last-valid-to-LOW
-budget (historical100ms is still only a proposal), technical clock/output API failure
-classes/retry and watchdog/diagnostic details. Do not reselect D64/D65. Explicitly plan
-migration of 02–04 latches/observer/adapter output inhibition so Fly and automatic
-recovery are actually achievable, retaining meaningful evidence and source ordering.
+D66-D73 and the accepted 05 spec/plan now select the remaining Q05 technical design:
+Test age >=500000 us with total accepted-end-to-physical-LOW <=1 s; separately defined
+output/clock failure, retry/recovery, actual-progress watchdog, diagnostics and evidence
+limits. These are design selections, not measured guarantees; read their current exact
+contracts and do not reselect settled parameters. Implement the planned migration of
+02-04 latches/observer/terminal output inhibition explicitly, retaining legacy evidence.
 
-Governance: D64/D65 are current explicit user instructions overriding old operational
-arming/universal signal-loss fail-off. Constitution v1.0.0 principle II still contains
-that older text; record the scoped conflict and required formal amendment/template
-synchronization before affected 05 implementation. Do not silently call this compliant,
-reopen the accepted choice, or invoke Constitution/another phase automatically.
+Governance: D74 formally adopts constitution v2.0.0 and synchronizes dependent templates
+and guidance. G05 is closed. Principle II now incorporates D63-D65; principle V codifies
+D10. Preserve prior v1.0.0/conflict assessments as historical records, not current
+blockers. This amendment does not implement 05, accept hardware or authorize another
+phase, commit/push, device access, flashing, reset or load operation.
 
 Q02/H02/H03, Q03 and Q06 remain physical gates at their documented boundaries.
 D38 permits software completion of 02 without physical acceptance of 01; D48 permits
