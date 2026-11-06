@@ -1,15 +1,21 @@
 #include "platform/local_diagnostics.hpp"
+#include "platform/pump_output.hpp"
 #include "driver/usb_serial_jtag.h"
 #include "esp_timer.h"
 #include "sdkconfig.h"
 #include <cstdio>
 namespace platform {
-LocalDiagnostics::LocalDiagnostics(): task_(nullptr),installed_(false),archive_(nullptr),cursor_(0) {}
+LocalDiagnostics::LocalDiagnostics(bridge::BenchConfig config): task_(nullptr),installed_(false),archive_(nullptr) {
+ DiagnosticSnapshot s{};s.has_output=true;s.output.scenario=config.scenario;s.output.mode=config.scenario==bridge::PumpScenario::Normal?bridge::PumpMode::Normal:bridge::PumpMode::Bench;policy_.publish(s);
+}
 void LocalDiagnostics::publish(const DiagnosticSnapshot& s) {
     portENTER_CRITICAL(&lock_);
     auto latest=policy_.copy();
     latest.startup=s.startup;latest.profile_fingerprint=s.profile_fingerprint;
     latest.pwm_low_api_applied=s.pwm_low_api_applied;
+    latest.output.applied=s.pwm_low_api_applied?bridge::PumpApplied::Low:bridge::PumpApplied::Unknown;
+    if(s.startup.last_error!=bridge::StartupError::None){latest.output.phase=bridge::PumpPhase::Fault;latest.output.reasons|=bridge::PumpInitFailure;}
+
     policy_.publish(latest);
     portEXIT_CRITICAL(&lock_);
 }
@@ -19,7 +25,14 @@ void LocalDiagnostics::publish_capture(const bridge::CaptureSnapshot& s) {
     portEXIT_CRITICAL(&lock_);
 }
 void LocalDiagnostics::archive(const bridge::AccuracyTrace* t) {
-    portENTER_CRITICAL(&lock_);archive_=t;cursor_=0;portEXIT_CRITICAL(&lock_);
+    portENTER_CRITICAL(&lock_);archive_=t;portEXIT_CRITICAL(&lock_);
+}
+void LocalDiagnostics::publish_control(const bridge::CaptureSnapshot& c,const bridge::OutputSnapshot& o,bool invalid) {
+ portENTER_CRITICAL(&lock_);auto s=policy_.copy();s.capture=c;s.has_capture=true;s.output=o;s.has_output=true;s.window_invalid=invalid;policy_.publish(s);portEXIT_CRITICAL(&lock_);
+}
+void LocalDiagnostics::output_archive(const bridge::OutputEvidence* out,const bridge::CaptureWindowEvidence* window) {
+ if(!out||!out->header().frozen||(window&&!window->frozen()))return;
+ portENTER_CRITICAL(&lock_);output_archive_=out;window_archive_=window;portEXIT_CRITICAL(&lock_);
 }
 bool LocalDiagnostics::transport_ready() {
     if(installed_)return true;
@@ -41,22 +54,27 @@ void LocalDiagnostics::run(void* p) {
 }
 void LocalDiagnostics::step(uint64_t now) {
     bool drained=usb_serial_jtag_wait_tx_done(0)==ESP_OK;
-    DiagnosticSnapshot s{};RcDiagnosticPolicy formatting;const bridge::AccuracyTrace* trace;
-    portENTER_CRITICAL(&lock_);trace=archive_;
+    DiagnosticSnapshot s{};RcDiagnosticPolicy formatting;const bridge::AccuracyTrace* trace;const bridge::OutputEvidence* out;const bridge::CaptureWindowEvidence* window;
+    portENTER_CRITICAL(&lock_);trace=archive_;out=output_archive_;window=window_archive_;
     bool ready=policy_.slot(now,drained);formatting=policy_;s=formatting.copy();portEXIT_CRITICAL(&lock_);
     if(!ready)return;
     char buffer[385];int n=0;
-    if(trace) {
+    const unsigned kind=archive_cursor_.select(trace!=nullptr,out!=nullptr,window&&out);
+    const unsigned cursor=archive_cursor_.index();
+    const bool export_trace=kind==0;
+    if(kind==1)n=format_output_archive(*out,cursor,s,buffer,sizeof(buffer));
+    else if(kind==2)n=format_window_archive(*window,out->header(),cursor,s,buffer,sizeof(buffer));
+    else if(export_trace) {
         const auto& h=trace->header();
-        if(cursor_==0)n=std::snprintf(buffer,sizeof(buffer),"\nrc03-trace H 1 %u %u %llu %llu 0 %u %u %u %u %llu %llu %llu\n",
+        if(cursor==0)n=std::snprintf(buffer,sizeof(buffer),"\nrc03-trace H 1 %u %u %llu %llu 0 %u %u %u %u %llu %llu %llu\n",
             unsigned(h.count),unsigned(h.failed),(unsigned long long)h.started_us,(unsigned long long)h.ended_us,
             unsigned(h.base_drops),unsigned(h.end_drops),unsigned(h.base_faults),unsigned(h.end_faults),
             (unsigned long long)h.max_rearm_us,(unsigned long long)h.max_processing_us,
             (unsigned long long)h.max_fault_lateness_us);
-        else if(cursor_<=h.count) {
-            const auto& x=trace->record(cursor_-1);
+        else if(cursor<=h.count) {
+            const auto& x=trace->record(cursor-1);
             n=std::snprintf(buffer,sizeof(buffer),"\nrc03-trace R %u %u %u %llu %llu %u %u %u %u %llu\n",
-                cursor_-1,unsigned(x.seq),unsigned(x.epoch),(unsigned long long)x.start_us,
+                cursor-1,unsigned(x.seq),unsigned(x.epoch),(unsigned long long)x.start_us,
                 (unsigned long long)x.end_us,unsigned(x.width_us),unsigned(x.period_us),unsigned(x.flags),unsigned(x.fault_bits),(unsigned long long)x.accepted_at_us);
         } else n=std::snprintf(buffer,sizeof(buffer),"\nrc03-trace E %u\n",unsigned(h.count));
     } else {
@@ -73,10 +91,8 @@ void LocalDiagnostics::step(uint64_t now) {
     }
     portENTER_CRITICAL(&lock_);
     policy_.written(sent,n>0?size_t(n):1);
-    if(n>0 && sent==size_t(n)) {
-        if(trace) { if(++cursor_>trace->header().count+1)cursor_=0; }
-        else policy_.ack(s.sequence);
-    }
+    if(kind==3 && n>0 && sent==size_t(n))policy_.ack(s.sequence);
     portEXIT_CRITICAL(&lock_);
+    if(kind<3)archive_cursor_.written(n>0&&sent==size_t(n),kind==0?trace->header().count:kind==1?out->header().count:0);
 }
 }

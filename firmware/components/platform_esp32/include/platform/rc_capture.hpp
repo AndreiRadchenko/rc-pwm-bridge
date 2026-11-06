@@ -9,11 +9,13 @@
 #include "freertos/queue.h"
 #include "platform/local_diagnostics.hpp"
 #include "sdkconfig.h"
+#include "platform/pump_output.hpp"
 #include <atomic>
 namespace platform {
 class RcCapture final : private bridge::CaptureResourcePort {
 public:
-  explicit RcCapture(LocalDiagnostics &);
+  RcCapture(LocalDiagnostics &, EspPumpOutput &, EspPumpSdk &, bridge::BenchConfig, bridge::OutputEvidence*, bridge::CaptureWindowEvidence*);
+  void startup_context(bool failed,int32_t reset_reason) { startup_failed_=startup_failed_||failed; reset_reason_=reset_reason; }
   bool start(uint64_t now);
 
 private:
@@ -28,7 +30,16 @@ private:
   bool IRAM_ATTR pending_edge() const;
   void step();
   void recovery(uint64_t now);
+  void output_service(uint64_t now);
+  static uint32_t output_faults(void*);
   LocalDiagnostics &diagnostics_;
+  EspPumpOutput& output_;
+  bridge::OutputPolicy output_policy_;
+  bridge::OutputEvidence* output_evidence_;
+  bridge::CaptureWindowEvidence* window_;
+  bool startup_failed_=false, output_started_=false, trace_enabled_=false;
+  uint32_t producers_=0;
+  int32_t reset_reason_=0;
   bridge::CapturePolicy policy_;
   bridge::CaptureLifecycle resources_;
   portMUX_TYPE lock_ = portMUX_INITIALIZER_UNLOCKED;

@@ -1,17 +1,17 @@
-# Перевірка 04-pump-output після майбутньої реалізації
+# Перевірка 04-pump-output
 
-Дата: 2026-10-30. Plan створює лише дизайн. Код04/нові CLI options/tests/offline validator ще не реалізовані, host/build/physical результати04 відсутні. Наступні команди призначені для окремо дозволеної реалізації та її перевірки; у цьому Plan вони не запускались. [Контракт](contracts/pump-output.md), [модель](data-model.md), [Plan](plan.md) задають нормативні межі.
+Дата: 2026-10-30. Реалізовано policy, LEDC adapter, скінченні bench-образи, RAM evidence, діагностику й offline validator. Фактичні software/build результати та межі — [verification/acceptance.md](verification/acceptance.md). Фізичне прийняття не проведено. [Контракт](contracts/pump-output.md), [модель](data-model.md), [Plan](plan.md) задають нормативні межі.
 
 ## Передумови
 
-1. Реалізовані04 policy/adapter/fixtures та documented CLI. Змістовий probe: `firmware/components/bridge_core/pump_output.cpp` і відповідні host suites існують, `scripts/build.py --help` показує pump04 flags. Наявні сьогодні18host suites03 та build03 не є evidence04.
+1. Реалізовані04 policy/adapter/fixtures та CLI. Змістовий probe: `firmware/components/bridge_core/pump_output.cpp` і відповідні host suites існують, `scripts/build.py --help` показує pump04 flags. Історичні suites/build03 не є новим evidence04; чинний набір має22 CTest suites і28 tooling tests.
 2. `SPECIFY_FEATURE_DIRECTORY=specs/04-pump-output` для всіх Spec Kit workflow скриптів. Plan/Tasks/Implement запускаються окремо за запитом; цей validation guide сам їх не викликає.
 3. Pinned environment01 перевірено перед збіркою. З кореня репозиторію виконуються наведені нижче команди; нові build directories мають бути відсутніми, старі results не видаляються.
 4. Для фізичної частини окремо потрібні виконані залежні H02/H03/Q03, прийнятий MD20A interface/Q06, придатна методика/прилад і явне апаратне завдання. Насос не підключений у всіх сценаріях04, включно з усіма reset.
 
 ## Host і tooling без плати
 
-Після реалізації04:
+Команди перевірки:
 
 ~~~sh
 python3 scripts/build.py host --build-dir build/host-04-validation
@@ -26,7 +26,7 @@ Meaningful negative probes повинні виявляти невалідні к
 
 ## Native target builds без hardware access
 
-Наступні `--pump04-bench`, `--pump04-trace-step` і `--require-pump04` — контракт майбутнього CLI, не вже встановлені options. Після реалізації:
+`--pump04-bench`, `--pump04-trace-step` і `--require-pump04` реалізовані; accuracy потребує явного step0..5. Normal не приймає bench permission від RC чи USB:
 
 ~~~sh
 python3 scripts/environment/check.py --manifest tools/environment/environment.lock.json
@@ -46,7 +46,7 @@ B1–B4 review actual compile_commands/config/map/source graph: native C3/pins03
 
 ## Послідовність фізичного прийняття без насоса
 
-Ці дії не виконуються автоматично з Plan чи наведення команд. Не наводимо flash/serial/device commands як частину автоматичного validation. Перед окремо дозволеним стендом:
+Ці дії потребують окремого явного апаратного завдання. Не наводимо flash/serial/device commands як частину автоматичного validation. Перед окремо дозволеним стендом:
 
 - Зафіксувати образ normal/waveform/stress/accuracy, firmware/config/source hashes, profile/unit ID, реальну MD20A revision, wiring/ground/power/bias, стан «насос від'єднаний», відсутність сторонніх output clients.
 - Перевірити живлення3,3В/якість/режимUSB та PWM bias за H02/H03; одночасний USB VBUS+external3V3 не стає прийнятим через наявність logging. HJ conditioning/routing/internalpullsoff D56 приймаються до його використання. Без чинного capture потоку його fault припинить тест; його не відключати для проходження04.
@@ -87,13 +87,38 @@ Stress output за D60:5 с initialLOW, далі 6×100 с, кінцевий LOW
 
 Окремо Accuracy builds перевіряють width5мкс/interval10мкс, U≤1мкс окремо за D54, у128candidate RAM windows за D55. Collector стартує на+1с вибраного trace step, отже фактичний PWM вже активний для25–100%. На freeze спершу checkedLOW, потім capture stop/export; помилка LOW дає Fault/неприйнятне вікно, а LowUnconfirmed блокує навмисний normal freeze/stop; це очікуване закінчення evidence build, не доказ full65с sequence/600сloss. Один USB writer експортує незмінні rc03-trace та rc04-out cycles після freeze, no per-pulse USB під час capture. Для кожного вікна raw archive/analyzer identity/order/counters мають узгоджуватися; invalid/unknown не вилучаються для pass. Точні boundary/malformed stimuli лишаютьсяhost за D53; окремий генератор не додається як новий gate.
 
-Для offline capture comparison використовується вже наявний `scripts/verify/rc_capture_trace.py` та формат03. Normalized analyzer CSV для output/fault: `time_ns,channel,level` (integer ns, channel `gpio0` або `gpio3`, level0/1), з monotonic edges кожного каналу та спільною часовою базою аналізатора; GPIO3 потрібний для112мс, без нього ця метрика blocked; raw vendor export і normalization provenance зберігаються. Майбутній `scripts/verify/pump_output_trace.py` приймає `--archive`, `--edges`, `--metadata`, `--report`; metadata version1 містить firmware/scenario/window identity, declared timebase/U/voltage method і physically measured voltage bounds, acquisition_start_ns/end_ns, initial_levels, observed_windows та gap/overflow flags. CSV містить лише edges: static trace без edges прийнятний тільки з цими boundary/initial-state доказами; порожній CSV сам не підтверджує LOW/HIGH. MCU API метрики та фізичні періоди/plateau/112мс порівнюються окремо, без clock-offset підгонки; cross-domain запит без незалежного calibration provenance не може дати pass.
+Для offline capture comparison використовується вже наявний `scripts/verify/rc_capture_trace.py` та формат03. Normalized analyzer CSV для output/fault: `time_ns,channel,level` (integer ns, channel `gpio0` або `gpio3`, level0/1), з monotonic edges кожного каналу та спільною часовою базою аналізатора; GPIO3 потрібний для112мс, без нього ця метрика blocked; raw vendor export і normalization provenance зберігаються. `scripts/verify/pump_output_trace.py` приймає `--archive`, `--edges`, `--metadata`, `--report`; metadata version1 містить firmware/scenario/window identity, declared timebase/U/voltage method і physically measured voltage bounds, acquisition_start_ns/end_ns, initial_levels, observed_windows та gap/overflow flags. CSV містить лише edges: static trace без edges прийнятний тільки з цими boundary/initial-state доказами; порожній CSV сам не підтверджує LOW/HIGH. MCU API метрики та фізичні періоди/plateau/112мс порівнюються окремо, без clock-offset підгонки; cross-domain запит без незалежного calibration provenance не може дати pass.
 
 ~~~sh
 python3 scripts/verify/pump_output_trace.py --archive evidence/rc04-out.txt --edges evidence/pwm-edges.csv --metadata evidence/method.json --report evidence/output-report.json
 ~~~
 
-Цей validator теж ще не реалізований. Контракт exit0=pass усіх запитаних метрик,1=fail виміряного критерію,2=blocked/insufficient method/incomplete evidence. Немає voltage records — voltage blocked, а не inferredpass із0/1. Header/digest/count/order/errors/raw hashes/per-cycle errors і maxima записуються в report; не змішувати unrelated boot archives. Недостатнє U/clock association/storage — blocked без послаблення лімітів.
+Реалізований validator має контракт exit0=pass усіх запитаних метрик,1=fail виміряного критерію,2=blocked/insufficient method/incomplete evidence. Немає voltage records — voltage blocked, а не inferredpass із0/1. Header/digest/count/order/errors/raw hashes/per-cycle errors і maxima записуються в report; не змішувати unrelated boot archives. Недостатнє U/clock association/storage — blocked без послаблення лімітів.
+
+## Формат metadata для offline validator
+
+`metrics` обов’язковий: непорожній список із `api`, `waveform`, `fault`, `window`, `voltage`, `startup`. Pass стосується лише запитаних метрик. Повне фізичне прийняття додатково потребує всіх операторських cases і gates, а не одного report. Файли archive/edges/metadata потрібні як аргументи завжди; для API-only edges може містити тільки CSV header. Decimal U можна передавати JSON-рядком. Не копіювати synthetic fixture як фізичний результат.
+
+Спільні поля: `schema_version: 1`, `metrics`, `build_fingerprint` (unsigned integer із manifest fingerprint hex), `boot` (integer із header архіву). Для digital-метрик:
+
+| Поля | Значення й походження |
+|---|---|
+| `acquisition_start_ns`, `acquisition_end_ns` | Фактичні межі запису приладу, integer ns |
+| `initial_levels` | Наприклад `{ "gpio0": 0, "gpio3": 0 }`; виміряний стан на початку |
+| `observed_windows` | Список `[start_ns,end_ns]`, що покриває весь запис |
+| `gap`, `overflow` | Явно `false` лише після перевірки storage/export |
+| `digital_sampling_hz`, `opposite_pulse_resolution_ns` | ≥10000000 та ≤1000 відповідно |
+| `instrument`, `calibration`, `normalization_provenance` | Непорожні посилання на method/raw/calibration записи |
+
+Для `waveform`: `frequency_uncertainty_hz`, `duty_uncertainty_pp`, `interval_uncertainty_ns`; `plateaus` — рівно шість об’єктів `{ "duty": 0, "start_ns": ..., "end_ns": ... }` у порядку0/25/40/50/80/100. Межі суміжні, взяті з незалежного фізичного протоколу. Початкові5с LOW, terminal/no-repeat і повтори reset документуються окремими startup/операторськими cases; validator не виводить їх із API-success.
+
+Для `fault`: `fault_start_ns` — останній edge GPIO3, `active_start_ns` і `fault_before_duty` (25/40/50/80/100); потрібні active nonzero до fault та повний terminal guard після. Для `startup`: `startup_windows` — непорожній список `[start_ns,end_ns]`; оператор окремо підтверджує case/repetition/pretrigger/full initial LOW/bootloader duration.
+
+Для `window`: `duration_uncertainty_ns`, `capture_width_uncertainty_ns`, `capture_interval_uncertainty_ns`; `window_mapping` містить `first_falling_index`, `last_falling_index` (нульова індексація falling GPIO3), `first_seq`, `last_seq`, `first_epoch`, `last_epoch`, `first_end_us`, `last_end_us` (точно з rc04-win), `anchor_provenance` (незалежний boot/edge anchor, boundary mapping). Повний `rc04-out` і `rc04-win` потрібні разом. Немає достовірного anchor — blocked.
+
+Для `voltage`: `analog` із `provenance`, `calibration`, `bandwidth_hz`≥10000000, `sampling_hz`≥20000000, `uncertainty_v`≤0,05 та `measurements`: шість `{ "duty": ..., "low_v": ..., "high_v": ... }`. Для0% потрібен LOW, для100% HIGH, для інших обидва. Прийнятність еквівалентної методики поза цією строгою схемою погоджується й документується окремо; validator її автоматично не приймає.
+
+`cross_domain_latency_requested: true` повертає blocked: цей інструмент не підтримує фізичний2мс pass між незалежними годинниками. Report містить status/reason, результати лише обраних метрик та SHA256 трьох входів. Окремо зберігати raw vendor export, normalized CSV, повні newline-terminated archive cycles і method records для кожного driver condition/reader/run. Після reconnect дочекатись цілого H..E циклу кожного архіву; short writes повторюють кадр, завершені цикли чергуються, history не накопичується в USB queue.
 
 ## Окремі результати та завершення
 

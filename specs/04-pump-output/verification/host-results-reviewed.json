@@ -1,0 +1,56 @@
+[
+  {
+    "name": "discovery",
+    "command": [
+      "/private/tmp/scopa01-host/cmake/cmake-3.30.2-macos-universal/CMake.app/Contents/bin/ctest",
+      "--test-dir",
+      "build/host-04-reviewed",
+      "-N"
+    ],
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "name": "ctest",
+    "command": [
+      "/private/tmp/scopa01-host/cmake/cmake-3.30.2-macos-universal/CMake.app/Contents/bin/ctest",
+      "--test-dir",
+      "build/host-04-reviewed",
+      "--output-on-failure"
+    ],
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "name": "tooling",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/tooling",
+      "-v"
+    ],
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "name": "negative",
+    "command": [
+      "build/host-04-reviewed/negative_probe"
+    ],
+    "exit": 1,
+    "expected": 1
+  },
+  {
+    "name": "archive-fixture",
+    "command": [
+      "build/host-04-reviewed/pump_output_evidence_tests",
+      "--emit-fixture",
+      "specs/04-pump-output/verification/archive-synthetic.txt"
+    ],
+    "exit": 0,
+    "expected": 0
+  }
+]

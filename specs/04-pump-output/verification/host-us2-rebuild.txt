@@ -1,0 +1,32 @@
+[0/1] Re-running CMake...
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/mac/Projects/Scopa/rc-pwm-bridge/build/host-04-us1
+[1/29] Building CXX object CMakeFiles/pump_adapter.dir/Users/mac/Projects/Scopa/rc-pwm-bridge/firmware/components/platform_esp32/pump_output.cpp.o
+[2/29] Building CXX object CMakeFiles/bridge_core.dir/Users/mac/Projects/Scopa/rc-pwm-bridge/firmware/components/bridge_core/pump_output.cpp.o
+[3/29] Building CXX object CMakeFiles/pump_output_evidence_tests.dir/pump_output_evidence_tests.cpp.o
+[4/29] Linking CXX static library libbridge_core.a
+[5/29] Linking CXX executable negative_probe
+[6/29] Linking CXX executable control_validation_tests
+[7/29] Linking CXX executable control_mapping_tests
+[8/29] Linking CXX static library libpump_adapter.a
+[9/29] Linking CXX executable control_fault_tests
+[10/29] Linking CXX executable core_header_probe
+[11/29] Linking CXX executable startup_tests
+[12/29] Linking CXX executable control_state_tests
+[13/29] Linking CXX executable control_header_probe
+[14/29] Linking CXX executable rc_capture_header_probe
+[15/29] Linking CXX executable rc_capture_validation_tests
+[16/29] Linking CXX executable rc_capture_time_tests
+[17/29] Linking CXX executable rc_capture_association_tests
+[18/29] Linking CXX executable rc_capture_trace_tests
+[19/29] Linking CXX executable rc_capture_adapter_tests
+[20/29] Linking CXX executable control_time_tests
+[21/29] Linking CXX executable rc_capture_core_tests
+[22/29] Linking CXX executable rc_capture_fault_tests
+[23/29] Linking CXX executable pump_output_evidence_tests
+[24/29] Linking CXX executable rc_diagnostics_transport_tests
+[25/29] Linking CXX executable rc_diagnostics_policy_tests
+[26/29] Linking CXX executable pump_output_policy_tests
+[27/29] Building CXX object CMakeFiles/pump_output_adapter_tests.dir/pump_output_adapter_tests.cpp.o
+[28/29] Linking CXX executable pump_output_adapter_tests

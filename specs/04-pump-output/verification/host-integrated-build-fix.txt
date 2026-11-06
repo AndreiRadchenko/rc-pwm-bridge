@@ -1,0 +1,25 @@
+[1/25] Building CXX object CMakeFiles/platform_policy.dir/Users/mac/Projects/Scopa/rc-pwm-bridge/firmware/components/platform_esp32/startup_policy.cpp.o
+[2/25] Linking CXX executable control_fault_tests
+[3/25] Linking CXX executable control_state_tests
+[4/25] Linking CXX executable control_header_probe
+[5/25] Linking CXX executable control_mapping_tests
+[6/25] Linking CXX executable control_validation_tests
+[7/25] Linking CXX executable rc_capture_header_probe
+[8/25] Linking CXX executable control_time_tests
+[9/25] Linking CXX executable rc_capture_validation_tests
+[10/25] Linking CXX static library libpump_adapter.a
+[11/25] Linking CXX static library libplatform_policy.a
+[12/25] Linking CXX executable rc_capture_association_tests
+[13/25] Linking CXX executable rc_capture_core_tests
+[14/25] Linking CXX executable rc_capture_time_tests
+[15/25] Linking CXX executable rc_capture_adapter_tests
+[16/25] Linking CXX executable rc_capture_trace_tests
+[17/25] Linking CXX executable pump_output_policy_tests
+[18/25] Linking CXX executable rc_capture_fault_tests
+[19/25] Linking CXX executable core_header_probe
+[20/25] Linking CXX executable rc_diagnostics_policy_tests
+[21/25] Linking CXX executable rc_diagnostics_transport_tests
+[22/25] Linking CXX executable pump_output_evidence_tests
+[23/25] Linking CXX executable pump_output_adapter_tests
+[24/25] Linking CXX executable negative_probe
+[25/25] Linking CXX executable startup_tests

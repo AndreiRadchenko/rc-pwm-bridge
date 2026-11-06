@@ -1,0 +1,6 @@
+[1/6] Building CXX object CMakeFiles/rc_capture_core_tests.dir/rc_capture_core_tests.cpp.o
+[2/6] Building CXX object CMakeFiles/pump_adapter.dir/Users/mac/Projects/Scopa/rc-pwm-bridge/firmware/components/platform_esp32/pump_output.cpp.o
+[3/6] Linking CXX executable rc_capture_core_tests
+[4/6] Linking CXX static library libpump_adapter.a
+[5/6] Linking CXX executable pump_output_evidence_tests
+[6/6] Linking CXX executable pump_output_adapter_tests

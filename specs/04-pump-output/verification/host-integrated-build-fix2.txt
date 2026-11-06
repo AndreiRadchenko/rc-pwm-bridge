@@ -1,0 +1,9 @@
+[1/9] Building CXX object CMakeFiles/platform_policy.dir/Users/mac/Projects/Scopa/rc-pwm-bridge/firmware/components/platform_esp32/startup_policy.cpp.o
+[2/9] Linking CXX static library libplatform_policy.a
+[3/9] Linking CXX executable negative_probe
+[4/9] Linking CXX executable rc_diagnostics_transport_tests
+[5/9] Linking CXX executable pump_output_adapter_tests
+[6/9] Linking CXX executable startup_tests
+[7/9] Linking CXX executable core_header_probe
+[8/9] Linking CXX executable pump_output_evidence_tests
+[9/9] Linking CXX executable rc_diagnostics_policy_tests

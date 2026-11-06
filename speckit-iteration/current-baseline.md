@@ -16,11 +16,16 @@ requested phase. Write generated documentation and operator procedures in Ukrain
 Use current decisions and prerequisite specifications/contracts for behavior, and
 `specs/01-foundation/verification/acceptance.md`,
 `specs/02-control-core/verification/acceptance.md` and
-`specs/03-rc-capture/verification/acceptance.md` for evidence. Some architecture/roadmap
+`specs/03-rc-capture/verification/acceptance.md` and
+`specs/04-pump-output/verification/acceptance.md` for evidence. For 05 and later,
+also read accepted `specs/04-pump-output/spec.md`, `plan.md` and
+`contracts/pump-output.md` relative to that feature directory. Some architecture/roadmap
 status prose predates implementation: do not restart completed software or infer
 physical acceptance from that prose. Software exists for 01–03; 02 meets its own
 software criteria under D38, while physical acceptance of 01/03 remains open.
-Partial operator logs are observations, not replacements for the acceptance suite.
+Software04 is verified separately from its seven open operator tasks T044-T050;
+Q02/Q03/Q06 and full physical acceptance remain open. Partial operator logs are
+observations, not replacements for the acceptance suite.
 Recheck actual evidence and affected gates before dependent work; document pending
 physical checks without inventing permission to bypass them. Specification/planning
 may identify those gates without claiming that implementation or hardware use is ready.
@@ -56,8 +61,10 @@ device access, load operation, or another Spec Kit phase.
   900–2100 us inclusive. Validate before mapping/clamping: 1000/1250/1400/1500/1800/2000 us
   maps to 0/25/40/50/80/100 percent, nearest whole percent with half up, no filtering
   or calibration (D36). Invalid width retains the previous valid calculation and
-  last-valid time. If none exists, no valid calculation is invented. Disarmed/fault
-  overrides retain effective zero; 02/03 never grant operational permission.
+  last-valid time. If none exists, no valid calculation is invented. In historical
+  02/03, disarmed/fault overrides retain effective zero and no operational permission
+  exists. D64/D65 explicitly supersede the operational signal-loss/recovery policy
+  in 05; do not silently preserve the old output inhibition there.
 - Read `specs/03-rc-capture/contracts/rc-capture.md` and its spec/plan. Only 50 Hz is
   supported in 03; period validity is 18000–22000 us inclusive between consecutive
   rising edges. Unknown/invalid period is not valid, does not refresh last-valid
@@ -69,17 +76,21 @@ device access, load operation, or another Spec Kit phase.
   superseded hardware-latch timestamps or the old 3 ms stuck-HIGH requirement.
   D56 disables internal GPIO3 pulls after each RMT channel creation, with checked
   cleanup/fault/retry on failure. Planned HJ conditioning is not measured Q03 acceptance.
-- Explicit capture faults latch and force effective zero. Valid under latch may
-  update calculation/last-valid, but cannot clear the latch or arm (D36/D37).
-  Malformed/overflow data with unreliable boundaries is discarded; acquisition
-  resynchronizes using two new trustworthy rising edges without clearing the fault.
-  Preserve epoch/fault barriers, time-order handling and loss accounting from 03.
-  Neither capture resync nor the model-only `clear_fault()` is production recovery.
+- Historical 02–04 capture faults latch and force effective zero. Preserve those
+  artifacts/evidence as baselines. For operational 05, D64/D65 explicitly require
+  automatic translation of new trustworthy valid commands, including high commands,
+  and mode-dependent signal-loss behavior. Separate sticky diagnostic history from
+  output inhibition; a signal-loss/stuck/capture latch or 04 terminal adapter must
+  not silently force LOW in Fly or permanently block recovery in either mode.
+  Preserve discard of ambiguous samples, epoch/fault/time-order barriers and the
+  two-new-trustworthy-rising-edges resync rule. Resync alone is not a valid command;
+  the model-only clear_fault() is not an implementation of the new recovery contract.
 - Capture stuck HIGH/LOW uses a 100 ms unchanged-level threshold from the last
   observed transition or observation start, plus a 10 ms fault-delivery budget.
   D52 also defines rearm/processing and active-RX guard budgets. These are capture
   requirements, not the operational freshness timeout or cutoff budget of Q05.
-  Preserve them unless an explicit decision changes the relevant contract.
+  Keep detection/accounting; D65 changes how that status affects operational output.
+  Test cutoff follows its selected deadline; Fly holds last valid despite input loss.
 - Preserve D43/D52 diagnostics: one latest snapshot, at most one launch per 100 ms,
   bounded zero-wait/drop transport, counters/sticky faults and no control input.
   One already committed USB record may finish after reconnect; subsequent output
@@ -89,13 +100,39 @@ device access, load operation, or another Spec Kit phase.
 
 ## Decisions and evidence boundaries
 
-Q04's width/rounding/period/capture policies are selected; physical compliance is
-still pending. Q05 remains open for 05: operational timeout and inclusive boundary,
-last-valid-to-LOW budget, valid-frame count, safe-low arming, recovery, watchdog and
-any affected diagnostic integration. The existing 100 ms capture threshold and the
-historical 100 ms operational proposal do not decide Q05. Preserve D36/D45 invalid
-hold behavior; invalid activity never renews freshness. Any requested policy change
-requires an explicit decision and synchronized affected artifacts before implementation.
+Q04 width/rounding/period/association policies are selected; physical compliance is
+pending. D63 identifies the intended source as ArduPilot on Matek H743-Wing; actual
+revision/output configuration/electrical acceptance remain open. The pump meters fuel
+and directly controls thrust. The converter only validates/translates commands; engine
+start, combustion control and engine recovery are outside its scope.
+
+D64/D65 settle the operational 05 product policy:
+- Startup/reset: LOW until the first fully valid current-boot measurement, then
+  translate it even if high. No separate arming, required preceding zero, extra
+  ten-frame startup qualification or manual signal-loss fault clear.
+- Build configurations: Test is the ordinary/default build; Fly requires explicit
+  selection. No runtime mode switching, USB command or persisted runtime mode.
+- Test: hold last valid before the selected timeout, then require LOW.
+- Fly: hold last valid without automatic cutoff solely because valid input remains
+  absent. With no valid command in the current boot, remain LOW. Do not restore a
+  previous boot's duty.
+- Both: a new trustworthy valid command automatically resumes translation, including
+  reconnect-high, after applicable capture resync/validation. Old/invalid samples and
+  USB reconnect do not create a valid command. Invalid never refreshes last-valid.
+- Operational Test/Fly are not the finite no-pump waveform/stress/accuracy images04.
+  Existing 04 firmware, artifacts and physical acceptance are unchanged baselines.
+
+Q05 remains open only for numerical Test timeout/exact boundary/last-valid-to-LOW
+budget (historical100ms is still only a proposal), technical clock/output API failure
+classes/retry and watchdog/diagnostic details. Do not reselect D64/D65. Explicitly plan
+migration of 02–04 latches/observer/adapter output inhibition so Fly and automatic
+recovery are actually achievable, retaining meaningful evidence and source ordering.
+
+Governance: D64/D65 are current explicit user instructions overriding old operational
+arming/universal signal-loss fail-off. Constitution v1.0.0 principle II still contains
+that older text; record the scoped conflict and required formal amendment/template
+synchronization before affected 05 implementation. Do not silently call this compliant,
+reopen the accepted choice, or invoke Constitution/another phase automatically.
 
 Q02/H02/H03, Q03 and Q06 remain physical gates at their documented boundaries.
 D38 permits software completion of 02 without physical acceptance of 01; D48 permits

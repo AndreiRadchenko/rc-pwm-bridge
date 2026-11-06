@@ -17,6 +17,7 @@ class AccuracyTrace {
 public:
   AccuracyTrace() : header_{}, records_{} {}
   void observe(const CaptureSnapshot &);
+  void fail() { header_.failed=true; }
   void append(const CaptureSnapshot &, uint64_t now);
   const TraceHeader &header() const { return header_; }
   const TraceRecord &record(size_t i) const { return records_[i]; }

@@ -163,9 +163,9 @@ M04 був завданням технічного вибору Plan; його �
 
 ### Простежуваність прийняття та докази
 
-Нижче — майбутні місця доказів, а не вже створені звіти. У Specify/Clarify тести firmware, збірки й вимірювання 04 не запускались.
+Нижче збережено початкову matrix Specify/Clarify: у цих фазах тести firmware, збірки й вимірювання04 не запускались. Актуальний стан після Implement — [verification/acceptance.md](verification/acceptance.md): host/build pass, фізичні gates відкриті. Нормативні критерії цієї специфікації не змінено.
 
-| Вимога R/FR | Сценарій / SC | Метод | Майбутній доказ / стан |
+| Вимога R/FR | Сценарій / SC | Метод | Початковий доказ / стан Specify/Clarify |
 |---|---|---|---|
 | R01 / FR-001,FR-010 | US2.AC5, US3.AC6 / SC-003,006 | Профіль/інтерфейс, огляд DIR–GND і ground без мотора | `verification/hardware.md` — not_run; Q02/Q06 gates відкриті |
 | R04 / FR-002,FR-006 | US2.AC1, US3.AC3 / SC-001 | Host: шість точок, rounding, межі width/period і last-valid | `verification/host.md` — not_run |

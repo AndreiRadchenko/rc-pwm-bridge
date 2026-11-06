@@ -1,0 +1,174 @@
+[
+  {
+    "variant": "normal",
+    "scenario": "normal",
+    "step": null,
+    "directory": "build/c3-04-r2-normal",
+    "exit": 0,
+    "log": "specs/04-pump-output/verification/build-normal-attempt2.txt"
+  },
+  {
+    "variant": "waveform",
+    "scenario": "waveform",
+    "step": null,
+    "directory": "build/c3-04-r2-waveform",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "scripts/build.py",
+      "target",
+      "--board-profile",
+      "firmware/boards/c3-supermini-pinout-01.json",
+      "--build-dir",
+      "build/c3-04-r2-waveform",
+      "--pump04-bench",
+      "waveform"
+    ],
+    "exit": 0,
+    "log": "specs/04-pump-output/verification/build-waveform-attempt2.txt"
+  },
+  {
+    "variant": "stress",
+    "scenario": "stress",
+    "step": null,
+    "directory": "build/c3-04-r2-stress",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "scripts/build.py",
+      "target",
+      "--board-profile",
+      "firmware/boards/c3-supermini-pinout-01.json",
+      "--build-dir",
+      "build/c3-04-r2-stress",
+      "--pump04-bench",
+      "stress"
+    ],
+    "exit": 0,
+    "log": "specs/04-pump-output/verification/build-stress-attempt2.txt"
+  },
+  {
+    "variant": "accuracy-0",
+    "scenario": "accuracy",
+    "step": 0,
+    "directory": "build/c3-04-r2-accuracy-0",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "scripts/build.py",
+      "target",
+      "--board-profile",
+      "firmware/boards/c3-supermini-pinout-01.json",
+      "--build-dir",
+      "build/c3-04-r2-accuracy-0",
+      "--pump04-bench",
+      "accuracy",
+      "--pump04-trace-step",
+      "0"
+    ],
+    "exit": 0,
+    "log": "specs/04-pump-output/verification/build-accuracy-0-attempt2.txt"
+  },
+  {
+    "variant": "accuracy-1",
+    "scenario": "accuracy",
+    "step": 1,
+    "directory": "build/c3-04-r2-accuracy-1",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "scripts/build.py",
+      "target",
+      "--board-profile",
+      "firmware/boards/c3-supermini-pinout-01.json",
+      "--build-dir",
+      "build/c3-04-r2-accuracy-1",
+      "--pump04-bench",
+      "accuracy",
+      "--pump04-trace-step",
+      "1"
+    ],
+    "exit": 0,
+    "log": "specs/04-pump-output/verification/build-accuracy-1-attempt2.txt"
+  },
+  {
+    "variant": "accuracy-2",
+    "scenario": "accuracy",
+    "step": 2,
+    "directory": "build/c3-04-r2-accuracy-2",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "scripts/build.py",
+      "target",
+      "--board-profile",
+      "firmware/boards/c3-supermini-pinout-01.json",
+      "--build-dir",
+      "build/c3-04-r2-accuracy-2",
+      "--pump04-bench",
+      "accuracy",
+      "--pump04-trace-step",
+      "2"
+    ],
+    "exit": 0,
+    "log": "specs/04-pump-output/verification/build-accuracy-2-attempt2.txt"
+  },
+  {
+    "variant": "accuracy-3",
+    "scenario": "accuracy",
+    "step": 3,
+    "directory": "build/c3-04-r2-accuracy-3",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "scripts/build.py",
+      "target",
+      "--board-profile",
+      "firmware/boards/c3-supermini-pinout-01.json",
+      "--build-dir",
+      "build/c3-04-r2-accuracy-3",
+      "--pump04-bench",
+      "accuracy",
+      "--pump04-trace-step",
+      "3"
+    ],
+    "exit": 0,
+    "log": "specs/04-pump-output/verification/build-accuracy-3-attempt2.txt"
+  },
+  {
+    "variant": "accuracy-4",
+    "scenario": "accuracy",
+    "step": 4,
+    "directory": "build/c3-04-r2-accuracy-4",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "scripts/build.py",
+      "target",
+      "--board-profile",
+      "firmware/boards/c3-supermini-pinout-01.json",
+      "--build-dir",
+      "build/c3-04-r2-accuracy-4",
+      "--pump04-bench",
+      "accuracy",
+      "--pump04-trace-step",
+      "4"
+    ],
+    "exit": 0,
+    "log": "specs/04-pump-output/verification/build-accuracy-4-attempt2.txt"
+  },
+  {
+    "variant": "accuracy-5",
+    "scenario": "accuracy",
+    "step": 5,
+    "directory": "build/c3-04-r2-accuracy-5",
+    "command": [
+      "/Users/mac/.platformio/penv/bin/python3",
+      "scripts/build.py",
+      "target",
+      "--board-profile",
+      "firmware/boards/c3-supermini-pinout-01.json",
+      "--build-dir",
+      "build/c3-04-r2-accuracy-5",
+      "--pump04-bench",
+      "accuracy",
+      "--pump04-trace-step",
+      "5"
+    ],
+    "exit": 0,
+    "log": "specs/04-pump-output/verification/build-accuracy-5-attempt2.txt"
+  }
+]

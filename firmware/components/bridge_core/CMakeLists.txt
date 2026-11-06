@@ -1,4 +1,4 @@
-set(core_sources "startup.cpp" "control.cpp" "rc_capture.cpp")
+set(core_sources "startup.cpp" "control.cpp" "rc_capture.cpp" "pump_output.cpp")
 if(CONFIG_BRIDGE_RC03_ACCURACY_TRACE)
     list(APPEND core_sources "rc_capture_trace.cpp")
 endif()

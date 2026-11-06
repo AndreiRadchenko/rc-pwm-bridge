@@ -80,7 +80,15 @@ def main():
     parser.add_argument('--build-dir', required=True)
     parser.add_argument('--board-profile')
     parser.add_argument('--rc03-bench', choices=['diagnostics','accuracy'])
+    parser.add_argument('--pump04-bench', choices=['waveform','stress','accuracy'])
+    parser.add_argument('--pump04-trace-step', type=int)
     args = parser.parse_args()
+    if args.pump04_bench and (args.mode!='target' or args.rc03_bench):
+        parser.error('--pump04-bench is target-only and conflicts with --rc03-bench')
+    if args.pump04_trace_step is not None and (args.pump04_bench!='accuracy' or not 0<=args.pump04_trace_step<=5):
+        parser.error('--pump04-trace-step requires accuracy and range0..5')
+    if args.pump04_bench=='accuracy' and args.pump04_trace_step is None:
+        parser.error('accuracy requires explicit --pump04-trace-step')
     if args.mode == 'target' and not args.board_profile:
         parser.error('target requires --board-profile')
     if args.mode == 'host' and args.rc03_bench:
@@ -114,6 +122,24 @@ def main():
             if args.rc03_bench:
                 fragment = 'sdkconfig.rc03-trace.defaults' if args.rc03_bench == 'accuracy' else 'sdkconfig.rc03-bench.defaults'
                 defaults += ';' + str(ROOT / 'firmware' / fragment)
+            if args.pump04_bench:
+                defaults += ';' + str(ROOT/'firmware'/('sdkconfig.pump04-'+args.pump04_bench+'.defaults'))
+                if args.pump04_bench=='accuracy':
+                    selection=directory/'pump04-step.defaults'
+                    selection.write_text('CONFIG_BRIDGE_PUMP04_TRACE_STEP=%d\n'%args.pump04_trace_step)
+                    defaults+=';'+str(selection)
+            source_hashes={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest()
+                for p in (ROOT/'firmware').rglob('*') if p.is_file() and 'build' not in p.relative_to(ROOT/'firmware').parts
+                and (p.suffix in ('.cpp','.hpp','.h','.json','.defaults') or p.name in ('CMakeLists.txt','Kconfig.projbuild'))}
+            identity04={'version':1,'scenario':args.pump04_bench or 'normal','trace_step':args.pump04_trace_step,
+                'initial_low_us':5000000 if args.pump04_bench else 0,
+                'output_duration_us':(600000000 if args.pump04_bench=='stress' else 60000000) if args.pump04_bench else 0,
+                'window_duration_us':601000000 if args.pump04_bench=='stress' else 0,'source_hashes':source_hashes,
+                'sdk_commit':identity['sdk_commit'],'profile_sha256':fingerprint}
+            identity04['fingerprint']=hashlib.sha256(json.dumps(identity04,sort_keys=True).encode()).hexdigest()
+            (directory/'pump04-manifest.json').write_text(json.dumps(identity04,sort_keys=True,indent=2)+'\n')
+            with header.open('a') as generated:
+                generated.write('#define BRIDGE_PUMP04_BUILD_FINGERPRINT 0x%sULL\n'%identity04['fingerprint'][:16])
             cmd = [str(python), str(sdk / 'tools/idf.py'), '-C', str(ROOT / 'firmware'), '-B', str(directory),
                    '-D', 'SDKCONFIG=' + str(directory / 'sdkconfig'),
                    '-D', 'SDKCONFIG_DEFAULTS=' + defaults,

@@ -5,6 +5,7 @@
 #include <cstdint>
 #include "bridge/startup.hpp"
 #include "bridge/rc_capture.hpp"
+#include "bridge/pump_output.hpp"
 
 namespace platform {
 struct ClockReading { bool valid; int64_t raw_us; };
@@ -21,6 +22,9 @@ struct DiagnosticSnapshot {
     bool pwm_low_api_applied;
     bridge::CaptureSnapshot capture;
     bool has_capture;
+    bridge::OutputSnapshot output;
+    bool has_output;
+    bool window_invalid;
 };
 static_assert(sizeof(DiagnosticSnapshot) <= 384, "snapshot exceeds transport bound");
 struct ClockPort { virtual ClockReading read() = 0; virtual ~ClockPort() = default; };
@@ -35,6 +39,7 @@ public:
     StartupPolicy(ClockPort&, ProfilePort&, OutputPort&, SetupPort&, DiagnosticPort&, uint64_t fingerprint);
     void poll();
     bridge::StartupSnapshot snapshot() const { return supervisor_.snapshot(); }
+    bool had_failure() const { return had_failure_; }
 private:
     void publish_if_changed(bool force = false);
     ClockPort& clock_; ProfilePort& profile_; OutputPort& output_; SetupPort& setup_; DiagnosticPort& diagnostic_;
@@ -42,9 +47,16 @@ private:
     DiagnosticSnapshot last_;
     bool published_;
     bool low_;
+    bool had_failure_;
 };
 
 // Caller serializes publish/copy/ack. Formatting is deliberately outside the lock.
+struct DiagnosticStats {
+    uint32_t overwritten,busy,drops,attempts;
+    uint64_t bytes;
+    bool saturated;
+};
+int format_rc04(const DiagnosticSnapshot&,const DiagnosticStats&,char*,size_t,bool padded=false);
 class RcDiagnosticPolicy {
 public:
     RcDiagnosticPolicy(): latest_{}, pending_(false), version_(0), last_slot_(0),

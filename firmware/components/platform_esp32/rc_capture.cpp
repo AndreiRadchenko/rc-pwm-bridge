@@ -7,7 +7,8 @@
 namespace platform {
 static constexpr gpio_num_t input =
     static_cast<gpio_num_t>(BRIDGE_PROFILE_RC_PIN);
-RcCapture::RcCapture(LocalDiagnostics &d) : diagnostics_(d) {
+RcCapture::RcCapture(LocalDiagnostics &d, EspPumpOutput& out, EspPumpSdk& sdk, bridge::BenchConfig config, bridge::OutputEvidence* evidence, bridge::CaptureWindowEvidence* window) : diagnostics_(d), output_(out), output_policy_(config), output_evidence_(evidence), window_(window) {
+  sdk.observer(output_faults,this);
   edges_ = xQueueCreateStatic(64, sizeof(bridge::EdgeEvent), edge_storage_,
                               &edge_control_);
   batches_ = xQueueCreateStatic(8, sizeof(bridge::RxBatch), batch_storage_,
@@ -82,7 +83,7 @@ void RcCapture::release(bridge::CaptureResource r) {
       vTaskDelete(task);
   }
   if (r == CaptureResource::Timer && timer_) {
-    esp_timer_stop(timer_);
+    if(esp_timer_stop(timer_)!=ESP_OK)policy_.fault(bridge::RxError,uint64_t(esp_timer_get_time()));
     esp_timer_delete(timer_);
     timer_ = nullptr;
   }
@@ -116,7 +117,7 @@ bool RcCapture::start(uint64_t now) {
     if (now >= retry_at_) {
       policy_.fault(bridge::RxError, now);
       retry_at_ = now + 100000;
-      diagnostics_.publish_capture(policy_.snapshot());
+      diagnostics_.publish_control(policy_.snapshot(),output_policy_.snapshot(),window_&&window_->postfreeze_invalid());
     }
     return false;
   }
@@ -124,7 +125,7 @@ bool RcCapture::start(uint64_t now) {
     resources_.cleanup(*this);
     policy_.fault(bridge::RxError, now);
     retry_at_ = now + 100000;
-    diagnostics_.publish_capture(policy_.snapshot());
+    diagnostics_.publish_control(policy_.snapshot(),output_policy_.snapshot(),window_&&window_->postfreeze_invalid());
     return false;
   }
   portENTER_CRITICAL(&lock_);
@@ -179,6 +180,7 @@ void RcCapture::gpio_edge(void *data) {
   bool high = gpio_get_level(input);
   BaseType_t wake = pdFALSE;
   portENTER_CRITICAL_ISR(&s.lock_);
+  ++s.producers_;
   bridge::EdgeEvent event{now, ++s.line_.seq, s.epoch_, high};
   if (high == s.line_.high)
     s.pending_fault_ |= bridge::ShapeError;
@@ -199,6 +201,7 @@ void RcCapture::gpio_edge(void *data) {
     s.line_.continuous = false;
     gpio_intr_disable(input);
   }
+  --s.producers_;
   if (s.task_)
     vTaskNotifyGiveFromISR(s.task_, &wake);
   portEXIT_CRITICAL_ISR(&s.lock_);
@@ -211,6 +214,7 @@ bool RcCapture::rx_done(rmt_channel_handle_t, const rmt_rx_done_event_data_t *e,
   bridge::RxBatch batch{};
   batch.completed_at_us = uint64_t(esp_timer_get_time());
   portENTER_CRITICAL_ISR(&s.lock_);
+  ++s.producers_;
   batch.epoch = s.epoch_;
   batch.arm_seq = s.arm_seq_;
   batch.close_seq = s.line_.seq;
@@ -243,6 +247,7 @@ bool RcCapture::rx_done(rmt_channel_handle_t, const rmt_rx_done_event_data_t *e,
     s.pending_fault_ |= bridge::QueueLoss;
     s.recovery_requested_ = true;
   }
+  --s.producers_;
   if (s.task_)
     vTaskNotifyGiveFromISR(s.task_, &wake);
   portEXIT_CRITICAL_ISR(&s.lock_);
@@ -307,21 +312,32 @@ void RcCapture::step() {
   portEXIT_CRITICAL(&lock_);
   if (errors)
     policy_.fault(errors, now, losses);
+  output_service(uint64_t(esp_timer_get_time()));
   bridge::EdgeEvent edge;
-  for (unsigned i = 0; i < 64 && xQueueReceive(edges_, &edge, 0) == pdTRUE; ++i)
+  for (unsigned i = 0; i < 64 && xQueueReceive(edges_, &edge, 0) == pdTRUE; ++i) {
     policy_.on_edge(edge, uint64_t(esp_timer_get_time()));
+    output_service(uint64_t(esp_timer_get_time()));
+  }
   bridge::RxBatch batch;
   for (unsigned i = 0; i < 8 && xQueueReceive(batches_, &batch, 0) == pdTRUE;
        ++i) {
+    output_service(uint64_t(esp_timer_get_time()));
     bool candidate = policy_.on_batch(batch, uint64_t(esp_timer_get_time()));
     policy_.processing_complete(batch.completed_at_us,
                                 uint64_t(esp_timer_get_time()));
 #ifdef CONFIG_BRIDGE_RC03_ACCURACY_TRACE
-    if (candidate)
+    if (candidate && (output_policy_.config().scenario!=bridge::PumpScenario::Accuracy || trace_enabled_))
       trace_.append(policy_.snapshot(), uint64_t(esp_timer_get_time()));
 #else
     (void)candidate;
 #endif
+    if(window_&&candidate){const auto m=policy_.snapshot().measurement;
+      const uint64_t completion=uint64_t(esp_timer_get_time());
+      const uint64_t stop=m.end_us<=UINT64_MAX-5000?m.end_us+5000:UINT64_MAX;
+      const uint64_t rearm=batch.rearmed_at_us?(batch.rearmed_at_us>=stop?batch.rearmed_at_us-stop:0):UINT64_MAX;
+      window_->sample(m,rearm,completion>=batch.completed_at_us?completion-batch.completed_at_us:UINT64_MAX);
+    }
+    output_service(uint64_t(esp_timer_get_time()));
   }
   bridge::LineObservation line;
   portENTER_CRITICAL(&lock_);
@@ -332,25 +348,39 @@ void RcCapture::step() {
   portEXIT_CRITICAL(&lock_);
   now = uint64_t(esp_timer_get_time());
   policy_.poll(line, now);
+  output_service(uint64_t(esp_timer_get_time()));
 #ifdef CONFIG_BRIDGE_RC03_ACCURACY_TRACE
   trace_.observe(policy_.snapshot());
+  if(output_.reasons())trace_.fail();
   if (trace_.header().frozen && !stopped_) {
+    output_policy_.freeze();
+    output_service(uint64_t(esp_timer_get_time()));
+    if(output_.reasons())trace_.fail();
+    if(output_.applied()!=bridge::PumpApplied::Low || (output_.reasons()&bridge::PumpLowUnconfirmed)) {
+      diagnostics_.publish_control(policy_.snapshot(),output_policy_.snapshot(),window_&&window_->postfreeze_invalid());
+      return;
+    }
     portENTER_CRITICAL(&lock_);
     stopped_ = true;
     recovery_requested_ = true;
     gpio_intr_disable(input);
     portEXIT_CRITICAL(&lock_);
+    bool stop_ok=true;
     if (enabled_) {
-      rmt_disable(channel_);
-      enabled_ = false;
+      if(rmt_disable(channel_)!=ESP_OK){policy_.fault(bridge::RxError,uint64_t(esp_timer_get_time()));stop_ok=false;}
+      else enabled_=false;
     }
-    esp_timer_stop(timer_);
+    if(esp_timer_stop(timer_)!=ESP_OK){policy_.fault(bridge::RxError,uint64_t(esp_timer_get_time()));stop_ok=false;}
+    output_service(uint64_t(esp_timer_get_time()));
+    if(!stop_ok){trace_.fail();if(output_evidence_)diagnostics_.output_archive(output_evidence_,nullptr);diagnostics_.publish_control(policy_.snapshot(),output_policy_.snapshot(),false);return;}
     diagnostics_.archive(&trace_);
-    diagnostics_.publish_capture(policy_.snapshot());
+    if(output_evidence_)diagnostics_.output_archive(output_evidence_,nullptr);
+    diagnostics_.publish_control(policy_.snapshot(),output_policy_.snapshot(),window_&&window_->postfreeze_invalid());
     return;
   }
 #endif
   auto state = policy_.snapshot();
+  output_service(uint64_t(esp_timer_get_time()));
   if (state.recovery_needed && now >= retry_at_)
     recovery(now);
   else {
@@ -359,6 +389,43 @@ void RcCapture::step() {
       arm_locked(false);
     portEXIT_CRITICAL(&lock_);
   }
-  diagnostics_.publish_capture(policy_.snapshot());
+  if(window_) {
+    const auto h=window_->header();
+    if(now>=h.end_us+6000&&!window_->frozen()) {
+      portENTER_CRITICAL(&lock_);
+      const uint32_t seq=line_.seq,epoch=epoch_;
+      const bool relevant_active=rx_active_&&line_.seq!=arm_seq_&&line_.changed_us<h.end_us;
+      const bool barrier=producers_==0&&!pending_fault_&&!pending_edge()&&!relevant_active&&uxQueueMessagesWaiting(edges_)==0&&uxQueueMessagesWaiting(batches_)==0;
+      portEXIT_CRITICAL(&lock_);
+      window_->close(policy_.snapshot(),uint64_t(esp_timer_get_time()),barrier,seq,epoch);
+    }
+  }
+  if(output_evidence_&&output_evidence_->header().frozen&&(!window_||window_->frozen()))diagnostics_.output_archive(output_evidence_,window_);
+  diagnostics_.publish_control(policy_.snapshot(),output_policy_.snapshot(),window_&&window_->postfreeze_invalid());
+}
+uint32_t RcCapture::output_faults(void* p) {
+  auto& s=*static_cast<RcCapture*>(p);
+  portENTER_CRITICAL(&s.lock_);const uint32_t bits=s.pending_fault_;portEXIT_CRITICAL(&s.lock_);
+  return bits|s.policy_.snapshot().fault_bits;
+}
+void RcCapture::output_service(uint64_t now) {
+  const bool first=!output_started_;output_started_=true;
+  auto q=output_policy_.tick(now,{true,startup_failed_,running_.load(),reset_reason_},policy_.snapshot().fault_bits?bridge::PumpCaptureFault:0);
+  if(policy_.snapshot().fault_bits && policy_.snapshot().first_fault_at_us<=now)q.deadline_us=policy_.snapshot().first_fault_at_us;
+  if(first) {
+    if(output_evidence_) {output_evidence_->begin(now);output_evidence_->append({0,uint8_t(bridge::PumpOperation::SessionStart),0,uint8_t(output_.applied()),0,0,now,now,now});}
+    if(window_)window_->start(now);
+  }
+  output_.apply(q);
+  if(output_.reasons())output_policy_.fault(output_.reasons());
+  output_policy_.applied(output_.applied());
+  trace_enabled_=trace_enabled_||output_policy_.accuracy_collect(now);
+  if(window_)window_->observe(policy_.snapshot(),now);
+  auto phase=output_policy_.snapshot().phase;
+  if(output_evidence_&&!output_evidence_->header().frozen&&(phase==bridge::PumpPhase::Fault||phase==bridge::PumpPhase::Complete||phase==bridge::PumpPhase::EvidenceFrozen)) {
+    const auto kind=phase==bridge::PumpPhase::Fault?bridge::PumpOperation::Fault:phase==bridge::PumpPhase::Complete?bridge::PumpOperation::Complete:bridge::PumpOperation::EvidenceFrozen;
+    output_evidence_->append({0,uint8_t(kind),0,uint8_t(output_.applied()),output_.reasons(),0,now,uint64_t(esp_timer_get_time()),q.deadline_us});
+    output_evidence_->freeze();
+  }
 }
 } // namespace platform

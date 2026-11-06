@@ -1,0 +1,1 @@
+line 3: s.snapshot().work_permitted
