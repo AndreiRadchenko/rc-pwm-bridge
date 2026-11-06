@@ -139,3 +139,7 @@ CHK001–003, CHK005–008, CHK010–016, CHK018–025, CHK027–031:27 пунк
 - Before/after hooks повторно перевіряються: `.specify/extensions.yml` відсутній; dispatch немає. Наступна окремо запитувана фаза — `/speckit-tasks`.
 
 Фінальна перевірка документації:32 послідовні CHK-ID,32/32 позначено, traceability32/32, групи A27/B4/C1;51 локальне посилання feature05 має наявний target. D75 присутнє у всіх шести feature artifacts. Hash-порівняння зі станом до checklist підтвердило незмінність конституції, specs01–04, firmware/tests; старі ADR entries порівняно з Git HEAD і збережено. `git diff --check` без помилок. Це перевірка документів; firmware tests, target builds та фізичні перевірки05 не виконувалися.
+
+## Синхронізація після guided analysis,2026-11-06
+
+I1/C1/U1 розв'язано в окремо викликаному `speckit-analyze-guided`, без повторного запуску Checklist: спільна міграція input inhibition тепер T013 перед US2, P3 відхиляє prematureLOW окремо від upper-bound1с, D76 задає event journal/accepted anchor/compile-time start/freeze. CHK007–009,CHK013,CHK023–024,CHK027–029 уточнено відповідними spec/plan/contract/tasks, усі32 quality flags збережені. Початкові triage/Resolution вище є історією checklist; actual firmware/build/physical pass не додано. Подробиці й повторні метрики — [analysis-resolution.md](../analysis-resolution.md).

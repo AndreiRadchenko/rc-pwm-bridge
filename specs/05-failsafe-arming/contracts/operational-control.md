@@ -1,6 +1,6 @@
 # Контракт operational керування 05
 
-Дата:2026-11-06; D63–D73, уточнення retry D75/CHK017. Локальні embedded boundaries, без web/network/команд USB. Це плановані інтерфейси та acceptance limits, не firmware API, що вже існує. Семантика нормативна; C++ назви нижче — обраний дизайн.
+Дата:2026-11-06; D63–D73, уточнення retry D75/CHK017 та event journal D76/U1. Локальні embedded boundaries, без web/network/команд USB. Це плановані інтерфейси та acceptance limits, не firmware API, що вже існує. Семантика нормативна; C++ назви нижче — обраний дизайн.
 
 ## 1. Розширення 02 та міграція 03/04
 
@@ -60,6 +60,8 @@ RMT/GPIO failures/rearm errors/overflow/stuck/malformed означають input
 | Long Fly loss hold |≥600 фізичних секунд у 0/80/100%,active/slow/absent reader,далі new high/new low recovery |
 | Physical latency method |U_latency≤1000 мкс;maximum bound pass за L+U≤limit;не змінює directE/U D54/M04 |
 
+Healthy P3 має два окремі verdicts: hold при age<T та максимальний physical cutoff≤1с. Достовірний prematureLOW без technical failure — fail. Для physical hold потрібне незалежне зіставлення accepted anchor/MCU age з waveform та документована clock/timebase uncertainty; API age не є physical proof. Якщо зіставлення/boundary неоднозначні — hold-part blocked, combined P3 не pass. Не виводити нову точну physical нижню межу500мс чи guessed tolerance з MCU T; output-transition offset fitting заборонений.
+
 Алгебра stalled Test: checkpoint за nonzero тільки при age<T; на/після T feed тількипісля checked LOW. Тому найпізніший nonzero feed≤t_v+500 мс;350+100 мс до physical LOW дають≤950 мс,50 мс запасдо 1 с. Це розподіл прийняття, не гарантія вже вимірянихшляхів. Нормальний≤502 мс API та прямий≤1 с physical перевіряютьсяокремо. Не можна скласти MCUtimestamps з analyzertime через невідомий offset. Resetphysical/responsibilitygate не закриваєтьсяалгеброю.
 
 ## 5. Watchdog, час і startup order
@@ -74,7 +76,11 @@ Sleep/DFS/cachewrite у steady state не додаються. Checked signed64ra
 
 TWDT stage0ISR спершу feed, stock panic з 10 с RTCwatchdog непридатний як proof1 с. IWDT500 мс не повинен раніше TWDT nominal300 мс stage1 зайтиу panic. За arbitrarypanic/WDT/oscillator/reset/padfailure немає universal fault tolerance. Фізичні declaredstallcases перевіряються без debugger, через freshboot після OpenOCD; unsupportedhandlerfailure не зараховується як pass.
 
-## 6. Diagnostics rc05 v1
+## 6. Timing journal D76 та diagnostics rc05 v1
+
+Timing evidence реалізує нормативну [подієву модель D76](../data-model.md#timing-journal-журнал-подій-сценарію-d76--u1): compile-time scenario/start/final event до run; accepted anchor оновлюється в RAM, не per-pulse history; переходи/пов’язані API brackets/all failures/retry/D75 closure включені. Повторні успіхи без зміни стану не записуються, але failures/operation-late і post-fence valid0 closure не фільтруються. Freeze тільки після завершальної події та checked result; missing provenance/result або overflow→incomplete. Усі anchors/API records разом≤64×48B+header≤128B; немає впливу recorder на control або відновлення архіву після reset. Конкретні bounded field layouts/enum/digest serialization узгодити в T022 до реалізації collector та T046/T047 fixtures; T050 матеріалізує exporter з тієї самої схеми, не перевизначає політику.
+
+### Diagnostics rc05 v1
 
 Production record: newline + `rc05 1` + групи нижче у fixed order + newline. Hexlowercase без 0x, один ASCIIspace між tokens; груповийпрефікс додається лише першомуполю. Наприклад q=sequence build boot. Відсутні/невідомі поля/enum/mask/версія дають malformed;немає guesseddefaults. Numbers без leadingpadding,не більше наведеноїрозрядності.
 

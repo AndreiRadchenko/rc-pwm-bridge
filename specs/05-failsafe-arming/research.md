@@ -62,6 +62,8 @@ Explicit `--operational-mode test|fly`, ordinary без bench — Test; `--legac
 
 Long Fly loss hold:≥600 фізичних секунд для 0/80/100%, reader active/slow/absent; потім recovery-high/low. Healthy capture regressions — окремі 600 с zero-loss/timing і короткі 128-record per-pulse windows D53–D55. Stress summary601MCU-секунда може повторно використати D62 lower-bound method, але не finite04 output cutoff. Reset/bias/probe readiness фізично pending. Один первинний журнал містить actual commands/config/source identity/очікуване-факт/U/gaps й статус; bench artifacts не є actual evidence до виконання.
 
+**Уточнення власника D76/U1 після аналізу**: обрано журнал подій сценарію з RAM accepted anchor та compile-time start/freeze; transitions/API brackets/failures/retry/D75 closure зберігаються, повторні успіхи без зміни стану не записуються. Це дає bounded event evidence для довгого hold без заповнення буфера звичайними polls/незмінними valid; усі failure/late/D75 valid0 closure лишаються обов’язковими. Case record bound≤64 перевіряється до run, overflow/incomplete не cutoff Fly. Правила data-model/контракт, exact layout у T022; accuracy128/stress512B/reset external evidence незмінні. Це нове рішення власника, не додаткове SDK research чи фізичний pass.
+
 ## Підсумок Phase0
 
 Технічних невибраних Q05 параметрів для Phase1 не залишено; вибори D69–D73 конкретизовані нижче в contracts/data-model/plan. На момент Phase0 G05 та physical gates були відкриті. D74 окремо закрив G05; physical Q02/Q03/Q06 лишаються відкритими з власниками, не замінені defaults. Source review/математичний sizing не є тестом firmware, build або physical pass.
